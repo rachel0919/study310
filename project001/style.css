@@ -94,6 +94,7 @@ img {
     flex-wrap: wrap;
     width: 100%;
     height: 740px;
+
     background-color: #FAF6EB;
     position: relative;
 }
@@ -119,8 +120,8 @@ img {
     right: 0;
     top: 20px;
     z-index: 10;
-    
-    
+
+
 }
 
 
@@ -133,17 +134,17 @@ img {
     font-family: "Noto Sans KR", serif;
     color: #3D3D3D;
     background-color: #ffd700;
-  padding: 0 5px;
-  border-radius: 3px;
-  box-shadow: inset 0 -8px 0 rgba(255, 215, 0, 0.5);
-  margin: 0;
-  
+    padding: 0 5px;
+    border-radius: 3px;
+    box-shadow: inset 0 -8px 0 rgba(255, 215, 0, 0.5);
+    margin: 0;
+
 }
 
 
 
 .txtBox .txt_main {
-    
+
     font-size: 71px;
     text-align: center;
     font-family: "Grandiflora One", serif;
@@ -152,28 +153,41 @@ img {
 }
 
 
-.txtBox .txt_sub {margin-top: 40px;}
+.txtBox .txt_sub {
+    margin-top: 40px;
+}
 
-.txtBox .txt_sub p { font-size: 26px;
+.txtBox .txt_sub p {
+    font-size: 26px;
     text-align: end;
     font-family: "Noto Sans KR", serif;
-    color: #3D3D3D;}
+    color: #3D3D3D;
+}
 
 
 
 .imgBox2 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: #FAF6EB;
+
+    /* display: flex;
     position: relative;
-    width: 100px;
-    height: auto;
+    width: 100%;
+    height: 100%;
     z-index: 15;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;*/
+
 }
 
 .imgBox2 .img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
+    width: 150px;
     height: auto;
+
 }
 
 
@@ -185,58 +199,178 @@ img {
 
 
 .reservation {
+    display: flex;
     width: 100%;
     height: 130px;
-    order: 3;
-    background-color: #FAF6EB;
+
+
+    background-color: red;
+
 }
 
-.map {
-    width: 60%;
-    height: 1050px;
-    order: 4;
-    background-color: #FAF6EB;
+.reservation .reservation-box {
+    display: flex;
+    justify-content: flex-end;
 }
 
-.notice {
-    width: 40%;
-    height: 1050px;
-    order: 5;
-    background-color: cadetblue;
+.reservation .reservation-box .reser_box1 {}
+
+.reservation .reservation-box .reser_box2 {}
+
+.reservation .reservation-box .reser_box3 {}
+
+
+
+
+
+
+
+/* ############################################################## */
+
+
+.notice_box {
+
+    width: 100%;
+    height: auto;
+
+    background-color: #FAF6EB;
+    margin-top: 20px;
+
 }
+
+
+
 
 .newmember {
+    display: flex;
     width: 100%;
     height: 1010px;
-    order: 6;
+
     background-color: cornflowerblue;
 }
 
 .slider_second {
     width: 100%;
     height: 790px;
-    order: 7;
+
     background-color: darkcyan;
 }
 
 .find {
     width: 100%;
     height: 1230px;
-    order: 8;
+
     background-color: darkslateblue;
 }
 
+
+/* video####################################################################### */
+.videoBox {}
+
+.title_left {position: relative;}
+.title_left .titleBox_txt {position: absolute;} 
+
+.title_left:nth-child(1) {left: 0;
+                          top: 500px;
+                          z-index: 3;}
+
+.title_left:nth-child(2) {left: 0;
+                          top: 0;
+                          z-index: 2;}
+
+.title_left:nth-child(3) {left: 0;
+                          top: 0;
+                          z-index: 1;}
+
+
+
+
 .video {
-    width: 100%;
-    height: 850px;
-    order: 9;
-    background-color: darkblue;
+    width: 1440px;
+        margin: 0 auto;
+
+    background-color: #FAF6EB;
 }
+
+.video .titleBox {float: left;
+                  width: 50%;}
+.video::after {display: block; content: ''; clear: both;}
+
+.video .titleBox:nth-child(odd) {padding-right: 15px;
+                                 box-sizing: border-box;}
+                        
+.video .titleBox:nth-child(even) {padding-left: 15px;
+                                 box-sizing: border-box;}
+
+
+.video .titleBox a {
+    display: block;
+    border: solid 1px #3D3D3D;
+    border-radius: 5px;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 10px;
+    
+}
+
+.video .titleBox a img {
+    width: 100%;
+    height: auto;
+    border: none;
+    vertical-align: bottom;
+    margin-bottom: 15px;
+    border-bottom: solid 1px #3D3D3D;
+    padding: 10px;
+}
+
+.video .titleBox a h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 26px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #785379;
+    text-align: center;
+    
+}
+
+.video .titleBox a p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 26px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #5B5B5B;
+    text-align: center;
+}
+
+
+.video .more {
+    display: block;
+    justify-items: end;
+    margin-top: 0px;
+    width: 100%;
+}
+
+.video .more a {
+    
+    border: 0.75px solid #888888;
+    border-radius: 5px;
+    text-align: center;
+    color: #888888;
+    font-size: 18px;
+    font-family: "Noto Sans KR", serif;
+    
+}
+
+
+/* .info############################################################################# */
+
 
 .info {
     width: 100%;
     height: 3060px;
-    order: 10;
+
     background-color: darkviolet;
 }
 
@@ -244,4 +378,3 @@ img {
 
 
 
-/* ##########header################################## */

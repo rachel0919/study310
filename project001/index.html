@@ -53,33 +53,61 @@
             </div>
 
             
+
             <div class="txtBox">
+
+
                 <div class="txt_upper">오늘의 펫티켓</div>
                 <div class="txt_main">반려동물의 감정 존중</div>
                 <div class="txt_sub">
                     <p>동물도 감정을 느낍니다</p>
                     <p>꾸짖기보다는 <strong>긍정적인 방법</strong>으로 훈련하세요</p>
-
                 </div>
+
+
             </div>
+
 
 
             <section class="reservation">
 
-                <form action="">
-                    <div>방문목적을 선택해주세요
-                        입양하고싶어요</div>
-                    <div>날짜를 선택해주세요
-                        2024.12.24</div>
-                    <div>방문예약하기</div>
-                </form>
+                <div class="reservation-box">
+                    <form>
 
+
+                        <div class="reser_box1">
+                            <label for="purpose"><strong>방문목적</strong>을 선택해주세요</label>
+                            <select id="purpose" name="purpose" required>
+                                <option value="" disabled selected>방문목적</option>
+                                <option value="adopt">입양하고싶어요</option>
+                                <option value="rescue">구조하고싶어요</option>
+                                
+                            </select>
+                        </div>
+
+                        <div class="reser_box2">
+                            <label for="date"><strong>날짜</strong>를 선택해주세요</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+            
+                        <div class="reser_box3">
+                            <button type="submit">예약하기</button>
+                        </div>
+
+
+                    </form>
+
+                    
+                </div>
+            
 
             </section>
 
             <div class="imgBox2">
                 <img src="img/board001_002.png" alt="">
             </div>
+
+
         </section>
         
 
@@ -91,12 +119,12 @@
             </div>
             <div class="contentsBox">
                 <section class="map"> 
-                    <!-- map을 기준으로 textBox postion -->
-                   <div class="mapBox"> 구글맵넣을예정이니까 사이즈만 잡고 백그라운드색만 넣어놓기</div>
-                    <div class="textBox">주소넣는거</div>
+                    <!-- map을 기준으로 textBox postion 
+                    <div class="mapBox"> 구글맵넣을예정이니까 사이즈만 잡고 백그라운드색만 넣어놓기</div>
+                    <div class="textBox">주소넣는거</div>-->
                 </section> 
                 <section class="notice">
-                    <!-- notice를 기준으로 more positon  -->
+                    <!-- notice를 기준으로 more positon  
                     <ul>
                         <li><a href=""></a></li>
                         <li><a href=""></a></li>
@@ -105,9 +133,13 @@
                     </ul>
                     <p class="more">더보기</p>
                 </section>
-            </div>
+            </div>-->
     </div>
         <section class="newmember">
+
+            <!--  
+
+                
             <div class="titleBox">
                 <h2></h2>
                 <p></p>
@@ -121,7 +153,7 @@
             <div class="imgBox">
                 <!-- li*4의 가로값 -->
                 <ul>
-                    <!-- li*8의 가로값 -->
+                    <!-- li*8의 가로값 
                     <li><a href=""></a></li>
                     <li><a href=""></a></li>
                     <li><a href=""></a></li>
@@ -134,6 +166,9 @@
             </div>
 
             <p class="more">더보기</p>
+        
+        
+        -->
         </section>  
         <section class="slider_second">
             <!-- slider_second를 기준으로 btn positon  -->
@@ -215,23 +250,44 @@
                 <!-- positon 이동 -->
             </div>
         </section>
-        <section class="video">
-            <div class="titleBox">
-                <h2></h2>
-                <p></p>
-            </div>
-            <div class="imgBox">
-                <!-- li*2의 가로값 -->
-                <ul>
-                    <!-- li*2의 가로값 -->
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                </ul>
+
+        <div class="videoBox">
+
+            <div class="titleBox_left">
+                <div class="titleBox_txt"><h2>보이는이야기</h2></div>
+                <div class="titleBox_txt"><p>소중한 순간들을 나누며 더 나은 내일을 꿈꿉니다</p></div>
+                <div class="titleBox_txt"><img src="img/title_left_001.png" alt=""></div>
             </div>
 
-            <p class="more">더보기</p>
+            <section class="video">
+                <div class="titleBox">
+                    <a href="">
+                        <img src="img/videoImg_002.png" alt="">
+                        <h2>인간의 욕심 때문에 희생당한 강아지들</h2>
+                        <p>2024.12.24</p>
+                    </a>
+                    
+                </div>
+    
+                <div class="titleBox">
+                    <a href="">
+                        <img src="img/videoImg_001.png" alt="">
+                        <h2>당신은 제 곁에서 벗어날 수 없습니다</h2>
+                        <p>2024.12.24</p>
+                    </a>
+                    
+                </div>
 
-        </section>
+                <div class="more">
+                    <a href="">더보기</a>
+                </div>
+    
+    
+            </section>
+
+
+            <!-- <p class="more">더보기</p> -->
+        </div>
         <section class="info">
             <div class="info_001">
                 <div class="txt">
