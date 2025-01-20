@@ -33,6 +33,7 @@ img {
     flex-wrap: wrap;
     width: 100%;
     margin: 0 auto;
+    background-color: #FAF6EB;
 }
 
 
@@ -51,14 +52,14 @@ img {
     width: 100%;
     height: 150px;
     position: relative;
-    background-color: #FAF6EB;
+
 }
 
 .logo {
     font-size: 36px;
     font-family: "Noto Sans KR", serif;
     color: #3D3D3D;
-    position: absolute;
+
 }
 
 .header nav {
@@ -81,6 +82,7 @@ img {
     color: #3D3D3D;
 }
 
+.header nav ul li:nth-child(6) a {padding-right: 0px;}
 
 
 
@@ -92,34 +94,28 @@ img {
 .slider_main {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    height: 740px;
+    width: 1990px;
+    height: 890px;
 
-    background-color: #FAF6EB;
     position: relative;
 }
 
 .imgBox1 {
     width: 60%;
     display: flex;
-    position: relative;
+
 }
 
-.imgBox1 .img {
-    position: absolute;
-}
+.imgBox1 .img {}
 
 .txtBox {
     width: 40%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: center;
     text-align: end;
-    position: absolute;
-    right: 0;
-    top: 20px;
-    z-index: 10;
+    margin-top: 40px;
+
 
 
 }
@@ -169,9 +165,12 @@ img {
 .imgBox2 {
     width: 100%;
     display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     justify-content: flex-end;
     padding: 20px;
-    background-color: #FAF6EB;
+
 
     /* display: flex;
     position: relative;
@@ -198,29 +197,141 @@ img {
 
 
 
-.reservation {
+.reservation {}
+
+.reservation form {}
+
+
+.reservation .reservation-box {
+
+
     display: flex;
-    width: 100%;
+
+
+    border: 3px solid #3D3D3D;
+    border-radius: 10px;
+    border-right-width: 7px;
+    border-bottom-width: 7px;
+
+    margin: 240px;
+    width: auto;
     height: 130px;
 
 
-    background-color: red;
-
 }
 
-.reservation .reservation-box {
+.reservation .reservation-box .reser_box1 {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    width: 470px;
+    border-right: 0.75px solid #3D3D3D;
+    margin-left: 50px;
+    font-size: 22px;
+    font-family: "Noto Sans KR", serif;
+    color: #3D3D3D;
 }
 
-.reservation .reservation-box .reser_box1 {}
 
-.reservation .reservation-box .reser_box2 {}
+.reservation .reservation-box .reser_box1 .purpose {}
 
-.reservation .reservation-box .reser_box3 {}
+.reservation .reservation-box .reser_box1 .selectBox {
+    width: 400px;
+    margin-top: 2px;
+    /* background-color: red; */
+    display: flex;
+    position: relative;
+}
+
+.reservation .reservation-box .reser_box1 .selectBox select {
+    position: absolute;
+
+    right: 0;
+    border: none;
+    background-color: transparent;
+    font-size: 28px;
+    font-family: "Noto Sans KR", serif;
+}
+
+.reservation .reservation-box .reser_box1 .selectBox i {
+    margin-top: 15px;
+}
+
+.reservation .reservation-box .reser_box2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+    width: 580px;
+    font-size: 22px;
+    font-family: "Noto Sans KR", serif;
+    color: #3D3D3D;
+
+}
+
+.reservation .reservation-box .reser_box2 .selectBox {margin-top: 2px;
+                                                      display: flex;
+                                                      position: relative;}
+
+
+.reservation .reservation-box .reser_box2 input {position: absolute;
+                                                 width: 300px;
+                                                 right: 100px;
+                                                 border: none;
+                                                 background-color: transparent;
+                                                 font-size: 28px;
+                                                 font-family: "Noto Sans KR", serif;}
+
+
+.reservation .reservation-box .reser_box2 i {margin-top: 15px;}
+
+
+.reservation .reservation-box .reser_box3 {
+    display: flex;
+    position: relative;
+    width: 300px;
+    color: #F6EBD9;
+    background-color: #785379;
+
+
+}
+
+.reservation .reservation-box .reser_box3 p {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Noto Sans KR", serif;
+    font-weight: bold;
 
 
 
+}
+
+/* hero부분 포지션 재정리###################################### */
+.header {width: 80%;
+    margin: 0 auto;
+        z-index: 2;}
+
+.slider_main {display: flex;
+              position: relative;
+              }
+
+
+.slider_main .imgBox1 {position: absolute;
+                       top: -100px;
+                       left: 0;
+                       z-index: 1;
+                       }
+.slider_main .txtBox {position: absolute;
+                      top: 0;
+                      right: 10%;}
+.slider_main .reservation {position: absolute;
+                           bottom: -15%;}
+.slider_main .imgBox2 {position: absolute;
+                       bottom: -10%;
+                    rotate: 340deg;}
 
 
 
@@ -228,79 +339,219 @@ img {
 /* ############################################################## */
 
 
+
+
 .notice_box {
 
-    width: 100%;
-    height: auto;
+    width: 1920px;
+    height: 1050px;
+    flex-direction: column;
+    margin-top: 150px;
 
-    background-color: #FAF6EB;
-    margin-top: 20px;
+
+}
+
+
+.subject_rightBox {
+    display: flex;
+    position: relative;
+}
+
+
+
+.subject_right {
+    position: absolute;
+    top: -300px;
+    right: 0;
+    width: 685px;
+    height: 165px;
+    background-color: #F6EBD9;
+    border-top-left-radius: 500px;
+    border-bottom-left-radius: 500px;
+    margin-top: 150px;
+    margin-bottom: 80px;
+}
+
+.subject_right .subject_txt {
+    width: 100%;
+    margin-left: 220px;
+    padding-top: 25px;
+}
+
+.subject_right .subject_txt h2 {
+    font-size: 45px;
+    font-weight: bold;
+    font-family: "Noto Sans KR", serif;
+    color: #785379;
+}
+
+.subject_right .subject_txt p {
+    font-size: 22px;
+    font-weight: normal;
+    font-family: "Noto Sans KR", serif;
+    color: #888888;
+}
+
+
+.contentsBox {
+    width: 1670px;
+    height: 540px;
+    display: flex;
+    background-color: #ffd700;
+}
+
+
+.contentsBox .map {width: 1050px;
+                  height: 480px;
+                  background-color: #5B5B5B;}
+.contentsBox .map .mapBox {}
+.contentsBox .map .info-box {width: 380px;
+                            height: 140px;
+                            border-radius: 10px;
+                            background-color: #F3E1CB;}
+
+.contentsBox .map .info-box h3 {font-size: 28px;
+                                font-weight: bold;
+                                font-family: "Noto Sans KR", serif;
+                                color: #5C5C5C;
+                                text-align: right;
+                                margin-right: 20px;
+                                margin-left: 20px;
+                                border-bottom: 1px solid #948E85;}
+.contentsBox .map .info-box p {font-size: 18px;
+                               font-weight: normal;
+                               font-family: "Noto Sans KR", serif;
+                               color: #5C5C5C;
+                               text-align: right;
+                               margin-right: 20px;}
+                               
+.contentsBox .map .info-box p i {vertical-align: bottom;}
+
+
+.contentsBox .notice {}
+.contentsBox .notice ul {}
+.contentsBox .notice ul li {}
+.contentsBox .notice ul li a {}
+
+.contentsBox .notice .more {width: 100%;
+    display: flex;
+    position: relative;}
+
+
+
+
+
+.contentsBox .notice .more a {
+
+    position: absolute;
+    right: 0;
+    padding: 2px;
+    border: 0.75px solid #888888;
+    border-radius: 5px;
+    text-align: center;
+    color: #888888;
+    font-size: 18px;
+    font-family: "Noto Sans KR", serif;
+    /* margin-left: 1380px; */
 
 }
 
 
 
 
+
+/* newmember########################################## */
+
+
 .newmember {
-    display: flex;
+
     width: 100%;
     height: 1010px;
 
-    background-color: cornflowerblue;
+
 }
 
 .slider_second {
     width: 100%;
     height: 790px;
 
-    background-color: darkcyan;
+
 }
 
 .find {
     width: 100%;
     height: 1230px;
-
-    background-color: darkslateblue;
 }
 
 
+
+
 /* video####################################################################### */
-.videoBox {}
+.videoBox {
+    width: 1920px;
 
-.title_left {position: relative;}
-.title_left .titleBox_txt {position: absolute;} 
+}
 
-.title_left:nth-child(1) {left: 0;
-                          top: 500px;
-                          z-index: 3;}
+.subject_left {
+    width: 685px;
+    height: 165px;
+    background-color: #F6EBD9;
+    border-top-right-radius: 500px;
+    border-bottom-right-radius: 500px;
+    margin-top: 150px;
+    margin-bottom: 80px;
+}
 
-.title_left:nth-child(2) {left: 0;
-                          top: 0;
-                          z-index: 2;}
+.subject_left .subject_txt {
+    width: 100%;
+    margin-left: 220px;
+    padding-top: 25px;
+}
 
-.title_left:nth-child(3) {left: 0;
-                          top: 0;
-                          z-index: 1;}
+.subject_left .subject_txt h2 {
+    font-size: 45px;
+    font-weight: bold;
+    font-family: "Noto Sans KR", serif;
+    color: #785379;
+}
+
+.subject_left .subject_txt p {
+    font-size: 22px;
+    font-weight: normal;
+    font-family: "Noto Sans KR", serif;
+    color: #888888;
+}
 
 
 
 
 .video {
     width: 1440px;
-        margin: 0 auto;
+    margin: 0 auto;
 
-    background-color: #FAF6EB;
+
 }
 
-.video .titleBox {float: left;
-                  width: 50%;}
-.video::after {display: block; content: ''; clear: both;}
+.video .titleBox {
+    float: left;
+    width: 50%;
+}
 
-.video .titleBox:nth-child(odd) {padding-right: 15px;
-                                 box-sizing: border-box;}
-                        
-.video .titleBox:nth-child(even) {padding-left: 15px;
-                                 box-sizing: border-box;}
+.video::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.video .titleBox:nth-child(odd) {
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+.video .titleBox:nth-child(even) {
+    padding-left: 15px;
+    box-sizing: border-box;
+}
 
 
 .video .titleBox a {
@@ -310,7 +561,7 @@ img {
     color: #000;
     text-decoration: none;
     margin-bottom: 10px;
-    
+
 }
 
 .video .titleBox a img {
@@ -331,7 +582,7 @@ img {
     margin-right: 15px;
     color: #785379;
     text-align: center;
-    
+
 }
 
 .video .titleBox a p {
@@ -346,22 +597,32 @@ img {
 
 
 .video .more {
-    display: block;
-    justify-items: end;
-    margin-top: 0px;
     width: 100%;
+    display: flex;
+    position: relative;
+
 }
 
 .video .more a {
-    
+
+    position: absolute;
+    right: 0;
+    padding: 2px;
     border: 0.75px solid #888888;
     border-radius: 5px;
     text-align: center;
     color: #888888;
     font-size: 18px;
     font-family: "Noto Sans KR", serif;
-    
+    /* margin-left: 1380px; */
+
 }
+
+
+
+
+
+
 
 
 /* .info############################################################################# */
@@ -371,10 +632,5 @@ img {
     width: 100%;
     height: 3060px;
 
-    background-color: darkviolet;
+
 }
-
-
-
-
-

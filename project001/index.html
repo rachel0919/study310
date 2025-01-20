@@ -71,41 +71,52 @@
 
             <section class="reservation">
 
-                <div class="reservation-box">
+                
                     <form>
+                        <div class="reservation-box">
 
 
                         <div class="reser_box1">
                             <label for="purpose"><strong>방문목적</strong>을 선택해주세요</label>
-                            <select id="purpose" name="purpose" required>
-                                <option value="" disabled selected>방문목적</option>
-                                <option value="adopt">입양하고싶어요</option>
-                                <option value="rescue">구조하고싶어요</option>
+                            <div class="selectBox">
+                                <i class="fa-solid fa-dog"></i>
+                                <select id="purpose" name="purpose" required> 
+
+                                    <option value="" disabled selected>방문목적</option>
+                                    <option value="adopt">&nbsp;&nbsp;&nbsp;입양하고싶어요&nbsp;&nbsp;&nbsp;</option>
+                                    <option value="rescue">&nbsp;&nbsp;&nbsp;구조하고싶어요&nbsp;&nbsp;&nbsp;</option>
+                                    
+                                </select>
                                 
-                            </select>
+                            </div>
                         </div>
 
                         <div class="reser_box2">
                             <label for="date"><strong>날짜</strong>를 선택해주세요</label>
-                            <input type="date" id="date" name="date" required>
+                            <div class="selectBox">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <input type="date" id="date" name="date" required>
+                            </div>
                         </div>
             
                         <div class="reser_box3">
-                            <button type="submit">예약하기</button>
+                            <p>예약하기</p>
                         </div>
+                    </div>
 
 
                     </form>
 
-                    
-                </div>
-            
 
             </section>
+
+
 
             <div class="imgBox2">
                 <img src="img/board001_002.png" alt="">
             </div>
+
+
 
 
         </section>
@@ -113,37 +124,73 @@
 
 
     <div class="notice_box">
-            <div class="titleBox">
-                <h2></h2>
-                <p></p>
+
+
+        <div class="subject_rightBox">
+            <div class="subject_right">
+                <div class="subject_txt">
+                    
+                    <h2>알림게시판</h2>
+                    <p>우리의 발걸음을 이어갈 소중한 소식을 전합니다</p>
+    
+                </div>
+                
             </div>
-            <div class="contentsBox">
+        </div>
+
+        <div class="contentsBox">
+
                 <section class="map"> 
-                    <!-- map을 기준으로 textBox postion 
-                    <div class="mapBox"> 구글맵넣을예정이니까 사이즈만 잡고 백그라운드색만 넣어놓기</div>
-                    <div class="textBox">주소넣는거</div>-->
+                    <!-- map을 기준으로 textBox postion--> 
+                    <div class="mapBox"> 
+                        
+                        <!-- 구글맵넣을예정이니까 사이즈만 잡고 백그라운드색만 넣어놓기 -->
+
+                    </div>
+                    
+                    
+                    <div class="info-box">
+
+                        <h3>한국동물구조관리협회</h3>
+                        <p>대한민국 경기도 양주시 남면 감악산로 63-37</p>
+                        <p><i class="fa-solid fa-phone"></i> 031-867-9119</p>
+                
+                    </div>
                 </section> 
+
                 <section class="notice">
-                    <!-- notice를 기준으로 more positon  
+                    <!-- notice를 기준으로 more positon-->  
                     <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="">유기동물 입양 상담회 개최 안내</a></li>
+                        <li><a href="">우리 센터 동물 친구들, 지금 잘 지내고 있어요!</a>
+                        
+                        </li>
+                        <li><a href="">KARMA와 함께하는 연말 후원 이벤트</a></li>
+                        <li><a href="">겨울철 야생동물 보호 캠페인 및 봉사활동</a></li>
                     </ul>
-                    <p class="more">더보기</p>
+                    <p class="more"><a href="">더보기</a></p>
                 </section>
-            </div>-->
+
+
+            </div>
     </div>
+
+
+
         <section class="newmember">
 
-            <!--  
+            <div class="subject_left">
+                <div class="subject_txt">
+                    
+                    <h2>새가족찾기</h2>
+                    <p>가족이 되어줄 당신을 기다리고 있어요</p>
 
+                </div>
                 
-            <div class="titleBox">
-                <h2></h2>
-                <p></p>
             </div>
+
+            
+            <!--
             <div class="btn">
                 <ul>
                     <li>왼</li>
@@ -209,10 +256,18 @@
              
         </section>
         <section class="find">
-            <div class="titleBox">
-                <h2></h2>
-                <p></p>
+          
+            <div class="subject_left">
+                <div class="subject_txt">
+                    
+                    <h2>반려동물찾기</h2>
+                    <p>함께했던 시간을 기억하며 당신을 찾고 있어요</p>
+
+                </div>
+                
             </div>
+
+
             <div class="listBox">
                 <!-- listBox 를 기준으로 more position -->
                 <ul>
@@ -253,11 +308,17 @@
 
         <div class="videoBox">
 
-            <div class="titleBox_left">
-                <div class="titleBox_txt"><h2>보이는이야기</h2></div>
-                <div class="titleBox_txt"><p>소중한 순간들을 나누며 더 나은 내일을 꿈꿉니다</p></div>
-                <div class="titleBox_txt"><img src="img/title_left_001.png" alt=""></div>
+            <div class="subject_left">
+                <div class="subject_txt">
+                    
+                    <h2>보이는이야기</h2>
+                    <p>소중한 순간들을 나누며 더 나은 내일을 꿈꿉니다</p>
+
+                </div>
+                
             </div>
+
+
 
             <section class="video">
                 <div class="titleBox">
