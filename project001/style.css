@@ -36,6 +36,10 @@ img {
     background-color: #FAF6EB;
 }
 
+.body {
+    overflow-x: hidden;
+}
+
 
 
 /* ################################################## */
@@ -49,9 +53,11 @@ img {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 100%;
     height: 150px;
     position: relative;
+    width: 80%;
+    margin: 0 auto;
+    z-index: 2;
 
 }
 
@@ -82,7 +88,9 @@ img {
     color: #3D3D3D;
 }
 
-.header nav ul li:nth-child(6) a {padding-right: 0px;}
+.header nav ul li:nth-child(6) a {
+    padding-right: 0px;
+}
 
 
 
@@ -94,29 +102,36 @@ img {
 .slider_main {
     display: flex;
     flex-wrap: wrap;
-    width: 1990px;
-    height: 890px;
-
+    width: 100%;
+    height: 100vh;
     position: relative;
+
 }
 
-.imgBox1 {
-    width: 60%;
+.slider_main .imgBox1 {
+    
     display: flex;
+    position: absolute;
+    top: -10%;
+    left: 0;
+    z-index: 1;
+    max-width: 100%;
+    
 
 }
 
-.imgBox1 .img {}
+.slider_main .imgBox1 .img {}
 
-.txtBox {
+.slider_main .txtBox {
     width: 40%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     text-align: end;
     margin-top: 40px;
-
-
+    position: absolute;
+    top: 0;
+    right: 10%;
 
 }
 
@@ -163,13 +178,14 @@ img {
 
 
 .imgBox2 {
-    width: 100%;
+    max-width: 200px;
     display: flex;
     position: absolute;
-    bottom: 0;
     right: 0;
+    top: 26%;
     justify-content: flex-end;
     padding: 20px;
+    transform: rotate(-20deg);
 
 
     /* display: flex;
@@ -184,8 +200,10 @@ img {
 }
 
 .imgBox2 .img {
-    width: 150px;
-    height: auto;
+        
+    
+   
+
 
 }
 
@@ -197,15 +215,24 @@ img {
 
 
 
-.reservation {}
+.reservation {
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+    margin: 0 auto;
+    
+}
 
 .reservation form {}
 
 
 .reservation .reservation-box {
 
-
+    width: 80%;
+    height: 130px;
     display: flex;
+    justify-content: space-between;
 
 
     border: 3px solid #3D3D3D;
@@ -213,9 +240,8 @@ img {
     border-right-width: 7px;
     border-bottom-width: 7px;
 
-    margin: 240px;
-    width: auto;
-    height: 130px;
+    margin: 140px;
+
 
 
 }
@@ -224,7 +250,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 470px;
+    width: 40%;
     border-right: 0.75px solid #3D3D3D;
     margin-left: 50px;
     font-size: 22px;
@@ -236,9 +262,10 @@ img {
 .reservation .reservation-box .reser_box1 .purpose {}
 
 .reservation .reservation-box .reser_box1 .selectBox {
-    width: 400px;
+    width: 100%;
     margin-top: 2px;
     /* background-color: red; */
+    
     display: flex;
     position: relative;
 }
@@ -246,7 +273,7 @@ img {
 .reservation .reservation-box .reser_box1 .selectBox select {
     position: absolute;
 
-    right: 0;
+    right: 5%;
     border: none;
     background-color: transparent;
     font-size: 28px;
@@ -269,21 +296,27 @@ img {
 
 }
 
-.reservation .reservation-box .reser_box2 .selectBox {margin-top: 2px;
-                                                      display: flex;
-                                                      position: relative;}
+.reservation .reservation-box .reser_box2 .selectBox {
+    margin-top: 2px;
+    display: flex;
+    position: relative;
+}
 
 
-.reservation .reservation-box .reser_box2 input {position: absolute;
-                                                 width: 300px;
-                                                 right: 100px;
-                                                 border: none;
-                                                 background-color: transparent;
-                                                 font-size: 28px;
-                                                 font-family: "Noto Sans KR", serif;}
+.reservation .reservation-box .reser_box2 input {
+    position: absolute;
+    width: 300px;
+    right: 100px;
+    border: none;
+    background-color: transparent;
+    font-size: 28px;
+    font-family: "Noto Sans KR", serif;
+}
 
 
-.reservation .reservation-box .reser_box2 i {margin-top: 15px;}
+.reservation .reservation-box .reser_box2 i {
+    margin-top: 15px;
+}
 
 
 .reservation .reservation-box .reser_box3 {
@@ -305,16 +338,14 @@ img {
     font-family: "Noto Sans KR", serif;
     font-weight: bold;
 
-
-
 }
 
-/* hero부분 포지션 재정리###################################### */
-.header {width: 80%;
-    margin: 0 auto;
-        z-index: 2;}
 
-.slider_main {display: flex;
+
+/* hero부분 포지션 재정리###################################### */
+
+
+/* .slider_main {display: flex;
               position: relative;
               }
 
@@ -323,7 +354,7 @@ img {
                        top: -100px;
                        left: 0;
                        z-index: 1;
-                       }
+                       } 
 .slider_main .txtBox {position: absolute;
                       top: 0;
                       right: 10%;}
@@ -331,9 +362,7 @@ img {
                            bottom: -15%;}
 .slider_main .imgBox2 {position: absolute;
                        bottom: -10%;
-                    rotate: 340deg;}
-
-
+                    rotate: 340deg;}*/
 
 
 /* ############################################################## */
@@ -343,8 +372,8 @@ img {
 
 .notice_box {
 
-    width: 1920px;
-    height: 1050px;
+    width: 100%;
+    height: auto;
     flex-direction: column;
     margin-top: 150px;
 
@@ -363,13 +392,13 @@ img {
     position: absolute;
     top: -300px;
     right: 0;
-    width: 685px;
+    width: 40%;
     height: 165px;
     background-color: #F6EBD9;
     border-top-left-radius: 500px;
     border-bottom-left-radius: 500px;
     margin-top: 150px;
-    margin-bottom: 80px;
+   
 }
 
 .subject_right .subject_txt {
@@ -394,48 +423,140 @@ img {
 
 
 .contentsBox {
-    width: 1670px;
+    margin-top: 80px;
+    margin-left: 3%;
+    width: 90%;
     height: 540px;
     display: flex;
     background-color: #ffd700;
+
 }
 
 
-.contentsBox .map {width: 1050px;
-                  height: 480px;
-                  background-color: #5B5B5B;}
-.contentsBox .map .mapBox {}
-.contentsBox .map .info-box {width: 380px;
-                            height: 140px;
-                            border-radius: 10px;
-                            background-color: #F3E1CB;}
-
-.contentsBox .map .info-box h3 {font-size: 28px;
-                                font-weight: bold;
-                                font-family: "Noto Sans KR", serif;
-                                color: #5C5C5C;
-                                text-align: right;
-                                margin-right: 20px;
-                                margin-left: 20px;
-                                border-bottom: 1px solid #948E85;}
-.contentsBox .map .info-box p {font-size: 18px;
-                               font-weight: normal;
-                               font-family: "Noto Sans KR", serif;
-                               color: #5C5C5C;
-                               text-align: right;
-                               margin-right: 20px;}
-                               
-.contentsBox .map .info-box p i {vertical-align: bottom;}
-
-
-.contentsBox .notice {}
-.contentsBox .notice ul {}
-.contentsBox .notice ul li {}
-.contentsBox .notice ul li a {}
-
-.contentsBox .notice .more {width: 100%;
+.contentsBox .map {
+    width: 65%;
+    height: 100%;
+    background-color: #5B5B5B;
+    border-radius: 10px;
     display: flex;
-    position: relative;}
+    position: relative;
+}
+
+.contentsBox .map .mapBox {}
+
+
+.contentsBox .map .map_forposition {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.contentsBox .map .info-box {
+    width: 380px;
+    height: 140px;
+    border-top-left-radius: 10px;
+    position: absolute;
+    background-color: #F3E1CB;
+    display: flex;
+    position: relative;
+    border: 8px solid #F6EBD9;
+    box-sizing: content-box;
+
+}
+
+.contentsBox .map .info-box .map_textBox {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+}
+
+.contentsBox .map .info-box h3 {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "Noto Sans KR", serif;
+    color: #5C5C5C;
+    text-align: right;
+
+    border-bottom: 1px solid #948E85;
+}
+
+.contentsBox .map .info-box p {
+    font-size: 18px;
+    font-weight: normal;
+    font-family: "Noto Sans KR", serif;
+    color: #5C5C5C;
+    text-align: right;
+
+    margin-top: 5px;
+    line-height: 1;
+}
+
+.contentsBox .map .info-box p i {
+    vertical-align: bottom;
+    
+}
+
+
+.contentsBox .notice {
+    width: 35%;
+    height: 100%;
+    background-color: #948E85;
+    margin-left: 8px;
+}
+
+.contentsBox .notice ul {}
+
+.contentsBox .notice ul li {
+    width: 100%;
+    min-height: 70px;
+    color: #3D3D3D;
+    font-family: "Noto Sans KR", serif;
+    font-size: 22px;
+    border: 2px solid #969696;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row; /* 요소를 가로로 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+    position: relative;
+    padding: 15px 15px 15px 15px; /* 안쪽 여백 */
+    box-sizing: border-box;
+    align-items: center;
+    
+    
+}
+
+
+.contentsBox .notice ul li a {
+    flex: 1; /* a 태그가 가능한 넓이를 차지하도록 설정 */
+    text-align: left; /* 가로로 왼쪽 정렬 */
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+
+.contentsBox .notice ul li i {position: absolute;
+    
+    top: 20px;
+    right: 15px; }
+
+.contentsBox .notice ul li:nth-child(2) { flex-direction: column; /* 세로 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    }
+
+.contentsBox .notice ul li:nth-child(2) p {color: #3D3D3D;
+    flex: 2; /* p 태그가 더 많은 공간을 차지 */
+    text-align: left; /* 가로로 왼쪽 정렬 */
+    margin: 0; /* 기본 여백 제거 */
+    margin-left: 15px;
+    
+    line-height: 1.5; /* 줄 간격 조절 */
+    word-break: break-word; /* 긴 내용 줄바꿈 */}
+
+.contentsBox .notice .more {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
 
 
 
@@ -466,21 +587,21 @@ img {
 .newmember {
 
     width: 100%;
-    height: 1010px;
+    
 
 
 }
 
 .slider_second {
     width: 100%;
-    height: 790px;
+    
 
 
 }
 
 .find {
     width: 100%;
-    height: 1230px;
+    
 }
 
 
@@ -488,12 +609,12 @@ img {
 
 /* video####################################################################### */
 .videoBox {
-    width: 1920px;
+    width: 100%;
 
 }
 
 .subject_left {
-    width: 685px;
+    width: 40%;
     height: 165px;
     background-color: #F6EBD9;
     border-top-right-radius: 500px;
@@ -526,7 +647,7 @@ img {
 
 
 .video {
-    width: 1440px;
+    width: 80%;
     margin: 0 auto;
 
 
@@ -566,6 +687,7 @@ img {
 
 .video .titleBox a img {
     width: 100%;
+    max-width: 1000px;
     height: auto;
     border: none;
     vertical-align: bottom;
@@ -630,7 +752,7 @@ img {
 
 .info {
     width: 100%;
-    height: 3060px;
+    
 
 
 }
