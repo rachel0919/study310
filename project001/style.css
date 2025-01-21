@@ -428,8 +428,7 @@ img {
     width: 90%;
     height: 540px;
     display: flex;
-    background-color: #ffd700;
-
+    
 }
 
 
@@ -455,11 +454,14 @@ img {
     width: 380px;
     height: 140px;
     border-top-left-radius: 10px;
+    
     position: absolute;
     background-color: #F3E1CB;
     display: flex;
     position: relative;
-    border: 8px solid #F6EBD9;
+    border: 8px solid #FAF6EB;
+    border-bottom-width: 0;
+    border-right-width: 0;
     box-sizing: content-box;
 
 }
@@ -467,7 +469,7 @@ img {
 .contentsBox .map .info-box .map_textBox {
     position: absolute;
     top: 15%;
-    right: 10%;
+    right: 5%;
 }
 
 .contentsBox .map .info-box h3 {
@@ -500,7 +502,7 @@ img {
 .contentsBox .notice {
     width: 35%;
     height: 100%;
-    background-color: #948E85;
+    
     margin-left: 8px;
 }
 
@@ -521,6 +523,7 @@ img {
     padding: 15px 15px 15px 15px; /* 안쪽 여백 */
     box-sizing: border-box;
     align-items: center;
+    margin-bottom: 8px;
     
     
 }
@@ -537,25 +540,30 @@ img {
 .contentsBox .notice ul li i {position: absolute;
     
     top: 20px;
-    right: 15px; }
+    right: 15px;
+    color: #969696; }
 
 .contentsBox .notice ul li:nth-child(2) { flex-direction: column; /* 세로 정렬 */
     align-items: flex-start; /* 왼쪽 정렬 */
+    
     }
 
 .contentsBox .notice ul li:nth-child(2) p {color: #3D3D3D;
     flex: 2; /* p 태그가 더 많은 공간을 차지 */
     text-align: left; /* 가로로 왼쪽 정렬 */
-    margin: 0; /* 기본 여백 제거 */
-    margin-left: 15px;
-    
+    margin: 15px; /* 기본 여백 제거 */
+    margin-left: 15px; /* 왼쪽 여백 추가 */
+    padding-top: 10px; /* 내부 여백으로 공간 확보 */
+    border-top: 1px solid #959595; /* 상단 테두리 설정 */
     line-height: 1.5; /* 줄 간격 조절 */
-    word-break: break-word; /* 긴 내용 줄바꿈 */}
+    word-break: break-word; /* 긴 내용 줄바꿈 */
+    }
 
 .contentsBox .notice .more {
     width: 100%;
     display: flex;
     position: relative;
+    /* padding: 8px; */
 }
 
 
@@ -588,9 +596,42 @@ img {
 
     width: 100%;
     
+}
 
+
+
+
+
+
+
+
+.newmember .more {
+    width: 100%;
+    display: flex;
+    position: relative;
+    /* padding: 8px; */
+}
+
+
+
+
+
+.newmember .more a {
+
+    position: absolute;
+    right: 0;
+    padding: 2px;
+    border: 0.75px solid #888888;
+    border-radius: 5px;
+    text-align: center;
+    color: #888888;
+    font-size: 18px;
+    font-family: "Noto Sans KR", serif;
+    /* margin-left: 1380px; */
 
 }
+
+
 
 .slider_second {
     width: 100%;
