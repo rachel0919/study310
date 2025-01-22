@@ -613,17 +613,27 @@ img {
 
 .newmember .subject_left {}
 
-.newmember .btn {position: relative;}
-.newmember .btn ul {display: flex;
-                    position: absolute;
-                    top: -100px;
-                    right: 10%;}
+.newmember .btn {
+    position: relative;
+}
 
-.newmember .btn ul li {margin-left: 40px;
-                       scale: 300%;
-                       }
-.newmember .btn ul li a { }
-.newmember .btn ul li a i {color: #785379;}
+.newmember .btn ul {
+    display: flex;
+    position: absolute;
+    top: -100px;
+    right: 10%;
+}
+
+.newmember .btn ul li {
+    margin-left: 40px;
+    scale: 300%;
+}
+
+.newmember .btn ul li a {}
+
+.newmember .btn ul li a i {
+    color: #785379;
+}
 
 
 .newmember .imgBox {
@@ -632,17 +642,17 @@ img {
 }
 
 .newmember .imgBox .imgBox_con {
-    
+
     display: flex;
-   /*  overflow-x: scroll;
+    /*  overflow-x: scroll;
     가로 스크롤 활성화 */
 
     width: 1440px;
     max-width: 1440px;
     margin: 0 auto;
     overflow: hidden;
-    
-    
+
+
 }
 
 .newmember .imgBox .imgBox_con ul {}
@@ -654,74 +664,94 @@ img {
     border: 1px solid #3D3D3D;
     padding: 20px;
     margin-right: 8px;
-    height: auto; 
-    max-width: 24.5%; 
-    flex: 0 0 24.5%; 
+    height: auto;
+    max-width: 24.5%;
+    flex: 0 0 24.5%;
     padding-bottom: calc(3% * 0.66);
     position: relative;
     overflow: hidden;
-    
+
 }
 
 
-.card .img_w_bg {background-color: #AA7878;
-                 border-radius: 50%;
-                 overflow: hidden;
-                 width: 100%;
-                 height: 100%;
-                 aspect-ratio: 1 / 1.15;
-                 position: relative;
-                 margin: 0 auto;
-                 border: 1px solid #3D3D3D;}
-
- 
-.card .img_w_bg img {width: 120%; /* 이미지 크기 조정 */
-                     height: auto; /* 이미지 비율 유지 */
-                     object-fit: cover; /* 이미지를 꽉 채움 */
-                     position: absolute; /* 부모 기준 위치 고정 */
-                     top: 10%; 
-                     left: 0; 
-                     }
-
-.card:nth-child(2) .img_w_bg img {width: 120%; 
-                                  height: auto; 
-                                  object-fit: cover; 
-                                  position: absolute;
-                                  top: -10%; 
-                                  left: -17%;  
-                                  
-    }
-
-    
-.card:nth-child(3) .img_w_bg img {width: 120%; 
-                                  height: auto; 
-                                  object-fit: cover; 
-                                  position: absolute; 
-                                  top: 10%; 
-                                  left: -10%; 
-                                  
-    }
+.card .img_w_bg {
+    background-color: #AA7878;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1.15;
+    position: relative;
+    margin: 0 auto;
+    border: 1px solid #3D3D3D;
+}
 
 
-.card:nth-child(4) .img_w_bg img {width: 120%; 
-                                  height: auto; 
-                                  object-fit: cover; 
-                                  position: absolute; 
-                                  top: -25%; 
-                                  left: -10%; 
-    }
+.card .img_w_bg img {
+    width: 120%;
+    /* 이미지 크기 조정 */
+    height: auto;
+    /* 이미지 비율 유지 */
+    object-fit: cover;
+    /* 이미지를 꽉 채움 */
+    position: absolute;
+    /* 부모 기준 위치 고정 */
+    top: 10%;
+    left: 0;
+}
 
-.card:nth-child(2) .img_w_bg {background-color: #E19069;}
-.card:nth-child(3) .img_w_bg {background-color: #FAF28D;}
-.card:nth-child(4) .img_w_bg {background-color: #F3E1CB;}
+.card:nth-child(2) .img_w_bg img {
+    width: 120%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: -10%;
+    left: -17%;
+
+}
+
+
+.card:nth-child(3) .img_w_bg img {
+    width: 120%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 10%;
+    left: -10%;
+
+}
+
+
+.card:nth-child(4) .img_w_bg img {
+    width: 120%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: -25%;
+    left: -10%;
+}
+
+.card:nth-child(2) .img_w_bg {
+    background-color: #E19069;
+}
+
+.card:nth-child(3) .img_w_bg {
+    background-color: #FAF28D;
+}
+
+.card:nth-child(4) .img_w_bg {
+    background-color: #F3E1CB;
+}
 
 
 
 
 
-.card a {display: flex;
-         flex-direction: column;
-         position: relative;}
+.card a {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
 
 
 .card .status {
@@ -737,24 +767,31 @@ img {
     font-size: 22px;
     font-family: "Noto Sans KR", serif;
     margin-bottom: 10px;
-    
-}
-.card .status .status_txt {  padding-left: 15px; /* 왼쪽 패딩 */
-    margin-right: 10px; }
 
-.card .status .status_txt:nth-child(2) {position: relative;
-    padding-left: 10px;}
+}
+
+.card .status .status_txt {
+    padding-left: 15px;
+    /* 왼쪽 패딩 */
+    margin-right: 10px;
+}
+
+.card .status .status_txt:nth-child(2) {
+    position: relative;
+    padding-left: 10px;
+}
 
 .card .status .status_txt:nth-child(2)::before {
-        content: '';
-        position: absolute;
-        top: 12%;
-        left: -20%;
-        height: 80%;
-        width: 2px;
-        background-color: #fff;
-        margin-left: 10px; /* 구분선과 텍스트 사이의 간격 추가 */
-    }
+    content: '';
+    position: absolute;
+    top: 12%;
+    left: -20%;
+    height: 80%;
+    width: 2px;
+    background-color: #fff;
+    margin-left: 10px;
+    /* 구분선과 텍스트 사이의 간격 추가 */
+}
 
 
 
@@ -766,6 +803,7 @@ img {
     padding: 0;
     margin-top: 10px;
 }
+
 .card .location {
     font-size: 22px;
     color: #3D3D3D;
@@ -774,7 +812,7 @@ img {
     padding: 0;
 }
 
- 
+
 
 .newmember .more {
     width: 100%;
@@ -811,24 +849,113 @@ img {
 
 
 
-.slider_second {width: 100%;}
+.slider_second {
+    width: 100%;
+    margin-top: 150px;
+}
 
 .slider_second .con_box {}
 
 
 
 
-.slider_second .con_box .con1 {width: 100%;
-                               height: 790px;
-                               background-color: #785379;
-                               position: relative;}
-.slider_second .con_box .con1 img {position: absolute;
-                                   bottom: -5%;}
-.con1 .txtBox_rescue {}
+.slider_second .con_box .con1 {
+    width: 100%;
+    height: 790px;
+    background-color: #785379;
+    position: relative;
+    display: flex;
+}
 
-.con1 .listBox{}
+.slider_second .con_box .con1 img {
+    position: absolute;
+    bottom: -5%;
+}
+
+.con1 .txtBox_rescue {
+    width: 70%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.con1 .txtBox_rescue .txt_main {
+    font-size: 71px;
+    color: #FAF6EB;
+    font-family: "Grandiflora One", serif;
+
+
+
+    text-shadow:
+        -1px -1px 0 #FAF6EB,
+        1px -1px 0 #FAF6EB,
+        -1px 1px 0 #FAF6EB,
+        1px 1px 0 #FAF6EB;
+    /* 스트로크 효과 */
+}
+
+.con1 .txtBox_rescue .txt_sub {
+    font-size: 26px;
+    color: #FAF6EB;
+    font-family: "Noto Sans KR", serif;
+    margin-top: 50px;
+}
+
+.con1 .listBox {
+    width: 30%;
+    z-index: 1;
+}
+
 .con1 .listBox ul {}
-.con1 .listBox ul li {}
+
+.con1 .listBox ul li {
+    width: 90%;
+    height: 35%;
+    background-color: #FAF6EB;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 30px;
+}
+
+
+
+
+.con1 .listBox ul li .text_list {
+    font-size: 26px;
+    color: #785379;
+    font-weight: bold;
+    font-family: "Noto Sans KR", serif;
+}
+
+.con1 .listBox ul li .text_main {
+    font-size: 26px;
+    color: #3D3D3D;
+    font-weight: normal;
+    font-family: "Noto Sans KR", serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.con1 .listBox ul li .text_info {
+    font-size: 18px;
+    color: #636363;
+    font-family: "Noto Sans KR", serif;
+    display: flex;
+   
+}
+.text_info .info_date {margin-left: 10px;
+                       /* border-left: 1px solid #636363; */
+                       position: relative;
+                       padding-left: 5px;
+                    }
+
+.text_info .info_date::before {content: '';
+    position: absolute;
+    top: 22%;
+    left: -15%;
+    height: 70%;
+    width: 2px;
+    background-color: #8b8b8b;
+    margin-left: 10px;}
 
 
 
@@ -837,11 +964,14 @@ img {
 
 
 .slider_second .con_box .con2 {}
+
 .slider_second .con_box .con3 {}
 
 
 .slider_second .btn {}
+
 .slider_second .btn ul {}
+
 .slider_second .btn ul li {}
 
 
