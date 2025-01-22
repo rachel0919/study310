@@ -613,7 +613,18 @@ img {
 
 .newmember .subject_left {}
 
-.newmember .btn {}
+.newmember .btn {position: relative;}
+.newmember .btn ul {display: flex;
+                    position: absolute;
+                    top: -100px;
+                    right: 10%;}
+
+.newmember .btn ul li {margin-left: 40px;
+                       scale: 300%;
+                       }
+.newmember .btn ul li a { }
+.newmember .btn ul li a i {color: #785379;}
+
 
 .newmember .imgBox {
     display: flex;
@@ -623,10 +634,13 @@ img {
 .newmember .imgBox .imgBox_con {
     
     display: flex;
-    overflow-x: scroll;
-    /* 가로 스크롤 활성화 */
+   /*  overflow-x: scroll;
+    가로 스크롤 활성화 */
 
-    max-width: 1600px;
+    width: 1440px;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
     
     
 }
@@ -640,23 +654,135 @@ img {
     border: 1px solid #3D3D3D;
     padding: 20px;
     margin-right: 8px;
-    max-width: 25%;
-    flex: 0 0 25%; /* 카드의 고정 크기 */
+    height: auto; 
+    max-width: 24.5%; 
+    flex: 0 0 24.5%; 
+    padding-bottom: calc(3% * 0.66);
+    position: relative;
+    overflow: hidden;
+    
 }
 
 
 .card .img_w_bg {background-color: #AA7878;
-                 border-radius: 50%;}
+                 border-radius: 50%;
+                 overflow: hidden;
+                 width: 100%;
+                 height: 100%;
+                 aspect-ratio: 1 / 1.15;
+                 position: relative;
+                 margin: 0 auto;
+                 border: 1px solid #3D3D3D;}
+
+ 
+.card .img_w_bg img {width: 120%; /* 이미지 크기 조정 */
+                     height: auto; /* 이미지 비율 유지 */
+                     object-fit: cover; /* 이미지를 꽉 채움 */
+                     position: absolute; /* 부모 기준 위치 고정 */
+                     top: 10%; 
+                     left: 0; 
+                     }
+
+.card:nth-child(2) .img_w_bg img {width: 120%; 
+                                  height: auto; 
+                                  object-fit: cover; 
+                                  position: absolute;
+                                  top: -10%; 
+                                  left: -17%;  
+                                  
+    }
+
+    
+.card:nth-child(3) .img_w_bg img {width: 120%; 
+                                  height: auto; 
+                                  object-fit: cover; 
+                                  position: absolute; 
+                                  top: 10%; 
+                                  left: -10%; 
+                                  
+    }
 
 
+.card:nth-child(4) .img_w_bg img {width: 120%; 
+                                  height: auto; 
+                                  object-fit: cover; 
+                                  position: absolute; 
+                                  top: -25%; 
+                                  left: -10%; 
+    }
+
+.card:nth-child(2) .img_w_bg {background-color: #E19069;}
+.card:nth-child(3) .img_w_bg {background-color: #FAF28D;}
+.card:nth-child(4) .img_w_bg {background-color: #F3E1CB;}
+
+
+
+
+
+.card a {display: flex;
+         flex-direction: column;
+         position: relative;}
+
+
+.card .status {
+    position: absolute;
+    display: flex;
+    top: 76%;
+    left: 21%;
+    align-items: center;
+    background-color: #ED7E48;
+    color: #fff;
+    padding: 1px 15px;
+    border-radius: 20px;
+    font-size: 22px;
+    font-family: "Noto Sans KR", serif;
+    margin-bottom: 10px;
+    
+}
+.card .status .status_txt {  padding-left: 15px; /* 왼쪽 패딩 */
+    margin-right: 10px; }
+
+.card .status .status_txt:nth-child(2) {position: relative;
+    padding-left: 10px;}
+
+.card .status .status_txt:nth-child(2)::before {
+        content: '';
+        position: absolute;
+        top: 12%;
+        left: -20%;
+        height: 80%;
+        width: 2px;
+        background-color: #fff;
+        margin-left: 10px; /* 구분선과 텍스트 사이의 간격 추가 */
+    }
+
+
+
+.card .name {
+    font-family: "Noto Sans KR", serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: #785379;
+    padding: 0;
+    margin-top: 10px;
+}
+.card .location {
+    font-size: 22px;
+    color: #3D3D3D;
+    font-family: "Noto Sans KR", serif;
+    margin-top: -2%;
+    padding: 0;
+}
+
+ 
 
 .newmember .more {
     width: 100%;
     display: flex;
     position: relative;
+    margin-top: 32px;
     /* padding: 8px; */
 }
-
 
 
 
@@ -664,7 +790,8 @@ img {
 .newmember .more a {
 
     position: absolute;
-    right: 0;
+    top: 0;
+    right: 10%;
     padding: 2px;
     border: 0.75px solid #888888;
     border-radius: 5px;
@@ -678,13 +805,51 @@ img {
 
 
 
-.slider_second {
-    width: 100%;
+/* ######################################################################### */
 
 
 
-}
 
+
+.slider_second {width: 100%;}
+
+.slider_second .con_box {}
+
+
+
+
+.slider_second .con_box .con1 {width: 100%;
+                               height: 790px;
+                               background-color: #785379;
+                               position: relative;}
+.slider_second .con_box .con1 img {position: absolute;
+                                   bottom: -5%;}
+.con1 .txtBox_rescue {}
+
+.con1 .listBox{}
+.con1 .listBox ul {}
+.con1 .listBox ul li {}
+
+
+
+
+
+
+
+.slider_second .con_box .con2 {}
+.slider_second .con_box .con3 {}
+
+
+.slider_second .btn {}
+.slider_second .btn ul {}
+.slider_second .btn ul li {}
+
+
+
+
+
+
+/* ######################################################################### */
 .find {
     width: 100%;
 
