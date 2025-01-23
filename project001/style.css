@@ -1007,13 +1007,75 @@ img {
 /* ######################################################################### */
 .find {
     width: 100%;
+    display: flex;
+    margin-top: 150px;
+    
 
 }
 
-.find .find_leftside {width: 30%;}
-.find_leftside .subject_left {width: 100%;}
+.find .find_leftside {width: 40%;
+                     
+                     
+                     
+                     }
 
-.find .find_rightside {width: 70%;}
+
+
+.find_leftside .subject_left {
+    width: 100%;
+    height: 165px;
+    background-color: #F6EBD9;
+    border-top-right-radius: 500px;
+    border-bottom-right-radius: 500px;
+    
+}
+
+
+.find_leftside .btn {
+    position: relative;
+}
+
+.find_leftside .btn ul {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.find_leftside .btn ul li {
+    margin-left: 40px;
+    scale: 300%;
+}
+
+.find_leftside .btn ul li a {}
+
+.find_leftside .btn ul li a i {
+    color: #785379;
+}
+
+.find .find_rightside {width: 60%;
+                      background-color: red;}
+
+.find .find_rightside .findBox {}
+.find .find_rightside .findBox ul {}
+.find .find_rightside .findBox ul li {}
+.find .find_rightside .findBox ul li a {}
+
+.findBox .findTextbox {width: 30%;
+                      height: 60%;
+                      background-color: #F3E1CB;
+                      }
+
+
+.findText .imgBox {width: 365px;
+                   height: 295px;
+                   overflow: hidden;
+                    position: relative;
+                    border-radius: 10px;}
+.findText img {width: 100%;
+               height: auto;
+                position: absolute;}
+
 
 
 

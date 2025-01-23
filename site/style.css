@@ -1,0 +1,171 @@
+/* 언어설정 */
+@charset 'utf-8';
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+.site {}
+.site h1 {font-size: 30px;}
+.site h1 a {}
+
+
+nav {}
+nav ul {display: flex;
+        justify-content: flex-end;}
+nav ul li {}
+nav ul li a {display: block;
+             font-size: 14px;
+             padding: 10px 15px;
+             }
+
+.box3 img {max-width: 100%;}
+
+.notice {}
+.notice h2 {margin-bottom: 5px;
+            font-size: 18px;
+            color: #666;}
+.notice ul {}
+.notice ul li {} 
+.notice ul li a {display: block;
+                    /*  a태그에서 display: block;을 해야 padding값을 줄 수 있음*/
+                padding: 5px;
+                font-size: 14px;
+                 border-bottom: dotted 2px #ddd;}
+.notice time {margin-right: 10px;
+              color: #888;
+              }
+
+.notice ul li a:hover {background-color: #eee;}
+
+
+.notice ul li a {display: flex;
+                 flex-wrap: nowrap;}
+
+
+.notice .text {}
+
+
+
+.copyright {}
+.copyright p {color: #666;
+              font-size: 14px;}
+
+
+/* 박스A아래에 경계선 그리기 */
+.boxA {border-bottom:1px solid #ddd;
+       margin-bottom: 10px;}
+
+
+
+
+/* 박스5를 바형태로 디자인하기 */
+
+.box5 {background-color: #ddd;
+       padding-top: 15px;
+       padding-bottom: 15px;}
+
+
+/* 박스 위아래 간격 설정 */
+.boxA {padding-top: 20px;
+       padding-bottom: 10px;}
+
+.box4 {padding-top: 20px;
+       padding-bottom: 20px;}
+
+
+/* 박스의 왼오 여백설정 */
+.boxA , 
+.box4 ,
+.box5 {padding-left: 15px;
+       padding-right: 15px;}
+
+
+/* 미디어쿼리구간설정################################################ */
+
+
+
+
+/* to 599px########################################################### */
+@media (max-width: 599px) {
+nav ul {justify-content: center;}
+nav ul li a {
+             font-size: 11px;
+             padding: 10px 7px;
+             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+/* 768px 이상일 때####################################################### */
+
+
+
+@media (min-width:768px) {
+/* 박스1과 박스2의 가로정렬 */
+/* flex 
+.boxA {display: flex;}
+.box1 {width: 50%;}
+.box2 {width: 50%;}*/
+
+/* after정렬방식 */
+.box1 {float: left; width: 50%;}
+.box2 {float: left; width: 50%;}
+
+.boxA::after {display: block;
+              content: '';
+              clear: both;}
+
+
+
+
+
+}
+
+
+
+/* from 1200px############################################################################## */
+@media (min-width:1200px) {
+
+
+
+
+
+.box3 ,
+.box4 ,
+.copyright ,
+.boxA_inner {width: 1200px;
+       margin: 0 auto;}
+
+
+
+}
