@@ -103,24 +103,28 @@ img {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 150px);
     position: relative;
+    /* background-color: red; */
 
 }
 
 .slider_main .imgBox1 {
 
-    display: flex;
+    
     position: absolute;
-    top: -10%;
+    bottom:80px;
     left: 0;
     z-index: 1;
-    max-width: 100%;
+    /* background-color: yellow; */
+   
+    height:calc(100vh - 150px);
 
 
 }
 
-.slider_main .imgBox1 .img {}
+ .slider_main .imgBox1 img {
+                            }
 
 .slider_main .txtBox {
     width: 40%;
@@ -182,7 +186,7 @@ img {
     display: flex;
     position: absolute;
     right: 0;
-    top: 26%;
+    bottom: 100px;
     justify-content: flex-end;
     padding: 20px;
     transform: rotate(-20deg);
@@ -212,7 +216,7 @@ img {
 .reservation {
     width: 100%;
     position: absolute;
-    bottom: 5%;
+    bottom: 0;
     left: 3%;
     margin: 0 auto;
 
@@ -235,6 +239,7 @@ img {
     border-bottom-width: 7px;
 
     margin: 140px;
+    margin-bottom: 0;
 
 
 
@@ -369,7 +374,7 @@ img {
     width: 100%;
     height: auto;
     flex-direction: column;
-    margin-top: 150px;
+    margin-top: 300px;
 
 
 }
@@ -852,6 +857,7 @@ img {
 .slider_second {
     width: 100%;
     margin-top: 150px;
+    position: relative;
 }
 
 .slider_second .con_box {}
@@ -873,7 +879,7 @@ img {
 }
 
 .con1 .txtBox_rescue {
-    width: 70%;
+    width: 60%;
     margin-left: 10%;
     margin-top: 5%;
 }
@@ -901,20 +907,32 @@ img {
 }
 
 .con1 .listBox {
-    width: 30%;
+    position: relative;
+    width: 40%;
+    height: 790px;
+    overflow: hidden;
     z-index: 1;
+    
 }
 
-.con1 .listBox ul {}
+.con1 .listBox ul {position: absolute;
+                   top: -13%;
+                   }
 
 .con1 .listBox ul li {
-    width: 90%;
+    width: 70%;
     height: 35%;
+    align-items: center;
+
     background-color: #FAF6EB;
     border-radius: 10px;
     margin-top: 10px;
     padding: 30px;
+    
 }
+
+.con1 .listBox ul li:nth-child(odd) {margin-left: 50px;}
+
 
 
 
@@ -968,11 +986,18 @@ img {
 .slider_second .con_box .con3 {}
 
 
-.slider_second .btn {}
+.slider_second .btn {position: absolute;
+                     top: 35%;
+                     left: 3%;}
 
 .slider_second .btn ul {}
 
-.slider_second .btn ul li {}
+.slider_second .btn ul li {width: 25px;
+                           height: 25px;
+                           background-color: #BF9FC0;
+                           border-radius: 50%;
+                           text-indent: -9999px;
+                           margin-top: 32px;}
 
 
 
@@ -984,6 +1009,13 @@ img {
     width: 100%;
 
 }
+
+.find .find_leftside {width: 30%;}
+.find_leftside .subject_left {width: 100%;}
+
+.find .find_rightside {width: 70%;}
+
+
 
 
 
