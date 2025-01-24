@@ -113,7 +113,7 @@ img {
 
     
     position: absolute;
-    bottom:80px;
+    bottom:100px;
     left: 0;
     z-index: 1;
     /* background-color: yellow; */
@@ -186,7 +186,7 @@ img {
     display: flex;
     position: absolute;
     right: 0;
-    bottom: 100px;
+    bottom: 120px;
     justify-content: flex-end;
     padding: 20px;
     transform: rotate(-20deg);
@@ -219,6 +219,7 @@ img {
     bottom: 0;
     left: 3%;
     margin: 0 auto;
+    margin-bottom: 20px;
 
 }
 
@@ -1054,17 +1055,14 @@ img {
 }
 
 .find .find_rightside {width: 60%;
-                      background-color: red;}
-
-.find .find_rightside .findBox {}
-.find .find_rightside .findBox ul {}
-.find .find_rightside .findBox ul li {}
-.find .find_rightside .findBox ul li a {}
-
-.findBox .findTextbox {width: 30%;
-                      height: 60%;
-                      background-color: #F3E1CB;
                       }
+.findText {position: relative;
+           height: 690px;
+            width: auto;}
+.imgforPosition {position: absolute;
+                 z-index: 1;
+                 top: 0;
+                 left: 17.5px;}
 
 
 .findText .imgBox {width: 365px;
@@ -1072,13 +1070,117 @@ img {
                    overflow: hidden;
                     position: relative;
                     border-radius: 10px;}
+
 .findText img {width: 100%;
                height: auto;
-                position: absolute;}
+                position: absolute;
+                top: -20%;}
 
 
 
 
+.findTextbox_bg {width: 400px;
+                height: 460px;
+                background-color: #F3E1CB;
+                border-radius: 10px;
+                margin-top: 300px;      
+                      }
+
+.findTextbox_bg .findTextbox {padding: 50px;}
+
+.findTextbox h3 {color: #785379;
+                 font-family: "Noto Sans KR", serif;
+                 font-size: 28px;
+                 font-weight: bold;
+                 margin-top: -10px;}
+
+
+.findTextbox_bg .findList_txt {display: flex;
+                               align-items: baseline;
+                               line-height: 1.8;
+                           }
+
+.findUpper {border-bottom: 1px solid #3D3D3D;
+            padding: -10px;
+            margin-bottom: 10px;
+            margin-top: 65px;}
+
+.findList_txt strong {color: #3D3D3D;
+                      font-family: "Noto Sans KR", serif;
+                      font-size: 22px;
+                      font-weight: bold;
+                      min-width: 80px; 
+                      display: inline-block;}
+
+.findList_txt p {color: #3D3D3D;
+                 font-family: "Noto Sans KR", serif;
+                 font-size: 22px;
+                 font-weight: normal;
+                 margin-left: 60px;
+                 }
+
+.findLower {margin-bottom: 10px;}
+.findLower p {color: #3D3D3D;
+                font-family: "Noto Sans KR", serif;
+                font-size: 16px;
+                font-weight: normal;
+                }
+.findLower p i {}
+
+.findLower_tap {margin-top: 20px;
+                background-color: #785379;
+                border-radius: 27px;
+                height: 55px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                }
+
+
+.findLower_tap a {
+    
+    color: #fff;
+    font-family: "Noto Sans KR", serif;
+    font-size: 28px;
+    font-weight: bold;
+    
+    
+
+}
+
+
+
+/* findText img 위치조정#################################### */
+
+.findBox ul li:nth-child(2) .imgBox img {
+    top: -65%; 
+    left: 0;}
+
+.findBox ul li:nth-child(3) .imgBox img {
+    width: 130%;
+    top: 0; 
+    right: 0;}
+
+/* .card .status {
+    position: absolute;
+    display: flex;
+    top: 76%;
+    left: 21%;
+   
+    
+  
+    padding: 1px 15px;
+   
+  
+    margin-bottom: 10px;
+
+} */
+
+
+/* findBox li들 좌우정렬 */
+.findBox {}
+.findBox ul {display: flex;}
+.findBox ul li {}
 
 
 

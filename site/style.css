@@ -38,7 +38,9 @@ nav ul li a {display: block;
 
 .box3 img {max-width: 100%;}
 
-.notice {}
+.notice {border: solid 5px #ddd;
+         padding: 20px;}
+
 .notice h2 {margin-bottom: 5px;
             font-size: 18px;
             color: #666;}
@@ -61,6 +63,82 @@ nav ul li a {display: block;
 
 
 .notice .text {}
+
+
+
+
+/* sns 설정 */
+.sns {}
+
+.sns ul {}
+.sns ul li {}
+.sns ul li a {display: block;
+              padding: 10px;
+              background-color: #888;
+              margin-bottom: 10px;
+              color: #fff;
+              font-size: 14px;}
+
+.sns i {font-size: 20px;
+        margin-right: 10px;
+        vertical-align: middle;}
+
+.sns ul li:nth-child(1) a {background-color: #1da1f2;}
+.sns ul li:nth-child(2) a {background-color: #1877f2;}
+.sns ul li:nth-child(3) a {background: linear-gradient(90deg, #405de6, #e1306c, #f77737)}
+        
+
+.sns-info {margin-bottom: 20px;
+          padding: 10px;
+          background-color: #ddd;
+          font-size: 14px;
+          text-align: center;}
+
+
+/* https://cssarrowplease.com/  에서 가지고 올 수 있음 
+css 제너레이터 구글링
+https://css3generator.com/ flex 차이 공부하면되겠당
+
+*/
+
+.sns-info {
+	    position: relative;
+	    background: #ddd;
+}
+.sns-info:after {
+	          top: 100%;
+	          left: 50%;
+	          border: solid transparent;
+	          content: "";
+	          height: 0;
+	          width: 0;
+	          position: absolute;
+	          pointer-events: none;
+	          border-color: rgba(221, 221, 221, 0);
+	          border-top-color: #ddd;
+	          border-width: 15px;
+	          margin-left: -15px;
+}
+
+/* 박스 6-1,6-2,6-3 설정하기*/
+.summary {}
+.summary a {display: block;/* 안에 a를 담았기때문*/
+           color: #fff;
+           background-color: #222;
+           text-align: center;
+           } 
+.summary h2 {padding: 5px 0;
+             font-size: 20px;
+              font-weight: normal;}
+.summary i {display: block;/* 한구간을 다 잡고있기때문에 block해야함*/
+            padding: 40px 0;
+            font-size: 38px;}
+.summary p {padding: 15px 0;
+            background-color: #524e3c;}
+
+.box6>div:nth-child(1) i {background-color: #bfbd13;}
+.box6>div:nth-child(2) i {background-color: #c58839;}
+.box6>div:nth-child(3) i {background-color: #859f46;}
 
 
 
@@ -90,6 +168,11 @@ nav ul li a {display: block;
 .box4 {padding-top: 20px;
        padding-bottom: 20px;}
 
+.box6 {padding-top: 20px;}
+.box6>div {padding-bottom: 10px;}
+
+.box4-1 {padding-bottom: 10px;}
+
 
 /* 박스의 왼오 여백설정 */
 .boxA , 
@@ -111,6 +194,7 @@ nav ul li a {
              padding: 10px 7px;
              }
 
+             
 
 
 
@@ -145,6 +229,27 @@ nav ul li a {
               content: '';
               clear: both;}
 
+/* 박스4-1과 박스4-2의 가로정렬 */
+.box4 {display: flex;}
+.box4-1 {width: 70%;
+         padding-right: 35px;
+         box-sizing: border-box;} 
+.box4-2 {width: 30%;
+         }
+
+
+/* flex-wrap:wrap이 있었더라면 box4-2이 밑으로 떨어짐 그래서 box-sizing: border-box;을 적용
+flex는 크기가 초과해도 아이템을 어떻게든 끼어넣음 */
+
+
+
+/* 박스 6-1과 6-2와 6-3의 가로 정렬 ##############*/
+
+.box6 {display: flex;
+       justify-content: space-between;}
+
+.box6>div {width: 32%;}
+
 
 
 
@@ -163,7 +268,8 @@ nav ul li a {
 .box3 ,
 .box4 ,
 .copyright ,
-.boxA_inner {width: 1200px;
+.boxA_inner,
+.box6 {width: 1200px;
        margin: 0 auto;}
 
 
