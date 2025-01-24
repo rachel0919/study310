@@ -1014,7 +1014,8 @@ img {
 
 }
 
-.find .find_leftside {width: 40%;
+.find .find_leftside {width: 35%;
+    position: relative;
                      
                      
                      
@@ -1023,6 +1024,8 @@ img {
 
 
 .find_leftside .subject_left {
+    position: absolute;
+    top: -50px;
     width: 100%;
     height: 165px;
     background-color: #F6EBD9;
@@ -1031,6 +1034,9 @@ img {
     
 }
 
+.find_leftside .search {position: absolute;}
+
+.btnForposition {position: absolute;}
 
 .find_leftside .btn {
     position: relative;
@@ -1046,6 +1052,7 @@ img {
 .find_leftside .btn ul li {
     margin-left: 40px;
     scale: 300%;
+    
 }
 
 .find_leftside .btn ul li a {}
@@ -1054,14 +1061,20 @@ img {
     color: #785379;
 }
 
-.find .find_rightside {width: 60%;
+.find_leftside .imgForposition {position: absolute;
+                                bottom: 0;
+                                left: 25%;}
+
+
+
+.find .find_rightside {width: 65%;
                       }
 .findText {position: relative;
            height: 690px;
             width: auto;}
 .imgforPosition {position: absolute;
                  z-index: 1;
-                 top: 0;
+                 top: 100px;
                  left: 17.5px;}
 
 
@@ -1074,7 +1087,8 @@ img {
 .findText img {width: 100%;
                height: auto;
                 position: absolute;
-                top: -20%;}
+                top: -20%;
+                }
 
 
 
@@ -1178,9 +1192,9 @@ img {
 
 
 /* findBox li들 좌우정렬 */
-.findBox {}
+.findBox {overflow-x: hidden;}
 .findBox ul {display: flex;}
-.findBox ul li {}
+.findBox ul li {margin-right: 8px;}
 
 
 
