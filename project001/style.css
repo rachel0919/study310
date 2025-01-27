@@ -123,8 +123,7 @@ img {
 
 }
 
- .slider_main .imgBox1 img {
-                            }
+.slider_main .imgBox1 img {}
 
 .slider_main .txtBox {
     width: 40%;
@@ -1112,7 +1111,8 @@ img {
 
 .find_leftside .imgForpositionCD {position: absolute;
                                 bottom: 0;
-                                left: 35%;}
+                                left: 35%;
+                                 margin-bottom: 25px;}
 
 .imgForpositionCD .cat {margin-right: -19px;}
 
@@ -1482,7 +1482,6 @@ img {
                            object-fit: contain;
                            top: 25%;
                            right: 5%;
-                           
 
                            
                           }
@@ -1630,3 +1629,4 @@ img {
 
 
 
+       
