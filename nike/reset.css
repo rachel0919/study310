@@ -1,0 +1,25 @@
+
+/* 언어설정 */
+@charset 'uft-8';
+
+
+
+/* 전체설정 */
+
+* {margin: 0;
+   padding: 0;
+}
+
+ul,ol {list-style: none;}
+a {text-decoration: none;
+   color: #000;}
+img {border: none;
+    vertical-align: bottom;}
+
+
+/* 레이아웃설정 */
+/* id는 .이 아니라 # */
+
+#wrap {display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;}
