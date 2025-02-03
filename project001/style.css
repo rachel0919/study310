@@ -36,8 +36,9 @@ img {
     background-color: #FAF6EB;
 }
 
-.body {
+body {
     overflow-x: hidden;
+    background-color: #FAF6EB;
     
 }
 
