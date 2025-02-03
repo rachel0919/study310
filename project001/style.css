@@ -38,7 +38,13 @@ img {
 
 body {
     overflow-x: hidden;
-    background-color: #FAF6EB;
+    /* background-color: #FAF6EB; */
+    background-image: url(img/bg_001.png);
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+
     
 }
 
@@ -1616,7 +1622,8 @@ body {
 /* .info############################################################################# */
 
 .info {position: relative;
-       width: 100%;}
+       width: 100%;
+       margin-top: 100px;}
 
 .info .info_001 {width: 90%;
                  height: 1040px;
@@ -1695,10 +1702,10 @@ body {
                  height: 890px;
                  margin: 0 auto;
                  position: relative;
-                 background-image: url(img/introBg_010.png);
+                 /* background-image: url(img/introBg_010.png);
                  background-size: 90%;
                  background-position: center;
-                 background-repeat: no-repeat;
+                 background-repeat: no-repeat; */
                  display: flex;
                  justify-content: center;
                  align-items: center;
@@ -1711,7 +1718,10 @@ body {
                  color: #3D3D3D;
                  line-height: 1.5;
                 }
-.info .info_002 p {}
+.info .info_002 p {z-index: 1;}
+.info .info_002 img {position: absolute;
+                     width: 90%;
+                     height: auto;}
 .info .info_002 strong {}
 
 
