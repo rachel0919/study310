@@ -104,6 +104,9 @@ body {
 }
 
 
+.header nav ul li a:hover {color: #785379;
+                           font-weight: 800;}
+
 
 
 /* slider_main######################################################
@@ -356,6 +359,9 @@ body {
     width: 300px;
     background-color: #785379;
     position: relative;
+    border: 1px solid #3D3D3D;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     cursor: pointer;
 
 }
@@ -376,7 +382,8 @@ body {
 }
 
 
-
+.reservation .reservation-box .reser_box3:hover {background-color: #F6EBD9;}
+.reservation .reservation-box .reser_box3:hover button {color: #785379;}
 
 .notice_box {
 
@@ -487,7 +494,7 @@ body {
     color: #5C5C5C;
     text-align: right;
 
-    border-bottom: 1px solid #948E85;
+    border-bottom: 1px solid #3D3D3D solid #948E85;
 }
 
 .contentsBox .map .info-box p {
@@ -905,10 +912,10 @@ body {
 
 
     text-shadow:
-        -1px -1px 0 #FAF6EB,
-        1px -1px 0 #FAF6EB,
-        -1px 1px 0 #FAF6EB,
-        1px 1px 0 #FAF6EB;
+    -1px -1px 0 #FAF6EB,
+    1px -1px 0 #FAF6EB,
+    -1px 1px 0 #FAF6EB,
+    1px 1px 0 #FAF6EB;
     /* 스트로크 효과 */
 }
 
@@ -974,7 +981,7 @@ body {
    
 }
 .text_info .info_date {margin-left: 10px;
-                       /* border-left: 1px solid #636363; */
+                        /* border-left: 1px solid #636363; */
                        position: relative;
                        padding-left: 5px;
                     }
@@ -1031,10 +1038,10 @@ body {
 
 
     text-shadow:
-        -1px -1px 0 #F3E1CB,
-        1px -1px 0 #F3E1CB,
-        -1px 1px 0 #F3E1CB,
-        1px 1px 0 #F3E1CB;
+    -1px -1px 0 #F3E1CB,
+    1px -1px 0 #F3E1CB,
+    -1px 1px 0 #F3E1CB,
+    1px 1px 0 #F3E1CB;
     } 
 
 .howtoRescue_txt {
@@ -1104,10 +1111,10 @@ body {
                           font-family: "Grandiflora One", serif;
                           
                           text-shadow:
-                              -1px -1px 0 #ED7E48,
-                              1px -1px 0 #ED7E48,
-                              -1px 1px 0 #ED7E48,
-                              1px 1px 0 #ED7E48;
+                          -1px -1px 0 #ED7E48,
+                          1px -1px 0 #ED7E48,
+                          -1px 1px 0 #ED7E48,
+                          1px 1px 0 #ED7E48;
                           margin-bottom: 30px;
                               
                           
@@ -1806,6 +1813,17 @@ body {
              opacity: 0.7;
              z-index: 1;
              overflow: hidden; }
+
+
+/* 전체적 more hover값 설정 */
+
+
+
+
+.more:hover a {color: #FAF6EB!important;
+               background-color: #3D3D3D;}
+
+
 
 
 

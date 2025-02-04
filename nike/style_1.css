@@ -1,7 +1,7 @@
 
 /* 언어설정 */
 @charset 'utf-8';
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Play:wght@400;700&display=swap');
 
 /* 전체설정 */
 
@@ -141,6 +141,51 @@ header {width: 700px;
 
 
 
+/* 텍스트박스 설정########################################################## */
+
+
+
+.txtBox {width: 340px;
+         height: 240px;
+         
+         /* 전체화면 동영상으로 설정되어 position: fixed;해야 텍스트박스 보임 */
+         position: fixed;
+         right: 70px;
+         top: 50%;
+         margin-top: -120px;}
+
+
+.txtBox p {position: absolute;}
+
+.txtBox p:nth-child(1) {font-size: 160px;
+                        color: #b9fb05;
+                        letter-spacing: -1px;
+                        font-family: "Monoton", serif;;
+                        }
+
+.txtBox p:nth-child(2) {bottom: 0;
+                        right: 0;
+                        font-size: 34px;
+                        letter-spacing: -2px;
+                        font-family: play;
+                        color: #bbb;}
+
+
+
+
+
+.txtBox em {font-size: 50px;
+            font-family: play;
+            color: #fff;}
+
+.txtBox b {font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #b9fb05;}
+
+
+
+
+
 
 
 
@@ -185,4 +230,69 @@ header {width: 700px;
             transition: all 1s;}
 
 .side:hover .con {left: 50px;}
-        
+
+
+
+
+.side .con p {width: 300px;
+              height: 100px;
+              position: absolute;
+              left: 50px;}
+
+
+
+.side .con em {color: #a0bd50;
+               font-weight: bold;
+               font-size: 16px;
+               font-family: Arial, Helvetica, sans-serif;
+               transform: skewX(40deg);
+               display: inline-block;
+               }
+
+
+
+
+.side .con a {}
+
+
+.side .con img {width: 300px;
+                height: 70px;
+                opacity: 0.3;}
+
+
+
+.side .con p:nth-child(1) {bottom: 270px;}
+.side .con p:nth-child(2) {bottom: 160px;}
+.side .con p:nth-child(3) {bottom: 50px;}
+
+
+
+
+/* 이미지 3장의 위치를 바꾸는 첫 번째 방법########################################################## */
+/* 위치로 조절 
+.side .con p {transition: all 1.0s;}
+
+
+.side .con p:nth-child(1) {left: 210px;}
+.side .con p:nth-child(2) {left: 140px;}
+.side .con p:nth-child(3) {left: 70px;}
+
+.side:hover .con p {left: 50px;}
+
+
+*/
+
+
+
+/* 이미지 3장의 위치를 바꾸는 두번째 방법########################################################## */
+/* 시간으로 조절 */
+
+
+.side .con p {transform: translateX(200px);}
+
+.side .con p:nth-child(1) {transition: all 1.2s;}
+.side .con p:nth-child(2) {transition: all 0.8s;}
+.side .con p:nth-child(3) {transition: all 0.4s;}
+
+
+.side:hover .con p {transform: translateX(0);}
