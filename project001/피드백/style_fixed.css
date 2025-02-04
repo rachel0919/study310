@@ -105,24 +105,50 @@ body {
 
 /* slider_main######################################################
 
-####### */
+
+
+.slider_main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: calc(100vh - 150px);
+    position: relative;
+   
+    max-width: 100%;
+
+}
+
+.slider_main .imgBox1 {
+
+    
+   height:calc(100vh - 150px);
+   z-index: 1;
+
+    
+    
+
+
+}
+
+.slider_main .imgBox1 img {
+                           max-width: 1915px;
+                           height: auto;
+    }######### */
 
 
 
 .slider_main .txtBox {
     width: 100%;
-    /* 텍스트는 width 100%해야함 침범할 것같다고 40%으로 막지말것
-      z-index로 위로 올리기 */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    /* text-align: end; 
-       end는 적용하지 못함 하려면 right로 가야함*/
+    /* text-align: right; */
     margin-top: 40px;
     position: absolute;
     top: 0;
     right: 10%;
-    z-index: 2;
+    z-index: 6;
+    position: relative;
 
 }
 
@@ -168,7 +194,8 @@ body {
 
 .slider_main {position: relative;
               width: 100%;
-              height: calc(100vh - 150px);}
+              height: calc(100vh - 150px);
+                }
 
 /* .slider_main .imgBox1 {position: absolute;
                        width: 100%;
@@ -183,18 +210,18 @@ body {
                            height: auto;} */
 
 
-.slider_main .imgBox1 {position: absolute;
-                       left: 50%;
-                       margin-left: calc(1915px / -2);
-                    /* 위치를 중앙으로 놓는 방법!!!!!
-                     left: 50%;
-                       margin-left: calc(이미지크기px / -2);*/
-                       bottom: 0;
-                       margin-bottom: 60px;
-                       /* 예약창을 걸쳐 놔야하니깐 예약창 높이의 반절 */
-                       z-index: 1;
-                    }
+ .slider_main .imgBox1   {position: absolute;
+                            left: 50%;
+                            margin-left: calc(1915px / -2);
+                            bottom: 0;
+                            margin-bottom: 60px;
+                        z-index: 5;
+                       }                      
 
+.slider_main .txtBox {position: absolute;
+                      top: 0;
+                      
+                      z-index: 2;}
 
 
 
@@ -527,6 +554,9 @@ body {
 
 
 }
+
+.contentsBox .notice ul li i {transition: all 0.3s;}
+.contentsBox .notice ul li:hover i {transform: rotate(180deg);}
 
 
 .contentsBox .notice ul li a {
