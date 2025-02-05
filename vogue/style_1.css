@@ -1,0 +1,157 @@
+/* set to language */
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+
+
+/* 전체설정 */
+
+*{margin: 0;
+  padding: 0;}
+
+ul, ol {list-style: none;}
+
+a {text-decoration: none;
+   color: #bbb;}
+
+img {border: 0;
+     vertical-align: bottom;}
+
+
+
+body {position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: #111;
+      font-family: "Orbitron", serif;
+      }
+
+
+
+/* set to layout */
+
+.wrap {position: fixed;
+       width: 100%;
+       height: 100%;
+       min-width: 1024px;
+       min-height: 768px;
+       perspective: 900px;}
+
+
+nav {position: absolute;
+     width: 150px;
+     height: 100%;
+     background-color: bisque;
+     top: 0;
+     left: 0;
+     z-index: 2;
+     transition: all 0.7s;
+     }
+
+
+section {position: fixed;
+         width: 100%;
+         height: 100%;
+         background-color: pink;
+         top: 0;
+         left: 0;
+         z-index: 1;
+         transition: all 1s;
+        
+        }
+
+.btnMenu {position: fixed;
+          font-size: 40px;
+          top: 50px;
+          left: 40px;
+          z-index: 3;
+          color: #fff;
+          animation: ani 0.8s infinite alternate;
+
+
+        }
+
+
+
+/* btnMenu animataion################## */
+
+
+@keyframes ani {
+
+0% {transform: scale(1);
+    opacity: 1;
+    color: #fff;}
+
+
+100% {transform: scale(1.5);
+    opacity: 0.8;
+    color: #888;}
+
+
+
+
+}
+
+
+
+
+
+/* set to nav################### */
+
+
+nav h1 {width: 100px;
+/* 틀어지지말라고 height값은 안넣음 img에서 조절 auto로 */
+        position: absolute;
+        left: 50%;
+        margin-left: -50px;
+        top: 80px;
+}
+
+nav h1 img {width: 100%;
+            height: auto;}
+
+
+nav ul {position: absolute;
+        top: 35%;
+        left: 0;
+        width: 100%;}
+nav ul li {}
+nav ul li a {display: block;
+             text-align: center;
+             font-size: 18px;
+             padding: 20px 0;}
+
+
+
+
+/* set to section####################################### */
+
+
+section>div {position: absolute;
+             width: 100%;
+             height: 100%;
+             opacity: 0;}
+
+section>div:nth-child(1) {background-color: plum;}
+section>div:nth-child(2) {background-color: pink;}
+section>div:nth-child(3) {background-color: palevioletred;}
+
+section>div.on {opacity: 1;}
+
+
+
+
+
+
+/* set to 3d motion#################################### */
+
+nav {transform-origin: left top;
+     transform: rotateY(0deg);}
+
+
+section {transform-origin: right top;
+         transform: rotateY(0deg);}  
+         
+         
+nav:hover {transform: rotateY(30deg);}
+section:hover {transform: rotateY(-10deg);}

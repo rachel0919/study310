@@ -1,0 +1,138 @@
+/* 언어설정 */
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+
+/* 전체설정 */
+
+* {margin: 0;
+  padding: 0;
+  }
+
+ul,ol {list-style: none;
+      }
+
+a {text-decoration: none;
+  color: #bbb;
+  }
+
+img {border: 0;
+    vertical-align: bottom;}
+
+body {position: fixed;
+/* 단일페이지라 fiwed가 가능 */
+width: 100%;
+height: 100%;
+background-color: #111;
+font-family: "Orbitron", serif;
+}
+
+
+/* 레이아웃 설정 */
+
+.wrap {position: fixed;
+       width: 100%;
+       height: 100%;
+       min-width: 1024px;
+       min-height: 768px;
+    /*비율이 틀어지지않기위해 min 수치를 지정함 */
+       perspective: 900px; /* 원근감 지정 */
+      
+    }
+
+nav {position: absolute;
+     width: 150px;
+     height: 100%;
+     background-color: #eee;
+     left: 0;
+     top: 0;
+     z-index: 2;
+     transition: all 0.8s;}
+
+
+
+section {position: fixed;
+         width: 100%;
+         height: 100%;
+         background-color: aquamarine;
+         left: 0;
+         top: 0;
+         z-index: 1;
+         transition: all 0.5s;}
+
+.btnMenu {position: fixed;
+          font-size: 40px;
+          top: 50px;
+          left: 40px;
+          z-index: 3;
+          color: #fff;
+          animation: ani 0.5s infinite alternate;}
+
+/* btnMenu animation 만들기 */
+
+@keyframes ani {
+
+
+0% {transform: scale(1);
+    opacity: 1;
+    color: #fff;}
+100% {transform: scale(1.5);
+    opacity: 0.8;
+    color: #888;}
+
+
+}
+
+/* nav설정 */
+nav h1 {width: 100px;
+  /* 틀어지지말라고 height값은 안넣음 img에서 조절 auto로 */
+        position: absolute;
+        left: 50%;
+        margin-left: -50px;
+        top: 80px;}
+
+nav h1 img {width: 100%;
+            height: auto;}
+
+nav ul {position: absolute;
+        top: 35%;
+        left: 0;
+        width: 100%;
+        }
+
+nav ul li a {display: block;
+             text-align: center;
+             font-size: 18px;
+             padding: 20px 0;}
+
+/* section 설정 */
+
+section>div {position: absolute;
+             width: 100%;
+             height: 100%;
+             opacity: 0;}
+
+section>div:nth-child(1) {background-color: antiquewhite;}
+section>div:nth-child(2) {background-color: plum;}
+section>div:nth-child(3) {background-color: yellowgreen;}
+
+
+section>div.on {opacity: 1;}
+
+
+
+/* 3d motion 설정하기 */
+
+
+nav {transform: rotateY(120deg);
+     transform-origin: left top;
+     opacity: 0;}
+
+section {transform-origin: right top;
+        }
+
+nav.on {transform: rotateY(15deg);
+           opacity: 1;}
+
+section.on {transform: rotateY(-10deg);}
+
