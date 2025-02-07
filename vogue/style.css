@@ -136,3 +136,193 @@ nav.on {transform: rotateY(15deg);
 
 section.on {transform: rotateY(-10deg);}
 
+/* 박스1  */
+.box1>p {width: 25%;
+         height: 25%;
+         float: left;
+        /* 중간에 박스 2개 합친게 있어서 flex를 못함 */
+        }
+
+.box1>p:nth-child(1) {background-color: #ddd;
+                      width: 50%;}  
+.box1>p:nth-child(2) {background-color: #ccc;}   
+.box1>p:nth-child(3) {background-color: #bbb;}   
+.box1>p:nth-child(4) {background-color: #aaa;
+                      width: 50%;
+                      height: 50%;
+                      float: right;}   
+.box1>p:nth-child(5) {background-color: #999;
+                      float: right;}   
+.box1>p:nth-child(6) {background-color: #888;
+                      float: right;}     
+.box1>p:nth-child(7) {background-color: #777;
+                      float: right;}   
+.box1>p:nth-child(8) {background-color: #666;
+                      float: right;}   
+.box1>p:nth-child(9) {background-color: #555;}   
+.box1>p:nth-child(10) {background-color: #444;
+                       width: 50%;}   
+.box1>p:nth-child(11) {background-color: #333;} 
+
+
+
+/* 박스2 설정 */
+
+.box2>p {width: 25%;
+         height: 25%;
+         float: left;}
+
+.box2>p:nth-child(1) {background-color: #ddd;}  
+.box2>p:nth-child(2) {background-color: #ccc;}   
+.box2>p:nth-child(3) {background-color: #bbb;
+                      width: 50%;}   
+.box2>p:nth-child(4) {background-color: #aaa;
+                      height: 50%;}   
+.box2>p:nth-child(5) {background-color: #999;
+                      width: 50%;
+                      height: 50%;}   
+.box2>p:nth-child(6) {background-color: #888;}     
+.box2>p:nth-child(7) {background-color: #777;}   
+.box2>p:nth-child(8) {background-color: #666;}   
+.box2>p:nth-child(9) {background-color: #555;}   
+.box2>p:nth-child(10) {background-color: #444;}   
+.box2>p:nth-child(11) {background-color: #333;}
+
+
+
+/* 박스3 설정 */
+
+.box3>p {width: 25%;
+  height: 25%;
+  float: left;}
+
+.box3>p:nth-child(1) {background-color: #ddd;
+                      width: 50%;
+                      height: 100%;}  
+.box3>p:nth-child(2) {background-color: #ccc;}   
+.box3>p:nth-child(3) {background-color: #bbb;}   
+.box3>p:nth-child(4) {background-color: #aaa;
+                      width: 50%;}   
+.box3>p:nth-child(5) {background-color: #999;
+                      height: 50%;}   
+.box3>p:nth-child(6) {background-color: #888;}     
+.box3>p:nth-child(7) {background-color: #777;}
+
+
+
+
+/* 내부설정 */
+/* 혹시 다른 것들도 들어갈 수 있으니 다이렉트로 설정!!!!! */
+
+
+section>div>p {box-sizing: border-box;
+                /*  내가 패딩을 넣더라도 공간이 침범당하지않게*/
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* 공간안의 가운데 정렬 */
+
+                color: #fff;
+                transform: rotateY(0deg);
+                transition: all 1.5s;
+}
+section>div>p>strong {font-size: 50px;
+                      display: inline-block;}
+section>div>p>span {font-size: 20px;
+                    display: inline-block;}
+
+
+
+/* 박스1 내용 설정 */
+
+.box1>p:nth-child(1) {background-color: #333;}
+.box1>p:nth-child(2) {background-image: url(img/m1.jpg);
+                      background-size: cover;}
+.box1>p:nth-child(3) {background-color: #444;}
+.box1>p:nth-child(3) a {display: block;
+                        /* 패딩넣기위해 블럭 */
+                        padding: 0 10px;
+                        font-size: 20px;}
+.box1>p:nth-child(4) {background-image: url(img/m2.jpg);
+                      background-size: cover;}
+.box1>p:nth-child(5) {background-color: #fff;
+                      background-image: url(img/m3.jpg);
+                      background-size: contain;
+                      /* 이미지 비율을 맞춰서 넣겠당 */
+                      background-position: left top;
+                      background-repeat: no-repeat;}
+                      
+.box1>p:nth-child(6) {background-color: #888;}
+.box1>p:nth-child(7) {background-color: #444;
+                      }
+.box1>p:nth-child(8) {background-image: url(img/m4.jpg);
+                      background-size: cover;
+                      background-position: center center;}
+.box1>p:nth-child(9) {background-color: #444;}
+.box1>p:nth-child(10) {background-image: url(img/m5.jpg);
+                       background-position: right center;}
+.box1>p:nth-child(11) {background-color: #222;}
+
+
+/* 박스2 내용 설정 */
+
+
+.box2>p:nth-child(1) {background-color: #444;}
+.box2>p:nth-child(2) {background-image: url(img/w1.jpg);
+                      background-size: contain;
+                    /* 이미지가 짤림이 없고 빈공간이 생길 수 있음 
+                    cover는 꽉 채우는 대신 이미지가 짤릴수 있음*/
+                    background-position: center center;
+                    background-color: #fff;
+                    }
+.box2>p:nth-child(3) {background-color: #222;}
+.box2>p:nth-child(4) {background-image: url(img/w2.jpg);
+                      background-size: cover;
+                      background-position: center top;}
+.box2>p:nth-child(5) {background-image: url(img/w3.jpg);
+                      background-size: cover;
+                      background-position: center center;}
+.box2>p:nth-child(6) {background-image: url(img/w4.jpg);
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      background-position: center center;
+                      background-color: #fff;}
+                      
+.box2>p:nth-child(7) {background-color: #555;}
+.box2>p:nth-child(8) {background-image: url(img/w5.jpg);
+                      background-size: cover;
+                      background-position: center center;}
+.box2>p:nth-child(9) {background-color: #555;}
+.box2>p:nth-child(10) {background-image: url(img/w6.jpg);
+                       background-size: cover;
+                       background-position: center center;}
+.box2>p:nth-child(11) {background-image: url(img/w7.jpg);
+                       background-size: cover;
+                       background-position: center center;}
+
+
+
+
+/* 박스3 내용 설정 */
+
+.box3>p:nth-child(1) {background-image: url(img/k1.jpg);
+                      background-size: cover;
+                      background-position: center top;}
+.box3>p:nth-child(2) {background-color: #555;}
+.box3>p:nth-child(3) {background-image: url(img/k2.jpg);
+                      background-position: center center;
+                      background-size: cover;}
+.box3>p:nth-child(4) {background-color: #222;}
+.box3>p:nth-child(5) {background-image: url(img/k3.jpg);
+                      background-size: cover;
+                      background-position: center top;}
+.box3>p:nth-child(6) {background-color: #777;}
+.box3>p:nth-child(7) {background-image: url(img/k4.jpg);
+                      background-size: cover;
+                      background-position: center center;}
+
+
+
+
+
