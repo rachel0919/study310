@@ -261,7 +261,8 @@ section>div>p>span {font-size: 20px;
                       background-position: center center;}
 .box1>p:nth-child(9) {background-color: #444;}
 .box1>p:nth-child(10) {background-image: url(img/m5.jpg);
-                       background-position: right center;}
+                       background-position: right center;
+                       background-size: cover;}
 .box1>p:nth-child(11) {background-color: #222;}
 
 
