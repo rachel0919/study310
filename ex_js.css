@@ -1,0 +1,94 @@
+
+/* 언어설정 */
+@charset 'uft-8';
+@import url('https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&display=swap');
+
+body {
+    font-family: "42dot Sans", serif;
+    text-align: center;
+    background-color: #cdd1ff;
+    margin: 20px;
+    
+   
+}
+
+h2 {font-size: 36px;
+    color: #fff;
+    margin-top: -5px;}
+
+h3 {font-size: 18px;
+    color: #482664;
+    font-weight: 400;
+    margin-top: -30px;}
+
+strong {}
+
+span {color: #482664;}
+
+
+
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    table-layout: fixed;
+    
+    
+    
+}
+
+
+table tr:nth-child(3) {background-color: #9198e2;
+                       color: #fff;
+                       font-weight: bold;}
+
+td {
+    border: 1px solid #ccc;
+    padding: 3px;
+    text-align: center;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+
+input[type="text"] {
+    width: 80%;
+    padding: 20px;
+    font-size: 36px;
+    text-align: center;
+    border: none;
+}
+
+
+button:hover {
+    background-color: #482664;
+}
+
+
+
+button {
+    background-color: #911df0;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s;
+}
+
+
+
+p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+span#grade {
+    font-weight: bold;
+    color: #911df0;
+    font-size: 24px;
+    text-decoration: underline;
+}
