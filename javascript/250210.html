@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트1일차</title>
+
+    <script>
+
+        console.log('출력방식으로 팝업방식 ( alert, comfirm, prompt), 화면출력방식 (document.write())가 있음')
+
+
+        // 연습
+        // 팝업으로 이름을 물어보고 이름을 변수로 저장하기
+
+    //    let name = prompt('당신의 이름은 무엇입니까?')
+       console.log(name)
+       document.write('<h1>' + name + '님 환영합니다</h1>')
+
+    //    현재시각 알아보기
+    // 내장 객체를 활용해서 시각 알아내기
+    let now = new Date();
+    let display = now.toLocaleTimeString()
+
+    document.write('<span>현재시각은 <em>' + display +'</em>입니다</span>')
+
+    // 변수 알아보기
+
+    console.log('let방식으로 연습하기');
+
+    let width ;
+    let height;
+
+    width = 200 ;
+    height = 300 ;
+
+    let area = width * height
+
+    console.log(area)
+
+    area = width + height
+    console.log(area);
+
+
+    console.log('const를 사용한 변수 방법');
+
+    // 변하지 않는 값을 변수로 지정
+    const pi = 3.14;
+    
+    // let radius = prompt('반지름을 입력하세요')
+    // 원의 넓이 계산식 만들기
+    // let circle = pi * (radius*2)
+    // console.log(circle)
+
+    // 자료형 이해하기
+    // 숫자 표기하기
+
+    let num = 1 + 5 + 10;
+    console.log(num);
+    let num2 = '1' + '5' + '10';
+    console.log(num2);
+
+    // 문자표기하기
+    let txt = '그린' + '컴퓨터' + '학원'
+    console.log(txt)
+
+    // 배경표기하기[]
+    let season = ['봄' , '여름' , '가을' , '겨울'];
+    console.log(season)
+    console.log(season[2])
+
+    </script>
+
+    <style>
+        h1 {color: red;
+            padding: 20px;
+            width: 800px;
+            margin: 0 auto;
+            border: dotted 2px #ddd;
+            border-radius: 10px;}
+
+        span {font-size: 40px;
+              background-color: palevioletred;
+              display: inline-block;
+              width: 650px;
+              height: auto;
+              color: #fff;
+              padding: 30px;
+              margin: 50px auto;
+              border-bottom-right-radius: 50px;
+              border-top-left-radius: 50px;
+              border: 5px solid rgb(255, 231, 231);}
+
+        
+    </style>
+
+</head>
+<body>
+
+    <h2>기본 내용은 console창에서 확인하세요;)</h2>
+    
+</body>
+</html>

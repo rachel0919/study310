@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 4일차</title>
+
+    <script>
+        console.log('반복문을 쓰는 이유');
+
+        // 숫자가 증가하고 증가한 수를 여러번 반복해서 사용하지 않으려고 간단히 식을 만든다
+        // 예제
+
+        let sum = 0;
+
+        sum += 1;
+        sum += 2;
+        sum += 3;
+        sum += 4;
+        sum += 5;
+        sum += 6;
+        sum += 7;
+        sum += 8;
+        sum += 9;
+        sum += 10;
+        
+        // 반복문을 만들때는 증가하거나 감소하는 아이가 꼭 있다
+
+        document.write(sum)
+
+        // sum += 고정값이고 증가하는 값은 1~10까지(공식을 만들어보자)
+        // 반복문을 만들기 위해서는 증가하는 수를 변수로 지정하고 조건식을 만든다
+
+        let sum2 = 0;
+
+        for(let i = 1; i <11; i++){
+
+
+            sum2 += i
+            document.write(sum2 + '<br>')
+        
+        }
+
+
+        // 구구단 2단 만들기 2*1=2   2*2=4   
+        document.write('<h2>2단</h2>')
+        let gu = 2;
+
+        
+
+        // document.write(gu + ' x 1 = 2<br>')
+        // document.write(gu + ' x 2 = 4<br>')
+        // document.write(gu + ' x 3 = 6<br>')
+
+
+        // 구구단 2단 반복문만들기
+
+
+
+
+        for (let a = 1; a<10; a++){
+
+
+            document.write(gu + ' x ' + a  + ' = '+ gu*a +' <br> ' )
+
+
+        }
+
+        document.write('<h2>3단</h2>')
+
+        let gu3 = 3;
+
+           for (let a = 1; a<10; a++){
+
+
+            document.write(gu3 + ' x ' + a  + ' = '+ gu3*a +' <br> ' )
+
+
+        }
+
+
+
+        
+        document.write('<h2>4단</h2>')
+
+        let gu4 = 4;
+
+           for (let a = 1; a<10; a++){
+
+
+            document.write(gu4 + ' x ' + a  + ' = '+ gu4*a +' <br> ' )
+
+
+        }
+
+        
+        document.write('<h2>5단</h2>')
+
+        let gu5 = 5;
+
+           for (let a = 1; a<10; a++){
+
+
+            document.write(gu5 + ' x ' + a  + ' = '+ gu5*a +' <br> ' )
+
+
+        }
+
+
+        
+        document.write('<h2>6단</h2>')
+
+        let gu6 = 6;
+
+           for (let a = 1; a<10; a++){
+
+
+            document.write(gu6 + ' x ' + a  + ' = '+ gu6*a +' <br> ' )
+
+
+        }
+
+        
+        
+        document.write('<h2>7단</h2>')
+
+        let gu7 = 7;
+
+           for (let a = 1; a<10; a++){
+
+
+            document.write(gu7 + ' x ' + a  + ' = '+ gu7*a +' <br> ' )
+
+
+        }
+
+        
+        document.write('<h2>8단</h2>')
+
+        let gu8 = 8;
+
+           for (let a = 1; a<10; a++){
+
+
+            document.write(gu8 + ' x ' + a  + ' = '+ gu8*a +' <br> ' )
+
+
+        }
+
+
+        
+        document.write('<h2>9단</h2>')
+
+        let gu9 = 9;
+
+           for (let a = 1; a<10; a++){
+
+
+            document.write(gu9 + ' x ' + a  + ' = '+ gu9*a +' <br> ' )
+
+
+        }
+
+        
+
+
+
+
+
+
+        
+
+
+
+
+
+
+       
+       
+
+    </script>
+
+
+
+</head>
+<body>
+
+    <h1>반복문</h1>
+    <h2>console창에서 상세내용을 확인해보세요</h2>
+    
+</body>
+</html>

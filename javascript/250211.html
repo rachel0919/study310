@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_2일차(연산자)</title>
+
+
+    <script>
+
+        console.log('산술연산자')
+        // 더하기
+        const a =1;
+        const b =2;
+
+        let plus = a + b;
+
+        console.log(plus)
+
+
+        // 빼기
+        let minus = b - a;
+        console.log(minus)
+        // 배수
+        let double = a * b;
+        console.log(double)
+        // 나누기
+        let divide = b/a;
+        console.log(divide)
+
+        // 나머지
+        let result = plus % b
+        console.log(result)
+
+        result++;
+        console.log(result)
+
+        plus--;
+        console.log(plus)
+
+        // 대입(할당) 연산자
+        console.log('대입연산자')
+        // =오른쪽의 값을 왼쪽에 대입한다
+        plus = result + a
+        console.log(plus)
+        plus +=result
+
+        console.log(plus)
+
+        plus -= 2
+        console.log(plus)
+
+        plus *=10;
+        console.log(plus)
+
+        plus /= 5;
+        console.log(plus)
+
+        plus %=4;
+        console.log(plus)
+
+        // 비교연산자
+        let c = plus < result
+
+        console.log(c)
+
+       c = plus > result
+       console.log(c)
+
+       c = plus == result
+       console.log(c)
+
+       c = plus >= result
+       console.log(c)
+
+        //논리연산자
+       c = plus >= 0 && plus < 5
+        console.log(c)
+
+       c = plus >= 3 && plus < 5 
+       console.log(c)
+
+        //예제만들기
+        // let age = prompt('당신의 나이는?')
+        // console.log(age)
+
+        // if(age >= 20) {
+
+        //     // true일때 해당내용의 스크립트가 발동되어라
+        //     document.write('<h2>당신은<span>성인</span>입니다</h2>')
+
+
+        // } else {
+
+        //     document.write('<h2>당신은<span>성인이</span>아닙니다</h2>')
+
+        // }
+
+
+
+        // // 10대부터 40대까지 연령별구분하기
+
+        // // 20대 구분하기
+        // if(age >= 20 && age < 30){
+
+
+        //     document.write('<h2>당신은<span>20대</span>입니다</h2>')
+
+
+        // }else if(age>=30 && age < 40){
+
+        //     document.write('<h2>당신은<span>30대</span>입니다</h2>')
+
+        // }else if(age>=40 && age < 50){
+
+        //     document.write('<h2>당신은<span>40대</span>입니다</h2>')
+
+        // }else {
+
+
+
+
+
+
+        // }    
+
+
+        // 성적표 예제만들기
+
+        let scoreK = Number(prompt('국어 점수는?'))
+        let scoreM = Number(prompt('수학 점수는?'))
+        let scoreE = Number(prompt('영어 점수는?'))
+        let scoreS = Number(prompt('과학 점수는?'))
+
+        document.write('<ul> <li>국어:' + scoreK + "</li><li>수학:" + scoreM +'</li><li>영어:' + scoreE + "</li><li>과학:" + scoreS + "</li></ul>" )
+
+        let scoreT =  scoreK + scoreM + scoreE + scoreS
+        
+
+        // document.write(scoreT)
+
+       document.write('<h2>총점 <span>' + scoreT +'</span>점입니다</h2>')
+
+       let average = scoreT/4
+       
+        
+       document.write('<h2>평균 <span>' + average +'</span>점입니다</h2>')
+
+         if(average >= 90 && average < 100){
+
+
+            document.write('<h2>당신의 학점은<span>A</span>입니다</h2>')
+
+
+        }else if(average >= 80 && average < 90){
+
+
+            document.write('<h2>당신의 학점은<span>B</span>입니다</h2>')
+
+
+        }else if(average >= 70 && average < 80){
+
+
+            document.write('<h2>당신의 학점은<span>C</span>입니다</h2>')
+
+
+        }else if(average >= 60 && average < 70){
+
+
+            document.write('<h2>당신의 학점은<span>D</span>입니다</h2>')
+
+
+        }else{
+
+
+            document.write('<h2>당신의 학점은<span>F</span>입니다</h2>')
+
+
+        }
+
+
+
+
+        
+       
+
+
+
+    </script>
+
+
+
+<style>
+
+    h2 {font-size: 48px;}
+    span {color: red;
+          text-decoration: underline;
+          display: inline-block;}
+</style>
+</head>
+<body>
+
+    <h1>console창에서 내용을 확인하세요! </h1>
+    
+</body>
+</html>

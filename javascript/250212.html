@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_3일차(성적표만들기)</title>
+</head>
+<body>
+
+
+    <form action="">
+
+        <table border="1">
+            
+            <tr>
+                <td>국어</td>
+                <td>영어</td>
+                <td>수학</td>
+                <td>과학</td>
+            </tr>
+
+            <tr>
+                <td><input type="text" id="k"></td>
+                <td><input type="text" id="e"></td>
+                <td><input type="text" id="m"></td>
+                <td><input type="text" id="s"></td>
+            </tr>
+
+            <tr>
+                <td>총점</td>
+                <td id="add">00</td>
+                <td>평균</td>
+                <td id="aver">00</td>
+            </tr>
+
+
+        </table>
+
+        <div><button id="btn">학점확인하기</button></div>
+
+        <div><p>당신의 학점은 <span id="grade">00</span>학점입니다.</p></div>
+
+
+    </form>
+
+    <script>
+        // // // 버튼을 눌렀을 때, 국어 영어 수학 과학에 입력해 놓은 점수를 받아와서 변수로 저장을 한 후 
+        // 값을 더해서 총점에 표기하고, 평균을 계산해서 평균에 표기하고, 
+        // // 90점 이상 A, 80점 이상 B, 70점 이상 C, 60점 이상 D, 
+        // // 그 이하 F로 학점을 span에 표기한다
+
+        document.getElementById('btn').addEventListener('click',function(e){
+            e.preventDefault()
+            // 기존이벤트를 삭제해라
+
+
+            let kor = Number(document.getElementById('k').value);
+            let eng = Number(document.getElementById('e').value);
+            let math = Number(document.getElementById('m').value);
+            let sic = Number(document.getElementById('s').value);
+
+
+
+            let add = kor + eng  + math + sic;
+            let aver = add / 4;
+
+
+            document.getElementById('add').textContent = add
+            document.getElementById('aver').textContent = aver
+
+            let grade ="";
+
+            if(aver >= 90)  grade = "A"
+            else if(aver < 90 && aver >= 80) grade = "B"
+            else if(aver < 80 && aver >= 70) grade = "C"
+            else if(aver < 70 && aver >= 60) grade = "D"
+            else grade ="F"
+
+            // ""문자임을 인식
+
+
+            document.getElementById('grade').textContent = grade
+
+
+
+
+        })
+
+
+    </script>
+
+    
+</body>
+</html>
