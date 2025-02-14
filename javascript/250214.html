@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_5일차</title>
+</head>
+<body>
+    <h1>반복문</h1>
+    <h2>콘솔에서 추가적인 사항은 확인 가능합니다</h2>
+
+
+
+    <div class="container">
+
+        <!-- 스크립트 작성 -->
+        <script>
+
+            console.log('구구단만들기')
+
+            // 2단 작성
+            for(let a = 2; a<10; a++){
+
+
+            document.write('<div>')    
+            document.write('<h3>' + a + '단</h3>')
+
+            for(let i=1; i<10; i++){
+
+
+                document.write(a + 'X' + i + '=' + a*i + '<br>')
+
+            }
+
+            document.write('</div>')
+
+
+
+            }
+
+
+        </script>
+
+
+
+    </div>
+
+
+    <style>
+        .container {display: flex;
+                    justify-content: space-between;
+                    padding: 100px;}
+    </style>
+
+
+
+<script>
+
+    document.write('while문을 활용한 반복문')
+
+    let b = 1;
+    
+
+    while(b<10) {
+
+
+        document.write('3 X ' + b + ' = ' + 3*b + '<br>')
+        b++;
+
+
+
+    }
+
+
+
+</script>
+    
+</body>
+</html>
