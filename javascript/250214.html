@@ -35,6 +35,13 @@
 
             document.write('</div>')
 
+            if(a == 4) {
+
+
+                break
+
+            }
+
 
 
             }
@@ -59,20 +66,35 @@
 
     document.write('while문을 활용한 반복문')
 
-    let b = 1;
     
+    let e = 2;
 
+    while(e<10){
+    
+    document.write('<h3>' + e + '단</h3>')
+    let b = 1;
     while(b<10) {
 
 
-        document.write('3 X ' + b + ' = ' + 3*b + '<br>')
+        document.write(e + 'X' + b + ' = ' + e*b + '<br>')
         b++;
+        
 
 
 
     }
 
+    e++;
 
+
+
+    if(e == 4) {
+
+
+        break
+    }
+
+}
 
 </script>
     
