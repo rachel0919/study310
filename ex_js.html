@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적표만들기</title>
+
+    <script>
+     
+        let name = prompt('당신의 이름은 무엇입니까?')
+       console.log(name)
+       document.write('<h2><span>' + name + '</span>님 환영합니다</h2>' + '<h3><span>' + name + '</span>님의 <strong>성적을 입력</strong>해주세요</h3>')
+
+
+
+    </script>
+
+    <link rel="stylesheet" href="ex_js.css">
+
+</head>
+
+
+
+
+
+<body>
+
+   
+
+
+    <form action="">
+        <table border="1">
+            <!-- <tr>
+                <td colspan="4"></td>
+            </tr> -->
+
+
+            <tr>
+                <td>국어</td>
+                <td>영어</td>
+                <td>수학</td>
+                <td>과학</td>
+            </tr>
+
+            <tr>
+                <td><input type="text" id="k"></td>
+                <td><input type="text" id="e"></td>
+                <td><input type="text" id="m"></td>
+                <td><input type="text" id="s"></td>
+            </tr>
+
+            <tr>
+                <td>TOTAL</td>
+                <td id="add">00</td>
+                <td>AVERAGE</td>
+                <td id="aver">00</td>
+            </tr>
+
+
+        </table>
+
+
+
+    <div><button id="btn">학점확인하기</button></div>
+    <div><p>당신의 학점은 <span id="grade">00</span>학점입니다.</p></div>
+
+
+
+    </form>
+
+    <script>
+        
+        document.getElementById('btn').addEventListener('click',function(e){
+
+
+            e.preventDefault()
+
+            let kor = Number(document.getElementById('k').value);
+            let eng = Number(document.getElementById('e').value);
+            let math = Number(document.getElementById('m').value);
+            let sic = Number(document.getElementById('s').value);
+
+            let add = kor + eng + math + sic;
+            let aver = add / 4;
+
+
+            document.getElementById('add').textContent = add
+            document.getElementById('aver').textContent = aver
+
+            let grade =""; 
+
+            if(aver >= 90)  grade = "A"
+            else if(aver < 90 && aver >= 80) grade = "B"
+            else if(aver < 80 && aver >= 70) grade = "C"
+            else if(aver < 70 && aver >= 60) grade = "D"
+            else grade ="F"
+
+            document.getElementById('grade').textContent = grade
+
+
+        })
+
+    </script>
+
+
+    
+</body>
+</html>
