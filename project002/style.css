@@ -14,7 +14,7 @@
 /* reset css*/
 * {margin: 0;
    padding: 0;
-   background-color: #49C9F5;
+   
   }
 
 a {text-decoration: none;
@@ -28,76 +28,197 @@ img {vertical-align: bottom;
 
      
 
+body {background-color: #49C9F5;}
 
-/* layout */
-
-body {
-      }
-
-
+.header {width: 100%;
+        height: 100px;
+        position: fixed;
+        z-index: 999;}
 
 
 .contents {width: 100%;
-           /* height: auto;쓰지말기 */
-           perspective: 1500px;}
+        /* height: auto;쓰지말기 */
+        perspective: 1500px;}
 
 .contents>div {
 
 display: none;
-/* #######임시설정######
 
-width: 100%;
-height: calc(100vh - 150px);
-# */
 
 }
 
 .contents>div.on {
 
-    display: block;
+ display: block;
 
 }
 
 
-.header {width: 100%;
-         height: 170px;
-         background-color: aliceblue;}
+/* 헤더 설정 */
+.header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+       }
+
+.header .logo {
+               position: absolute;
+               left: 50%;
+               margin-left: -140px;
+
+           }
+.header .logo a {color: #fff;
+             display: block;
+             padding: 10px;}
+
+
+
+.header .logo a img {width: 100%;}
+
 
 
 .gnb {
-   display: flex;
-   justify-content: space-between; 
-   align-items: center; 
-   width: 100%;
-   height: 150px;
-   padding: 10px 20px;
- }
- 
- .gnb ul {
-   display: flex;
-   gap: 100px;
-   list-style: none;
-   padding: 0 100px;
-   margin: 0;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%)
+      }
+.gnb>ul {display: flex;
+        justify-content: center;
+        align-items: center;}
+.gnb>ul>li {display: inline-block;
+  white-space: nowrap;}
+.gnb>ul>li:nth-child(2) {margin-right: 200px;}
+.gnb>ul>li:nth-child(3) {margin-left: 200px;}
+.gnb>ul>li>a {display: block;
+     color: #fff;
+     font-size: 18px;
+     padding: 10px 50px;
+     text-align: center;
+    white-space: nowrap;}
+
+.gnb>ul>li>a:hover {color: #ccc;}
+
+
+
+
+
+.util {position: absolute;
+       top: 0;
+       right: 0;
+       margin-right: 50px;
+       /* padding: 25px;*/} 
+.util ul {display: flex;}
+.util ul li {}
+.util a {display: block;
+      color: #fff;
+     padding: 10px;
+     position: relative;}
+
+.util a:hover {color: #ccc;}        
+.util span {display: inline-block;
+         text-indent: -9999px;
+
+         }
+
+
+.util .num {position:absolute;
+         width: 12px;
+         height: 12px;
+         font-size: 10px;
+         right: 2px;
+         top: 5px;
+         border-radius: 50%;
+         display: flex;
+         justify-content: center;
+         align-items: center;}
+
+
+
+
+/* 메인페이지 설정 */
+
+ /* hero 설정 */
+ .hero {width: 100%;
+        height: 100vh;
+        position: relative;}
+        /* 부모 높이 값이 기준이 있어야 100% 쓸 수 있음 */
+ .mainImg {width: 100%;
+           height: 100%;
+        overflow: hidden;    /* 꼭 들어가야함 위치 설정할때는 주석으로 감추기 */
+           }
+ .mainImg ul {width: 100%;
+              height: 100%;
+               position: relative;}
+ .mainImg ul li {
+                 position: absolute;
+                 width: 100%;
+                 height: 100%;
+                 left: 100%;}
+
+
+ .mainImg ul li:nth-child(1) {left: 0;
+  background-color: #24A9AF;}
   
- }
- 
- .gnb ul li a {
-   text-decoration: underline;
-   color: #fff;
-   display: inline-block;
-   font-size: 21px;
-   font-family: 'Pretendard-Regular';
-   font-weight: 800;
- }
- 
- .logo img {
-   
- }
+  .imgWrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* 개별 이미지 스타일링 */
+.imgWrap img {
+    position: absolute;
+    max-width: 100%;
+}
+
+/* 첫 번째 li의 이미지들 */
+.mainImg ul li img:nth-child(1) { /* 텍스트 이미지 */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 3; 
+}
+
+
+.mainImg ul li img:nth-child(2) { /* 아이스크림 통 */
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  z-index: 2; 
+}
+
+
+.mainImg ul li img:nth-child(3) { /* 파티클 효과 */
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  opacity: 1;
+  z-index: 1;
+}
+
+
+.mainImg ul li img:nth-child(4) { /* 원형 효과 */
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  opacity: 1;
+}
 
 
 
 
- .footer {width: 100%;
-          position: absolute;
-          bottom: 0;}
+
+
+/* product 페이지 설정 */
+
+
+
+
+/* login 페이지 설정 */
+
