@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 7일차</title>
+
+    <!-- 제이쿼리 cdn -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script src="jquery-ui.js"></script>
+
+
+</head>
+<body>
+    
+    <div class="ex004">
+
+
+        <ul>
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+        </ul>
+
+        <p><span>리스트</span>를 클릭하셨습니다</p>
+
+        <div class="img"><img src="https://picsum.photos/id/88/100/50" alt=""></div>
+
+
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+
+            // ex004의 li를 클릭했을 때 나 자신의 텍스트의 변수를 저장하고 변수를 span에 기입해라
+            $('.ex004 li').click(function(){
+
+                let txt = $(this).text();
+                console.log(txt)
+
+                $('.ex004 span').text(txt)
+                // 두번째 괄호안에 내용이 있으면 이걸 대입해라는 뜻이 됨
+
+            });
+
+            // class img를 클릭했을 때 html의 태그를 변수로 저장하고 span의 출력하기
+
+            $('.ex004 .img').click(function(){
+
+
+             
+                let img = $(this).html();
+                console.log(img)
+
+                $('.ex004 span').html(img)
+                
+            })
+
+
+
+
+
+        })
+
+
+
+    </script>
+
+
+    <style>
+
+        .ex004 {margin-top: 20px;}
+        .ex004 ul {list-style: none;
+                   margin: 0;
+                   padding: 0;
+                   display: flex;}
+        .ex004 li {width: 100%;
+                  height: 20px;
+                  background-color: skyblue;
+                  margin: 0 5px;
+                  text-align: center;
+                  cursor: pointer;}
+
+                  
+        .ex004 li:hover {background-color: darkslateblue;}
+        .ex004 li.on {background-color: darkslateblue;
+                      color: white;}
+
+
+        .ex004 p {width: 300px;
+                  border-radius: 20px;
+                  border: 3px solid darkcyan;
+                  height: 50px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;}
+
+        .ex004 span {display: inline-block;
+                     margin-right: 5px;
+                     font-size: 18px;
+                     font-weight: bold;
+                     border-bottom: dotted 3px paleturquoise;}
+
+
+    </style>
+
+
+
+
+
+</body>
+</html>

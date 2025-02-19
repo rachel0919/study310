@@ -120,10 +120,102 @@
             </ul>
         </div>
 
+        <div class="ex004">
 
+            <ul>
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+            </ul>
+
+            <p><span>리스트</span>를 클릭하셨습니다</p>
+            
+            
+            <div class="img"><img src="https://picsum.photos/seed/picsum/100/50" alt=""></div>
+
+        </div>
+
+
+
+
+        <script>
+            $(document).ready(function(){
+
+
+                // ex004의 li를 클릭했을 때 나 자신의 텍스트의 변수를 저장하고 변수를 span에 기입해라
+                $('.ex004 li').click(function(){
+
+                    let txt = $(this).text();
+                    console.log(txt)
+
+                    $('.ex004 span').text(txt)
+                    // 두번째 괄호안에 내용이 있으면 이걸 대입해라는 뜻이 됨
+
+                });
+
+                // class img를 클릭했을 때 html의 태그를 변수로 저장하고 span의 출력하기
+
+                $('.ex004 .img').click(function(){
+
+
+                 
+                    let img = $(this).html();
+                    console.log(img)
+
+                    $('.ex004 span').html(img)
+                    
+                })
+
+
+
+
+
+            })
+
+ 
+
+        </script>
 
 
         <style>
+
+            .ex004 {margin-top: 20px;}
+            .ex004 ul {list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        display: flex;}
+            .ex004 li {width: 100px;
+                      height: 20px;
+                      background-color: antiquewhite;
+                      margin: 0 5px;
+                      text-align: center;
+                      cursor: pointer;}
+            .ex004 li:hover {background-color: aquamarine;}
+            .ex004 li.on {background-color: aquamarine;
+                          color: purple;}
+
+
+            .ex004 p {width: 300px;
+                      border-radius: 20px;
+                      border: 3px solid aquamarine;
+                      height: 50px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;}
+
+            .ex004 span {display: inline-block;
+                         margin-right: 5px;
+                         font-size: 18px;
+                         font-weight: bold;
+                         border-bottom: dotted 3px red;}   
+                         
+                         
+
+        
+
+
+
+
             .ex001 {width: 200px;
                     height: 200px;
                    background-color: yellow;}
@@ -135,9 +227,10 @@
                    background-color: blue;}
 
 
-            .ex003 {list-style: none;
-                    padding: 0;
-                    margin: 0;}
+            .ex003 {}
+            .ex003 ul {list-style: none;
+                        padding: 0;
+                        margin: 0;}
 
             .tabTitle {display: flex;} 
 
@@ -164,12 +257,16 @@
 
             .tabCon li {width: 100%;
                         position: absolute;
+                        left: 0;
+                        top: 0;
                         padding: 20px;
                         box-sizing: border-box;
                         opacity: 0;
                         transition: all 0.8s;}
 
-            .tabCon li:nth-child(1) {opacity: 1;}            
+            .tabCon li:nth-child(1) {opacity: 1;}  
+            
+            
         </style>
 
 
