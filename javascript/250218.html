@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 7일차</title>
+
+    <!-- 제이쿼리 cdn -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script src="jquery-ui.js"></script>
+
+
+    <script>
+
+        $(document).ready(function(){
+
+            // 실행문
+            // ex001에 마우스가 들어갔을때, 배경색이 바뀌어라
+            $('.ex001').mouseenter(function(){
+
+                $(this).css('background-color','red');
+                $('.ex002').css('opacity','0')
+            })
+
+            // 마우스가 나갔을때, 다시 배경색이 노란색이 되어라
+            $('.ex001').mouseleave(function(){
+
+
+                $(this).css('background-color','yellow')
+                $('.ex002').css('opacity','1')
+
+            });
+
+
+            // tapTitle li를 클릭했을때, 나한테 addClass('on')를 하고 
+            // 모든 li한테는 removeClass를 진행한다
+
+            $('.tabTitle li').click(function(){
+
+                // 클릭한 나 자신의 순번찾기
+                let i = $(this).index()
+                console.log(i)
+
+
+                $('.tabTitle li').removeClass()
+                $(this).addClass('on');
+
+
+                // tabCon의 LI 순번에 맞게 opacity를 조절해라
+                
+                $('.tabCon li').css('opacity','0');
+                $('.tabCon li').eq(index).css('opacity','1');
+
+
+            })
+
+
+
+
+        })
+    </script>
+</head>
+<body>
+
+    <h1>제이쿼리 변경구문들</h1>
+    <p>제이쿼리를 통해 html 또는 css를 변경하는 구문들</p>
+
+
+    <h2>css()</h2>
+    <p>제이쿼리에서 css의 설정을 바꾸는 구문</p>
+    <ul>
+        <li>
+            체이닝기법 - css({'속성명':'속성값','속성명':'속성값'}) <br>
+            체이닝기법은 복수형으로 css를 여러개 작성이 가능
+        </li>
+        <li>축약형단수 - css('속성명','속성값')
+
+        </li>
+    </ul>
+
+
+    <h2>addClass() / removeClass()</h2>
+    <p>html 태그에 class를 추가하거나 지울 때 사용</p>
+    <p>addClass('클래스명') <br>
+        removeClass의 경우 ()를 비워놓을 경우 all의 의미를 갖고  <br>
+        하나씩 지울 경우 removeClass('클래스명') 으로 작성
+
+    </p>
+
+    <h2>text()</h2>
+    <p>자바스크립트의 textContent의 의미로 text 요소의 내용을 삽입하거나 가져올때 사용한다</p>
+
+
+    <h2>val()</h2>
+    <p>자바스크립트의 value의 의미로 input value 값을 가져올 때 사용한다</p>
+
+    <h2>attr()</h2>
+    <p>html 태그의 속성의 값을 불러오거나 삽입할 때 사용</p>
+    <p>예로 img src="속성값"일 때 속성값을 부르는 방법으로 <br>
+        $('img').attr('src') 시 = 속성값을 변수로 지정할 수 있음</p>
+
+    <h2>html()</h2>
+    <p>html의 내부에 태그를 추가하는 구조 <br>
+       레이아웃의 스타일을 변경할 수 있음 </p>
+
+<hr>
+        <h3>예제</h3>
+        <div class="ex001"></div>
+        <div class="ex002"></div>
+        <div class="ex003">
+            <ul class="tabTitle">
+                <li class="on">공지사항</li>
+                <li>자주하는질문</li>
+            </ul>
+            <ul class="tabCon">
+                <li>notice notice notice notice notice notice notice notice notice notice notice notice notice notice notice notice notice notice </li>
+                <li>qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna qna </li>
+            </ul>
+        </div>
+
+
+
+
+        <style>
+            .ex001 {width: 200px;
+                    height: 200px;
+                   background-color: yellow;}
+
+
+
+            .ex002 {width: 200px;
+                    height: 200px;
+                   background-color: blue;}
+
+
+            .ex003 {list-style: none;
+                    padding: 0;
+                    margin: 0;}
+
+            .tabTitle {display: flex;} 
+
+            .tabTitle li {width: 120px;
+                          height: 30px;
+                          background-color: beige;
+                          border-top-right-radius: 10px;
+                          border-top-left-radius: 10px;
+                          margin-right: 2px;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                          }  
+                          
+            .tabTitle li.on {background-color: bisque;
+                             font-weight: bold;}
+
+            .tabCon {
+                     background-color: bisque;
+                     width: 450px;
+                     height: 300px; 
+                     position: relative;
+                     }  
+
+            .tabCon li {width: 100%;
+                        position: absolute;
+                        padding: 20px;
+                        box-sizing: border-box;
+                        opacity: 0;
+                        transition: all 0.8s;}
+
+            .tabCon li:nth-child(1) {opacity: 1;}            
+        </style>
+
+
+
+    
+</body>
+</html>

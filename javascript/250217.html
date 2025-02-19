@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_6일차_제이쿼리</title>
+
+    <!-- 제이쿼리CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+    <!-- 자바스크립트 작성 -->
+    <script>
+
+        // 제이쿼리선언문
+
+        $(document).ready(function(){
+            // 실행문
+
+
+
+
+
+        }) // 제이쿼리끝
+    </script>
+
+</head>
+<body>
+
+    <h1>제이쿼리</h1>
+    <p><a href="http://jquery.com">제이쿼리바로가기</a></p>
+    
+    <h2>제이쿼리선택자</h2>
+    <p>제이쿼리를 사용해서 선택자를 부르는 방법은 
+        CSS 방법과 동일하되, $('선택자')로 작성한다.
+    <br>
+    클래스 - $('.클래스이름')<br>
+    아이디 - $('#아이디이름')<br>
+    태그명 - $('태그명')<br>
+    자손자 의 경우 html과 CSS는 1 부터 시작이지만 , 
+    자바스크립튼 0부터 시작됨 <br>
+    선택자:nth-child(1) - $('선택자:nth-child(1)')또는 
+                     - $('선택자').eq(0);
+
+                    
+
+
+    </p>
+
+
+    <div class="ex001">
+        <ul>
+            <li class="list1">리스트1</li>
+            <li id="list2">리스트2</li>
+            <li>리스트3</li>
+            <li>리스트4</li>
+        </ul>
+    </div>
+
+
+
+
+
+    <script>
+        $(document).ready(function(){
+            // 클래스선택자 CSS 변경하기
+
+            $('.list1').css({'color':'red'})
+            // 아이디선택자 CSS 변경하기
+            $('#list2').css({'color':'blue'})
+            // CSS방식으로 세번째 선택자 의 CSS변경하기
+
+            $('.ex001 li:nth-child(3)').css({'color':'orange'})
+            // js방식으로 4번째 선택자의 CSS변경하기
+
+            $('.ex001 li').eq(3).css({'color':'green'})
+
+
+        })
+
+    </script>
+
+    <h2>제이쿼리 이벤트에 맞춰서 본인선택하기</h2>
+    <p>선택자를 이벤트했을때 중복선택자를 선택하는 방법<br>
+        $(this)</p>
+<!-- ########################################################################### -->
+
+    <div class="ex002">
+        <ul>
+            <li class="li001">리스트1</li>
+            <li id="li002">리스트2</li>
+            <li>리스트3</li>
+        </ul>
+    </div>
+
+    <div class="ex003">
+        <ul>
+            <li>리스트1</li>
+            <li>리스트2</li>
+            <li>리스트3</li>
+            <li>리스트4</li>
+            <li>리스트5</li>
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+            // 클래스 li001을 클릭했을때, 나 자신의 색깔이 바뀌어라.
+            $('.li001').click(function(){
+
+                $(this).css({'color':'red'})
+
+            })
+
+            // 아이디li002를 클릭했을때, 나 자신의 색깔을 바꿔라.
+
+            $('#li002').click(function(){
+
+                $(this).css({'color':'blue'})
+            })
+
+            // 클래스 ex003 안에 li를 클릭했을때, 
+            // 클릭한 나 자신의 색깔을 바꿔라. 
+            $('.ex003 li').eq(2).click(function(){
+
+               
+                $(this).css({'color':'red'})
+
+
+
+            })
+
+
+        })
+
+    </script>
+
+
+    <div class="ex004">
+        <ul>
+            <li class="aw1">리스트1</li>
+            <li>리스트2</li>
+            <li>리스트3</li>
+            <li>리스트4</li>
+            <li>리스트5</li>
+        </ul>
+    </div>
+
+    <style>
+        .color  {font-size: 22px;
+                color: red;
+                font-weight: bold;
+                text-decoration: underline;}
+    </style>
+
+    <script>
+
+        $(document).ready(function(){
+
+            // 클래스ex004 의 li 를 클릭했을때, 
+            // 클릭한 나 자신의 모습이 변경되어라. 
+
+            $('.ex004 li').click(function(){
+
+                $('.ex004 li').removeClass()
+                $(this).addClass('color')
+            })
+        })
+    </script>
+
+</body>
+</html>

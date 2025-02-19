@@ -96,7 +96,8 @@ display: none;
      font-size: 18px;
      padding: 10px 50px;
      text-align: center;
-    white-space: nowrap;}
+    white-space: nowrap;
+    text-decoration: underline;}
 
 .gnb>ul>li>a:hover {color: #ccc;}
 
@@ -146,8 +147,8 @@ display: none;
         /* 부모 높이 값이 기준이 있어야 100% 쓸 수 있음 */
  .mainImg {width: 100%;
            height: 100%;
-        overflow: hidden;    /* 꼭 들어가야함 위치 설정할때는 주석으로 감추기 */
-           }
+          overflow: hidden;    /* 꼭 들어가야함 위치 설정할때는 주석으로 감추기 */
+          z-index: 1;}
  .mainImg ul {width: 100%;
               height: 100%;
                position: relative;}
@@ -155,36 +156,45 @@ display: none;
                  position: absolute;
                  width: 100%;
                  height: 100%;
-                 left: 100%;}
+                 left: 100%;
+                 display: none;}
+
+  .mainImg>ul>.up {display: block;}               
 
 
- .mainImg ul li:nth-child(1) {left: 0;
-  background-color: #24A9AF;}
   
-  .imgWrap {
+.imgWrap {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-/* 개별 이미지 스타일링 */
+
 .imgWrap img {
     position: absolute;
     max-width: 100%;
 }
 
+
+
+
+ .mainImg ul li:nth-child(1) {left: 0;
+  background-color: #24A9AF;}
+
+
+
 /* 첫 번째 li의 이미지들 */
 .mainImg ul li img:nth-child(1) { /* 텍스트 이미지 */
-  top: 0;
+  top: 200px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%;
+  width: 50%;
   z-index: 3; 
 }
 
 
 .mainImg ul li img:nth-child(2) { /* 아이스크림 통 */
-  bottom: 50px;
+  bottom: -45%;
   left: 50%;
   transform: translateX(-50%);
   width: 50%;
@@ -193,22 +203,59 @@ display: none;
 
 
 .mainImg ul li img:nth-child(3) { /* 파티클 효과 */
-  bottom: 0px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -20px;
+  
+  scale: 0.8;
+  transform: rotateX('30deg');
   width: 100%;
+  margin: 0 auto;
   opacity: 1;
   z-index: 1;
+  transform-origin: bottom center;
+  transition: all 10s;
+  
 }
 
 
-.mainImg ul li img:nth-child(4) { /* 원형 효과 */
-  bottom: 20px;
+.mainImg ul li img:nth-child(4) { /* 원형 */
+  bottom: -30%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   opacity: 1;
 }
+
+
+
+.hero>img {position: absolute;
+           width: 130%;
+           bottom: -50px;
+           left: 50%;
+           transform: translateX(-50%);
+           z-index: 2;}
+
+
+
+
+
+.mainImg:hover ul li img:nth-child(3) {scale: 1;}  
+
+/* 두번째 히어로부분############################################################ */
+
+
+
+
+
+.mainImg ul li:nth-child(2) {left: 0;
+  background-color: #FF6725;}
+
+
+  .mainImg ul li:nth-child(3) {left: 0;
+    background-color: #86BA51;}  
+
+/* 
+.mainImg>div {display: none;}
+.mainImg>div.up {display: block;} */
 
 
 

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_6일차_제이쿼리</title>
+
+    <!-- 제이쿼리CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+    <!-- 자바스크립트 작성 -->
+    <script>
+
+        // 제이쿼리선언문
+
+        $(document).ready(function(){
+            // 실행문
+
+
+
+
+
+
+
+        }) // 제이쿼리끝
+    </script>
+
+</head>
+<body>
+    <h1>제이쿼리</h1>
+    <p><a href="http://jquery.com">제이쿼리바로가기</a></p>
+
+    <h2>제이쿼리선택자</h2>
+    <p>제이쿼리를 사용해서 선택자를 부르는 방법은 css와 동일하되, $('선택자')로 작성한다
+
+    <br>
+        클래스 - $('.클래스이름')<br>
+        아이디 - $('#아이디이름')<br>
+        태그명 - $('태그명')<br>
+        자손자의 경우 html과 css는 1부터 시작이지만, 자바스크립트는 0부터 시작됨 <br>
+        선택자 :nth-child(1) - $('선택자 :nth-child(1)') 또는 $('선택자').eq(0);
+    </p>
+
+
+
+    <div class="ex001">
+        <ul>
+            <li class="list1">리스트1</li>
+            <li id="list2">리스트2</li>
+            <li>리스트3</li>
+            <li>리스트4</li>
+        </ul>
+
+    </div>
+
+
+
+    <script>
+
+        $(document).ready(function(){
+
+
+            // 클래스선택자 css변경하기
+            $('.list1').css({'color':'red'})
+            // 아이디선택자 css 변경하기
+            $('#list2').css({'color':'blue'})
+            // css 방식으로 세번째 선택자의 css변경하기
+            $('.ex001 li:nth-child(3)').css({'color':'orange'})
+            // js방식으로 4번째 선택자의 css변경하기
+            $('.ex001 li').eq(3).css({'color':'green'})
+
+
+
+
+        })
+
+    </script>
+
+
+<h2>제이쿼리 이벤트에 맞춰서 본인 선택하기</h2>
+<p>선택자를 이벤트 했을 때 중복선택자를 선택하는 방법 <br>
+$(this) </p>
+
+</body>
+</html>
