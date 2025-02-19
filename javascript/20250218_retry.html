@@ -32,6 +32,31 @@
 
     </div>
 
+
+
+    <div class="ex005">
+
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+
+
+    </div>
+
+
+    <div class="ex006">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, 
+        debitis deleniti? Fuga quam dolores laboriosam natus quo architecto repellendus nihil laudantium, 
+        necessitatibus velit officia reiciendis, quaerat esse earum, harum fugit?
+        <p> SHOP NOW</p>
+
+
+    </div>
+
+
+
     <script>
         $(document).ready(function(){
 
@@ -60,6 +85,47 @@
                 
             })
 
+            let numA = 0;
+
+            $('.ex005').click(function(){
+
+                numA++;
+                if(numA == 2) numA=0
+                console.log(numA)
+
+                if(numA == 1){
+
+                    $(this).addClass('on')
+                    $('.ex006').css('left','0')
+                    
+            }else{$(this).removeClass('on')
+                  $('.ex006').css('left','-330px')
+        }
+
+                
+
+
+
+            })
+
+
+            $('.ex006').click(function(){
+
+                numA++;
+                if(numA == 2) numA=0
+                console.log(numA)
+
+                if(numA == 1){
+                    $(this).css('left','0')
+                }else{
+                    $(this).css('left','-330px')
+                }
+
+
+
+
+            })
+
 
 
 
@@ -72,6 +138,61 @@
 
 
     <style>
+
+
+        .ex006 {width: 300px;
+                height: 200px;
+                background-color: palevioletred;
+                position: absolute;
+                color: #fff;
+                padding: 15px;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                left: -330px;
+                transition: all 1s;
+                }
+
+
+        .ex006 p {position: absolute;
+                  width: 20px;
+                  height: 100px;
+                  padding: 20px;
+                  margin-left: -10px;
+                  border-top-right-radius: 10px;
+                  border-bottom-right-radius: 10px;
+                  background-color: palevioletred;
+                  left: 100%;
+                  top: 10px;
+                  writing-mode: vertical-lr;
+                 }
+
+
+        .ex005 span {width: 25px;
+                     height: 5px;
+                     background-color: #000;
+                     display: block;
+                     margin-bottom: 3px;
+                     }
+
+
+
+        .ex005 span:nth-child(1){transition: all 0.8s;
+                                 transform-origin: left center;
+                                 transform: rotate(0);}
+        .ex005 span:nth-child(2){opacity: 1;}
+        .ex005 span:nth-child(3){transition: all 0.8s;
+                                 transform-origin: left center;
+                                 transform: rotate(0);}
+
+
+
+        .ex005.on span:nth-child(1){transform: rotate(40deg);}
+        .ex005.on span:nth-child(2){opacity: 0;}
+        .ex005.on span:nth-child(3){transform: rotate(-40deg);}
+
+
+
+
 
         .ex004 {margin-top: 20px;}
         .ex004 ul {list-style: none;

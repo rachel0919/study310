@@ -135,6 +135,29 @@
 
         </div>
 
+        
+
+    <div class="ex005">
+
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+
+
+    </div>
+
+    <div class="ex006">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Iusto nesciunt quos repellendus exercitationem repellat temporibus ab architecto alias!
+        Sunt aut sequi laudantium, 
+        voluptates magnam quia! Nam consequatur recusandae praesentium sint!
+        <p>장바구니</p>
+
+
+    </div>
+
 
 
 
@@ -167,6 +190,51 @@
                 })
 
 
+                    let numA = 0;
+                // ex005를 클릭했을때 나 자신에게 addclass on을 해라
+                $('.ex005').click(function(){
+
+                     numA++;
+                     if(numA == 2) numA=0
+                     console.log(numA)
+
+
+                     if(numA == 1){
+                    $(this).addClass('on')
+                    $('.ex006').css('left','0')
+                
+                    }else{$(this).removeClass('on')
+                      $('.ex006').css('left','-300px')
+                        }
+
+
+
+                })
+
+
+
+                // ex006의 p를 클릭했을때 토글과 같은 효과를 내라
+                $('.ex006 p').click(function(){
+
+                     numA++;
+                     if(numA == 2) numA=0
+                     console.log(numA)
+
+
+                     if(numA == 1){
+                    $('.ex005').addClass('on')
+                    $('.ex006').css('left','0')
+                
+                    }else{
+                        $('.ex005').removeClass('on')
+                      $('.ex006').css('left','-300px')
+                        }
+
+
+
+                })
+
+
 
 
 
@@ -178,6 +246,52 @@
 
 
         <style>
+
+
+
+            .ex006 {width: 300px;
+                    height: 200px;
+                    background-color: pink;
+                    position: absolute;
+                    left: -300px;
+                    transition: all 1.2s;}
+
+            .ex006 p {position: absolute;
+                      width: 20px;
+                      height: 100px;
+                      padding: 10px;
+                      border-top-right-radius: 10px;
+                      border-bottom-right-radius: 10px;
+                      background-color: pink;
+                      left: 100%;
+                      top: 10px;}
+
+
+
+
+            .ex005 span {width: 25px;
+                     height: 5px;
+                     background-color: #000;
+                     display: block;
+                     margin-bottom: 3px;}
+
+
+            .ex005 span:nth-child(1) {transition: all 0.8s;
+                                      transform-origin: left center;
+                                      transform: rotate(0deg);}
+            .ex005 span:nth-child(2) {opacity: 1;}
+            .ex005 span:nth-child(3) {transition: all 0.8s;
+                                      transform-origin: left center;
+                                      transform: rotate(0deg);}
+
+
+            .ex005.on span:nth-child(1) {transform: rotate(40deg);}
+            .ex005.on span:nth-child(2) {opacity: 0;}
+            .ex005.on span:nth-child(3) {transform: rotate(-40deg);}    
+
+
+
+
 
             .ex004 {margin-top: 20px;}
             .ex004 ul {list-style: none;
