@@ -7,6 +7,10 @@
    font-weight: 400;
    font-style: normal;
 }
+@font-face {
+  font-family: 'HoltwoodOneSC-Regular';
+  src: url('font/HoltwoodOneSC-Regular.ttf') format('ttf');
+}
 
 
 @import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
@@ -61,6 +65,7 @@ display: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      
       
        }
 
@@ -257,13 +262,12 @@ display: none;
 
 
 /* product 부분###################################################################### */
-.product {}
-.product .title001 {
-                      display: flex;
+.product {padding: 150px 0;}
+.product .title001 {display: flex;
                       justify-content: center;
                       align-items: center;
                       position: relative;
-                      padding: 40px 0 0 0;}
+                      padding: 40px 0 300px 0;}
 
 .product .title001 span {
   
@@ -275,12 +279,115 @@ display: none;
                             position: absolute;
                             left: 50%;
                             top: 0;
-                            margin-left: -450px;}
+                            margin-left: -450px;
+                           }
 
 
 
 
+  .proList1 {background-color: red;
+              width: 90%;
+             margin: 0 auto;
+              position: relative;
+              /* height: 1680px; */
+              display: flex;
+               justify-content: center;} 
 
+
+
+  .proList1 .left {position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    background-color: #ccc;
+                    color: #fff;
+                    font-size: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    left: 0;
+                    top: 50%;
+                    margin-top: -10px;}
+  .proList1 .right {position: absolute;
+                     width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    background-color: #ccc;
+                    color: #fff;
+                    font-size: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    right: 0;
+                    top: 50%;
+                    margin-top: -10px;} 
+                    
+                    
+
+    .proList1 .container {background-color: antiquewhite;
+                         width: calc(400px*4);
+                         height: 630px;
+                         /* overflow: hidden; */
+                        }
+    .proList1 .container ul {display: flex;}
+    .proList1 .container li {margin: 0 10px;
+                             width: 390px;
+                             height: 630px;
+                             box-sizing: border-box;
+                             display: flex;
+                             flex-direction: column; /* 세로 정렬 */
+                             align-items: center;}
+
+
+    .proPic {width: 390px;
+             height: 410px;
+             position: relative;
+             }
+
+
+.proPic img:first-child {
+    position: absolute;
+    top: 280px;
+    left: 3%;
+    display: block;
+}
+
+.proPic img:last-child {
+    position: absolute;
+}
+
+    .proTextbox {padding: 50px 0 0 0;
+                 }
+    .proTextbox .proName {}
+    .proTextbox .proIngre {text-align: center;
+                           font-size: 20px;
+                           font-family: 'Pretendard-Regular';
+                           color: #353634;
+                           white-space: nowrap;
+                           margin-bottom: 10px;
+                          }
+    .proTextbox .proPrice {color: #1C1E19;
+                           text-align: center;
+                           font-size: 20px;
+                           font-family: 'Pretendard-Regular';
+                           margin: 10px 0;}
+
+
+
+    .shopNow {display: inline-block;
+              justify-content: center;
+              align-items: center;
+              padding: 10px 100px;
+              color: #1C1E19;
+              text-align: center;
+              font-size: 20px;
+              font-family: 'Pretendard-Regular';
+              background-color: #FFB700;
+              border: 2px solid #1C1E19;
+              border-radius: 40px;
+              white-space: nowrap;
+              
+              }
 
 
 

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 8일차</title>
+</head>
+<body>
+
+    <h1>제이쿼리선택자</h1>
+    <h2>제이쿼리탐색구문</h2>
+    <table border="1">
+        <tr>
+            <td>구문</td>
+            <td>설명</td>
+        </tr>
+
+        <tr>
+            <td>children()</td>
+            <td>자식요소선택 ()안에 이름으로 지칭 비워둘경우 모두 선택</td>
+        </tr>
+
+        <tr>
+            <td>parent()</td>
+            <td>부모선택요소. $(this)문과 함께 사용하는 경우가 많음 - 내가 선택한 요소의 부모다 $(this).parent()</td>
+        </tr>
+
+        <tr>
+            <td>siblings()</td>
+            <td>형제요소선택 : 나를 제외한 형제선택 </td>
+        </tr>
+
+        <tr>
+            <td>find()</td>
+            <td>자손요소(후손) 선택</td>
+        </tr>
+
+        
+        <tr>
+            <td>eq()</td>
+            <td>자손의 순번 선택자 : 0부터 시작</td>
+        </tr>
+
+        
+        <tr>
+            <td>next()</td>
+            <td>선택자의 다음 요소</td>
+        </tr>
+
+        
+        <tr>
+            <td>prev()</td>
+            <td>선택자의 이전 요소 </td>
+        </tr>
+
+        
+        <tr>
+            <td>not()</td>
+            <td>제외요소</td>
+        </tr>
+
+    </table>
+
+    <table border="1">
+
+        <tr>
+            <td>구문</td>
+            <td>설명</td>
+        </tr>
+
+        <tr>
+            <td>append()</td>
+            <td>선택자 자식요소 중 마지막요소에 요소를 추가</td>
+        </tr>
+
+        <tr>
+            <td>prepend()</td>
+            <td>선택자 자식요소 중 처음 요소에 요소를 추가</td>
+        </tr>
+
+        <tr>
+            <td>after()</td>
+            <td>형제요소를 다음으로 추가</td>
+        </tr>
+
+        <tr>
+            <td>before()</td>
+            <td>형제요소를 앞전에 추가</td>
+        </tr>
+
+
+    </table>
+    
+
+
+    <div class="ex001">
+
+        <ul>
+            <li><span class="list03">list1</span></li>
+            <li>list2</li>
+            <li>list3</li>
+            <li class="list01">list4</li>
+            <li>list5</li>
+            <li class="list02">list6</li>
+            <li>list7</li>
+            <li>list8</li>
+        </ul>
+    </div>
+
+
+
+    <!-- 제이쿼리 cdn #################################### -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- 제이쿼리 설정################## -->
+    <script>
+
+        $(document).ready(function(){
+
+
+            // 자식요소선택
+            $('.ex001').children().css('border','2px solid #000')
+
+            // 부모요소선택
+            $('span').parent().css('background','blue')
+
+            // 형제요소선택
+            $('.list01').siblings().css('font-weight','bold')
+
+            // 자손자요소선택
+            $('body').find('.list03').css('color','red')
+
+            // 순서값선택하기
+            $('.ex001').find('li').eq(5).css('background','blue')
+
+            // 다음요소선택
+            $('.list01').next().css('background-color','green')
+
+            // 이전요소선택
+            $('.list02').prev().css('color','#fff')
+
+            // 특정요소를 제외
+            $('.ex001').find('li').not('.list02').css('font-size','30px')
+
+            // ex001의 ul안에 제일 마지막 자식 추가
+            $('.ex001').children('ul').append('<li>마지막리스트</li>')
+
+            // ex001의 ul안에 제일 처음 자식 추가
+            $('.ex001').find('ul').prepend('<li>처음리스트추가</li>')
+
+            // list01의 다음형제 추가
+            $('.list01').after('<li>list01다음형제</li>')
+
+            // list01의 이전형제 추가
+            $('.list01').before('<li>list01이전형제</li>')
+
+            
+
+        })
+
+    </script>
+
+    <style>
+        .ex001 li {margin: 10px;}
+    </style>
+
+
+
+
+
+    <h2>이벤트구문</h2>
+       <p>실제 사용자가 웹상에 특정한 행동을 취할 때 그에 대한 상호작용이 나타나는 형태</p>
+
+       <ul>
+        <li> 클릭 - click(function(){실행문})</li>
+        <li> 마우스가 들어갔을 때 - mouseenter(function(){실행문})</li>
+        <li> 마우스가 나갔을 때 - mouseleave(function(){실행문})</li>
+        <li> 마우스가 움직였을 때 - mousemove(function(){실행문})</li>
+        <li> 브라우저의 스크롤이 움직였을 때 - $(window).scroll(function(){실행문})</li>
+        <li> 브라우저의 화면리사이즈가 되었을 때 - $(window).resize(function(){실행문})</li>
+       </ul>
+
+
+    <div class="wrap">
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </div> 
+    
+    
+    <style>
+        .wrap {display: flex;
+              justify-content: space-around;}
+
+        .wrap>div {width: 200px;
+                  height: 200px;
+                   background-color: blueviolet;
+                   transition: all 0.8s;}
+
+
+
+        .on {transform: translateY(-20px);}
+        .on2 {transform: translateY(20px);}
+        .on3 {transform: rotate(20deg);}
+
+
+    </style>
+
+
+<script>
+    $(document).ready(function(){
+
+
+        let a = 0;
+        
+        // 클릭했을때 나자신의 배경색이 바뀌고 text()작성되어라
+        $('.wrap').children('div').eq(0).click(function(){
+                a++
+                if( a == 2) a = 0;
+                if( a == 1){
+
+            $(this).css('background-color','red')
+            $(this).text('클릭하셨습니다')
+
+        }else {
+            $(this).css('background-color','blueviolet') 
+        }
+            
+           
+        })
+
+        // 마우스가 들어갔을 때, addClass on을 입혀라
+        $('.wrap').find('div').eq(1).mouseenter(function(){
+
+
+            $(this).addClass('on');
+            $(this).text('마우스가 들어왔습니다')
+        })
+
+
+        // 마우스가 나갔을 때, addClass on2을 입혀라
+         $('.wrap').find('div').eq(2).mouseleave(function(){
+
+
+
+            $(this).addClass('on2');
+            $(this).text('마우스가 나갔습니다')
+
+
+
+
+        })
+
+
+        // 마우스가 움직였을 때,
+        $('.wrap').find('div').eq(3).mouseleave(function(){
+
+
+            $(this).addClass('on3');
+            $(this).text('마우스가 움직였습니다')
+
+
+        })
+
+        // 스크롤이 움직였을 때
+        $(window).scroll(function(){
+
+            $('.wrap').find('div').eq(4).css('background-color','yellow')
+
+
+        })
+
+        // resizing
+        $(window).resize(function(){
+
+
+            $('.wrap').find('div').eq(5).css('background-color','red')
+
+
+            
+        })
+
+
+
+
+
+    })
+</script>
+
+
+
+
+</body>
+</html>
