@@ -253,6 +253,162 @@ display: none;
                               transform: rotateY(180deg);}
 
 
+
+   /* 제품리스트 설정############################################################ */
+
+   .pro {}
+   .pro h2 {font-size: 60px;
+            text-align: center;
+            letter-spacing: 20px;
+            position: relative;
+            padding: 20px 0 0 0;/* 상우하좌 */}
+            
+   .pro p {text-align: center;
+            padding: 30px 0;}
+
+   
+      
+
+   .pro_list {background-color: red;
+              width: 80%;
+             margin: 0 auto;
+              position: relative;
+              height: 200px;
+              display: flex;
+               justify-content: center;} 
+   .pro_list .left {position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    background-color: #ccc;
+                    color: #fff;
+                    font-size: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    left: 0;
+                    top: 50%;
+                    margin-top: -10px;}
+   .pro_list .right {position: absolute;
+                     width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    background-color: #ccc;
+                    color: #fff;
+                    font-size: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    right: 0;
+                    top: 50%;
+                    margin-top: -10px;}  
+
+
+
+   .pro_list .container {background-color: antiquewhite;
+                         width: calc(220px*4);
+                         height: 200px;
+                         overflow: hidden;} 
+   .pro_list .container ul {display: flex;}
+   .pro_list .container li {margin: 0 10px;
+                            width: 200px;}
+   .pro_list .container img {}   
+
+
+
+
+
+
+
+
+   
+   .pro_list2 {background-color: red;
+              width: 80%;
+             margin: 0 auto;
+              position: relative;
+              height: 200px;
+              display: flex;
+               justify-content: center;} 
+   .pro_list2 .left {position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    background-color: #ccc;
+                    color: #fff;
+                    font-size: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    left: 0;
+                    top: 50%;
+                    margin-top: -10px;}
+   .pro_list2 .right {position: absolute;
+                     width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    background-color: #ccc;
+                    color: #fff;
+                    font-size: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    right: 0;
+                    top: 50%;
+                    margin-top: -10px;}  
+
+
+
+   .pro_list2 .container {background-color: antiquewhite;
+                         width: calc(220px*4);
+                         height: 200px;
+                         overflow: hidden;
+                         /* keyframe 설정할때 overflow 주석으로 감추고 설정해야함 */
+                         position: relative;
+                        } 
+   .pro_list2 .container ul {display: flex;
+                             position: absolute;}
+   .pro_list2 .container li {margin: 0 10px;
+                            width: 200px;}
+   .pro_list2 .container img {} 
+   
+   
+
+   .pro_list2 .container ul:nth-child(1) {left: 0;
+                                          animation: ani1 40s linear infinite;}
+                                          /* liner 일정한 속도 */
+   .pro_list2 .container ul:nth-child(2) {left: 100%;
+                                          animation: ani2 40s linear infinite;
+                                       }
+
+
+   .pro_list2 .container:hover ul:nth-child(1) {animation-play-state: paused;}
+   .pro_list2 .container:hover ul:nth-child(2) {animation-play-state: paused;}  
+                                     /* 애니메이션 걸려있는건 하나하나 다 paused해야함 */
+
+
+   @keyframes ani1 {
+
+      0% {left: 0;}
+      50% {left: -100%;}
+      50.00001% {left: 100%;}
+      100% {left: 0;}
+
+
+   }
+
+   @keyframes ani2 {
+
+      0% {left: 100%;}
+      50% {left: 0;}
+      100% {left: -100%;}
+
+
+   }
+
+
+   .pro_list2 .container li:hover {transform: scale(1.2);}
+
+
 /* product 페이지 설정 */
 
 
