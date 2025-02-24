@@ -1,0 +1,116 @@
+/* 언어 설정 */
+
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+/* .righteous-regular {
+    font-family: "Righteous", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+   */
+
+
+   /*reset css  */
+
+   * {margin: 0;
+      padding: 0;}
+
+   a {text-decoration: none;
+     color: #000;}
+     
+   ul, ol {list-style: none;} 
+   
+   img {border: none;
+        vertical-align: bottom;}
+
+   body {font-family: "Righteous", serif;}    
+
+
+
+   /* gnb 설정############################################# */
+/* a 값 안넣은 이유는 어차피 다른 페이지로 넘어가지않기때문 */
+
+   .gnb {position: fixed;
+         left: 0;
+         top: 50%;
+         margin-top: -120px;}
+   .gnb li {cursor: pointer;
+            width: 200px;
+            height: 60px;
+            font-family: "Righteous", serif;
+            font-size: 14px;
+            border-top: 1px solid #111;
+            box-sizing: border-box;
+            text-align: right;
+            opacity: 0.6;
+            transition: all 0.5s;
+        }
+
+   .gnb li:hover {font-size: 24px;
+                   opacity: 1;}    
+
+   .gnb li:nth-child(1):hover {color: #d4164c;
+                               border-color: #d4164c;}
+
+   .gnb li:nth-child(2):hover {color: #fff;
+                               border-color: #fff;}
+
+   .gnb li:nth-child(3):hover {color: #ffec6a;
+                               border-color: #ffec6a;}
+
+   .gnb li:nth-child(4):hover {color: #005a89;
+                               border-color: #005a89;}
+
+
+
+    .gnb li.on {font-size: 24px;
+                   opacity: 1;}    
+
+   .gnb li:nth-child(1).on {color: #d4164c;
+                               border-color: #d4164c;}
+
+   .gnb li:nth-child(2).on {color: #fff;
+                               border-color: #fff;}
+
+   .gnb li:nth-child(3).on {color: #ffec6a;
+                               border-color: #ffec6a;}
+
+   .gnb li:nth-child(4).on {color: #005a89;
+                               border-color: #005a89;}
+
+
+
+
+    /* section 설정 */
+
+    section {width: 100%;
+             height: 700px;/* 일단 700px로 보고있다가 자바에서 바꿈 */
+             background-size: cover;
+             background-position: right center;
+             overflow: hidden;
+             background-attachment: fixed;/* 기존의 이미지는 가만히 있고 스크롤하면 아래 이미지가 올라오는 모양새 */
+             position: relative;
+            }
+
+    section:nth-child(1) {background-image: url(img/bg1.jpg);}
+    section:nth-child(2) {background-image: url(img/bg2.jpg);}
+    section:nth-child(3) {background-image: url(img/bg3.jpg);}
+    section:nth-child(4) {background-image: url(img/bg4.jpg);}
+
+
+
+    /* wrap 설정 */
+    article {position: absolute;
+             left: 300px;
+             top: 46%;
+             z-index: 999;}
+    article p {font-size: 50px;
+               letter-spacing: 2px;}
+    article span {font-size: 16px;
+                  font-family: Arial, Helvetica, sans-serif;}
+
+
+    article:nth-child(1) p {}
+    article:nth-child(1) span {}
