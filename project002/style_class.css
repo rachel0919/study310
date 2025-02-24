@@ -409,6 +409,106 @@ display: none;
    .pro_list2 .container li:hover {transform: scale(1.2);}
 
 
+
+
+
+   /* 제품소개페이지 설정 */
+
+   .story {}
+   .story h2 {font-size: 60px;
+      text-align: center;
+      letter-spacing: 20px;
+      position: relative;
+      padding: 20px 0 0 0;/* 상우하좌 */}
+   .story>p {text-align: center;
+             padding: 30px 0;}
+
+   .story_box {display: flex;
+               width: 80%;
+               margin: 0 auto;
+               height: 650px;
+               overflow: hidden;}  
+
+
+   .story_box>div {position: relative;
+                   width: 33.3333%;}
+
+   .story_box>div:nth-child(1) {background-color: red;}
+   .story_box>div:nth-child(2) {background-color: yellowgreen;}
+   .story_box>div:nth-child(3) {background-color: yellow;}
+
+
+
+
+   .left_box {}
+   .left_box ul {}
+   .left_box li {display: flex;
+                justify-content: flex-end;
+                margin: 10px 0;}
+
+   .left_box .txt {}
+   .left_box .txt strong {text-align: right;
+                          display: block;}
+   .left_box .txt p {width: 300px;
+                     /* 기기가 아무리 줄어들어도 300아래로 안감 */
+                     text-align: right;
+   }
+
+   .left_box i {font-size: 28px;
+                width: 40px;
+                height: 40px;
+                border: 2px solid #fff;
+                line-height: 1.5;
+                text-align: center;
+                border-radius: 50%;
+                /* color: #fff; */
+                margin-left: 20px;
+               }
+
+
+
+
+   .img_box {text-align: center;
+             height: 100%;}
+   .img_box img {width: 100%;
+                 max-width: 100%;/* 꼭 해야함 확대하면 픽셀값이 깨짐 */
+                 position: relative;/* 앱솔루트안해도 위치값 제공할 수 있으니깐 안그러면 다른거 위치깨짐 */
+                 top: 100%;
+                 transition: all 1.5s;
+                 
+   }
+
+
+   .img_box.on img {top: 0;}
+
+
+
+   .right_box {}
+   .right_box ul {}
+   .right_box li {display: flex;
+                justify-content: flex-start;
+                margin: 10px 0;}
+
+   .right_box .txt {}
+   .right_box .txt strong {text-align: left;
+                          display: block;}
+   .right_box .txt p {width: 300px;
+                     /* 기기가 아무리 줄어들어도 300아래로 안감 */
+                     text-align: left;
+   }
+
+   .right_box i {font-size: 28px;
+                width: 40px;
+                height: 40px;
+                border: 2px solid #fff;
+                line-height: 1.5;
+                text-align: center;
+                border-radius: 50%;
+                /* color: #fff; */
+                margin-right: 20px;
+               }
+
+
 /* product 페이지 설정 */
 
 

@@ -54,7 +54,7 @@ nav {position: absolute;
 section {position: fixed;
          width: 100%;
          height: 100%;
-         background-color: aquamarine;
+         background-color: black;
          left: 0;
          top: 0;
          z-index: 1;
@@ -110,14 +110,20 @@ nav ul li a {display: block;
 section>div {position: absolute;
              width: 100%;
              height: 100%;
-             opacity: 0;}
+             opacity: 0;
+            perspective: 700px;
+             transition: all 1.5s;}
 
-section>div:nth-child(1) {background-color: antiquewhite;}
-section>div:nth-child(2) {background-color: plum;}
-section>div:nth-child(3) {background-color: yellowgreen;}
+section>div:nth-child(1) {background-color: black;}
+section>div:nth-child(2) {background-color: black;}
+section>div:nth-child(3) {background-color: black;}
 
 
-section>div.on {opacity: 1;}
+section>div.on {opacity: 1;
+                z-index: 2;}
+
+
+
 
 
 
@@ -135,6 +141,14 @@ nav.on {transform: rotateY(15deg);
            opacity: 1;}
 
 section.on {transform: rotateY(-10deg);}
+
+
+section>div>p {overflow: hidden;
+              transition: all 1.5s;
+               transform: rotateY(180deg);}
+
+
+section>div.on>p {transform: rotateY(0deg);}               
 
 /* 박스1  */
 .box1>p {width: 25%;
@@ -224,8 +238,7 @@ section>div>p {box-sizing: border-box;
                 /* 공간안의 가운데 정렬 */
 
                 color: #fff;
-                transform: rotateY(0deg);
-                transition: all 1.5s;
+                
 }
 section>div>p>strong {font-size: 50px;
                       display: inline-block;}
