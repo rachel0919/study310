@@ -2,9 +2,7 @@ $(document).ready(function(){
 
 // section의 높이를 화면의 높이와 같이해라
 
-
-
-// 화면의 높이값 찾기 처음부분을 셋팅하는거임
+// 화면의 높이 값 찾기 처음부분을 셋팅하는거임
 let ht = $(window).height();
 $('section').height(ht)
 
@@ -14,9 +12,11 @@ $(window).resize(function(){
 
     let ht = $(window).height();
     $('section').height(ht)
-    // 리사이징 될 때마다
+    // 리사이징 될 때마다 바뀜
 
 })
+
+
 
 
 

@@ -35,7 +35,9 @@
    .gnb {position: fixed;
          left: 0;
          top: 50%;
-         margin-top: -120px;}
+         margin-top: -120px;
+         z-index: 999;}
+         
    .gnb li {cursor: pointer;
             width: 200px;
             height: 60px;
@@ -65,7 +67,7 @@
 
 
 
-    .gnb li.on {font-size: 24px;
+   .gnb li.on {font-size: 24px;
                    opacity: 1;}    
 
    .gnb li:nth-child(1).on {color: #d4164c;
@@ -112,5 +114,20 @@
                   font-family: Arial, Helvetica, sans-serif;}
 
 
-    article:nth-child(1) p {}
-    article:nth-child(1) span {}
+    section:nth-child(1) p {color: #d4164c;}
+    section:nth-child(1) span {color: #111;}
+
+
+    
+    section:nth-child(2) p {color: #fff;}
+    section:nth-child(2) span {color: #111;}
+
+
+    
+    section:nth-child(3) p {color: #fff;}
+    article:nth-child(3) span {color: #ffec6a;}
+
+
+    
+    section:nth-child(4) p {color: #005a89;}
+    section:nth-child(4) span {color: #111;}

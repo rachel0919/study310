@@ -303,31 +303,38 @@ display: none;
 
 
   .proList1 .left {position: absolute;
-                    width: 20px;
-                    height: 20px;
-                    border-radius: 5px;
-                    background-color: #ccc;
-                    color: #fff;
-                    font-size: 10px;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    border: 3px solid #1C1E19;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     left: 0;
                     top: 50%;
                     margin-top: -10px;}
+
+  .proList1 .left i {font-size: 30px;
+                     color: #1C1E19;} 
+
   .proList1 .right {position: absolute;
-                     width: 20px;
-                    height: 20px;
-                    border-radius: 5px;
-                    background-color: #ccc;
-                    color: #fff;
-                    font-size: 10px;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    border-radius: 50%;
+                    border: 3px solid #1C1E19;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     right: 0;
                     top: 50%;
                     margin-top: -10px;} 
+
+  .proList1 .right i {font-size: 30px;
+                     color: #1C1E19;} 
+
+
+  
                     
      
 
@@ -409,7 +416,7 @@ display: none;
               border: 2px solid #1C1E19;
               border-radius: 40px;
               white-space: nowrap;
-              transition: background-color 0.2s ease, transform 0.1s ease;
+              transition: background-color , transform 0.1s ease;
               }
 
 
@@ -739,6 +746,14 @@ display: none;
   .more:hover a {border: 0.75px solid #D2EFF9;
                  color: #49C9F5;
                 background-color: #fff;}
+
+
+  .more:active a {
+                background-color: #24657a;
+                transform: scale(0.98);
+            }
+
+
 
 
 /* product 페이지 설정 */
