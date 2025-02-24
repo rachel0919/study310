@@ -65,6 +65,8 @@ display: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background-color: rgba(73, 201, 245, 0);
+      transition: background-color 0.3s ease;
       
       
        }
@@ -84,11 +86,15 @@ display: none;
 .header .logo a img {width: 100%;}
 
 
+.header.scrolled {
+  background-color: rgba(73, 201, 245, 0.9);
+}
 
 .gnb {
       position: absolute;
       left: 50%;
-      transform: translateX(-50%)
+      transform: translateX(-50%);
+     
       }
 .gnb>ul {display: flex;
         justify-content: center;
@@ -106,6 +112,7 @@ display: none;
     text-decoration: underline;}
 
 .gnb>ul>li>a:hover {color: #ccc;}
+
 
 
 
@@ -285,7 +292,7 @@ display: none;
 
 
 
-  .proList1 {background-color: red;
+  .proList1 {
               width: 90%;
              margin: 0 auto;
               position: relative;
@@ -322,12 +329,13 @@ display: none;
                     top: 50%;
                     margin-top: -10px;} 
                     
-                    
+     
 
-    .proList1 .container {background-color: antiquewhite;
+
+    .proList1 .container {
                          width: calc(400px*4);
                          height: 630px;
-                         /* overflow: hidden; */
+                         overflow: hidden;
                         }
     .proList1 .container ul {display: flex;}
     .proList1 .container li {margin: 0 10px;
@@ -337,6 +345,15 @@ display: none;
                              display: flex;
                              flex-direction: column; /* 세로 정렬 */
                              align-items: center;}
+
+
+
+
+    @keyframes popUp {
+    0% { transform: scale(0); }
+    60% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
 
 
     .proPic {width: 390px;
@@ -350,6 +367,12 @@ display: none;
     top: 280px;
     left: 3%;
     display: block;
+    transform: scale(0);
+    opacity: 0;  
+}
+.container li:hover .starHover {
+  animation: popUp 0.5s ease-out forwards;
+  opacity: 1;  
 }
 
 .proPic img:last-child {
@@ -382,18 +405,28 @@ display: none;
               text-align: center;
               font-size: 20px;
               font-family: 'Pretendard-Regular';
-              background-color: #FFB700;
+              background-color: #49C9F5;
               border: 2px solid #1C1E19;
               border-radius: 40px;
               white-space: nowrap;
-              
+              transition: background-color 0.2s ease, transform 0.1s ease;
               }
 
 
-
-
-                            
-
+              .container .shopNow:hover { 
+                background-color: #cef3ff; 
+            }
+            
+            .container li:hover .shopNow {
+                background-color: #cef3ff;
+            }
+            
+            /* 클릭할 때 배경색 변경 (우선순위를 높이기 위해 li까지 포함) */
+            .container li:active .shopNow, 
+            .container .shopNow:active {
+                background-color: #FFB700;
+                transform: scale(0.98);
+            }
 
 
 
@@ -440,13 +473,15 @@ display: none;
     .ingreInfo .list2 {}
     .ingreInfo .list2 ul {display: flex;
                     justify-content: center;
+                    
                    
                }
     .ingreInfo .list2 li {margin: 200px 80px; 
                           width: 360px;
                           height: 500px;
                           position: relative;
-                          box-sizing: border-box;}
+                          box-sizing: border-box;
+                          }
    
     .ingreInfo .list2 .cardpic {width: 100%;
                      height: 100%;
@@ -458,10 +493,11 @@ display: none;
                      flex-direction: column;
                      justify-content: center;
                      align-items: center;
-                     opacity: 1;
+                     
                      transform: rotateY(0);
-                     transition: all 0.5s;
+                     transition: all 0.8s;
                      z-index: 2;
+                     backface-visibility: hidden;
                     }
 
 
@@ -495,8 +531,9 @@ display: none;
                                 left: 0;
                                 top: 0;
                                 transform: rotateY(180deg);
-                                opacity: 0;
-                                transition: all 0.5s;}
+                                
+                                backface-visibility: hidden;
+                                transition: all 0.8s;}
 
 
     .cardtext img {width: 100%;
@@ -548,6 +585,160 @@ display: none;
 
 
 
+
+
+
+/* review 설정################################################################## */
+
+
+.review {padding: 250px 0;}
+
+.review .title002 {display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 40px 0 230px 0;}
+
+.review .title002 span {
+
+        font-size: 30px;
+        font-family: 'Pretendard-Regular';
+        font-weight: 900;
+        color: white; 
+        letter-spacing: 5px;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        margin-left: -552px;
+       }
+
+
+
+
+
+
+
+  .reviewSection {width: 90%;
+                  margin: 0 auto;
+                  position: relative;
+                  /* height: 1680px; */
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;}
+  .container2 {width: calc(430px*4);
+                  height: auto;
+                  overflow: hidden;}
+  .container2 ul {display: flex;
+                  padding-bottom: 70px;}
+  .container2 li {margin: 0 10px;
+                  width: 420px;
+                  height: 580px;
+                  box-sizing: border-box;
+                  display: flex;
+                  flex-direction: column; /* 세로 정렬 */
+                  align-items: center;
+                  background-color: #D2EFF9;
+                  border: 3px solid #FFB700;
+                  border-radius: 40px;
+                  }
+  .container2 li a {}
+
+
+  .container2 li:hover {background-color: #F4FCFF;}
+
+
+
+
+  .container2 .upperText {display: flex;
+    flex-direction: column;
+    padding: 25px 0 10px 0;}
+  .container2 .upperText img {display: flex;
+                              justify-content: center;
+                              align-items: center;}
+  .container2 .upperText span {text-align: center;
+                               font-size: 16px;
+                               color: #1C1E19;
+                               font-family: 'Pretendard-Regular';
+                               font-weight: 700;}
+
+
+  .container2 .reviewImg {border-radius: 40px;
+                          border: 2px solid #D8E1E4;
+                          overflow: hidden; 
+                          width: 385px; 
+                          height: auto;
+                          }
+  .container2 .reviewImg img {width: 100%; 
+                              height: 100%; 
+                              object-fit: cover;}
+
+
+  .container2 .lowerText {text-align: center;
+                          padding: 15px 0;
+                          width: 100%;
+                          height: 160px;
+                          position: relative;}
+  .container2 .lowerText>div {color: #FFB700;
+                             padding-bottom: 10px;}
+  .container2 .lowerText>p {
+                            font-size: 21px;
+                            color: #1C1E19;
+                            font-family: 'Pretendard-Regular';
+                            font-weight: 400;
+                            }
+  .container2 .lowerText>em {font-style: normal;
+                             color: #707070;
+                             font-size: 16px;
+                             font-family: 'Pretendard-Regular';
+                             font-weight: 700;
+                             position: absolute;
+                             bottom: 0;
+                             left: 50%;
+                             transform: translateX(-50%);
+                             }
+
+
+
+
+
+
+     
+
+
+
+
+  .more {
+
+        text-align: center;
+        
+        
+    }
+    
+    
+    
+    
+    
+  .more a {
+    
+        
+        padding: 2px 7px;
+        border: 0.75px solid #1C1E19;
+        border-radius: 5px;
+        text-align: center;
+        color: #1C1E19;
+        background-color: transparent;
+        font-size: 24px;
+        font-family: 'Pretendard-Regular';
+        font-weight: 500;
+        display: inline-block;
+        
+    
+    }
+
+
+  .more:hover a {border: 0.75px solid #D2EFF9;
+                 color: #49C9F5;
+                background-color: #fff;}
 
 
 /* product 페이지 설정 */
