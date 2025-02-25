@@ -19,6 +19,92 @@ $(window).resize(function(){
 })
 
 
+// window에서 스크롤 했을 때 스크롤탑값을 찾아라
+$(window).scroll(function(){
+
+   let sc = $(this).scrollTop()
+   let ht = $(window).height();
+   console.log(sc);
+
+
+//    sc값이 일정구간에 있을 때 li에 addClass on을 붙여라
+
+
+/*
+    if( sc >= (ht*0)-200  &&  sc < (ht*1)-200 ){
+
+        $('.gnb li').removeClass('on')
+        $('.gnb li').eq(0).addClass('on')
+
+
+    }
+
+    if(sc >= (ht*1)-200 && sc < (ht*2)-200 ){
+
+        $('.gnb li').removeClass('on')
+        $('.gnb li').eq(1).addClass('on')
+
+
+    }
+
+    if(sc >= (ht*2)-200 && sc < (ht*3)-200 ){
+
+        $('.gnb li').removeClass('on')
+        $('.gnb li').eq(2).addClass('on')
+
+
+    }
+
+    if(sc >= (ht*3)-200 && sc < (ht*4)-200 ){
+
+        $('.gnb li').removeClass('on')
+        $('.gnb li').eq(3).addClass('on')
+
+
+    }
+*/
+
+
+
+
+    // 위의 공식을 반복문으로 변환하기
+    for(let a = 0; a < 4; a++ ){
+
+
+       
+    if(sc >= (ht*a)-200 && sc < (ht*(a+1))-200 ){
+
+        $('.gnb li').removeClass('on')
+        $('.gnb li').eq(a).addClass('on')
+
+
+    } 
+
+    }
+
+
+
+
+});
+
+// gnb의 li를 click했을때, scrollTop의 위치를 바꿔라
+$('.gnb li').click(function(){
+
+
+    // html body안에 scrollTop을 animation을 이용해 움직이게 해라
+    /*
+    how to make an animation 
+    $('선택자').stop().animate({'속성명':속성값},작동시간-1/1000초,easing-생략가능)
+
+    */
+    let i = $(this).index()
+    let ht = $(window).height();
+    $('.gnb li').removeClass('on')
+    $(this).addClass('on')
+    $('html,body').stop().animate({'scrollTop':ht*i},1400)
+
+})
+
 
 
 
