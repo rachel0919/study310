@@ -32,7 +32,7 @@ img {vertical-align: bottom;
 
      
 
- body {background-color: /*#fff*/#49C9F5; 
+body {background-color: #fff; 
   font-family: 'Pretendard-Regular';}
 
 .header {width: 100%;
@@ -43,7 +43,14 @@ img {vertical-align: bottom;
 
 .contents {width: 100%;
         /* height: auto;쓰지말기 */
-        perspective: 1500px;}
+        perspective: 1500px;
+        
+
+
+
+
+      
+      }
 
 .contents>div {
 
@@ -60,7 +67,7 @@ display: none;
 
 
 /* 헤더 설정 */
-.header {
+.header  {
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -152,6 +159,8 @@ display: none;
 
 
 /* 메인페이지 설정 */
+
+.main {background-color: #49C9F5;}
 
  /* hero 설정 */
  .hero {width: 100%;
@@ -452,17 +461,17 @@ display: none;
 
 
               .container .shopNow:hover { 
-                background-color: #cef3ff; 
+                background-color: #FFB700; 
             }
             
             .container li:hover .shopNow {
-                background-color: #cef3ff;
+              background-color: #FFB700;
             }
             
             /* 클릭할 때 배경색 변경 (우선순위를 높이기 위해 li까지 포함) */
             .container li:active .shopNow, 
             .container .shopNow:active {
-                background-color: #FFB700;
+                background-color: #cef3ff;
                 transform: scale(0.98);
             }
 
@@ -475,7 +484,7 @@ display: none;
               background-color: #FFB700; 
               color: #1C1E19;
               padding: 3px 15px;
-              font-size: 21px;
+              font-size: 20px;
               font-family: 'Pretendard-Regular';
               font-weight: 500;
               border-radius: 30px;
@@ -623,7 +632,7 @@ display: none;
                     }
     .cardtext p { width: 100%;
                   height: 100%;
-                  font-size: 22px;
+                  font-size: 20px;
                   font-family: 'Pretendard-Regular';
                   font-weight: 800;
                   color: #49C9F5;
@@ -677,19 +686,19 @@ display: none;
                            width: 100%;
                            top: 0;
                            left: 50%;
-                           margin-left: -800px;
+                           margin-left: -700px;
                           }
 .back_box .story_001 {position: relative;
                           }
 
 
 
-.back_box .storyText_001 {width: 1350px;
+.back_box .storyText_001 {width: 1150px;
                           height: 710px;
                           background-color: #F4FCFF;
                           border: 3px solid #939393;
                           border-radius: 50px;
-                          padding: 80px 80px 300px 80px;
+                          padding: 80px 80px 100px 80px;
                           box-sizing: border-box;
                           display: inline-block;
                           position: absolute;} 
@@ -709,7 +718,7 @@ display: none;
                          top: 0;
                          margin-top: -100px;
                          left: 50%;
-                         margin-left: 300px;
+                         margin-left: 100px;
 
                          }
 
@@ -769,7 +778,7 @@ display: none;
                      top: 50%;
                      left: 50%;
                      transform: translate(-50%, -50%);
-                     margin-top: -150px;
+                     margin-top: -250px;
                      }
 .story_box .img_box img {width: 100%;}
 
@@ -835,7 +844,7 @@ display: none;
 .front_box li:nth-child(3) {position: absolute;
                             width: 100%;
                             right: -45%;
-                            bottom: 20%;}
+                            bottom: 25%;}
 .story_005 {position: relative;
             width: 100%;}
 
@@ -850,15 +859,13 @@ display: none;
 
 .story_005 .storyPic_005 {position: absolute;
                           top: 0;
-                          margin-top: -325px;
+                          margin-top: -240px;
                           right: 50%;
-                          transform: translateX(35%)}
+                          transform: translateX(-15%)}
 
-.storyPic_005 img {}
-
-
-
-
+.storyPic_005 img {width: 300px;
+                   max-width: 500px;
+                   height: auto;}
 
 
 
@@ -870,14 +877,18 @@ display: none;
 
 
 
-.story_box h3 {font-size: 36px;
+
+
+
+
+.story_box h3 {font-size: 30px;
                color: #1C1E19;
                font-family: 'Pretendard-Regular';
                font-weight: 800;
                text-align: left;
                margin-bottom: 25px;}
 
-.story_box span {font-size: 26px;
+.story_box span {font-size: 20px;
                color: #1C1E19;
                font-family: 'Pretendard-Regular';
                font-weight: 500;
@@ -890,7 +901,7 @@ display: none;
 /* review 설정################################################################## */
 
 
-.review {padding: 150px 0 250px 0;}
+.review {padding-bottom: 200px;}
 
 .review .title002 {display: flex;
   justify-content: center;
@@ -1146,6 +1157,38 @@ display: none;
 
 
 /* product 페이지 설정 */
+
+
+
+
+/* gnb 디테일 변경 */
+.header.sub .gnb > ul > li > a {
+  color: #1C1E19; 
+}
+
+.header.sub .gnb > ul > li > a:hover {
+  color: #666; 
+}
+
+.header.sub .util a {
+  color: #1C1E19; 
+}
+
+.header.sub .util a:hover {
+  color: #666; 
+}
+.header.sub {
+  background-color: transparent; 
+  transition: none; /* 불필요한 애니메이션 제거 */
+}
+
+
+.product { 
+  width: 100%; 
+  height: auto; 
+    
+}
+
 
 
 
