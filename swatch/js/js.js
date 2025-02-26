@@ -105,7 +105,33 @@ $('.gnb li').click(function(){
 
 })
 
+//  section에서 mouse wheel했을 때, 다음화면 또는 이전화면으로 이동해라
+$('section').mousewheel(function(event,delta){
 
+// 마우스를 올렸을 때
+
+if(delta > 0){
+
+let prev = $(this).prev().offset().top;
+
+$('html,body').stop().animate({'scrollTop':prev},1400,'easeOutBounce')
+
+}
+
+// 마우스를 내렸을 때
+
+else if(delta < 0){
+
+
+    let next = $(this).next().offset().top;
+   
+    $('html,body').stop().animate({'scrollTop':next},1400,'easeOutBounce')
+
+
+}
+
+
+})
 
 
 })

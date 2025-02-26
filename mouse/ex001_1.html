@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseeffect_1</title>
+
+
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+
+
+
+    * {margin: 0;
+       padding: 0;}
+
+
+    ul {list-style: none;}
+
+    body {position: fixed;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background-color: rgb(250, 246, 221);
+          color: rgb(109, 9, 79);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "Playfair Display", serif;
+          font-weight: 800;}
+
+
+
+     h1 {
+        display: none;
+         position: absolute;
+         top: 20px;
+         left: 50px;}
+         
+         
+    .info {position: absolute;
+           left: 50px;
+           bottom: 20px;
+           font-size: 14px;}
+           
+    .info>ul {color: rgb(112, 112, 112);
+        font-family: "Phudu", serif;
+        font-weight: 500;}
+        
+        
+    .info span {margin-left: 10px;}
+    
+    
+
+  
+    .txt {text-align: center;}
+    .txt p {padding: 10px 0;}
+
+    
+    .txt p:nth-child(1) {font-size: 80px;}
+    .txt p:nth-child(2) {font-size: 70px;}
+    .txt p:nth-child(3) {font-size: 30px;}
+    .txt p:nth-child(4) {font-size: 20px;}
+
+    .txt span {border-bottom: 4px dashed rgb(168, 0, 0);}
+
+
+    .mouse {position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 3px solid rgb(109, 9, 79);
+            background-color: rgba(255, 255, 255, 0.1);
+            z-index: 9999;
+            pointer-events: none;
+            user-select: none;
+            transition: background-color 0.2s,
+                            border-color 0.2s,
+                            transform 0.6s,
+                            border-radius 0.2s;}
+           
+           
+    
+        .mouse.style1 {background-color: rgba(255, 165, 0, 0.4);
+                 border-color: orange;}
+        .mouse.style2 {background-color: rgba(140, 0, 255, 0.4);
+                 border-color: rgb(140, 0, 255);
+                 transform: rotateY(720deg) scale(2);}
+        .mouse.style3 {background-color: rgba(0, 47, 255, 0.4);
+                 border-color: rgb(0, 47, 255);
+                 transform: rotateY(45deg) scale(1.5);
+                 border-radius: 10px;}
+        .mouse.style4 {background-color: rgba(121, 235, 197, 0.4);
+                 border-color: rgb(121, 235, 197);
+                 transform: rotateY(360deg) scale(10);}
+        .mouse.style5 {background-color: rgba(255, 0, 85, 0.4);
+                 border-color: rgb(255, 0, 85);
+                 transform: rotateY(720deg) scale(0.1);}
+        .mouse.style6 {background-color: rgba(255, 81, 0, 0.4);
+                 border-color: rgb(255, 81, 0);
+                 transform: rotateY(-720deg) scale(1.5);
+                 border-radius: 0;}
+
+    
+
+
+    </style>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+
+            $('body')
+
+
+
+
+
+
+
+
+        })
+
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+
+    <h1>마우스이펙트</h1>
+    <div class="info">
+
+
+       
+
+        <ul>
+
+            <!-- 브라우저 기준이므로 스크롤의 영향을 받지않음 높이 최대갓ㅂ이 화면크기를 벗어나지않는다 -->
+            <li>clientX : <span>00</span></li>
+            <li>clientY : <span>00</span></li>
+
+            <!-- 요소기준이므로 요소안에서 마우스가 이벤트가 일어났을 때 값을 찾아라 -->
+            <li>offsetX : <span>00</span></li>
+            <li>offsetY : <span>00</span></li>
+
+            <!-- html 문서 기준이므로 body의 높이 값을 기준으로 움직임, scroll값의 영향을 받는다(많이 쓰임) -->
+            <li>pageX : <span>00</span></li>
+            <li>pageY : <span>00</span></li>
+
+            <!-- 모니터 해상도 기준 client와 비슷해 보이나 해상도 세팅값 스크롤의 영향없음 -->
+            <li>screenX : <span>00</span></li>
+            <li>screenY : <span>00</span></li>
+        </ul>
+</div>
+        <div class="txt">
+
+
+            <p><span class="style1">Do my</span>, do my ladies run this?</p>
+            <p>Do my, do <span class="style2">my ladies run</span> this?</p>
+            <p>All of <span class="style3">my girls looking good</span> and they got <span class="style4">they own money</span> Pop your shit</p>
+            <p>This <span class="style5">for my girls</span> with no sponsor, they got they <span class="style6">own fundin'</span></p>
+            
+        </div>
+
+        <div class="mouse"></div>
+
+
+
+
+
+
+
+    
+
+    
+</body>
+</html>

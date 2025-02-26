@@ -1186,9 +1186,51 @@ display: none;
 .product { 
   width: 100%; 
   height: auto; 
-    
 }
 
+.productPage {width: 90%;
+              height: auto;
+              margin: 0 auto;
+              }
+
+
+
+.proDetails {
+             width: 100%;
+             height: auto;
+             }
+.proDetails .deLeftside { float: left;
+              width: 50%;
+             }
+
+
+
+.deImgbox {width: 710px;
+           height: 800px;
+           overflow: hidden;
+           position: relative;}
+
+.deImgbox img {width: 120%;
+               height: auto;
+               position: absolute;
+               top: 50%; /* 세로 중앙 정렬 */
+               left: 50%; /* 가로 중앙 정렬 */
+               transform: translate(-50%, -50%); 
+               
+               object-fit: cover;}
+
+
+
+
+            
+.proDetails .deRightside {float: left;
+              width: 50%;}
+
+.proDetails::after {
+                display: block;
+                content: '';
+                clear: both;
+            }
 
 
 
