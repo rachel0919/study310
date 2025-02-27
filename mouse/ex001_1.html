@@ -31,7 +31,8 @@
           justify-content: center;
           align-items: center;
           font-family: "Playfair Display", serif;
-          font-weight: 800;}
+          font-weight: 800;
+          cursor: none;}
 
 
 
@@ -83,7 +84,8 @@
             transition: background-color 0.2s,
                             border-color 0.2s,
                             transform 0.6s,
-                            border-radius 0.2s;}
+                            border-radius 0.2s;
+            }
            
            
     
@@ -112,16 +114,129 @@
 
     </style>
 
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
 
     <script>
 
         $(document).ready(function(){
 
 
-            $('body')
+            $('body').mousemove(function(e){
 
 
+            let cX = e.clientX;
+            let cY = e.clientY;
+
+            let oX = e.offsetX;
+            let oY = e.offsetY;
+
+            let pX = e.pageX;
+            let pY = e.pageY;
+
+            let sX = e.screenX;
+            let sY = e.screenY;
+
+
+            $('.info li').eq(0).find('span').text(cX)
+            $('.info li').eq(1).find('span').text(cY)
+
+            $('.info li').eq(2).find('span').text(oX)
+            $('.info li').eq(3).find('span').text(oY)
+
+            $('.info li').eq(4).find('span').text(pX)
+            $('.info li').eq(5).find('span').text(pY)
+
+            $('.info li').eq(6).find('span').text(sX)
+            $('.info li').eq(7).find('span').text(sY)
+
+                // 마우스 움직임값에 pageXY값 대입하기
+                $('.mouse').css({'left':pX-15, 'top':pY-15})
+
+
+            });
+
+
+
+
+            $('.style1').mouseenter(function(){
+
+                $('.mouse').addClass('style1')
+            })
+
+               $('.style1').mouseleave(function(){
+
+                $('.mouse').removeClass('style1')
+            })
+
+
+
+            
+
+            $('.style2').mouseenter(function(){
+
+                $('.mouse').addClass('style2')
+            })
+
+               $('.style2').mouseleave(function(){
+
+                $('.mouse').removeClass('style2')
+            })
+
+
+
+
+            $('.style3').mouseenter(function(){
+
+                $('.mouse').addClass('style3')
+            })
+
+               $('.style3').mouseleave(function(){
+
+                $('.mouse').removeClass('style3')
+            })
+
+
+
+
+
+
+            $('.style4').mouseenter(function(){
+
+                $('.mouse').addClass('style4')
+            })
+
+               $('.style4').mouseleave(function(){
+
+                $('.mouse').removeClass('style4')
+            })
+
+
+
+
+
+            $('.style5').mouseenter(function(){
+
+                $('.mouse').addClass('style5')
+            })
+
+               $('.style5').mouseleave(function(){
+
+                $('.mouse').removeClass('style5')
+            })
+
+
+
+
+
+            $('.style6').mouseenter(function(){
+
+                $('.mouse').addClass('style6')
+            })
+
+               $('.style6').mouseleave(function(){
+
+                $('.mouse').removeClass('style6')
+            })
 
 
 
