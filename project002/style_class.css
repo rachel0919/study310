@@ -35,7 +35,8 @@ img {vertical-align: bottom;
 .header {width: 100%;
          height: 100px;
          position: fixed;
-         z-index: 999;}
+         z-index: 999;
+         height: 120px;}
 
 
 .contents {width: 100%;
@@ -510,6 +511,121 @@ display: none;
 
 
 /* product 페이지 설정 */
+
+.product {background-color: antiquewhite;
+          padding-top: 120px;}
+
+.pro001 {display: flex;
+         width: 90%;
+         margin: 0 auto;}
+.pro001 .imgBox {width: 70%;}
+.pro001 .cartBox {width: 30%;}
+
+.imgBox .bigImg {background-color: aqua;
+                 width: 80%;
+                 margin: 0 auto;
+                 height: 600px;
+               /* 자식에게 absolute 할거기때문에 height값을 꼭 지정  */
+               position: relative;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               /* 이미지 중앙 정렬  화면이 줄어들더라도 이미지가 가운데로 줄어들음*/
+               overflow: hidden;
+               /* 화면 확대할시 텍스트 부분이 치고 넘어옴 */
+               }
+
+.imgBox .bigImg img {position: absolute;
+                     height: 100%;
+                     opacity: 0;
+                     z-index: 1;
+
+                     }
+
+
+.imgBox .bigImg img.on {opacity: 1;
+                        z-index: 2;}
+
+
+
+
+.imgBox .thumb {width: 80%;
+                margin: 0 auto;
+                margin-top: 20px;}
+.imgBox .thumb ul {display: flex;
+                   justify-content: space-between;}
+.imgBox .thumb li:nth-child(2) {margin: 0 5px;}
+.imgBox .thumb img {width: 100%;}
+
+
+.cartBox .infoBox {}
+.cartBox .infoBox h2 {font-size: 30px;
+                   text-align: left;
+                   letter-spacing: 5px;}
+.cartBox .infoBox p {font-size: 18px;
+   text-align: left;}
+
+
+.cartBox .count {
+                 display: flex;
+                 justify-content: space-between;
+                 padding: 10px;
+                 margin: 20px 0;}
+.count .num {border: 2px solid #000;
+             }
+
+.count .num span {display: inline-block;
+                  padding: 5px 20px;
+                  font-size: 25px;
+                  color: #fff;
+                  cursor: pointer;}
+.count .num span:nth-child(1) {background-color: #000;
+                               }
+.count .num span:nth-child(2) {color: #000;}
+.count .num span:nth-child(3) {background-color: #000;}
+.count .won {display: flex;
+             justify-content: center;
+             align-items: center;
+             font-size: 20px;
+             font-weight: bold;
+             color: rgb(151, 5, 5);}
+
+.count .won span {font-size: 22px;
+                  display: inline-block;
+                  margin-right: 10px;}
+
+
+
+.count .num span:nth-child(1):hover {background-color: #ccc;}
+.count .num span:nth-child(3):hover {background-color: #ccc;}
+
+
+
+.cartBox .cart {display: flex;
+                width: 100%;
+                justify-content: space-between;}
+
+
+
+.cartBox .cart p {width: 48%;
+
+                  padding: 20px;
+                  box-sizing: border-box;
+                  text-align: center;
+                  font-size: 18px;
+                  font-weight: bold;
+                 background-color: rebeccapurple;
+                  border-radius: 10px;
+                  cursor: pointer;}
+
+
+
+.cartBox .cart p:nth-child(1) {border: 2px solid palevioletred;
+                               background-color: transparent;}
+
+
+.cartBox .cart p:hover {opacity: 0.6;}
+
 
 
 

@@ -1,0 +1,219 @@
+/* 언어설정 */
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    font-family: "Orbitron", sans-serif;
+}
+
+
+/* 전체화면설정 */
+#wrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-image: url(img/bg_morning.jpg);
+    background-size: cover;
+}
+
+/* 로고설정 */
+
+#wrap h1 {
+    width: 90px;
+    height: 80px;
+    position: fixed;
+    top: 30px;
+    left: 60px;
+    background-image: url(img/logo_b.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+
+}
+
+
+/* 텍스트박스설정 */
+#wrap article {position: absolute;
+                top: 350px;
+                left: 150px;
+                width: 450px;
+                }
+#wrap article p {font-size: 50px;
+                color: #666;}
+#wrap article strong {color: #111;}
+#wrap article em {font-style: normal;
+                    font-size: 14px;
+                    color: #333;}
+
+/* 모바일구간설정 */
+#wrap figure {position: absolute;
+           
+        width: 1226px;
+    height: 809px;
+top: 200px;
+    right: -300px;
+background-image: url(img/phone_morning.png);}
+#wrap figure p {
+    width: 550px;
+    height: 310px;
+    position: absolute;
+    left: 134px;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+    overflow: hidden;
+    color: #333;
+}
+#wrap figure p span {}
+
+/* 네비설정 */
+#wrap nav {position: fixed;
+            width: 90%;
+           
+            bottom: 30px;
+            left: 5%;
+
+        }
+#wrap nav ul {width: 100%;
+            display: flex;
+            justify-content: space-between;}
+#wrap nav li {width: 23%;
+            background-color:rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            box-sizing: border-box
+            }
+#wrap nav a {color: #fff;
+                display: block;}
+#wrap nav li:hover {background-color: rgba(255, 255, 255, 1);}
+#wrap nav li:hover a {color: #000;}
+
+/* morning설정 */
+#wrap.morning {background-image: url(img/bg_morning.jpg);}
+#wrap.morning h1 {background-image: url(img/logo_b.png);}
+
+#wrap.morning article p {color: #333;}
+#wrap.morning article strong {color: #111;}
+#wrap.morning article em {color: #333;}
+
+#wrap.morning figure {background-image: url(img/phone_morning.png);}
+#wrap.morning figure p{color: #333;}
+
+
+
+/* afternoon설정 */
+
+
+#wrap.afternoon {background-image: url(img/bg_afternoon.jpg);}
+#wrap.afternoon h1 {background-image: url(img/logo_b.png);}
+
+#wrap.afternoon article p {color: #666;}
+#wrap.afternoon article strong {color: #111;}
+#wrap.afternoon article em {color: #333;}
+
+#wrap.afternoon figure {background-image: url(img/phone_afternoon.png);}
+#wrap.afternoon figure p{color: #333;}
+
+/* evening설정 */
+
+#wrap.evening {background-image: url(img/bg_evening.jpg);}
+#wrap.evening h1 {background-image: url(img/logo_w.png);}
+
+#wrap.evening article p {color: #444;}
+#wrap.evening article strong {color: #fff;}
+#wrap.evening article em {color: #333;}
+
+#wrap.evening figure {background-image: url(img/phone_evening.png);}
+#wrap.evening figure p{color: #fff;}
+
+/* night설정 */
+
+#wrap.night {background-image: url(img/bg_night.jpg);}
+#wrap.night h1 {background-image: url(img/logo_w.png);}
+
+#wrap.night article p {color: #bbb;}
+#wrap.night article strong {color: #fff;}
+#wrap.night article em {color: #888;}
+
+#wrap.night figure {background-image: url(img/phone_night.png);}
+#wrap.night figure p{color: #fff;}
+
+
+
+/* 구름설정 */
+
+.c01 {position: absolute;
+top: 0;
+left: -1146px;
+animation: c01 100s linear infinite;
+    }
+.c02 {position: absolute;
+top: 20px;
+left: 0;
+animation: c02 110s linear infinite;}
+
+@keyframes c01 {
+    0% {left: -1146px;}
+    100%{left: 1950px;}
+}
+
+@keyframes c02 {
+    0% {left: 0px;}
+    50%{left: 1950px;}
+    50.0001% {left: -1840px;}
+    100% {left: 0;}
+}
+
+
+
+.mc01 {
+    width: 600px;
+    position: absolute;
+    top: 0;
+    left: -600px;
+    animation: mc01 100s linear infinite;
+        }
+    .mc02 {
+        width: 700px;
+        position: absolute;
+    top: 20px;
+    left: 0;
+    animation: mc02 110s linear infinite;}
+    
+    @keyframes mc01 {
+        0% {left: -600px;}
+        100%{left: 540px;}
+    }
+    
+    @keyframes mc02 {
+        0% {left: 0px;}
+        50%{left: 540px;}
+        50.0001% {left: -700px;}
+        100% {left: 0;}
+    }
+
+
+
+
