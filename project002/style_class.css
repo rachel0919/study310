@@ -513,18 +513,21 @@ display: none;
 /* product 페이지 설정 */
 
 .product {background-color: antiquewhite;
-          padding-top: 120px;}
+          padding-top: 120px;
+          padding-bottom: 80px;}
 
 .pro001 {display: flex;
          width: 90%;
-         margin: 0 auto;}
+         margin: 0 auto;
+         padding-bottom: 50px;
+         border-bottom: #fff 2px solid;}
 .pro001 .imgBox {width: 70%;}
 .pro001 .cartBox {width: 30%;}
 
 .imgBox .bigImg {background-color: aqua;
                  width: 80%;
                  margin: 0 auto;
-                 height: 600px;
+                 height: 500px;
                /* 자식에게 absolute 할거기때문에 height값을 꼭 지정  */
                position: relative;
                display: flex;
@@ -536,7 +539,7 @@ display: none;
                }
 
 .imgBox .bigImg img {position: absolute;
-                     height: 100%;
+                     width: 100%;
                      opacity: 0;
                      z-index: 1;
 
@@ -554,7 +557,13 @@ display: none;
                 margin-top: 20px;}
 .imgBox .thumb ul {display: flex;
                    justify-content: space-between;}
-.imgBox .thumb li:nth-child(2) {margin: 0 5px;}
+.imgBox .thumb li:nth-child(2) {margin: 0 5px;
+                                }
+
+.imgBox .thumb li {height: 300px;
+                   width: 30%;
+                   overflow: hidden;}
+
 .imgBox .thumb img {width: 100%;}
 
 
@@ -630,5 +639,153 @@ display: none;
 
 
 
+
+/* 추천상품설정 */
+
+.recommend {width: 80%;
+            margin: 40px auto;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            
+            }
+
+.recommend h2 {width: 100%;
+               text-align: center;
+               padding: 20px 0;}            
+
+
+
+.recommend .left {width: 50px;
+                  height: 50px;
+                  background-color: #fff;
+                  border-radius: 50%;
+                  font-size: 20px;
+                  font-weight: bold;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  color: #ddd;
+                  /* 서체에 따라 위치가 다름  */
+                  box-sizing: border-box;
+                  padding-bottom: 5px;
+                  }
+
+
+.recommend .contain {width: calc(170px * 5);
+   overflow: hidden;
+   height: 100px;
+   position: relative;}
+.recommend .contain ul {display: flex;
+                        width: calc(170px * 8);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        transition: all 0.8s;}
+.recommend .contain li {width: 150px;
+                        margin: 0 10px;
+                        height: 100px;
+                        overflow: hidden;}
+.recommend .contain img {}
+
+
+
+.recommend .right {width: 50px;
+   height: 50px;
+   background-color: #fff;
+   border-radius: 50%;
+   font-size: 20px;
+   font-weight: bold;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #ddd;
+   /* 서체에 따라 위치가 다름  */
+   box-sizing: border-box;
+   padding-bottom: 5px;
+                  }
+
+
 /* login 페이지 설정 */
 
+.contents.loginBig {z-index: 9999999;
+                    height: 100vh;
+                    width: 100%;
+                    position: relative;
+                    background-color: antiquewhite;}
+
+.login {width: 100%;
+        height: 100%;
+        position: fixed;
+        
+       }
+
+.login h2 {text-align: center;
+           padding: 50px 0;}
+.login .loginBox {width: 500px;
+                  margin: 0 auto;
+                 
+                  display: flex;
+                  justify-content: center;
+                  
+                  }
+
+
+
+.loginBox .id {width: 200px;
+               background-color: #fff;
+               padding: 10px;
+               border-top-left-radius: 5px;
+               border-top-right-radius: 5px;
+               border: 1px solid #ccc;
+            }
+
+.loginBox .id input {margin-left: 5px;
+                     font-size: 20px;
+                     color: #333;
+                     border: none;
+                     caret-color: rgb(21, 156, 156);}
+
+.loginBox .id input::placeholder {color: #ddd;}
+
+.loginBox .id input:focus {outline: none;}
+.loginBox .pass {width: 200px;
+                 background-color: #fff;
+                 padding: 10px; 
+                 border-bottom-left-radius: 5px;
+                 border-bottom-right-radius: 5px;
+                 border: 1px solid #ccc;
+                 border-top: none;
+               }
+
+.loginBox .pass input {margin-left: 5px;
+                       font-size: 20px;
+                       color: #333;
+                       border: none;
+                     }
+
+
+.loginBox .pass input::placeholder {color: #ddd;}
+.loginBox .pass input:focus {outline: none;}
+
+
+.loginBox .loginBtn {width: 200px;
+   background-color: #fff;
+   padding: 10px; 
+   border-radius: 5px;
+   margin-top: 20px;
+   text-align: center;
+   cursor: pointer;}
+
+
+.loginBox .loginBtn input {color: aqua;
+                           background-color: transparent;
+                           border: none;
+                           letter-spacing: 5px;
+                           cursor: pointer;
+                           }
+
+
+.loginBox .loginBtn:hover {box-shadow: 2px 2px 2px #ccc;}

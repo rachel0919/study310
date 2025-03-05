@@ -1487,5 +1487,261 @@ display: none;
 .proSugbox:hover .proSugtxt img {filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(10deg) brightness(106%) contrast(101%);}
 .proSugbox:hover .proSugtxt p {color: #fff;}
 
+
+
+
+
+
+
+
+/* galleryList구간############################################ */
+.galleryList {width: 90%;
+             height: auto;
+             margin: 0 auto;
+             padding: 200px 0;
+             }
+
+.galleryTitle {width: 80%;
+               height: auto;
+               margin: 0 auto;
+               padding-bottom: 100px;
+  }
+.galleryTitle h4 {font-size: 20px;
+  color: #080807;
+  font-family: 'Pretendard-Regular';
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.galleryTitle img {width: 60%;
+                   height: auto;}
+
+.gallerySection {width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  flex-wrap: nowrap;}
+
+
+
+
+.gallerySection .gallerybox {border: 1px solid #1C1E19;
+                           border-radius: 10px;
+                           margin: 8px;
+                           padding: 20px 10px;
+                           box-sizing: border-box;
+                           background-color: #fff;
+                           width: 385px;
+                           height: 555px;
+                           text-align: center;
+                           }
+
+.gallerybox:last-child {
+    margin-right: 0;
+}
+
+.gallerybox .gallerypic {}
+.gallerybox .gallerypic img {width: 95%;
+                             height: auto;}
+
+.gallerybox .gallerytxt {text-align: center;
+                       padding: 20px 0;
+                       margin-top: 20px;
+                       display: flex;
+                       flex-direction: column;}
+.gallerybox .gallerytxt img {}
+.gallerybox .gallerytxt p {color: #1C1E19;}
+
+.gallerybox .gallerytxt span {font-size: 21px;
+  font-family: 'Pretendard-Regular';
+  color: #1C1E19;
+  font-weight: 400;
+  margin-top: 10px;}
+
+.gallerytxt a {margin-top: 10px;
+              }  
+.gallerybox .gallerytxt strong {font-size: 21px;
+                            font-family: 'Pretendard-Regular';
+  color: #fff;
+  font-weight: 700;
+  font-style: normal;
+  display: inline-block;
+  padding: 5px 20px;
+  background-color: #49C9F5;
+              border-radius: 50px;
+  
+  }  
+
+
+
+
+.gallerybox:hover {background-color: #49C9F5;}
+.gallerybox:hover .gallerytxt img {filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(10deg) brightness(106%) contrast(101%);}
+.gallerybox:hover .gallerytxt p {color: #fff;}
+.gallerybox:hover .gallerytxt span {color: #fff;}
+.gallerybox:hover .gallerytxt strong { background-color: #FFB700;}
+
+.gallerytxt strong:hover {box-shadow: 3px 3px #166072;}
+
+
+
+
+
+
+
+
+
+
+
 /* login 페이지 설정 */
 
+
+.contents.loginBig {z-index: 9999999;
+                    height: 100vh;
+                    width: 100%;
+                    position: relative;
+                    background-color: #C7F1FF;
+                    text-align: center;}
+
+.loginPage {width: 100%;
+            height: 100%;
+            position: fixed;
+
+}
+
+.loginBox {position: relative;
+           padding: 50px;
+           display: flex;
+           justify-content: center;
+           }
+
+.loginBox .loginImg {position: absolute;
+                     }
+
+.loginImg img {width: 68%;
+                
+               height: auto;}
+    
+.loginBox .loginTxtsec {position: absolute;
+                        top: 25%;
+                        left: 50%;
+                        margin-left: -200px;
+                        display: flex;
+                        flex-direction: column; 
+                        align-items: center; 
+                        width: 50%; 
+                        }
+
+.loginTxtsec .logupperTxt {display: flex;
+                           justify-content: center;
+                           align-items: center;
+                           flex-direction: column;
+                           text-align: center;
+                           
+                        
+                           padding: 50px; 
+                           box-sizing: border-box;
+
+                           }
+
+.logupperTxt img:nth-child(1) {width: 30%;
+                  height: auto;}
+
+.logupperTxt img:nth-child(2) {width: 80%;
+                  height: auto;}
+
+
+.logupperTxt p {color: #1C1E19;
+                font-size: 30px;
+                font-family: 'Pretendard-Regular';
+                font-weight: 700;
+   
+   }
+
+
+
+
+
+                           
+.loginTxtsec form {}
+.loginTxtsec form>div {margin-bottom: 10px;}
+.loginTxtsec .id {width: 350px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 50px;
+  background-color: #EFEFEF;
+}
+
+.loginTxtsec .id input {margin-left: 5px;
+        font-size: 20px;
+        color: #616161;
+        border: none;
+        caret-color: rgb(21, 156, 156);
+        background: transparent; }
+
+.loginTxtsec .id input::placeholder {color: #616161;
+                                     background: transparent; 
+                                     }
+
+.loginTxtsec .id input:focus {outline: none;}
+.loginTxtsec .pass {width: 350px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 50px;
+  background-color: #EFEFEF;
+  }
+
+.loginTxtsec .pass input {margin-left: 5px;
+  font-size: 20px;
+  color: #616161;
+  border: none;
+  caret-color: rgb(21, 156, 156);
+  background: transparent;
+        }
+
+
+.loginTxtsec .pass input::placeholder {color: #616161;
+  background: transparent; }
+.loginTxtsec .pass input:focus {outline: none;}
+
+
+
+.loginTxtsec .loginBtn {width: 350px;
+                       height: auto;
+                       background-color: #FFB700;
+                       padding: 15px;
+                       border-radius: 50px;
+                       text-align: center;
+                       cursor: pointer;
+                       margin-top: 30px;
+                      }
+
+
+
+
+
+
+
+.loginTxtsec .loginBtn input {
+                           background-color: transparent;
+                           border: none;
+                           
+                           cursor: pointer;
+                           }
+
+
+
+.loginTxtsec .loglowerTxt {padding-top: 70px;}
+.loglowerTxt span {font-size: 20px;
+      color: #1C1E19;
+      font-weight: 500;
+      font-family: 'Pretendard-Regular';}
+
+.loglowerTxt em {color: #1DB4E8;
+                 font-weight: 700;
+                 font-style: normal;
+                 text-decoration: underline;
+                 cursor: pointer;}
