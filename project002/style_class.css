@@ -789,3 +789,6 @@ display: none;
 
 
 .loginBox .loginBtn:hover {box-shadow: 2px 2px 2px #ccc;}
+
+
+.loginBox .naver {margin-top: 10px;}

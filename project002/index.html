@@ -14,6 +14,10 @@
     <script src="https://kit.fontawesome.com/694f379057.js" crossorigin="anonymous"></script>
 
 
+    
+    <!-- naver login API -->
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+
     <!-- 제이쿼리 cdn   순서 꼭 이대로 해야함!!!!!!!! githurb에서는 http를 못읽음 그래서 하단에 있는 것을 씀-->
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -1398,7 +1402,10 @@
                             <input type="submit" value="">
                             <img src="img/loginTxt_002.png" alt="">
                         </div>
-                        <div class="never"></div>
+                        <div class="never">
+                             <!-- 네이버 로그인 버튼 노출 영역 -->
+                        <div id="naver_id_login"></div>
+                        </div>
                     </form>
 
 
@@ -1471,6 +1478,17 @@
 
 
     </footer>
+    
+    <script type="text/javascript">
+        var naver_id_login = new naver_id_login("UmZ7VhDKm3IulqArFsMP", "https://rachel0919.github.io/study310/callback");
+        var state = naver_id_login.getUniqState();
+        naver_id_login.setButton("green", 3,47);
+        naver_id_login.setDomain("https://rachel0919.github.io/study310/");
+        naver_id_login.setState(state);
+        naver_id_login.setPopup();
+        naver_id_login.init_naver_id_login();
+    </script>
+    
     
 </body>
 </html>

@@ -1604,7 +1604,8 @@ display: none;
                     width: 100%;
                     position: relative;
                     background-color: #C7F1FF;
-                    text-align: center;}
+                    text-align: center;
+                    }
 
 .loginPage {width: 100%;
             height: 100%;
@@ -1612,27 +1613,38 @@ display: none;
 
 }
 
-.loginBox {position: relative;
-           padding: 50px;
-           display: flex;
-           justify-content: center;
+.loginBox {position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%); 
+           transform-origin: center center;
+           margin: 0 auto;
+           width: 970px;
+           height: 675px;
+           
            }
 
-.loginBox .loginImg {position: absolute;
+.loginBox .loginImg {
                      }
 
-.loginImg img {width: 68%;
+.loginImg img {width: 100%;
                 
                height: auto;}
     
 .loginBox .loginTxtsec {position: absolute;
-                        top: 25%;
-                        left: 50%;
-                        margin-left: -200px;
+                        top: 0;
+                        right: 0;
+                        padding: 25px 0;
+                        
+                        margin-top: 10px;
+                        margin-right: 10px;
                         display: flex;
                         flex-direction: column; 
                         align-items: center; 
-                        width: 50%; 
+                        width: 48%; 
+                        background-color: #fff;
+                        border-top-right-radius: 30px;
+                        border-bottom-right-radius: 30px;
                         }
 
 .loginTxtsec .logupperTxt {display: flex;
@@ -1642,7 +1654,7 @@ display: none;
                            text-align: center;
                            
                         
-                           padding: 50px; 
+                           padding: 30px 0px; 
                            box-sizing: border-box;
 
                            }
@@ -1655,7 +1667,7 @@ display: none;
 
 
 .logupperTxt p {color: #1C1E19;
-                font-size: 30px;
+                font-size: 20px;
                 font-family: 'Pretendard-Regular';
                 font-weight: 700;
    
@@ -1679,7 +1691,7 @@ display: none;
         font-size: 20px;
         color: #616161;
         border: none;
-        caret-color: rgb(21, 156, 156);
+        caret-color: rgb(54, 200, 245); 
         background: transparent; }
 
 .loginTxtsec .id input::placeholder {color: #616161;
@@ -1698,7 +1710,7 @@ display: none;
   font-size: 20px;
   color: #616161;
   border: none;
-  caret-color: rgb(21, 156, 156);
+  caret-color: rgb(54, 200, 245); 
   background: transparent;
         }
 
