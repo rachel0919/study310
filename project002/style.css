@@ -1122,10 +1122,226 @@ display: none;
 
 
 
+/* cart#################################################################################### */
+
+
+.cart {position: fixed;
+       top: 0;
+       right: -500px;
+       margin-top: 20px;
+       background-color: #fff;
+       width: 26%;
+       height: 90%;
+       box-shadow: -2px 2px 5px rgb(131, 131, 131);
+       z-index: 999;
+       border-top-left-radius: 10px;
+       border-bottom-left-radius: 10px;
+       text-align: center;
+       transition: all 0.8s;
+      }
+
+
+.cart .cartHeader {display: flex;
+                   justify-content: space-between;
+                   margin-top: 10px;
+                   box-sizing: border-box;
+                   padding: 30px;} 
+
+.cartHeader .cartBox {} 
+.cartHeader .cartBox img {} 
+
+.cartHeader .yourbag {padding-top: 3px;} 
+.cartHeader .yourbag img {} 
+
+.cartHeader .closeBtn {} 
+.cartHeader .closeBtn i {font-size: 40px;} 
+
+
+
+.cartMiddle {width: 100%;
+             height: 60%;
+            }
+
+
+.cartMiddle .cartMiddle_upper {}
+
+.cartMiddle_upper p:nth-child(1) {color: #1C1E19;
+                                  font-size: 18px;
+                                  font-weight: 500;
+                                  font-family: 'Pretendard-Regular';
+                                  margin-bottom: 8px;
+                                } 
+.cartMiddle_upper em {font-style: normal;
+                      font-weight: 800;
+                      font-family: 'Pretendard-Regular';
+                      } 
+
+.cartMiddle_upper p:nth-child(2) {font-size: 22px;
+                                  color: #fff;
+                                  font-weight: 500;
+                                  font-family: 'Pretendard-Regular';
+                                  background-color: #49C9F5;
+                                  padding: 20px;
+                                  
+                                } 
+.cartMiddle_upper strong {font-weight: 900;
+  font-family: 'Pretendard-Regular';
+  color: #fff;} 
 
 
 
 
+
+
+
+.cartMiddle .cartList {width: 100%;
+                      height: 60%;
+                    
+                    }
+
+
+
+.cartList ul {}
+.cartList li {display: flex;
+              justify-content: space-between;
+              } 
+
+
+.cartList li img {}
+.cartList li p {}
+.cartList li .count {display: flex;}
+.cartList li .count .num {}
+.cartList li .deleteIcon {}
+
+
+
+
+
+
+
+.cartMiddle .total {padding: 20px;
+                    border-top: 1px solid #C9C9C9;
+                    box-sizing: border-box;
+                    margin: 0 15px;
+                    
+                    }
+.cartMiddle .total>div {display: flex;
+  justify-content: space-between; /* 항목명과 가격을 좌우로 정렬 */
+  width: 50%;                      
+  margin-left: auto;                        
+
+}
+
+.cartMiddle .total>div>p:nth-child(1) {position: relative;
+                                       
+                                       text-align: center;
+                                       
+                        }
+
+.total .price p {color: #6D6D6D;
+                 font-size: 16px;
+                 font-family: 'Pretendard-Regular'; 
+                  
+                } 
+
+.total .price em {font-style: normal;}                
+
+.total .parcel {margin-bottom: 10px;}
+.total .parcel p {color: #6D6D6D;
+  font-size: 16px;
+  font-family: 'Pretendard-Regular';  
+ } 
+
+.total .parcel em {font-style: normal;} 
+
+
+
+
+.total>div:nth-child(3) {color: #1C1E19;
+                         font-size: 20px;
+                         
+                        }
+
+.total>div:nth-child(3) em {font-style: normal;}
+
+
+
+
+
+.cart .buyBtn {width: 100%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               text-align: center;
+               margin: 10px 0;
+         }
+.cart .buyBtn span {background-color: #FFB700;
+  padding: 13px 150px;
+  border-radius: 50px;
+              color: #fff;
+                         font-size: 18px;
+                         font-family: 'Pretendard-Regular'; 
+                         font-weight: 900;
+                        
+
+  }
+
+
+.cart .cartrecomSec {margin-top: 30px;}  
+.cart .cartrecomSec p {color: #1C1E19;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Pretendard-Regular';}  
+.cart .cartrecomSec em {font-style: normal;
+  font-weight: 800;
+  font-family: 'Pretendard-Regular';}  
+.cartrecomList {width: 410px;
+                height: 85px;
+                display: flex;
+                position: relative;
+                left: 50%;
+                margin-left: -205px;
+                border: #1C1E1B 2px solid;
+                border-radius: 30px;
+                margin-top: 8px;
+                align-items: center;
+                box-sizing: border-box;
+                padding: 10px;
+              }
+
+
+
+
+.cartrecomList>div:nth-child(1) {width: 20%;
+                                }
+.cartrecomList>div:nth-child(1) img {width: 90%;
+                                     height: auto;}
+.cartrecomList>div:nth-child(2) {width: 50%;
+                                
+}
+.cartrecomList>div:nth-child(2) img {width: 100%;
+  height: auto;
+   transform: scale(1.5);}
+.cartrecomList>div:nth-child(3) {width: 30%;}
+.cartrecomList>div:nth-child(3) span {color: #1C1E19;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Pretendard-Regular';
+  background-color: #FFB700;
+  border: 1px #000 solid;
+  border-radius: 30px;
+  padding: 3px 10px;
+}
+
+
+
+
+
+
+
+
+
+.cart.on {right: 0;} 
  /* FOOTER######################################################################################## */
 
  footer {display: flex;
@@ -1223,7 +1439,7 @@ display: none;
 
 
 
-/* product 페이지 설정 */
+/* product 페이지 설정############################################################################## */
 
 
 

@@ -111,9 +111,106 @@ $('.pro_list').children('.right').click(function(){
 
 
 
+// 스크롤의 위치값을 찾기
+
+$(window).scroll(function(){
+
+  let sc = $(this).scrollTop();
+  console.log(sc);
+
+  let infoTop =$('.info').offset().top
+
+  if(sc>=infoTop){
+
+    $('.header').addClass('fixed')
+
+
+  }else{
+    $('.header').removeClass('fixed')
+
+  };
+
+  if(sc>=infoTop-600){
+
+    $('.info').addClass('on')
+    $('.info .list').addClass('on')
+    $('.info .list2').addClass('on')
 
 
 
+  }else{
+
+
+    $('.info').removeClass('on')
+    $('.info .list').removeClass('on')
+    $('.info .list2').removeClass('on')
+
+
+
+
+  };
+
+
+  if(sc>=infoTop && sc<=infoTop + 800){
+
+    $('.info .list').addClass('on')
+    $('.info .list2').addClass('on')
+
+
+
+  }else{
+
+
+    $('.info .list').removeClass('on')
+    $('.info .list2').removeClass('on')
+
+
+
+
+  };
+
+
+
+
+});
+
+
+
+
+// list li를 클릭했을 때 장바구니 옆의 숫자가 늘어나라
+
+let cart = 0;
+$('.list li').click(function(){
+
+
+  cart++;
+  $('.util').find('.num').text(cart);
+  $('.total>div').eq(0).find('span').text(cart);
+
+
+
+});
+
+
+
+// 장바구니 클릭시 장바구니가 나타남
+
+let aa = 0;
+
+$('.cart').children('h2').click(function(){
+
+aa++;
+if(aa==2)aa=0;
+if(aa===1){
+
+  $('.cart').addClass('on')
+
+}else{
+
+  $('.cart').removeClass('on')
+
+}
+})
 
 
 

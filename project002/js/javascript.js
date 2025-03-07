@@ -62,10 +62,55 @@ $('.proList1').children('.left').click(function(){
 
 
 
+/*
+
+
+// 장바구니 클릭시 장바구니가 나타남
+
+let aa = 0;
+
+$('.util li').eq(1).click(function(){
+
+aa++;
+if(aa==2)aa=0;
+if(aa===1){
+
+  $('.cart').addClass('on')
+
+}else{
+
+  $('.cart').removeClass('on')
+
+}
+})
 
 
 
 
+*/
+
+document.querySelector(".util li:nth-child(2) a").addEventListener("click", function (event) {
+  event.preventDefault(); // a 태그의 기본 동작(페이지 이동) 막기
+  
+});
+// 장바구니 클릭시 장바구니가 나타남
+
+let aa = 0;
+
+$('.util li').eq(1).click(function(){
+
+aa++;
+if(aa==2)aa=0;
+if(aa===1){
+
+  $('.cart').addClass('on')
+
+}else{
+
+  $('.cart').removeClass('on')
+
+}
+})
 
 })     //제이쿼리 끝!!!!!!!!
 

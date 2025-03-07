@@ -27,7 +27,7 @@ img {vertical-align: bottom;
      border: none;}
 
      
-
+body {overflow-x: hidden;}
 
 /* layout */
 
@@ -61,6 +61,8 @@ display: none;
 .header {display: flex;
          justify-content: space-between;
          align-items: center;
+         transition: all 0.8s;
+         
           }
 
 .header .logo {font-size: 28px;
@@ -69,7 +71,12 @@ display: none;
                 display: block;
                 padding: 10px;}
 
-.header .logo a:hover {opacity: 0.7;}                
+.header .logo a:hover {opacity: 0.7;}    
+
+
+/* 일정거리만큼 스크롤이 되었을때 header 스타일변경 */
+
+.header.fixed {background-color: rgba(0, 0, 0, 0.3);}
 
 
 .gnb {}
@@ -164,7 +171,14 @@ display: none;
               letter-spacing: 20px;
               position: relative;
               padding: 20px 0 0 0;/* 상우하좌 */
+              transition: all 0.8s;
+              top: 300px;
+              opacity: 0;
             }
+
+
+    .info.on h2 {top: 0;
+      opacity: 1;}         
     .info h2 span {font-size: 18px;
                   letter-spacing: 5px;
                    position: absolute;
@@ -176,7 +190,12 @@ display: none;
     .info p {text-align: center;
              padding: 30px 0;}
 
-    .info .list {}
+    .info .list {position: relative;
+                right: 500px;
+                opacity: 0;
+               transition: all 0.8s;}
+    .info .list.on {right: 0;
+      opacity: 1;}            
     .info .list ul {display: flex;
                     justify-content: center;
                   /* flex wrap을 안하는게 좋음 공간이 작아지면 텍스트가 밑으로 떨어지게됨*/ }
@@ -216,7 +235,15 @@ display: none;
 
 
    
-    .info .list2 {}
+    .info .list2 {position: relative;
+                  left: 800px;
+                  opacity: 0;
+                  transition: all 0.8s;}
+
+
+    .info .list2.on {left: 0;
+      opacity: 1;}  
+
     .info .list2 ul {display: flex;
                     justify-content: center;
                   /* flex wrap을 안하는게 좋음 공간이 작아지면 텍스트가 밑으로 떨어지게됨*/ }
@@ -796,3 +823,42 @@ display: none;
 
 
 .loginBox .naver {margin-top: 10px;}
+
+
+
+
+
+/* 장바구니 설정 */
+
+
+.cart {width: 500px;
+       height: 600px;
+       background-color: #fff;
+       border-radius: 20px;
+       border-top-left-radius: 0px;
+       box-shadow: 2px 2px 5px #ccc;
+       position: fixed;
+       top: 120px;
+       right: -500px;
+       transition: all 1.5s;
+      }
+
+
+.cart.on {right: 0;}      
+
+
+.cart h2 {position: absolute;
+          width: 40px;
+          height: 150px;
+          background-color: #fff;
+          left: -40px;
+          text-align: center;
+          box-sizing: border-box;
+          padding: 5px;
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          padding-top: 10px;
+          cursor: pointer;
+          color: #ccc;
+         }
+
