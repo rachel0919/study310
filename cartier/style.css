@@ -1,0 +1,135 @@
+/* 언어설정 */
+@charset "UTF-8";
+
+/* 폰트설정 */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+/* 
+  .raleway-<uniquifier> {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+ */
+
+ /* reset */
+
+* {margin: 0;
+   padding: 0;}
+
+a {text-decoration: none;
+    color: #bbb;}
+ul, ol {list-style: none;}
+img {border: none;
+     vertical-align: bottom;}
+
+
+body {font-family: "Raleway", sans-serif;}
+
+
+
+/* 배경이미지 설정 */
+
+.wrap {position: fixed;
+    width: 100%;
+    height: 100%;
+       left: 0;
+       top: 0;
+       min-width: 1024px;
+       min-height: 768px;
+       /* 노트북사이즈정도   적응형 웹*/
+       background-image: url(img/bg.jpg);
+       background-size: cover;
+       background-position: center bottom;
+        /* background-position만 좌우//////상하 */
+    }
+
+
+    /* section */
+section {position: fixed;
+         width: 100%;
+         height: 100%;
+         right: 0;
+         top: 0;       
+}
+
+article {float: right;
+         width: 12%;
+         height: 100%;
+         background-image: url(img/divider.png);
+         background-repeat: no-repeat;
+         background-position: left center;
+         position: relative;
+         overflow: hidden;
+        }
+
+
+article h2 {position: absolute;
+            top: 300px;
+            left: 20px;
+            padding-left: 15px;
+            box-sizing: border-box;
+            border-left: 3px solid #555;
+            font-size: 20px;
+            color: #666;
+            transition: all 0.5s;
+            z-index: 3;
+
+} 
+
+
+article div {position: absolute;
+             left: 0;
+             top: 300px;
+             width: 100%;
+             height: 0px;  /* 임시설정  */
+             background-color: #000;
+             opacity: 0.5;
+             z-index: 2;
+             transition: all 0.5s;
+
+                }
+article:hover div {height: 70px;
+                   top: 265px; 
+}
+
+article:hover h2 {color: #ccc;
+                  border-left: 3px solid #ccc;}
+
+/* 비디오설정 */
+article video {position: absolute;
+               left: 0;
+               top: 0;
+               margin-left: -100px;
+               height: 100%;
+               width: auto;
+               z-index: 1;  
+               opacity: 0;         
+            }
+
+
+
+/* article의 숨은 컨텐츠 설정 */
+
+article h3 {position: absolute;
+            font-size: 40px;
+            bottom: 210px;
+            text-align: right;
+            width: 100%;
+            color: #fff;
+            z-index: 4;
+            right: -310px;
+}
+article p {position: absolute;
+           font-size: 12px;
+           bottom: 50px;
+           text-align: right;
+           width: 300px;
+           color: #fff;
+           z-index: 5;
+           right: -310px;
+}
+
