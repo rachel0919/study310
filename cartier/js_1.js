@@ -16,7 +16,7 @@ $(document).ready(function(){
         $(this).stop().animate({'width':'35%'},1000,function(){
 
             // find 'h3' and change amount of right
-            $(this).find('h3').stop().animate({'right':'10px'},400)
+            $(this).find('h3').stop().animate({'opacity':0.6},400)
 
             // find 'p' and change amount of right
             $(this).find('p').stop().animate({'right':'10px'},800)
@@ -51,10 +51,10 @@ $(document).ready(function(){
 
 
         // find 'h3' and change amount of right
-        $(this).find('h3').stop().animate({'right':'-310px'},400)
+        $(this).find('h3').stop().animate({'opacity':0},400)
 
         // find 'p' and change amount of right
-        $(this).find('p').stop().animate({'right':'-310px'},800)
+        $(this).find('p').stop().animate({'right':'-560px'},800)
 
 
 

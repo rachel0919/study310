@@ -46,6 +46,36 @@ body {font-family: "Raleway", sans-serif;}
 }
 
 
+.leftside {display: flex;
+           flex-direction: column; 
+           position: relative;
+           top: 50%;
+           transform: translateY(-100%);  
+           margin-left: 70px;  
+           width: 440px;
+}
+
+.leftside .logo {margin-bottom: 50px;}
+
+.logo>div:nth-child(1) {font-size: 18px;
+                        font-family: Times;
+                        font-weight: 900;
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-30%);  
+                     }
+.logo>div:nth-child(2) {margin-bottom: 20px;
+                        margin-left: 10px;}
+
+.logo>div:nth-child(3) {width: 100%;
+                        font-size: 11px;
+                        letter-spacing: 8px;
+                        color: rgb(99, 99, 99);
+                      }
+.leftside .lowerTxt {font-size: 28px;}
+.lowerTxt span {color: rgb(99, 99, 99);}
+
+
 /* section */
 section {position: fixed;
          width: 100%;
@@ -114,13 +144,14 @@ article video {
 
 /* set to hidden contents of article section*/
 article h3 {position: absolute;
-            font-size: 40px;
-            bottom: 210px;
+            font-size: 70px;
+            bottom: 110px;
             text-align: right;
             width: 100%;
             color: #fff;
             z-index: 4;
-            right: -310px;
+            
+            opacity: 0;
 
 }
 
@@ -128,8 +159,8 @@ article p {position: absolute;
            font-size: 12px;
            bottom: 50px;
            text-align: right;
-           width: 300px;
+           width: 450px;
            color: #fff;
            z-index: 5;
-           right: -310px; 
+           right: -560px; 
 }
