@@ -59,9 +59,6 @@ $('.proList1').children('.left').click(function(){
 
 
 
-
-
-
 /*
 
 
@@ -110,7 +107,189 @@ if(aa===1){
   $('.cart').removeClass('on')
 
 }
+});
+
+
+// header의 h1를 클릭하면 메인페이지에 on이 붙어라
+
+
+$('.header h1').click(function(e){
+
+ 
+  $('.contents').removeClass('loginBig');
+  $('.contents>div').removeClass('on')
+  $('.contents>div').eq(0).addClass('on')
+
+
 })
+
+
+
+
+// gnb의 두번째 li를 클릭하면 galleryList에 on이 붙어라
+
+$('.gnb li').eq(1).click(function(e){
+
+  e.preventDefault()
+
+  $('.contents').removeClass('loginBig');
+  $('.contents>div').removeClass('on')
+  $('.contents>div').eq(2).addClass('on')
+
+
+  $('.header').removeClass('sub')
+  $('.header').addClass('sub')
+
+
+  $(window).scrollTop(0);
+
+
+
+});
+
+
+
+
+
+//gallerybox를 클릭하면 product에 on이 붙어라
+$('.gallerybox').click(function(e){
+
+  e.preventDefault()
+  $('.contents>div').removeClass('on')
+  $('.contents>div').eq(1).addClass('on')
+
+  
+  $('.header').removeClass('sub')
+  $('.header').addClass('sub')
+
+
+
+
+})
+
+
+
+
+
+
+
+
+// proList1 li를 클릭하면 product에 on이 붙어라
+
+
+$('.proList1 li').click(function(e){
+
+  e.preventDefault()
+  $('.contents>div').removeClass('on')
+  $('.contents>div').eq(1).addClass('on')
+
+
+  $('.header').removeClass('sub')
+  $('.header').addClass('sub')
+
+
+  $(window).scrollTop(0);
+
+});
+
+
+
+
+// util의 첫번째 li에 클릭하면 loginPage에 on이 붙어라
+
+
+
+$('.util li').eq(0).click(function(e){
+
+  e.preventDefault()
+$('.contents').addClass('loginBig');
+
+
+$('.contents>div').removeClass('on')
+$('.contents>div').eq(3).addClass('on')
+$(window).scrollTop(0);
+
+});
+
+
+
+// loginPage에 logo를 클릭하면 메인페이지로 이동해라
+$('.logupperTxt>img').eq(0).click(function(e){
+
+ 
+  $('.contents').removeClass('loginBig');
+  $('.contents>div').removeClass('on')
+  $('.contents>div').eq(0).addClass('on')
+
+
+});
+
+
+
+// proList1 li를 클릭하면 product에 on이 붙어라
+
+
+$('.proSugbox').click(function(e){
+
+  e.preventDefault()
+  $('.contents>div').removeClass('on')
+  $('.contents>div').eq(1).addClass('on')
+
+
+  $('.header').removeClass('sub')
+  $('.header').addClass('sub')
+
+
+  $(window).scrollTop(0);
+
+});
+
+// closeBtn을 클릭하면 
+
+
+$('.closeBtn').click(function(){
+
+
+
+$('.cart').removeClass('on')
+
+
+});
+
+$('.gnb li:first-child').click(function(e) {
+  e.preventDefault(); // 기본 동작 방지
+
+  // .story 위치로 부드럽게 스크롤 이동
+  $('html, body').stop().animate({
+      scrollTop: $('.story').offset().top
+  }, 700, 'swing'); // 'swing'으로 더 부드럽게
+});
+
+
+
+
+
+
+$(document).ready(function() {
+  let index = 0;
+  const $listItems = $('.mainImg ul li');
+
+  // 첫 번째 li부터 시작
+  $listItems.eq(index).addClass('up');
+
+  function showNextItem() {
+    // 이전 li의 'up' 클래스 제거
+    $listItems.eq(index).removeClass('up');
+    
+    // 다음 li의 'up' 클래스 추가
+    index = (index + 1) % $listItems.length;  // 3개 li가 끝나면 처음으로 돌아가기
+    $listItems.eq(index).addClass('up');
+  }
+
+  // 3초마다 showNextItem 함수 실행
+  setInterval(showNextItem, 3000);
+});
+
 
 })     //제이쿼리 끝!!!!!!!!
 

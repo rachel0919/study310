@@ -754,7 +754,8 @@ display: none;
        }
 
 .login h2 {text-align: center;
-           padding: 50px 0;}
+           padding: 50px 0;
+           cursor: pointer;}
 .login .loginBox {width: 500px;
                   margin: 0 auto;
                  

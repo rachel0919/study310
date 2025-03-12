@@ -210,7 +210,95 @@ if(aa===1){
   $('.cart').removeClass('on')
 
 }
+});
+
+
+
+// gnb 두번째 li product 클ㄹ릭했을때 on이 붙어라
+
+
+
+$('.gnb li').eq(1).click(function(e){
+
+  e.preventDefault()
+  $('.contents').removeClass('loginBig');
+  $('.contents>div').removeClass('on')
+  $('.contents>div').eq(1).addClass('on')
+
+
 })
+
+
+// logo를 클릭했을때 메인페이지에 on이 붙어라
+
+
+
+$('.logo').click(function(e){
+
+  e.preventDefault()
+  $('.contents').removeClass('loginBig');
+  $('.contents>div').removeClass('on')
+  $('.contents>div').eq(0).addClass('on')
+
+
+})
+
+
+
+
+// util 첫번째 li를 클릭했을때 로그인에 on이 붙어라
+
+
+  $('.util li').eq(0).click(function(e){
+
+    e.preventDefault()
+$('.contents').addClass('loginBig');
+
+
+$('.contents>div').removeClass('on')
+$('.contents>div').eq(2).addClass('on')
+
+  })
+
+
+// login에서 // logo를 클릭했을때 메인페이지에 on이 붙어라
+
+
+$('.login h2').click(function(e){
+
+ 
+  $('.contents').removeClass('loginBig');
+  $('.contents>div').removeClass('on')
+  $('.contents>div').eq(0).addClass('on')
+
+
+})
+
+
+
+
+// util 두번째 li를 클릭했을때 cart에 on이 붙어라
+
+
+
+$('.util li').eq(1).click(function(e){
+
+  e.preventDefault()
+  $('.cart').addClass('on')
+
+
+})
+
+// pro_list의 li들을 클릭했을때 product에 on이 붙어라
+
+$('.pro_list li').click(function(e){
+
+  e.preventDefault()
+  $('.product').addClass('on')
+
+
+
+});
 
 
 
