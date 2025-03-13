@@ -268,7 +268,7 @@ $('.gnb li:first-child').click(function(e) {
 
 
 
-
+/*
 
 $(document).ready(function() {
   let index = 0;
@@ -289,6 +289,14 @@ $(document).ready(function() {
   // 3초마다 showNextItem 함수 실행
   setInterval(showNextItem, 3000);
 });
+
+
+*/
+
+
+
+
+
 
 
 })     //제이쿼리 끝!!!!!!!!

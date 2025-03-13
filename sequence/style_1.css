@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/* reset css */
+* {margin: 0;
+   padding: 0; 
+}
+a {text-decoration: none;
+   color: #bbb;}
+img {border: none;
+     vertical-align: bottom;
+}   
+ul,ol {list-style: none;}
+body {background-color: #111;}
+
+
+/* set to background image */
+
+.bg {position: fixed;
+     width: 100%;
+     height: 100%;
+     background-image: url(img/bgLine.png);
+     background-repeat: repeat;
+     background-position: left top;
+     opacity: 0.1;
+     z-index: 1;
+}
+
+/* set to navigation */
+nav {position: fixed;
+     left: 0;
+     width: 100%;
+     background-image: url(img/tr.png);
+     z-index: 3;
+     top: 50%;
+     margin-top: 25px;
+
+}
+
+nav>ul {display: flex;
+        width: 100%;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+}
+nav>ul>li {width: 200px;
+           text-align: center;
+           position: relative;
+           perspective: 700px;
+              /* perspective는 공감각 주고싶은 곳의 부모에게 주기 */
+        } 
+nav>ul>li>a {display: block;
+             width: 100%;
+             color: #aaa;
+             font-size: 12px;
+             transition: all 0.4s;
+} 
+
+nav>ul>li:hover>a {transform: translateY(20px);
+                   opacity: 0; 
+}
+
+
+
+/* set to 2nd depth */
+nav>ul>li>div {
+               position: absolute;
+               width: 200px;
+               height: 300px;
+               background-image: url(img/tr.png);
+               background-repeat: repeat;
+               background-position: 0 0;
+               border: 1px solid #000;
+               left: 0;
+               top: -50px; 
+               opacity: 0;
+               transition: all 0.5s;
+
+}
+
+nav>ul>li:hover>div {opacity: 1;
+                     transform: rotateY(360deg);
+                     top: -110px;   
+}
+nav>ul>li>div h2 {position: absolute;
+                  top: 105px;
+                  color: #fff;
+                  font-size: 12px;
+                  width: 100%;
+                  height: 50px;
+                  text-align: center;
+
+
+
+}
+nav>ul>li>div p {
+                 width: 100%;
+                 height: 90px;
+                 border: 1px solid #333;
+                 box-sizing: border-box;
+                 overflow: hidden;
+
+}
+nav>ul>li>div img {width: 110%;}
+nav>ul>li>div ul {position: absolute;
+                  width: 100%;
+                  bottom: 0;
+                  left: 0;  
+
+}
+nav>ul>li>div li {
+                  color: #888;
+                  line-height: 2.3;
+                  width: 100%;
+                  height: 40px;
+                  box-sizing: border-box;
+                  border-top: 1px solid #333;
+
+}
+nav>ul>li>div li:hover {background-color: #000;
+                        color: #fff;}
+
+
+/* set to section */
+
+section {position: fixed;
+         z-index: 2;
+         width: 100%;
+         height: 500px;
+         top: 50%;
+         margin-top: -250px;
+         overflow: hidden;
+
+}
+section img {width: 100%;
+             transform: translateY(-150px);
+}
