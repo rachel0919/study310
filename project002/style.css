@@ -230,7 +230,11 @@ display: none;
 
 
  .mainImg ul li:nth-child(1) {left: 0;
-  background-color: #24A9AF;}
+
+  /* background-color: #24A9AF; */
+  background-image: url(img/hero_ver001.png);
+
+}
 
 
 
@@ -243,17 +247,17 @@ display: none;
   z-index: 3; 
 }
 
-
-.mainImg ul li img:nth-child(2) { /* 아이스크림 통 */
+ /* 아이스크림 통
+.mainImg ul li img:nth-child(2) {
   bottom: -45%;
   left: 50%;
   transform: translateX(-50%);
   width: 50%;
   z-index: 2; 
-}
+} */
 
 
-.mainImg ul li img:nth-child(3) { /* 파티클 효과 */
+.mainImg ul li img:nth-child(2) { /* 파티클 효과 */
   bottom: -20px;
   
   scale: 0.8;
@@ -267,8 +271,8 @@ display: none;
   
 }
 
-
-.mainImg ul li img:nth-child(4) { /* 원형 */
+/*
+.mainImg ul li img:nth-child(4) {  원형 
   bottom: -30%;
   left: 50%;
   transform: translateX(-50%);
@@ -276,7 +280,7 @@ display: none;
   opacity: 1;
 }
 
-
+*/
 
 .hero>img {position: absolute;
            width: 130%;
@@ -290,21 +294,33 @@ display: none;
 
 
 
-.mainImg:hover ul li img:nth-child(3) {scale: 1;}  
+.mainImg:hover ul li img:nth-child(2) {scale: 1;}  
 
 /* 나머지 히어로부분############################################################ */
 
 
 
 .mainImg ul li:nth-child(2) {left: 0;
-  background-color: #FF6725;}
+  /* background-color: #FF6725; */
+  background-image: url(img/hero_ver002.png);
+}
 
 
   .mainImg ul li:nth-child(3) {left: 0;
-    background-color: #86BA51;}  
+    /* background-color: #86BA51; */
+    background-image: url(img/hero_ver003.png);
+  
+  }  
 
 
-
+/*     section {width: 100%;
+             height: 700px;/* 일단 700px로 보고있다가 자바에서 바꿈 
+             background-size: cover;
+             background-position: right center;
+             overflow: hidden;
+             background-attachment: fixed;/* 기존의 이미지는 가만히 있고 스크롤하면 아래 이미지가 올라오는 모양새
+             position: relative;
+            } */ 
 
 /* product 부분###################################################################### */
 .product {padding: 140px 0;}

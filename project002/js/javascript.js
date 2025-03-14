@@ -294,6 +294,24 @@ $(document).ready(function() {
 */
 
 
+    // section에서 mouse wheel했을 때, 다음화면 또는 이전화면으로 이동
+    $('hero').on('mousewheel DOMMouseScroll', function(event) {
+      let delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+
+      // 마우스를 올렸을 때 (이전 섹션)
+      if (delta > 0) {
+          let prev = $(this).prev().offset().top;
+          $('html,body').stop().animate({'scrollTop': prev}, 1400, 'easeOutBounce');
+      } 
+      // 마우스를 내렸을 때 (다음 섹션)
+      else if (delta < 0) {
+          let next = $(this).next().offset().top;
+          $('html,body').stop().animate({'scrollTop': next}, 1400, 'easeOutBounce');
+      }
+
+      event.preventDefault(); // 기본 스크롤 방지
+  });
+
 
 
 
