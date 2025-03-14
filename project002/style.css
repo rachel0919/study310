@@ -194,25 +194,23 @@ display: none;
                  position: absolute;
                  width: 100%;
                  height: 100%;
-                 top: 100%;
+                 top: 0;
                  left: 0;
-                 display: none;
                  
                  
-                 transform: translateY(100%);  /* 처음에는 아래로 숨겨두기 */
+                 
+                 
                  visibility: visible;  /* 항상 보이도록 설정 */
-                 z-index: 1;  /* 기본 z-index */
-                 transition: transform 0.8s ease; 
-                
+                 z-index: -1;  /* 기본 z-index */
+                 transition: all 1.5s ease; 
+                 clip-path: circle(0% at 50% 100%);
                 }
 
-  .mainImg>ul>li.up {display: block;
-    top: 0;
-    transform: translateY(0);
-    z-index: 10;
-  }               
 
+ .mainImg ul li.up {clip-path: circle(100% at 50% 100%);
+                    transition: all 1.5s ease; 
 
+}
   
 .imgWrap {
     position: relative;
@@ -229,13 +227,6 @@ display: none;
 
 
 
- .mainImg ul li:nth-child(1) {left: 0;
-
-  /* background-color: #24A9AF; */
-  background-image: url(img/hero_ver001.png);
-
-}
-
 
 
 /* 첫 번째 li의 이미지들 */
@@ -247,17 +238,17 @@ display: none;
   z-index: 3; 
 }
 
- /* 아이스크림 통
+ /* 아이스크림 통*/
 .mainImg ul li img:nth-child(2) {
   bottom: -45%;
   left: 50%;
   transform: translateX(-50%);
   width: 50%;
   z-index: 2; 
-} */
+} 
 
 
-.mainImg ul li img:nth-child(2) { /* 파티클 효과 */
+.mainImg ul li img:nth-child(3) { /* 파티클 효과 */
   bottom: -20px;
   
   scale: 0.8;
@@ -267,12 +258,18 @@ display: none;
   opacity: 1;
   z-index: 1;
   transform-origin: bottom center;
-  transition: all 10s;
+  transition: all 20s;
   
 }
+.particle1 {transform: scale(1.1);}
+.particle2 {transform: translateY(200px) rotate(-5deg) scale(1.1);
 
-/*
-.mainImg ul li img:nth-child(4) {  원형 
+}
+.particle3 {transform: scale(1);}
+
+
+
+.mainImg ul li img:nth-child(4) {  /*원형 */
   bottom: -30%;
   left: 50%;
   transform: translateX(-50%);
@@ -280,7 +277,7 @@ display: none;
   opacity: 1;
 }
 
-*/
+
 
 .hero>img {position: absolute;
            width: 130%;
@@ -294,33 +291,35 @@ display: none;
 
 
 
-.mainImg:hover ul li img:nth-child(2) {scale: 1;}  
+.mainImg:hover ul li img:nth-child(3) {scale: 1;}  
 
 /* 나머지 히어로부분############################################################ */
 
 
+.mainImg ul li:nth-child(1) {left: 0;
+
+  background-color: #24A9AF;
+  
+
+}
+
 
 .mainImg ul li:nth-child(2) {left: 0;
-  /* background-color: #FF6725; */
-  background-image: url(img/hero_ver002.png);
+  background-color: #FF6725;
+  
 }
 
 
   .mainImg ul li:nth-child(3) {left: 0;
-    /* background-color: #86BA51; */
-    background-image: url(img/hero_ver003.png);
+    background-color: #86BA51;
+    
   
   }  
 
 
-/*     section {width: 100%;
-             height: 700px;/* 일단 700px로 보고있다가 자바에서 바꿈 
-             background-size: cover;
-             background-position: right center;
-             overflow: hidden;
-             background-attachment: fixed;/* 기존의 이미지는 가만히 있고 스크롤하면 아래 이미지가 올라오는 모양새
-             position: relative;
-            } */ 
+
+
+
 
 /* product 부분###################################################################### */
 .product {padding: 140px 0;}

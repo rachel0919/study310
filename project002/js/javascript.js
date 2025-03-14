@@ -313,9 +313,29 @@ $(document).ready(function() {
   });
 
 
+// DOM 요소 선택
+const listItems = document.querySelectorAll('.mainImg ul li');
 
+// 애니메이션 시작 함수
+function startAnimation() {
+    listItems.forEach((item, index) => {
+        // 각 li 요소가 3초마다 차례로 애니메이션을 진행하도록 설정
+        setTimeout(() => {
+            item.style.zIndex = '10'; // 현재 li가 위에 오도록 z-index 설정
 
+            // 애니메이션 트리거
+            item.style.clipPath = 'circle(100% at 50% 100%)'; // 원이 확대되는 효과
 
+            // 강제로 트랜지션을 트리거하기 위해 requestAnimationFrame 사용
+            requestAnimationFrame(() => {
+                item.style.transition = 'clip-path 1.5s ease-in-out'; // transition을 다시 설정
+            });
+        }, index * 3000); // 3초 간격으로 차례대로 실행
+    });
+}
+
+// 처음에 애니메이션 시작
+startAnimation();
 
 })     //제이쿼리 끝!!!!!!!!
 
