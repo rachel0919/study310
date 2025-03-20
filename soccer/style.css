@@ -1,0 +1,75 @@
+/* 언어설정 */
+
+@charset 'UTF-8';
+
+/* reset css */
+* {margin: 0;
+  padding: 0;  
+}
+
+a {text-decoration: none;
+   color: #000; 
+}
+ul, ol {list-style: none;}
+img {border: none;
+     vertical-align: bottom;
+}
+
+body {width: 100%;
+      height: 23000px;  
+}
+
+/* 로고설정 */
+h1 {position: fixed;
+    top: 40px;
+    left: 70px;
+    z-index: 999;
+    font-size: 100px;
+}
+
+/* 네비설정 */
+.gnb {position: fixed;
+      left: 70px;
+      top: 300px;
+      z-index: 999;
+}
+.gnb li {margin-bottom: 20px;
+         cursor: pointer;
+
+}
+
+/* set to section  */
+section {perspective: 2300px;
+         position: fixed;
+         width: 1200px;
+         height: 700px;
+         left: 50%;
+         margin-left: -600px;
+         top: 50%;
+         margin-top: -350px;
+         border: 3px solid red;
+}
+
+section>article {width: 100%;
+                 height: 100%;
+                 position: absolute;
+                 font-size: 100px;
+                 color: #fff;
+                 background-color: blue;
+                 opacity: 0.3;
+                 top: 0;
+                 left: 0;
+                 z-index: 1;
+
+
+}
+
+section>article.on {opacity: 1;
+                    z-index: 2;
+}
+
+section>article:nth-child(1) {transform: translateZ(0);}
+section>article:nth-child(2) {transform: translateZ(-5000px);}
+section>article:nth-child(3) {transform: translateZ(-10000px);}
+section>article:nth-child(4) {transform: translateZ(-15000px);}
+section>article:nth-child(5) {transform: translateZ(-20000px);}

@@ -1,0 +1,196 @@
+/* 언어설정 */
+@charset 'UTF-8';
+
+/* reset css */
+* {margin: 0;
+   padding: 0; 
+}
+
+ul, ol {list-style: none;}
+a {text-decoration: none;
+   color: #000;    
+}
+img {border: none;
+     vertical-align: bottom;
+}
+
+/* wrap 설정 */
+.wrap {position: relative;
+       width: 100%;
+       height: 100vh;
+       background-color: #dde1ff; 
+       overflow: hidden;
+
+}
+.wrap>div {position: absolute;
+           perspective: 800px; 
+           transition: all 0.8s;
+
+}
+.wrap>div img {width: 100%;
+               height: 100%;
+               object-fit: contain; 
+               object-position: center bottom;
+}
+.wrap>div:nth-child(1) {width: 25vw;
+                        height: 85vh; 
+                        opacity: 1;
+                        top: 0; 
+                        left: 50%;
+                        transform: translateX(-300%) translateY(7%);
+                        z-index: 5;
+                        transition: all 1.5s ease-in-out;
+}
+.wrap>div:nth-child(1).on {transform: translateX(-140%) translateY(7%);}
+
+.wrap>div:nth-child(2) {width: 32vw;
+    height: 88vh; 
+   
+    left: 50%;
+    transform: translateX(-50%) translateY(5%);
+    top: -100%;  
+    z-index: 1;
+    transition: all 1.5s ease-in-out; 
+}
+
+.wrap>div:nth-child(2).on {top: 0;}
+.wrap>div:nth-child(3) {width: 20vw;
+    height: 88vh; 
+   
+    top: 0; 
+    left: 50%;
+    transform: translateX(250%) translateY(5%);
+    z-index: 5;
+    transition: all 1.5s ease-in-out;
+}
+
+.wrap>div:nth-child(3).on {transform: translateX(100%) translateY(5%);} 
+
+
+.imgtxt {width: auto;
+         text-align: center;
+         height: 15vh;
+         left: 50%;
+         transform: translateX(-50%) translateY(-30%) scale(1.1);
+         top: 50%;
+         margin-top: -5vh;
+         z-index: 2;
+}
+.imgtxt img {width: 100%;
+             height: auto;   
+}
+
+
+.wrap>div p {border: 3px solid #3577e5;
+             width: 15vw;
+             height: 23vh;
+             position: absolute;
+             transition: all 0.8s;
+
+
+
+}
+
+.wrap>div:nth-child(1) p {bottom: 0;
+                          left: 0;
+                          transform: translateY(-50%) ;  
+}
+
+.wrap>div:nth-child(2) p {top: 0;
+    right: 0;
+    transform: translateY(30%);  
+}
+
+.wrap>div:nth-child(3) p {top: 50%;
+    right: 0;
+    transform: translateX(50%);  
+}
+
+
+
+.wrap>div:hover p {transform: translate(0,0)}
+
+
+
+.btn {position: absolute;
+      width: 11vw;
+      height: 8vh;
+      background-color: rgba(53, 119, 229, 0.6);
+      border: 5px solid #9bbaf0;
+      border-radius: 10px;
+      left: 50%;
+      top: 50%;
+      z-index: 55;
+      transform: translateX(-50%) translateY(250%);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      
+      cursor: pointer;
+
+}
+
+.btn.on {opacity: 1;} 
+
+.btn:hover { background-color: rgba(53, 119, 229, 1);
+            border: 5px solid #fff;
+}
+.btn span {font-size: 24px;
+            font-weight: 800;
+            color: #fff;
+            display: block;
+            
+
+}
+
+.wrap>div.off {opacity: 0;}
+
+
+.wrap2 {width: 100%;
+        height: 100vh;
+        position: absolute;
+        background-color: #828bd6;
+        left: 0;
+        top: 100%;
+        z-index: 100;
+}
+
+.wrap2 .inner {
+                     position: absolute;
+                     width: 100%;
+                     height: 100vh;
+                     overflow: hidden;
+                     background-image: url(img/bg_001.png);
+                     left: 0;
+                     top: 0;
+                     opacity: 1;
+
+
+}
+
+
+.wrap2 .inner>div {position: absolute;}
+
+
+
+.wrap2 .inner>div:nth-child(1) {
+    left: 5vw;
+    bottom: -10vh;
+
+}
+
+
+.wrap2 .inner>div:nth-child(2) {
+    right: 10vw;
+    bottom: -10vh;
+
+}
+
+
+.wrap2 .inner>div:nth-child(3) {
+    bottom: 0;
+    right: 20vw;
+
+}

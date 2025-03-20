@@ -1,8 +1,9 @@
-
+/* set to language */
 @charset 'UTF-8';
 /* reset css */
-* {margin: 0;
-   padding: 0;
+* {
+    margin: 0;
+    padding: 0;
 }
 a {text-decoration: none;
    color: #000;
@@ -14,35 +15,36 @@ img {border: none;
 
 /* set to wrap */
 #wrap {position: relative;
-       perspective: 800px;
+       perspective: 800px; 
 }
+
 /* set to nav */
 nav {position: fixed;
      width: 150px;
      left: 50px;
      top: 50%;
      z-index: 999;
-     margin-top: ;
+     margin-top: -125px;   
 }
-
 nav ul {}
 nav li {width: 150px;
         height: 50px;
         border-bottom: 2px solid #000;
+        box-sizing: border-box;
         line-height: 3;
-        transition: all 1.5s;
-        cursor: pointer;   
+        transition: all 0.8s;
+        cursor: pointer;    
 }
 nav li:hover {font-size: 18px;
               color: #fff;
               border-color: #fff;
-            }
+}
 
 nav li.on {font-size: 18px;
-              color: #fff;
-              border-color: #fff;
-              font-weight: bold;
-            }
+    color: #fff;
+    border-color: #fff;
+    font-weight: bold;
+}
 
 /* set to section */
 #wrap>div {width: 100%;
@@ -50,8 +52,9 @@ nav li.on {font-size: 18px;
            font-size: 150px;
            color: #fff;
            display: flex;
-           justify-content: center;
+           justify-content: center; 
            align-items: center;
+
 }
 
 .box1 {background-color: antiquewhite;}
