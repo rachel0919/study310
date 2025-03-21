@@ -14,6 +14,37 @@ img {border: none;
      vertical-align: bottom;
 }
 
+
+
+/* nav 설정 */
+nav {position: fixed;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: -100%;
+      z-index: 9999999;
+}
+nav ul {width: 100%;
+         height: 100px;
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         background-color: rgba(255, 255, 255, 0.5); 
+}
+nav li {color: blueviolet;
+         font-size: 30px;
+         font-weight: bold;
+         cursor: pointer;
+         width: 33.3333%;
+         height: 100%;
+         text-align: center;
+         line-height: 3;
+         transition: all 0.3s;   
+}
+
+nav li:hover {background-color: rgba(0, 0, 0, 0.5);
+              color: #fff;  
+}
 /* wrap 설정 */
 .wrap {position: relative;
        width: 100%;
@@ -193,4 +224,133 @@ img {border: none;
     bottom: 0;
     right: 20vw;
 
+}
+
+
+
+
+.wrap3 {width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        z-index: 999999;
+        overflow: hidden;
+        transition: all 1.5s;
+        opacity: 0;
+}
+
+.wrap3.on {top: 0;
+           opacity: 1; 
+}
+
+
+.wrap3 img {object-fit: contain;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+
+            /* 박스크기와 상관없이 항상 고정값 */
+}
+.wrap3 .bg {width: 100%;
+            height: 100%;
+            background-color: #3577e5;
+            color: #fff;
+            text-shadow: 3px 3px 5px #333;
+            font-size: 80px;
+            font-weight: bold;
+             z-index: 100;   
+        }
+
+
+.wrap3 .img1 {width: 85vw;
+              height: 100vh;
+              position: absolute;
+              z-index: 200;
+              left: -500px;
+              top: 0;  
+}   
+
+
+.wrap3 .img2 {width: 74vw;
+              height: 100vh;
+              position: absolute;
+              z-index: 2;
+              right: -200px;
+              bottom: -150px;
+
+
+}
+           
+.wrap3 p {position: relative;
+          width: 2820px;
+          height: 100px;
+          opacity: 0.6;
+}
+
+.wrap3 span {position: absolute;
+             width: 2820px;
+             left: 0;
+             top: 0;
+             
+
+}
+
+.wrap3 p:nth-child(odd) span:nth-child(1) {
+                                         left: 0;
+animation: m1 50s linear infinite;
+
+}
+
+.wrap3 p:nth-child(odd) span:nth-child(2) {left: 2820px;
+
+animation: m2 50s linear infinite;
+
+}
+
+
+@keyframes m1 {
+
+    0% {left: 0;}
+    50% {left: -2820px;}
+    50.000000001% {left: 2820px}
+    100% {left: 0px}
+}
+
+@keyframes m2 {
+
+    0% {left: 2820px;}
+    50% {left: 0;}
+    100% {left: -2820px}
+}
+
+
+
+
+.wrap3 p:nth-child(even) span:nth-child(1) {
+    left: -2820px;
+animation: m4 50s linear infinite;
+
+}
+
+.wrap3 p:nth-child(even) span:nth-child(2) {left: 0px;
+
+animation: m3 50s linear infinite;
+
+}
+
+@keyframes m3 {
+
+    0% {left: 0;}
+    50% {left: 2820px;}
+    50.000000001% {left: -2820px}
+    100% {left: 0px}
+}
+
+@keyframes m4 {
+
+    0% {left: -2820px;}
+    50% {left: 0;}
+    100% {left: 2820px}
 }

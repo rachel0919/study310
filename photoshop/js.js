@@ -94,7 +94,14 @@ setTimeout(function(){
 
     $('.wrap2').stop().animate({'top':0},1200, function(){
 
-        $('.inner').stop().animate({'opacity':1},500)
+        $('.inner').stop().animate({'opacity':1},500,function(){
+
+
+
+            $('nav').stop().animate({'top':0},500)
+
+
+        })
     })
 
 
@@ -104,8 +111,29 @@ setTimeout(function(){
 
 
 
+
 })
 
+$('nav li').eq(1).click(function(){
+
+
+    $('.wrap3').addClass('on')
+
+})
+
+
+
+// 네비에 li 첫번째 클릭 했을때 다시 wrap3은 들어가라
+
+$('nav li').eq(0).click(function(){
+
+
+    $('.wrap3').removeClass('on')
+
+
+
+
+})
 
 
 
