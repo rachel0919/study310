@@ -1,0 +1,1158 @@
+/* set to language */
+
+@charset 'utf-8';
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+ }
+
+/* 
+.imperial-script-regular {
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+*/
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@100&display=swap');
+
+
+
+
+
+ /* reset css */
+ * {margin: 0;
+    padding: 0;
+}
+
+ul, ol {list-style: none;}
+
+img {vertical-align: bottom;
+     border: none;   
+}
+
+body {background-color: #1C1A1B;
+    font-family: 'Pretendard', sans-serif;
+    width: 100%;
+    
+    
+}
+
+.header {
+    width: 7.55vw;
+    height: auto;
+    position: fixed; /* 뷰포트 기준으로 고정 */
+    top: 1.56vw; /* 30px / 1920px */
+    left: 0.52vw; /* 10px / 1920px */
+    /* position: absolute;
+    top: 0;
+    left: 0; 
+    margin: 30px 10px;*/
+    z-index: 999;     
+
+
+}
+
+.logo a {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.logo img {  width: 100%;
+    height: auto;}
+
+
+
+.contents>div {
+
+    display: none;
+    
+    
+    }
+    
+    .contents>div.on {
+    
+     display: block;
+    
+    }
+    
+
+
+.loadingPage {
+ display: none;
+ /* display: flex; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+.loadingBg {position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;}
+.loadingBg video {width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;}
+.loadingBg video source {}
+
+
+.loadingTxt {color: #fff;
+             text-align: center;
+             line-height: 1.8;
+             position: absolute;
+             top: 50%;
+             right: 50%;
+             transform: translateY(-50%) translateX(720%);
+             transition: all 0.5s; 
+             font-size: 1.8vw;  
+             text-shadow: 0px 0px 50px #868686;
+             cursor: pointer;
+             
+            }
+.loadingTxt h3 {font-weight: 100;
+                
+            
+                                    
+}
+.loadingTxt span {
+   
+}
+
+.loadingTxt:hover {color: #CB0121;
+    transform: translateY(-50%) translateX(680%);     
+}
+
+
+
+
+
+
+
+/* mainPage ######################################################################### */
+
+.mainPage {position: relative;
+          width: 100vw;
+          height: 100vh;
+          overflow: hidden;  
+}
+/* 이미지 움직임 */
+@keyframes shakeBackground {
+    0% {
+        transform: translateX(0) translateY(0); /* 시작 위치 */
+    }
+    20% {
+        transform: translateX(18px) translateY(-18px); /* 오른쪽 위로 */
+    }
+    40% {
+        transform: translateX(-25px) translateY(10px); /* 왼쪽 아래로 */
+    }
+    60% {
+        transform: translateX(18px) translateY(18px); /* 오른쪽 아래로 */
+    }
+    80% {
+        transform: translateX(-10px) translateY(-10px); /* 왼쪽 위로 */
+    }
+    100% {
+        transform: translateX(0) translateY(0); /* 원래 위치로 돌아오기 */
+    }
+}
+
+
+
+.mainPage .bg {position: absolute;
+               top: 50%;
+               right: 0;
+               transform: translateX(20%) translateY(-50%);
+               animation: blink 1.5s infinite;
+               
+
+}
+
+@keyframes blink {
+    0% {
+      opacity: 1; /* 완전 불투명 */
+    }
+    10% {
+      opacity: 0.85; /* 살짝 투명 */
+    }
+    20% {
+      opacity: 0.95; /* 거의 불투명 */
+    }
+    30% {
+      opacity: 0.8; /* 중간 투명 */
+    }
+    40% {
+      opacity: 0.9; /* 거의 불투명 */
+    }
+    50% {
+      opacity: 1; /* 완전 불투명 */
+    }
+    60% {
+      opacity: 0.7; /* 좀 더 투명 */
+    }
+    70% {
+      opacity: 0.9; /* 거의 불투명 */
+    }
+    80% {
+      opacity: 0.75; /* 중간 투명 */
+    }
+    90% {
+      opacity: 0.85; /* 살짝 투명 */
+    }
+    100% {
+      opacity: 1; /* 다시 완전 불투명 */
+    }
+  }
+  
+
+
+
+
+
+.mainPage .bg img {scale: 0.8;
+    width: 100vw; /* 뷰포트 크기 기준으로 이미지 크기 맞추기 */
+    height: auto; 
+    animation: shakeBackground 8s infinite ease-in-out;
+
+}
+
+
+.mainPage .menu {position: absolute;
+                 top: 50%;
+                 left: 50%;
+                 transform: translateY(-50%) translateX(-190%);
+                 
+
+}
+.menu ul {text-align: center;}
+.menu li {margin: 2.6vw 0;}
+.menu a {font-size: 1.46vw;
+         text-decoration: none;
+         color: rgb(141, 124, 124); 
+         font-weight: 100; 
+         text-shadow: none;
+         transition: all 0.3s;
+          
+}
+.menu img {width: 18vw;
+    /* max-width: 570px; */
+    height: auto;
+    transition: all 0.3s;
+
+
+    }
+
+
+
+.menu li:hover a {color: #fff;
+    text-shadow: 0px 0px 20px #CB0121;
+}    
+
+.menu li:hover img {filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.8));}
+
+
+
+
+
+.mainPage .util {position: absolute;
+    right: 1.04vw; /* 20px / 1920px */
+    bottom: 1.04vw; /* 20px / 1920px */
+    padding: 2.08vw;
+    
+                    
+}
+.util ul {display: flex;}
+.util li {margin: 0 0.8vw;
+    opacity: 0.5;}
+.util a {}
+.util img {width: 1.3vw;  /* 화면 크기 기준으로 비율을 맞추기 위해 vw 단위 사용 */
+    height: auto;  }
+
+
+    .util li:hover {opacity: 1;}
+
+
+
+    /* profilePage############################################################################### */
+
+
+.profilePage>div {display: none;}
+.profilePage>div.toggle {
+    display: block;
+    
+
+}  
+
+
+.profilePage {position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+   }
+
+
+
+/* .Kr {width: 100vw;
+     height: 100vh;
+    background-image: url(img/profileBgkr.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;   
+    transition: all 1.5s; 
+} */
+
+
+.Kr {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.Kr::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/profileBgkr.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: 1; /* 여기서 투명도 조절 */
+    transition: all 1.5s;
+    z-index: -1;
+    transition: all 1.5s; 
+}
+
+
+
+.Kr>div {position: absolute;}
+
+
+
+.toggleBox {top: 50%;
+            left: 50%;
+            transform: translateX(-18vw) translateY(-10vh);
+            z-index: 5;    
+}
+.switchOn {position: absolute;
+           width: 2.3vw;
+           height: 3vh;
+           background-color: #fff;
+           border-radius: 50% / 80%;
+           margin: 0.57vh;
+           left: 0;
+           transition: all 0.6s ease-in-out;
+
+}
+.toggleBox img {position: absolute;
+    width: 5.31vw;
+    height: auto;
+                
+}
+
+@keyframes typing {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.textBox div:nth-child(2) p {
+    animation-delay: 0.5s;
+}
+
+
+.textBox {font-size: 1.04vw;
+          color: #fff; 
+          top: 50%;
+          left: 50%;
+          transform: translateX(-18vw) translateY(-4vh);
+          z-index: 5;
+          font-family: 'Pretendard', sans-serif;
+          font-weight: 100;
+          font-style: normal;
+
+}
+.textBox>div {margin-bottom: 2.6vh;
+    overflow: hidden;  
+}
+.textBox p {letter-spacing: 0.06vw;;
+            line-height: 1.3;
+            display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1.5s ease-out forwards;
+    opacity: 0;
+
+}
+.textBox em {font-style: normal;
+             font-weight: 500;   
+}
+
+
+.ExploreBtn {top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(30vh);
+          text-align: center;
+          display: inline-block; 
+          cursor: pointer;
+          z-index: 555; 
+        }
+.ExploreBtn>span {font-size: 1.04vw;
+                  font-style: normal;
+                  font-weight: 500; 
+                  color: #fff;
+                  border: 0.05vw solid #fff;
+                  border-radius: 1.3vw;
+                  padding: 0.74vh 1.04vw;               
+}
+
+.ExploreBtn:hover>span{color: #1C1A1B;
+                       background-color: #fff;
+}
+
+
+
+
+
+.imgBg_001K {perspective: 1000px;
+}
+.imgBg_001K img {width: 75vw;
+             height: auto;
+             scale: 1.1;
+             top: 50%;
+             left: 50%;
+             transform: translateX(45vw) translateY(1vh);
+             transition: all 1.5s;
+             z-index: 1;  
+}
+
+
+
+
+.imgBg_002K {perspective: 1000px;
+
+}
+.imgBg_002K img {width: 75vw;
+             height: auto;
+             scale: 0.65;
+             top: 50%;
+             left: 50%; 
+             transform: translateX(-30vw) translateY(-53vh);
+             transition: all 1.5s;  
+             z-index: 1;
+            }
+/* .imgBg_001K img:hover {transform: translateZ(1000px);} */
+/* .imgBg_002K img:hover {transform: translateZ(1000px);} */
+
+
+
+
+/* En.ver######################################## */
+
+.En {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.En::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/profileBgen.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: 1; /* 여기서 투명도 조절 */
+    transition: all 1.5s;
+    z-index: -1;
+    transition: all 1.5s; 
+    background-color: #CF0000;
+}
+
+
+
+.En>div {position: absolute;}
+
+
+
+.toggleBox {top: 50%;
+            left: 50%;
+            transform: translateX(-18vw) translateY(-10vh);
+            z-index: 5;    
+}
+.switchOn {position: absolute;
+           width: 2.3vw;
+           height: 3vh;
+           background-color: #fff;
+           border-radius: 50% / 80%;
+           margin: 0.57vh;
+           left: 2.5vw;
+           transition: all 0.6s ease-in-out;
+
+}
+.toggleBox img {position: absolute;
+    width: 5.31vw;
+    height: auto;
+                
+}
+
+@keyframes typing {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.textBox div:nth-child(2) p {
+    animation-delay: 0.5s;
+}
+
+
+.textBox {font-size: 1.04vw;
+          color: #fff; 
+          top: 50%;
+          left: 50%;
+          transform: translateX(-18vw) translateY(-4vh);
+          z-index: 5;
+          font-family: 'Pretendard', sans-serif;
+          font-weight: 100;
+          font-style: normal;
+
+}
+.textBox>div {margin-bottom: 2.6vh;
+    overflow: hidden;  
+}
+.textBox p {letter-spacing: 0.06vw;;
+            line-height: 1.3;
+            display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1.5s ease-out forwards;
+    opacity: 0;
+
+}
+.textBox em {font-style: normal;
+             font-weight: 500;   
+}
+
+
+.ExploreBtn {top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(30vh);
+          text-align: center;
+          display: inline-block; 
+          cursor: pointer;
+          z-index: 555; 
+        }
+.ExploreBtn>span {font-size: 1.04vw;
+                  font-style: normal;
+                  font-weight: 500; 
+                  color: #fff;
+                  border: 0.05vw solid #fff;
+                  border-radius: 1.3vw;
+                  padding: 0.74vh 1.04vw;               
+}
+
+.ExploreBtn:hover>span{color: #CF0000;
+                       background-color: #fff;
+}
+
+
+
+
+
+.imgBg_001E {perspective: 1000px;
+}
+.imgBg_001E img {width: 75vw;
+             height: auto;
+             scale: 0.75;
+             top: 50%;
+             left: 50%;
+             transform: translateX(70vw) translateY(-50vh);
+             transition: all 1.5s;
+             z-index: 1;  
+}
+
+
+
+
+.imgBg_002E {perspective: 1000px;
+
+}
+.imgBg_002E img {width: 75vw;
+             height: auto;
+             scale: 0.8;
+             top: 50%;
+             left: 50%; 
+             transform: translateX(-25vw) translateY(-25vh);
+             transition: all 1.5s;  
+             z-index: 1;
+            }
+/* .imgBg_001E img:hover {transform: translateZ(1000px);} */
+/* .imgBg_002E img:hover {transform: translateZ(1000px);} */
+
+
+
+
+/* storiesPage################################################################### */
+
+.storiesPage {}
+
+/* albumPage################################################################### */
+
+.albumPage {background-color: #CF0000;
+            width: 100%;
+            height: auto;
+
+}
+
+
+.albumIntro {display: flex;
+            background-color: #CF0000;
+             padding-top: 13vh;
+             padding-bottom: 15vh;
+}
+.albumIntro .leftside {position: relative;}
+
+
+
+.albumIntro .leftside>img {width: 64vw;
+               height: auto;
+               position: relative;
+               z-index: 5;
+               
+               
+}
+.albumIntro .leftside .bgLogo {position: absolute;
+    z-index: 1; 
+    transform: translateX(10vw) translateY(-2vh);
+}
+.albumIntro .leftside .bgLogo img {scale: 2.5; 
+    width: 26vw;
+    height: auto;
+
+
+
+}
+
+
+
+.albumIntro .rightside {padding-left: 1vw;
+   
+}
+
+
+
+.albumK {font-size: 1.04vw;
+    color: rgb(0, 0, 0); 
+    top: 50%;
+    left: 50%;
+    
+    z-index: 5;
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-bottom: 5vh;
+    
+
+}
+
+.albumK p {letter-spacing: 0.03vw;;
+      line-height: 1.3;
+      display: inline-block;
+      margin-bottom: 3vh;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 1.5s ease-out forwards;
+
+}
+.albumK em {font-style: normal;
+       font-weight: 500;   
+}
+
+.albumK img {position: relative; /* 기존 위치에서 이동 가능하도록 */
+            top: 0.8vh;
+            width: auto;
+            max-height: 5vh;
+            min-height: 5vh;
+        }
+
+
+
+.albumE {font-size: 1.04vw;
+    color: rgb(0, 0, 0); 
+    top: 50%;
+    left: 50%;
+    
+    z-index: 5;
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+
+}
+
+.albumE p {letter-spacing: 0.03vw;;
+      line-height: 1.3;
+      display: inline-block;
+      margin-bottom: 3vh;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 1.5s ease-out forwards;
+
+}
+.albumE em {font-style: normal;
+       font-weight: 500;   
+}
+
+.albumE img {position: relative; /* 기존 위치에서 이동 가능하도록 */
+            top: 1vh;
+            width: auto;
+            max-height: 5vh;
+            min-height: 5vh;
+        }
+
+
+.moreBtn {display: flex;
+                     position: absolute;
+                     top: 50%;
+                     right: 50%;
+                     transform: translateX(48vw) translateY(41vh);
+                     color: #000;
+                     transition: all 1s;
+                     opacity: 1;
+                     box-sizing: border-box;
+                     padding: 1vw 1vh;
+                    
+                    
+                    
+}
+.moreBtn p {margin-right: 0.5vw;
+    font-size: 18px;
+    
+    font-weight: 200;     
+}
+.moreBtn img {font-size: 16px;}
+
+.moreBtn:hover { transform: translateX(48vw) translateY(45vh);
+                 
+                 filter: invert(1);
+                
+                
+                }
+
+
+
+
+/* albulTrackBox###################################### */
+
+.albulTrackBox {padding-top: 20vh;
+                position: relative;
+                width: 100vw;
+                height: auto;
+                background-color: #CF0000;
+}
+.albulTrackBox>div {position: absolute;
+    
+
+}
+
+.albulTrackBox .bg {width: 100vw;
+                    height: auto;
+                    background-color: #CF0000;
+}
+.albulTrackBox .bg img:nth-child(1) {width: 100vw;
+                                    height: auto;
+                                    z-index: 1;
+                                    
+                                }
+
+.trackBox {top: 50%;
+           right: 50%; 
+           transform: translateX(2vw) translateY(88vh);
+           position: relative;
+           scale: 0.85;
+}
+
+.trackBox>img {position: absolute;
+               z-index: 1; 
+   
+                
+}
+.trackBox .trackTxtBox {display: flex;
+                        
+                         z-index: 5;
+                         position: absolute;
+                         top: 50%;
+                         left: 50%;
+                         transform: translate(3vw, 10vh);
+                         scale: 0.85;
+                         
+}
+
+.trackTxtBox .trackleftside {} 
+.trackTxtBox .trackleftside img {margin-bottom: 8vh;
+    cursor: pointer;
+} 
+
+.trackTxtBox .trackrightside {margin-top: 6vh;} 
+.trackTxtBox .trackrightside img {margin-bottom: 8vh;
+    cursor: pointer;
+} 
+
+
+
+
+
+/* musicvideoPage########################################### */
+
+.musicvideoPage {width: 100vw;
+                 height: 100vh;
+                 overflow: hidden;
+                 
+                
+}
+.musicvideoPage .mvBg {
+                        width: 100vw;
+                        height: 100vh;
+                        background-image: url(img/mvBg.png);
+                        position: absolute;
+                        background-position: center center;
+                        background-size: cover;
+                        z-index: -1;
+
+                    
+                    }
+                    
+
+
+
+
+.mvMainframeSec {position: relative;
+              height: 80vh; 
+
+}
+
+
+.mvMainframe {
+position: relative;
+top: 0;
+left: 50%;
+scale: 1.15;
+transform: translateX(-23vw) translateY(-1vh);    
+}
+.mvMainframe video {position: absolute;}
+.mvMainframe img {position: absolute;
+                  scale: 1.05;  
+}
+
+
+
+
+
+.lowerframeBox {scale: 0.97;
+    display: flex;
+    transform: translate(1vw,-1.8vh) rotateZ(-3.5deg);
+    
+   
+    
+}
+
+
+
+
+.lowerframe {display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100vw;
+    
+    justify-content: space-between;
+    
+                
+}
+
+
+
+.lowerframeBox>div:nth-child(1) {transform: translateX(0vw);
+    animation: ani1 30s linear infinite;
+    
+}
+.lowerframeBox>div:nth-child(2) {transform: translateX(0vw);
+    animation: ani2 30s linear infinite;   
+}
+
+@keyframes ani1 {
+
+    0% {transform: translateX(0vw);}
+    49.9% {transform: translateX(-99.9vw);} 
+    50% {transform: translateX(100vw);}
+    100% {transform: translateX(0vw);}
+
+
+ }
+
+ @keyframes ani2 {
+
+    0% {transform: translateX(0vw);}
+    49.9% {transform: translateX(-99.9vw);} 
+    100% {transform: translateX(-200vw);}
+
+
+
+ 
+ }
+
+
+
+.lowerframeBox:hover > div:nth-child(1) {animation-play-state: paused;}
+.lowerframeBox:hover > div:nth-child(2) {animation-play-state: paused;}
+.mvListBox {
+            display: flex;
+            
+            
+            
+}
+.mvListBox>div {width: 19.6vw;
+                height: 24.6vh;
+                overflow: hidden;
+                position: relative;
+                background-color: red;
+                margin-left: 9px;
+                
+                
+        }
+.mvListBox>div img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    scale: 0.8;
+    filter: grayscale(95%);
+    transition: all 0.3s;
+}
+.mvListBox>div img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+                                 scale: 0.7;
+}
+
+
+
+
+.lowerframe>img {scale: 1.45;
+                 position: relative;
+                 top: 0;
+                 left: 50%;
+                 transform: translate(-92.8vw,-0.18vh) rotateZ(0.03deg);   
+                 pointer-events: none;
+}
+
+
+
+
+/* replace to txt */
+
+
+.mvListBox>div:nth-child(1) img:nth-child(2) {transform: translate(-10vw,-5vh);}
+.mvListBox>div:nth-child(2) img:nth-child(2) {transform: translate(-15vw,-8vh);}
+.mvListBox>div:nth-child(3) img:nth-child(2) {transform: translate(-15vw,-8vh);}
+.mvListBox>div:nth-child(4) img:nth-child(2) {transform: translate(-18vw,-8vh);}
+
+
+
+.mvListBox>div:hover img:nth-child(1) {filter: grayscale(0%);} 
+
+
+
+
+
+/* tourdatePage############################################## */
+
+.tourdatePage {width: 100vw;
+               height: 100vh; 
+               background-color: #CF0000;
+               overflow: hidden;
+               position: relative;
+}
+.Bgtour {width: 100vw;
+    height: 100vh; 
+    background-image: url(img/tourdatesPageWideBg.png);
+    background-repeat: no-repeat;
+    background-size: contain;    
+    background-position: right;
+}
+
+
+
+.tourTxtSec {position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-38vw,-38vh);
+
+
+}
+
+.tourTxtSec>img {width: 500px;
+                 height: auto;
+                 position: relative;
+                 top: 50%;
+                 left: 50%;
+                 transform: translate(-17vw,-1vh);
+}
+.dateTxtSec {position: relative;
+             top: 50%;
+             left: 50%;
+             transform: translate(-20vw,9vh);
+
+}
+
+.dateTxtbox {position: relative;
+    z-index: 1;
+    margin-bottom: 5vh;
+}
+.dateTxtbox .text {display: flex;
+                   font-size: 24px; 
+                   position: relative;
+                   z-index: 2;
+                   
+                   white-space: nowrap;
+                   overflow: hidden;
+                   
+                   opacity: 1;
+               
+                   
+                   
+                   
+}
+@keyframes typing2 {
+    0% {
+        transform: translateY(-100%); /* 위에서 아래로 시작 */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%); /* 위에서 아래로 시작 */
+        opacity: 1;
+    }
+}
+
+.dateTxtbox .text em {font-style: normal;
+                      margin-right: 3vw;
+                      font-weight: 300;
+                      color: #fb7373; 
+                      text-align: center; 
+                      min-width: 5vw;
+                      opacity: 0;
+                      animation: typing2 1s ease-out forwards;
+                      animation-delay: 0s;
+}
+.dateTxtbox .text p {font-style: normal;
+                     margin-right: 3vw;  
+                     font-weight: 600;
+                     color: #ff5657;
+                     text-align: left;
+                     min-width: 10vw;
+                     opacity: 0;
+                      animation: typing2 1s ease-out forwards;
+                      animation-delay: 0.4s;
+                    }
+.dateTxtbox .text span {font-style: normal;
+                        margin-right: 3vw;  
+                        font-weight: 300;
+                        color: #f63f3f;
+                        text-align: left;
+                        opacity: 0;
+                      animation: typing2 1s ease-out forwards;
+                      animation-delay: 0.8s;
+                    }
+
+
+
+.dateTxtbox .Soldoutlin {position: absolute;
+                              top: 50%;
+                              left: 50%;
+                              transform: translate(-18.5vw,-3.5vh);
+                               z-index: 5;
+                               animation: drawImage 0.7s forwards;
+                               animation-delay: 2.6s;
+                               opacity: 0;
+}
+
+.dateTxtbox .Soldout {position: absolute;
+                              top: 50%;
+                              left: 50%;
+                              transform: translate(2vw,-5vh);
+                               z-index: 7;
+                               animation: soldout 0.3s ease-out forwards;
+                               animation-delay: 2.8s;
+                               opacity: 0;
+}
+
+
+.tourTxtSec .dateTxtSec .dateTxtbox img {display: none;}
+.tourTxtSec .dateTxtSec .dateTxtbox:nth-child(1) img {display: block;}
+.tourTxtSec .dateTxtSec .dateTxtbox:nth-child(2) img {display: block;}
+
+
+
+
+@keyframes drawImage {
+    0% {
+        width: 0;
+        transform: translate(-50vw,-3.5vh);
+        opacity: 0;
+    }
+    100% {
+        width: 100%; 
+        transform: translate(-18.5vw,-3.5vh);
+        opacity: 1;
+    }
+        
+
+}
+@keyframes soldout {
+
+0% {
+    opacity: 0;
+}
+
+100% {
+    opacity: 1;
+}
+
+
+
+
+}
+
+
+
