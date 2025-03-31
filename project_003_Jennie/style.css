@@ -291,7 +291,92 @@ body {background-color: #1C1A1B;
 
 
 
-    /* profilePage############################################################################### */
+/* lnb 설정 */
+
+.lnb {}
+
+.homeBtn {position: fixed;
+    top: 50%; /* 화면 세로 중앙 정렬 */
+    left: 3vw; /* 왼쪽에서 조금 떨어진 위치 */
+    transform: translateY(-50%); /* 정확한 중앙 정렬 */
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 100;}
+.homeBtn img {width: 100%;
+    height: auto;}
+
+
+.depth1 {font-size: 21px;
+    position: absolute;
+    top: 50%;
+    left: 70px; /* homeBtn의 오른쪽에 위치 */
+    transform: translateY(-50%);
+    
+    padding: 10px;
+    border-radius: 10px;
+    display: block; /* 기본적으로 숨김 */
+    width: 80px;   
+}
+
+.homeBtn:hover .depth1 {
+    display: block; /* 마우스를 올리면 나타남 */
+}
+
+.depth1>div {position: absolute}
+.depth1>ul {width: 50px;
+            height: auto;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border: 1px solid #fff;
+            border-radius: 50px;
+}
+.depth1>ul li { text-align: center;
+    margin: 20px 0;
+    width: 50px;
+    height: 50px;    
+}
+
+.depth1 ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.depth1 ul li a img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s;
+}
+
+/* 아이콘 호버 효과 */
+.depth1 ul li a img:last-child {
+    position: absolute;
+    opacity: 0; /* 기본적으로 숨김 */
+}
+
+.depth1 ul li a:hover img:first-child {
+    opacity: 0;
+}
+
+.depth1 ul li a:hover img:last-child {
+    opacity: 1;
+}
+
+.lnbLight {
+    position: absolute;
+    left: 10px; /* 아이콘 왼쪽으로 약간 이동 */
+    top: 0;
+    width: 70px;
+    height: auto;
+    transition: top 0.3s ease-in-out;
+    pointer-events: none; /* 마우스 이벤트 무시 */
+}
+
+
+
+/* profilePage############################################################################### */
 
 
 .profilePage>div {display: none;}
@@ -627,7 +712,559 @@ body {background-color: #1C1A1B;
 
 /* storiesPage################################################################### */
 
-.storiesPage {}
+.storiesPage {background-color: rgb(0, 0, 0);
+              width: 100vw;
+              height: 100vh; 
+              position: relative; 
+}
+
+.storiesPage .upperBtn {
+                        position: relative;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-35vh);
+                       
+                        display: flex;
+                       
+                        font-size: 21px;
+                        justify-content: center;
+                        align-items: center;
+
+}
+
+
+.upperBtn .musicBtn{border: 1px solid #fff;
+                    border-radius: 20px;
+                    padding: 5px 15px;
+                    margin: 8px;
+                    text-align: center; 
+                    color: #fff; 
+                    background-color: transparent; 
+                    cursor: pointer; 
+
+
+}
+.upperBtn .showBtn{border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: 8px;
+    text-align: center;
+    color: #fff; 
+    background-color: transparent;  
+    cursor: pointer; 
+}               
+.upperBtn .fashionBtn{border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: 8px;
+    text-align: center; 
+    color: #fff; 
+    background-color: transparent;  
+    cursor: pointer; 
+}  
+
+.upperBtn>div:hover { color: #000; 
+    background-color: #fff;  
+} 
+
+
+.storiesPage>section {  position: fixed;
+                        width: 4600px;
+                        display: flex;
+                        top: 50%;
+                        margin-top: -300px;
+                        height: 575px;
+                        left: 0;
+}
+.storiesPage>section>article { width: 150px;
+                               height: 575px;
+                               margin: 10px;
+                               margin-top: -200px;
+                               /* transition: all 0.5s; */
+                               position: relative;
+                               top: 50%;
+                               overflow: hidden;
+                               filter: grayscale(60%);
+                            }
+
+.storiesPage>section>article img {
+    pointer-events: none; /* 이미지 위에서 마우스를 올려도 부모 article이 hover 감지 */
+}
+
+.storiesPage>section>article:hover {filter: grayscale(0%);} 
+
+
+
+.storiesPage>section>article h2 {position: absolute;
+                                 color: rgb(156, 156, 156);
+                                 z-index: 5;
+                                 font-weight: 200;
+                                 display: inline;
+                                 text-align: center;
+                                 font-size: 18px;
+                                 margin: 10px;
+                                 top: 0;
+                                 left: 0;
+
+
+}
+.storiesPage>section>article strong {position: absolute;
+                                     z-index: 3; 
+                                     top: 0;
+                                     left: 0;
+                                     width: 150px;
+                                     height: 575px;
+                                     transition: all 0.8s;
+
+
+}
+
+.storiesPage>section>article strong img:nth-child(1) {position: absolute;
+                                                      top: 50%;
+                                                      left: 50%;
+                                                      transform: translate(-50%,-50%);
+
+}
+.storiesPage>section>article strong img:nth-child(2) {position: absolute;}
+
+.storiesPage>section>article p {position: absolute;
+                                z-index: 3;
+                                opacity: 0;
+                                transition: all 0.8s;
+}
+
+.articleTxtbox {opacity: 0;
+    z-index: 7;
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.articleTxtbox em {font-style: normal;
+    font-size: 41px;
+    font-weight: 100;}
+.articleTxtbox span {
+    font-size: 16px;
+                    font-weight: 100; 
+                    margin-top: -0.3vh;
+}
+
+
+
+/* article click시 효과 */
+
+.storiesPage>section>article.on {width: 1020px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -200px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article.on h2 {position: absolute;
+                                    color: rgb(255, 255, 255);
+                                    z-index: 5;
+                                    font-weight: 400;
+                                    display: inline;
+                                    text-align: center;
+                                    font-size: 18px;
+                                    margin: 10px;
+                                    top: 78%;
+                                    left: 2%;
+                                    transition: all 1.5s;
+
+                                }
+.storiesPage>section>article.on strong {opacity: 0.1;}
+.storiesPage>section>article.on p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1020px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+
+ 
+.storiesPage>section>article.on p img:nth-child(1) {position: absolute;
+                                                      top: 50%;
+                                                      left: 50%;
+                                                      transform: translate(-49%,-60%) scale(1.6);
+                                                      
+
+}
+.storiesPage>section>article.on p img:nth-child(2) {position: absolute;}  
+
+
+.storiesPage>section>article.on .articleTxtbox {z-index: 7;
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    opacity: 1;
+
+}
+.storiesPage>section>article.on .articleTxtbox em {font-style: normal;
+                   font-size: 41px;
+                   font-weight: 100; 
+}
+.storiesPage>section>article.on .articleTxtbox span {font-size: 16px;
+                    font-weight: 100; 
+                    margin-top: -0.3vh;
+}
+
+
+
+
+/* 세부 이미지 크기 조절 2번째 */
+.storiesPage>section>article:nth-child(2) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%,-50%) scale(1.3);
+
+}
+
+/* 세부 이미지 크기 조절 3번째 */
+
+
+.storiesPage>section>article:nth-child(3).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -200px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(3).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(3) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.45);
+
+}
+
+
+.storiesPage>section>article:nth-child(3).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-45%) scale(0.55);
+    
+
+}
+.storiesPage>section>article:nth-child(3).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+/* 세부 이미지 크기 조절 4번째 */
+.storiesPage>section>article:nth-child(4) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%,-50%) scale(1);
+
+}
+
+
+.storiesPage>section>article:nth-child(4).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(1.3);
+    
+
+}
+
+
+
+/* 세부 이미지 크기 조절 5번째 */
+.storiesPage>section>article:nth-child(5) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%,-40%) scale(1);
+
+}
+
+
+.storiesPage>section>article:nth-child(5).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(1);
+    
+
+}
+
+
+/* 세부 이미지 크기 조절 6번째 세로크기###########################*/
+
+
+.storiesPage>section>article:nth-child(6).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -200px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(6).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(6) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.75);
+
+}
+
+
+.storiesPage>section>article:nth-child(6).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-45%) scale(0.75);
+    
+
+}
+.storiesPage>section>article:nth-child(6).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+
+
+    
+
+/* 세부 이미지 크기 조절 7번째 */
+.storiesPage>section>article:nth-child(7) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.65);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(7).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.7);
+    
+
+}
+
+
+
+
+
+/* 세부 이미지 크기 조절 8번째 */
+.storiesPage>section>article:nth-child(8) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%,-45%) scale(0.7);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(8).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-20%) scale(1.2);
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 세부 이미지 크기 조절 9번째 세로크기###########################*/
+
+
+.storiesPage>section>article:nth-child(9).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -200px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(9).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(9) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.3);
+
+}
+
+
+.storiesPage>section>article:nth-child(9).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(0.5);
+    
+
+}
+.storiesPage>section>article:nth-child(9).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+
+
+
+
+/* 세부 이미지 크기 조절 10번째 */
+.storiesPage>section>article:nth-child(10) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-50%) scale(0.6);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(10).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.8);
+    
+
+}
+
+
+
+
+/* 세부 이미지 크기 조절 11번째 */
+.storiesPage>section>article:nth-child(11) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.5);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(11).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.5);
+}
+
+/* 세부 이미지 크기 조절 12번째 */
+.storiesPage>section>article:nth-child(12) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.55);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(12).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.73);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.close {
+        color: rgb(255, 255, 255);
+        font-size: 32px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1.5vw;
+        opacity: 0.5;
+        
+
+}
+.close i {}
+
+.close:hover {opacity: 1;}
+
+
+
+
 
 /* albumPage################################################################### */
 
@@ -1156,3 +1793,132 @@ transform: translateX(-23vw) translateY(-1vh);
 
 
 
+/* shopPage############################################## */
+
+
+
+.shopPage { width: 100vw;
+    height: auto;
+}
+
+.shopHero {background-color: #000;
+    width: 93vw;
+    height: 50vh;
+    border: 1px solid rgb(68, 68, 68);
+    border-radius: 5px;
+    display: flex;
+           justify-content: space-around;
+           align-items: center;
+           position: relative; 
+           overflow: hidden;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, 10%);
+}
+.shopHero img {position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-10vw,-28vh) scale(0.8); 
+}
+.shopHero p {color: #CF0000;
+             font-style: italic;
+             font-size: 21px;
+             font-weight: 400;
+             letter-spacing: 5px;
+             
+
+}
+
+
+.shopPage .option {display: flex;
+                   padding-top: 15vh;
+                   padding-left: 10vw;
+                   color: #fff;
+
+}
+.shopPage .option p {font-size: 21px;
+                    
+                     border: 1px solid #fff;
+                     margin-right: 0.8vw;
+                     padding: 0;
+                     border-radius: 30px;
+                     padding: 0 20px;
+}
+
+.shopPage .option span {position: relative;
+                        top: 10px;
+            
+}
+.shopPage .option img {vertical-align: middle;
+                       font-size: 16px; 
+                       
+}
+
+
+.shopPage .option p:hover {background-color: #CF0000;}
+
+
+.productList {padding-left: 10vw;
+              margin-top: 6vh;  
+}
+
+
+.productList ul {display: flex;
+                 
+}
+.productList li {perspective: 1500px;
+                 padding: 80px 30px;
+}
+.cardBox {position: relative;
+          width: 345px;
+          height: 480px; 
+          perspective: 700px; /* 3D 깊이감을 줍니다. */
+    transform-style: preserve-3d; /* 자식 요소들이 3D 변환을 지원하도록 설정 */
+    transition: transform 1s; 
+
+}
+
+.cardBox:hover {
+    transform: rotateY(180deg); /* 마우스 hover 시 Y축으로 180도 회전 */
+}
+
+.cardFront {position: absolute;
+            width: 100%;
+            height: 100%;  
+            backface-visibility: hidden;  
+}
+.cardFront>img {}
+
+.cardBack {position: absolute;
+    width: 345px;
+    height: 480px;  
+            background-color: #000;
+            border: 5px solid #CB0121;
+            border-radius: 10px;
+            overflow: hidden;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;  
+
+}
+.cardBack>img { object-fit: contain;
+    position: absolute;
+    width: 100%;   /* 부모 요소의 크기에 맞게 가로 크기 조정 */
+    height: 100%;}
+
+
+
+    /* 하단 텍스트 */
+
+    .txtBoxP {padding: 20px 0;
+        margin-top: 10px;
+              width: 345px;
+              color: #fff;
+              text-align: center;
+              font-size: 21px;
+    }
+    .txtBoxP p {font-weight: 200;
+                margin-bottom: 3px;
+    }
+    .txtBoxP em {font-style: normal;
+                 font-weight: 600;   
+    }
