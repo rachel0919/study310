@@ -41,6 +41,10 @@ img {vertical-align: bottom;
 body {background-color: #1C1A1B;
     font-family: 'Pretendard', sans-serif;
     width: 100%;
+    overflow-x: hidden;
+    height: 100%;   /* 페이지가 100% 높이를 가지도록 설정 */
+    overflow-y: scroll; 
+
     
     
 }
@@ -87,16 +91,30 @@ body {background-color: #1C1A1B;
 
 
 .loadingPage {
- display: none;
- /* display: flex; */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 5;
+    opacity: 1;
+    
     
     
 }
+
+/*loadingPage.on ############################### */
+.loadingPage.on { 
+    display: block;
+    opacity: 1;
+                }
+
+.loadingPage.hide { 
+                    opacity: 0;
+                    z-index: -1;
+                    pointer-events: none; /* 클릭 방지 */
+                }
 
 .loadingBg {position: absolute;
     top: 0;
@@ -104,14 +122,23 @@ body {background-color: #1C1A1B;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1;}
+    z-index: 1;}
+
+
 .loadingBg video {width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;}
-.loadingBg video source {}
+.loadingBg video source {position: absolute;
+
+
+}
+.overlay-video {
+    mix-blend-mode: screen; /* 어두운 부분 투명하게 */
+    opacity: 0.8    ;
+}
 
 
 .loadingTxt {color: #fff;
@@ -125,6 +152,7 @@ body {background-color: #1C1A1B;
              font-size: 1.8vw;  
              text-shadow: 0px 0px 50px #868686;
              cursor: pointer;
+             z-index: 5;
              
             }
 .loadingTxt h3 {font-weight: 100;
@@ -143,7 +171,9 @@ body {background-color: #1C1A1B;
 
 
 
-
+.contents {position: relative;
+z-index: 1;
+}
 
 
 /* mainPage ######################################################################### */
@@ -296,47 +326,66 @@ body {background-color: #1C1A1B;
 .lnb {}
 
 .homeBtn {position: fixed;
-    top: 50%; /* 화면 세로 중앙 정렬 */
+    top: 50vh; /* 화면 세로 중앙 정렬 */
     left: 3vw; /* 왼쪽에서 조금 떨어진 위치 */
-    transform: translateY(-50%); /* 정확한 중앙 정렬 */
-    width: 60px;
-    height: 60px;
+    transform: translateY(-500%); /* 정확한 중앙 정렬 */
+    width: 3.125vw;
+    height: 3.125vh;
     cursor: pointer;
-    z-index: 100;}
+    z-index: 10;}
 .homeBtn img {width: 100%;
-    height: auto;}
-
-
-.depth1 {font-size: 21px;
-    position: absolute;
-    top: 50%;
-    left: 70px; /* homeBtn의 오른쪽에 위치 */
-    transform: translateY(-50%);
-    
-    padding: 10px;
-    border-radius: 10px;
-    display: block; /* 기본적으로 숨김 */
-    width: 80px;   
+    height: auto;
+    opacity: 1;
+    transition: all 0.3s;
 }
+
+
+.depth1 {font-size: 1.09vw;
+    position: relative;
+    top: 50vh;  /* 화면 세로 중앙 정렬 */
+    left: -1vw; /* 왼쪽에서 조금 떨어진 위치 */
+    transform: translateY(-215%) scaleY(0); /* 정확한 중앙 정렬 */
+    
+    padding: 0.52vw;
+    border-radius: 0.52vw;
+    z-index: 100;
+     
+    transition: all 0.8s; 
+}
+
+.homeBtn:hover>img {opacity: 0;}
 
 .homeBtn:hover .depth1 {
-    display: block; /* 마우스를 올리면 나타남 */
+    
+    
+    transform: translateY(-180%) scaleY(1); /* 정확한 중앙 정렬 */
+    
+    
 }
 
-.depth1>div {position: absolute}
-.depth1>ul {width: 50px;
+.depth1>div {position: absolute;
+            
+            
+                
+}
+.depth1>ul {width: 2.6vw;
             height: auto;
             background: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border: 1px solid #fff;
-            border-radius: 50px;
+            padding: 0 2vw;
+            border: 0.052vw solid #fff;
+            border-radius: 2.6vw;
+            box-sizing: border-box;
 }
 .depth1>ul li { text-align: center;
-    margin: 20px 0;
-    width: 50px;
-    height: 50px;    
+    margin: 2.04vw 0;
+    width: 2.6vw;
+    height: 2.6vh;  
+    position: relative;
+    left: 0;
+    transform: translate(-1.3vw,-1.5vh);
+    z-index: 5;
 }
-
+.depth1 ul li a img:first-child {opacity: 1;}
 .depth1 ul li a {
     display: flex;
     justify-content: center;
@@ -365,14 +414,108 @@ body {background-color: #1C1A1B;
 }
 
 .lnbLight {
+    width: 3.125vw;
+    height: 3.125vh;
     position: absolute;
-    left: 10px; /* 아이콘 왼쪽으로 약간 이동 */
-    top: 0;
-    width: 70px;
-    height: auto;
-    transition: top 0.3s ease-in-out;
+    top: 3.5vh;
+    left: 1vw;
+    padding: 0;
+    opacity: 0;
     pointer-events: none; /* 마우스 이벤트 무시 */
+    transition: top 0.3s ease-in-out; 
+   
+    
 }
+
+.lnbLight>img {width: 3.125vw;
+    height: 3.125vh;
+}
+
+
+
+/* 첫 번째 li를 호버하면 lnbLight의 top 변경 */
+.depth1 ul li:nth-child(1):hover ~ .lnbLight { 
+    top: 3.5vh;
+    opacity: 1;
+}
+
+/* 두 번째 li를 호버하면 lnbLight의 top 변경 */
+.depth1 ul li:nth-child(2):hover ~ .lnbLight { 
+    top: 10vh;
+    opacity: 1;
+}
+
+/* 세 번째 li를 호버하면 lnbLight의 top 변경 */
+.depth1 ul li:nth-child(3):hover ~ .lnbLight { 
+    top: 17vh;
+    opacity: 1;
+}
+
+/* 네 번째 li를 호버하면 lnbLight의 top 변경 */
+.depth1 ul li:nth-child(4):hover ~ .lnbLight { 
+    top: 23vh;
+    opacity: 1;
+}
+
+
+
+
+/* depth2 */
+.depth1 ul li:nth-child(3) {position: relative;}
+.depth2 {
+    position: absolute;
+    left: 2.5vw;
+    top: 0;
+    width: 9.37vw; /* ✅ 부모 너비 */
+    background: rgba(0, 0, 0, 0.8);
+    border: 0.052vw solid #fff;
+    border-radius: 0.52vw;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 10;
+    overflow: hidden;
+
+}
+
+/* 2Depth 내부 리스트 스타일 */
+
+.depth2 li {
+    width: 100%;
+    padding: 1vh 0; /* ✅ 상하 패딩 조정 */
+   
+    font-size: 1vw;
+   
+    
+    text-align: center; /* ✅ 텍스트 중앙 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+.depth2 li p {position: absolute;
+              top: 0;
+              left: 0; 
+              color: #fff; 
+              padding: 2vh 3vw;
+              background-color: rgba(0, 0, 0, 0.8);
+              transition: background-color 0.3s ease-in-out;
+              text-align: center;
+}
+/* 2Depth 메뉴 호버 효과 */
+.depth2 li:hover p {
+    background-color: #fff;
+    color: #000;
+}
+
+.iconAlbum:hover .depth2 {
+    opacity: 1;
+    visibility: visible;
+}
+
+
 
 
 
@@ -437,7 +580,11 @@ body {background-color: #1C1A1B;
 .toggleBox {top: 50%;
             left: 50%;
             transform: translateX(-18vw) translateY(-10vh);
-            z-index: 5;    
+            z-index: 5; 
+            animation: fadeIn1 1s ease-in-out; 
+            cursor: pointer;
+            width: 6vw;
+           height: 4.5vh;     
 }
 .switchOn {position: absolute;
            width: 2.3vw;
@@ -449,6 +596,8 @@ body {background-color: #1C1A1B;
            transition: all 0.6s ease-in-out;
 
 }
+
+
 .toggleBox img {position: absolute;
     width: 5.31vw;
     height: auto;
@@ -505,6 +654,7 @@ body {background-color: #1C1A1B;
           display: inline-block; 
           cursor: pointer;
           z-index: 555; 
+          animation: fadeIn1 1s ease-in-out; 
         }
 .ExploreBtn>span {font-size: 1.04vw;
                   font-style: normal;
@@ -515,12 +665,35 @@ body {background-color: #1C1A1B;
                   padding: 0.74vh 1.04vw;               
 }
 
-.ExploreBtn:hover>span{color: #1C1A1B;
+.Kr .ExploreBtn:hover>span{color: #1C1A1B;
                        background-color: #fff;
 }
 
 
+@keyframes zoomInOut1 {
+    0% {
+        transform:  translateX(-15vw) translateY(1vh) translateZ(40vw); /* 처음에 이미지가 커져 있음 */
+    }
+    100% {
+        transform:  translateX(45vw) translateY(1vh) translateZ(0vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
+    }
+}
 
+@keyframes zoomInOut2 {
+    0% {
+        transform: translateX(10vw) translateY(-53vh) translateZ(40vw); /* 처음에 이미지가 커져 있음 */
+    }
+    100% {
+        transform: translateX(-30vw) translateY(-53vh) translateZ(0vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
+    }
+}
+@keyframes fadeIn1 {
+
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+
+
+}
 
 
 .imgBg_001K {perspective: 1000px;
@@ -530,9 +703,10 @@ body {background-color: #1C1A1B;
              scale: 1.1;
              top: 50%;
              left: 50%;
-             transform: translateX(45vw) translateY(1vh);
+             transform: translateX(45vw) translateY(1vh) translateZ(0vw);
              transition: all 1.5s;
-             z-index: 1;  
+             z-index: 1;
+             animation: zoomInOut1 1s ease-in-out;  
 }
 
 
@@ -546,9 +720,10 @@ body {background-color: #1C1A1B;
              scale: 0.65;
              top: 50%;
              left: 50%; 
-             transform: translateX(-30vw) translateY(-53vh);
+             transform: translateX(-30vw) translateY(-53vh) translateZ(0vw);
              transition: all 1.5s;  
              z-index: 1;
+             animation: zoomInOut2 1s ease-in-out;  
             }
 /* .imgBg_001K img:hover {transform: translateZ(1000px);} */
 /* .imgBg_002K img:hover {transform: translateZ(1000px);} */
@@ -591,18 +766,22 @@ body {background-color: #1C1A1B;
 .toggleBox {top: 50%;
             left: 50%;
             transform: translateX(-18vw) translateY(-10vh);
-            z-index: 5;    
+            z-index: 5; 
+            animation: fadeIn1 1s ease-in-out;
+            cursor: pointer;       
 }
-.switchOn {position: absolute;
+/* .switchOn {position: absolute;
            width: 2.3vw;
            height: 3vh;
            background-color: #fff;
            border-radius: 50% / 80%;
            margin: 0.57vh;
+           
            left: 2.5vw;
            transition: all 0.6s ease-in-out;
+           animation: fadeIn1 1s ease-in-out;    
 
-}
+} */
 .toggleBox img {position: absolute;
     width: 5.31vw;
     height: auto;
@@ -669,12 +848,28 @@ body {background-color: #1C1A1B;
                   padding: 0.74vh 1.04vw;               
 }
 
-.ExploreBtn:hover>span{color: #CF0000;
+.En .ExploreBtn:hover>span{color: #CF0000;
                        background-color: #fff;
 }
 
 
+@keyframes zoomInOut3 {
+    0% {
+        transform:  translateX(-15vw) translateY(1vh) translateZ(40vw); /* 처음에 이미지가 커져 있음 */
+    }
+    100% {
+        transform:  translateX(70vw) translateY(-50vh) translateZ(0vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
+    }
+}
 
+@keyframes zoomInOut4 {
+    0% {
+        transform: translateX(10vw) translateY(-53vh) translateZ(40vw); /* 처음에 이미지가 커져 있음 */
+    }
+    100% {
+        transform: translateX(-25vw) translateY(-25vh) translateZ(0vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
+    }
+}
 
 
 .imgBg_001E {perspective: 1000px;
@@ -686,7 +881,8 @@ body {background-color: #1C1A1B;
              left: 50%;
              transform: translateX(70vw) translateY(-50vh);
              transition: all 1.5s;
-             z-index: 1;  
+             z-index: 1; 
+             animation: zoomInOut3 1s ease-in-out;   
 }
 
 
@@ -703,6 +899,7 @@ body {background-color: #1C1A1B;
              transform: translateX(-25vw) translateY(-25vh);
              transition: all 1.5s;  
              z-index: 1;
+             animation: zoomInOut4 1s ease-in-out;  
             }
 /* .imgBg_001E img:hover {transform: translateZ(1000px);} */
 /* .imgBg_002E img:hover {transform: translateZ(1000px);} */
@@ -712,10 +909,21 @@ body {background-color: #1C1A1B;
 
 /* storiesPage################################################################### */
 
-.storiesPage {background-color: rgb(0, 0, 0);
+.storiesPage {background-color: rgba(0, 0, 0, 0.8);
+              backdrop-filter: blur(10px);
               width: 100vw;
               height: 100vh; 
-              position: relative; 
+             
+              position: fixed;
+              bottom: -100%; /* 화면 아래로 숨기기 */
+              left: 0;
+              transition: bottom 0.5s ease-in-out; /* 애니메이션 효과 */
+              z-index: 9999;
+              overflow-y: auto; 
+}
+
+.storiesPage.on {
+    bottom: 0; /* 화면에 나타나도록 */
 }
 
 .storiesPage .upperBtn {
@@ -729,6 +937,25 @@ body {background-color: #1C1A1B;
                         font-size: 21px;
                         justify-content: center;
                         align-items: center;
+                        
+
+}
+.upperBtn>div { cursor: pointer;
+                position: relative;
+                z-index: 5;
+
+}
+
+
+.upperBtn .all {border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: 8px;
+    text-align: center; 
+    color: #fff; 
+    background-color: transparent; 
+    cursor: pointer; 
+
 
 }
 
@@ -768,23 +995,28 @@ body {background-color: #1C1A1B;
 } 
 
 
-.storiesPage>section {  position: fixed;
-                        width: 4600px;
+.storiesPage>section { 
+                        width: 8000px;
                         display: flex;
-                        top: 50%;
-                        margin-top: -300px;
+                        top: 20vh;
+                       
                         height: 575px;
                         left: 0;
+                        position: relative;
+                        z-index: 2;
+                        transform: translateX(0px);
+                        transition: transform 0.5s ease;
 }
 .storiesPage>section>article { width: 150px;
                                height: 575px;
                                margin: 10px;
-                               margin-top: -200px;
+                               margin-top: -300px;
                                /* transition: all 0.5s; */
                                position: relative;
                                top: 50%;
                                overflow: hidden;
                                filter: grayscale(60%);
+                               transition: transform 0.5s ease;
                             }
 
 .storiesPage>section>article img {
@@ -859,7 +1091,7 @@ body {background-color: #1C1A1B;
 .storiesPage>section>article.on {width: 1020px;
     height: 575px;
     margin: 10px;
-    margin-top: -200px;
+    margin-top: -300px;
    
     position: relative;
     top: 50%;
@@ -939,7 +1171,7 @@ body {background-color: #1C1A1B;
 .storiesPage>section>article:nth-child(3).on {width: 520px;
     height: 575px;
     margin: 10px;
-    margin-top: -200px;
+    margin-top: -300px;
    
     position: relative;
     top: 50%;
@@ -1023,7 +1255,7 @@ body {background-color: #1C1A1B;
 .storiesPage>section>article:nth-child(6).on {width: 520px;
     height: 575px;
     margin: 10px;
-    margin-top: -200px;
+    margin-top: -300px;
    
     position: relative;
     top: 50%;
@@ -1124,7 +1356,7 @@ body {background-color: #1C1A1B;
 .storiesPage>section>article:nth-child(9).on {width: 520px;
     height: 575px;
     margin: 10px;
-    margin-top: -200px;
+    margin-top: -300px;
    
     position: relative;
     top: 50%;
@@ -1224,6 +1456,199 @@ body {background-color: #1C1A1B;
 
 
 
+/* 세부 이미지 크기 조절 13번째 */
+.storiesPage>section>article:nth-child(13) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(0.55);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(13).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(0.73);
+}
+
+
+/* 세부 이미지 크기 조절 14번째 */
+.storiesPage>section>article:nth-child(14) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-50%) scale(0.8);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(14).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.3);
+}
+
+
+
+
+
+
+
+/* 세부 이미지 크기 조절 15번째 세로크기###########################*/
+
+
+.storiesPage>section>article:nth-child(15).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(15).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(15) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%,-50%) scale(0.8);
+
+}
+
+
+.storiesPage>section>article:nth-child(15).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-40%) scale(1);
+    
+
+}
+.storiesPage>section>article:nth-child(15).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+/* 세부 이미지 크기 조절 16번째 */
+.storiesPage>section>article:nth-child(16) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.3);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(16).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-30%) scale(0.8);
+}
+
+
+/* 세부 이미지 크기 조절 17번째 */
+.storiesPage>section>article:nth-child(17) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(17).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 세부 이미지 크기 조절 18번째 */
+
+
+.storiesPage>section>article:nth-child(18).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(18).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(18) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-45%) scale(0.7);
+
+}
+
+
+.storiesPage>section>article:nth-child(18).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%,-39%) scale(0.8);
+    
+
+}
+.storiesPage>section>article:nth-child(18).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+
+/* 세부 이미지 크기 조절 19번째 */
+.storiesPage>section>article:nth-child(19) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-51%,-50%) scale(0.8);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(19).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-30%) scale(1.3);
+}
 
 
 
@@ -1270,8 +1695,10 @@ body {background-color: #1C1A1B;
 
 .albumPage {background-color: #CF0000;
             width: 100%;
-            height: auto;
-
+            height: 325vh;
+            
+            
+          
 }
 
 
@@ -1418,6 +1845,9 @@ body {background-color: #1C1A1B;
                 width: 100vw;
                 height: auto;
                 background-color: #CF0000;
+                width: 100vw;
+                height: 20vh;
+                
 }
 .albulTrackBox>div {position: absolute;
     
@@ -1427,6 +1857,8 @@ body {background-color: #1C1A1B;
 .albulTrackBox .bg {width: 100vw;
                     height: auto;
                     background-color: #CF0000;
+                    pointer-events: none;
+                    
 }
 .albulTrackBox .bg img:nth-child(1) {width: 100vw;
                                     height: auto;
@@ -1434,11 +1866,46 @@ body {background-color: #1C1A1B;
                                     
                                 }
 
+
+.albulTrackBox .iconVD {top: 50%;
+                        right: 50%; 
+                        transform: translateX(43vw) translateY(74vh);
+                        color: #fff;
+                        display: flex;
+                        font-size: 20px;
+                        
+
+
+}
+.iconVD>div {margin-right: 1vw;
+             display: flex;
+             opacity: 0.5;
+             cursor: pointer;
+}
+
+
+.iconVD>div p {line-height: 1.1;
+               margin-left: 0.3vw;
+               font-weight: 100; 
+               transform: translateY(0vh);
+               opacity: 1;
+               transition: all 0.3s;
+               pointer-events: none;
+}
+.iconVD>div i {pointer-events: none;}
+.iconVD>div:nth-child(1) p {line-height: 0.9;}
+
+.iconVD>div:hover {opacity: 0.8;}
+
+.iconVD>div:hover p {
+    opacity: 1;}
+
 .trackBox {top: 50%;
            right: 50%; 
            transform: translateX(2vw) translateY(88vh);
            position: relative;
            scale: 0.85;
+           pointer-events: none;
 }
 
 .trackBox>img {position: absolute;
@@ -1476,8 +1943,20 @@ body {background-color: #1C1A1B;
 .musicvideoPage {width: 100vw;
                  height: 100vh;
                  overflow: hidden;
+                 transition: bottom 0.3s ease-in-out;
+                 animation: popup 0.5s ease-in-out; 
                  
                 
+}
+
+@keyframes popup {
+
+    0% {transform: translateY(80vh);}
+
+    100% {transform: translateY(0);}
+
+
+
 }
 .musicvideoPage .mvBg {
                         width: 100vw;
@@ -1504,22 +1983,36 @@ body {background-color: #1C1A1B;
 .mvMainframe {
 position: relative;
 top: 0;
-left: 50%;
+left: 50vw;
 scale: 1.15;
-transform: translateX(-23vw) translateY(-1vh);    
+transform: translateX(-23vw) translateY(-0.93vh);
 }
 .mvMainframe video {position: absolute;}
+
+
+.mvMainframe video source {position: relative;
+                           
+
+}
 .mvMainframe img {position: absolute;
                   scale: 1.05;  
 }
 
 
 
+.mvMainframeSec .bg-video {position: relative;
+    top: 0;
+    left: 50vw;
+    scale: 1.15;
+    transform: translateX(-26.8vw) translateY(-0.93vh) scaleX(0.98);
+    z-index: -1;
+    
+}
 
 
 .lowerframeBox {scale: 0.97;
     display: flex;
-    transform: translate(1vw,-1.8vh) rotateZ(-3.5deg);
+    transform: translate(1.04vw,-1.67vh) rotateZ(-3.5deg);
     
    
     
@@ -1583,8 +2076,9 @@ transform: translateX(-23vw) translateY(-1vh);
                 height: 24.6vh;
                 overflow: hidden;
                 position: relative;
-                background-color: red;
-                margin-left: 9px;
+             
+                
+                margin-left: 0.47vw;
                 
                 
         }
@@ -1659,7 +2153,7 @@ transform: translateX(-23vw) translateY(-1vh);
 
 }
 
-.tourTxtSec>img {width: 500px;
+.tourTxtSec>img {width: 26vw;
                  height: auto;
                  position: relative;
                  top: 50%;
@@ -1678,7 +2172,7 @@ transform: translateX(-23vw) translateY(-1vh);
     margin-bottom: 5vh;
 }
 .dateTxtbox .text {display: flex;
-                   font-size: 24px; 
+                   font-size:  1.25vw; 
                    position: relative;
                    z-index: 2;
                    
@@ -1740,7 +2234,7 @@ transform: translateX(-23vw) translateY(-1vh);
                               transform: translate(-18.5vw,-3.5vh);
                                z-index: 5;
                                animation: drawImage 0.7s forwards;
-                               animation-delay: 2.6s;
+                               animation-delay: 1.8s;
                                opacity: 0;
 }
 
@@ -1750,7 +2244,7 @@ transform: translateX(-23vw) translateY(-1vh);
                               transform: translate(2vw,-5vh);
                                z-index: 7;
                                animation: soldout 0.3s ease-out forwards;
-                               animation-delay: 2.8s;
+                               animation-delay: 2s;
                                opacity: 0;
 }
 
@@ -1799,13 +2293,14 @@ transform: translateX(-23vw) translateY(-1vh);
 
 .shopPage { width: 100vw;
     height: auto;
+    overflow-x: hidden;
 }
 
 .shopHero {background-color: #000;
     width: 93vw;
     height: 50vh;
-    border: 1px solid rgb(68, 68, 68);
-    border-radius: 5px;
+    border: 0.052vw solid rgb(68, 68, 68);
+    border-radius: 0.26vw;
     display: flex;
            justify-content: space-around;
            align-items: center;
@@ -1822,9 +2317,9 @@ transform: translateX(-23vw) translateY(-1vh);
 }
 .shopHero p {color: #CF0000;
              font-style: italic;
-             font-size: 21px;
+             font-size: 1.1vw;
              font-weight: 400;
-             letter-spacing: 5px;
+             letter-spacing: 0.26vw;
              
 
 }
@@ -1836,21 +2331,21 @@ transform: translateX(-23vw) translateY(-1vh);
                    color: #fff;
 
 }
-.shopPage .option p {font-size: 21px;
+.shopPage .option p {font-size: 1.1vw;
                     
-                     border: 1px solid #fff;
+                     border: 0.052vw solid #fff;
                      margin-right: 0.8vw;
                      padding: 0;
-                     border-radius: 30px;
-                     padding: 0 20px;
+                     border-radius: 1.56vw;
+                     padding: 0 1.04vw;
 }
 
 .shopPage .option span {position: relative;
-                        top: 10px;
+                        top: 1vh;
             
 }
 .shopPage .option img {vertical-align: middle;
-                       font-size: 16px; 
+                       font-size: 0.84vw;
                        
 }
 
@@ -1858,7 +2353,7 @@ transform: translateX(-23vw) translateY(-1vh);
 .shopPage .option p:hover {background-color: #CF0000;}
 
 
-.productList {padding-left: 10vw;
+.productList {padding-left: 13vw;
               margin-top: 6vh;  
 }
 
@@ -1866,8 +2361,8 @@ transform: translateX(-23vw) translateY(-1vh);
 .productList ul {display: flex;
                  
 }
-.productList li {perspective: 1500px;
-                 padding: 80px 30px;
+.productList li {perspective: 75vw; 
+                 padding: 4.16vh 1.56vw; 
 }
 .cardBox {position: relative;
           width: 345px;
