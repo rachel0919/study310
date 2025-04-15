@@ -397,6 +397,32 @@ $(document).on("click", ".depth1 ul li:nth-child(4)", function (e) {
 });
 
 
+$(document).on("click", ".shopPage .option p:nth-child(1)", function (e) {
+    e.preventDefault();
+
+    // proNINIBARAS 디졸브
+    $(".proNINIBARAS").stop().animate({ opacity: 0 });
+
+    // proRuby 다시 나타나게 하기
+    $(".proRuby").stop().animate({ opacity: 1 });
+    $(".proRuby").removeClass("off");
+    $(".proNINIBARAS").removeClass("on");
+});
+
+$(document).on("click", ".shopPage .option p:nth-child(2)", function (e) {
+    e.preventDefault();
+
+    // proRuby 디졸브
+    $(".proRuby").stop().animate({ opacity: 0 });
+
+    // proNINIBARAS 나타나게 하기
+    $(".proNINIBARAS").stop().animate({ opacity: 1 });
+    $(".proNINIBARAS").addClass("on");
+    $(".proRuby").addClass("off");
+});
+
+
+
 });
 
     

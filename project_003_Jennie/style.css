@@ -1651,6 +1651,588 @@ z-index: 1;
 }
 
 
+/* 세부 이미지 크기 조절 20번째 */
+.storiesPage>section>article:nth-child(20) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-28%,-50%) scale(1);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(20).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+
+
+/* 세부 이미지 크기 조절 21번째 */
+
+
+.storiesPage>section>article:nth-child(21).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(21).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(21) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-40%) scale(0.7);
+
+}
+
+
+.storiesPage>section>article:nth-child(21).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-39%) scale(0.8);
+    
+
+}
+.storiesPage>section>article:nth-child(21).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+
+/* 세부 이미지 크기 조절 22번째 */
+.storiesPage>section>article:nth-child(22) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%,-40%) scale(1.3);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(22).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.05);
+}
+
+
+
+
+
+/* 세부 이미지 크기 조절 23번째 */
+.storiesPage>section>article:nth-child(23) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-78%,-40%) scale(1.5);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(23).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.5);
+}
+
+
+
+
+
+/* 세부 이미지 크기 조절 24번째 */
+.storiesPage>section>article:nth-child(24) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%,-40%) scale(1);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(24).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.5);
+}
+
+
+
+/*26  */
+
+
+
+/* 세부 이미지 크기 조절 26번째 */
+.storiesPage>section>article:nth-child(26) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%,-50%) scale(1.3);
+
+}
+
+/* 세부 이미지 크기 조절 27번째 */
+
+
+.storiesPage>section>article:nth-child(27).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(27).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(27) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.45);
+
+}
+
+
+.storiesPage>section>article:nth-child(27).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-45%) scale(0.55);
+    
+
+}
+.storiesPage>section>article:nth-child(27).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+/* 세부 이미지 크기 조절 28번째 */
+.storiesPage>section>article:nth-child(28) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%,-50%) scale(1);
+
+}
+
+
+.storiesPage>section>article:nth-child(28).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(1.3);
+    
+
+}
+
+
+
+/* 세부 이미지 크기 조절 29번째 */
+.storiesPage>section>article:nth-child(29) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%,-40%) scale(1);
+
+}
+
+
+.storiesPage>section>article:nth-child(29).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(1);
+    
+
+}
+
+
+/* 세부 이미지 크기 조절 30번째 세로크기###########################*/
+
+
+.storiesPage>section>article:nth-child(30).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(30).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(30) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.75);
+
+}
+
+
+.storiesPage>section>article:nth-child(30).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-45%) scale(0.75);
+    
+
+}
+.storiesPage>section>article:nth-child(30).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+
+
+    
+
+/* 세부 이미지 크기 조절 31번째 */
+.storiesPage>section>article:nth-child(31) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.65);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(31).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.7);
+    
+
+}
+
+
+
+
+
+/* 세부 이미지 크기 조절 32번째 */
+.storiesPage>section>article:nth-child(32) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%,-45%) scale(0.7);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(32).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-20%) scale(1.2);
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 세부 이미지 크기 조절 33번째 세로크기###########################*/
+
+
+.storiesPage>section>article:nth-child(33).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(33).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(33) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.3);
+
+}
+
+
+.storiesPage>section>article:nth-child(33).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(0.5);
+    
+
+}
+.storiesPage>section>article:nth-child(33).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+
+
+
+
+/* 세부 이미지 크기 조절 34번째 */
+.storiesPage>section>article:nth-child(34) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-50%) scale(0.6);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(34).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.8);
+    
+
+}
+
+
+
+
+/* 세부 이미지 크기 조절 35번째 */
+.storiesPage>section>article:nth-child(35) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.5);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(35).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.5);
+}
+
+/* 세부 이미지 크기 조절 36번째 */
+.storiesPage>section>article:nth-child(36) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.55);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(36).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.73);
+}
+
+
+
+/* 세부 이미지 크기 조절 38번째 */
+.storiesPage>section>article:nth-child(38) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%,-50%) scale(1.4);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(38).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.5);
+}
+
+
+
+
+
+
+
+
+
+
+/* 세부 이미지 크기 조절 39번째 */
+
+
+.storiesPage>section>article:nth-child(39).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(39).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(39) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.45);
+
+}
+
+
+.storiesPage>section>article:nth-child(39).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-45%) scale(0.55);
+    
+
+}
+.storiesPage>section>article:nth-child(39).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+/* 세부 이미지 크기 조절 40번째 */
+.storiesPage>section>article:nth-child(40) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%,-50%) scale(1);
+
+}
+
+
+.storiesPage>section>article:nth-child(40).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(1.3);
+    
+
+}
+
+
+
+/* 세부 이미지 크기 조절 41번째 */
+.storiesPage>section>article:nth-child(41) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%,-40%) scale(1);
+
+}
+
+
+.storiesPage>section>article:nth-child(41).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(1);
+    
+
+}
+
+
+/* 세부 이미지 크기 조절 42번째 세로크기###########################*/
+
+
+.storiesPage>section>article:nth-child(42).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(42).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(42) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.75);
+
+}
+
+
+.storiesPage>section>article:nth-child(42).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-45%) scale(0.75);
+    
+
+}
+.storiesPage>section>article:nth-child(42).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
 
 
 
@@ -1674,7 +2256,7 @@ z-index: 1;
 
 .close {
         color: rgb(255, 255, 255);
-        font-size: 32px;
+        font-size: 2vw;
         position: absolute;
         top: 0;
         right: 0;
@@ -1984,28 +2566,45 @@ z-index: 1;
 position: relative;
 top: 0;
 left: 50vw;
-scale: 1.15;
-transform: translateX(-23vw) translateY(-0.93vh);
+width: 64.06vw;
+height: 78.33vh;
+
+transform: translateX(-32vw) translateY(-0.93vh);
 }
-.mvMainframe video {position: absolute;}
+.mvMainframe video {position: absolute;
+    top: 0;
+    left: 50vw;
+    transform: translateX(-47.1vw) translateY(-0.93vh);
+    width: 58.7vw;
+    height: auto;
+
+           
+}
 
 
 .mvMainframe video source {position: relative;
-                           
+   
 
 }
 .mvMainframe img {position: absolute;
-                  scale: 1.05;  
+                   
+                  width: 64.06vw;
+                  height: 78.33vh;
 }
 
 
 
-.mvMainframeSec .bg-video {position: relative;
+.mvMainframeSec .bg-video {position: absolute;
     top: 0;
     left: 50vw;
-    scale: 1.15;
-    transform: translateX(-26.8vw) translateY(-0.93vh) scaleX(0.98);
+  width: 58.7vw;
+    height: auto;
+    
+    transform: translateX(-29.2vw) translateY(6vh);
     z-index: -1;
+
+
+   
     
 }
 
@@ -2073,7 +2672,7 @@ transform: translateX(-23vw) translateY(-0.93vh);
             
 }
 .mvListBox>div {width: 19.6vw;
-                height: 24.6vh;
+                height: 23.85vh;
                 overflow: hidden;
                 position: relative;
              
@@ -2085,28 +2684,80 @@ transform: translateX(-23vw) translateY(-0.93vh);
 .mvListBox>div img:nth-child(1) {position: absolute;
     top: 50%;
     left: 50%;
+    width: 36.67vw;
+    height: 36.67vh;
     transform: translate(-50%, -50%);
-    scale: 0.8;
+    
     filter: grayscale(95%);
     transition: all 0.3s;
 }
-.mvListBox>div img:nth-child(2) {position: absolute;
+
+
+
+
+/* 텍스트 크기위치조절 */
+
+.mvListBox > div:nth-child(1) .listText {
+    position: relative;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-                                 scale: 0.7;
-}
+    left: 70%;
+   
+    width: 12vw;
+    height: auto;
+  }
+  
+  .mvListBox > div:nth-child(2) .listText {
+    position: relative;
+    top: 75%;
+    left: 88%;
+   
+    width: 15vw;
+    height: auto;
+  }
+  
+  .mvListBox > div:nth-child(3) .listText {
+    position: relative;
+    top: 90%;
+    left: 70%;
+   
+    width: 12vw;
+    height: auto;
+  }
+  
+  .mvListBox > div:nth-child(4) .listText {
+    position: relative;
+    top: 65%;
+    left: 97%;
+   
+    width: 17vw;
+    height: auto;
+  }
+  
+  .mvListBox > div:nth-child(5) .listText {
+    position: relative;
+    top: 50%;
+    left: 10%;
+   
+    width: 7vw;
+    height: auto;
+  }
 
 
+
+  
 
 
 .lowerframe>img {scale: 1.45;
                  position: relative;
                  top: 0;
                  left: 50%;
+                 width: 77.08vw;
+                 height: 24.35vh;
                  transform: translate(-92.8vw,-0.18vh) rotateZ(0.03deg);   
                  pointer-events: none;
 }
+
+
 
 
 
@@ -2313,7 +2964,9 @@ transform: translateX(-23vw) translateY(-0.93vh);
 .shopHero img {position: absolute;
                top: 50%;
                left: 50%;
-               transform: translate(-10vw,-28vh) scale(0.8); 
+               transform: translate(-11vw,-25vh) scale(0.9); 
+               width: 21.875vw;
+height: 53.24vh;
 }
 .shopHero p {color: #CF0000;
              font-style: italic;
@@ -2329,6 +2982,7 @@ transform: translateX(-23vw) translateY(-0.93vh);
                    padding-top: 15vh;
                    padding-left: 10vw;
                    color: #fff;
+                   cursor: pointer;
 
 }
 .shopPage .option p {font-size: 1.1vw;
@@ -2346,11 +3000,16 @@ transform: translateX(-23vw) translateY(-0.93vh);
 }
 .shopPage .option img {vertical-align: middle;
                        font-size: 0.84vw;
+                       width: 3.23vw;
+height: 4.54vh;
                        
 }
 
 
 .shopPage .option p:hover {background-color: #CF0000;}
+
+
+
 
 
 .productList {padding-left: 13vw;
@@ -2359,61 +3018,160 @@ transform: translateX(-23vw) translateY(-0.93vh);
 
 
 .productList ul {display: flex;
+
                  
 }
 .productList li {perspective: 75vw; 
                  padding: 4.16vh 1.56vw; 
 }
 .cardBox {position: relative;
-          width: 345px;
-          height: 480px; 
-          perspective: 700px; /* 3D 깊이감을 줍니다. */
+    width: 18vw;
+    height: 44.4vh;
+    perspective: 36.5vw; /* 3D 깊이감을 줍니다. */
     transform-style: preserve-3d; /* 자식 요소들이 3D 변환을 지원하도록 설정 */
+    transform: rotateY(0deg);
     transition: transform 1s; 
+    animation: card 0.8s forwards;
 
 }
 
-.cardBox:hover {
-    transform: rotateY(180deg); /* 마우스 hover 시 Y축으로 180도 회전 */
-}
 
+.cardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  
+  .cardBox:hover .cardInner {
+    transform: rotateY(180deg);
+  }
 .cardFront {position: absolute;
             width: 100%;
             height: 100%;  
             backface-visibility: hidden;  
+            width: 18vw;
+    height: 44.4vh;
 }
-.cardFront>img {}
+.cardFront>img {width: 18vw;
+    height: 44.4vh;
+}
 
 .cardBack {position: absolute;
-    width: 345px;
-    height: 480px;  
+    width: 18vw;
+    height: 44.4vh;
             background-color: #000;
             border: 5px solid #CB0121;
             border-radius: 10px;
             overflow: hidden;
             transform: rotateY(180deg);
             backface-visibility: hidden;  
+            box-sizing: border-box;
 
 }
 .cardBack>img { object-fit: contain;
     position: absolute;
-    width: 100%;   /* 부모 요소의 크기에 맞게 가로 크기 조정 */
-    height: 100%;}
+    width: 100%;
+    height: 100%;
+}
 
 
 
     /* 하단 텍스트 */
 
-    .txtBoxP {padding: 20px 0;
-        margin-top: 10px;
-              width: 345px;
+    .txtBoxP { padding: 1.04vh 0;           /* 20px ≈ 1.04vh */
+        margin-top: 3vh;          /* 10px ≈ 0.52vh */
+        width: 17.97vw;              /* 345px ≈ 17.97vw */
               color: #fff;
               text-align: center;
-              font-size: 21px;
+              font-size: 1.1vw; 
+              animation: textP 0.8s forwards; 
     }
     .txtBoxP p {font-weight: 200;
-                margin-bottom: 3px;
+                margin-bottom: 0.16vh;
     }
     .txtBoxP em {font-style: normal;
                  font-weight: 600;   
     }
+
+
+    @keyframes textP {
+        0% {transform: translateY(-10vh);
+            opacity: 0;    
+        }
+        100% {transform: translateY(0vh);
+            opacity: 1;  
+        }
+    
+    
+    
+      }
+
+    /* proRuby NINIBARAS  */
+
+
+    .proRuby {display: block;
+       
+    
+    }
+
+    .proRuby.off {display: none;}
+
+    
+
+
+
+    /* 기본 상태는 rotateY(180deg)로 숨겨진 상태 */
+
+.proNINIBARAS {position: absolute;
+               
+               display: none;
+}    
+
+
+  
+.proNINIBARAS .cardBack {position: absolute;
+    width: 18vw;
+    height: 44.4vh;
+            background-color: #000;
+            border: 5px solid #97bbda;
+            border-radius: 10px;
+            overflow: hidden;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;  
+            box-sizing: border-box;
+
+}
+.proNINIBARAS.on {
+    
+    display: block;
+}    
+.proNINIBARAS.on .cardBox {
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: rotateY(180deg);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    
+  }
+  
+  /* 'on' 클래스가 추가되면 애니메이션이 적용되어 보이게 됨 */
+  .proNINIBARAS.on .cardBox {
+    opacity: 1;
+    animation: card 0.8s forwards;
+  }
+
+  @keyframes card {
+    0% {transform: rotateY(90deg);
+        opacity: 0;    
+    }
+    100% {transform: rotateY(0deg);
+        opacity: 1;  
+    }
+
+
+
+  }
+
+
