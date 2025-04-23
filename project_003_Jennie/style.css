@@ -2609,13 +2609,16 @@ transform: translateX(-32vw) translateY(-0.93vh);
 }
 
 
-.lowerframeBox {scale: 0.97;
+.lowerframeBox {
     display: flex;
     transform: translate(1.04vw,-1.67vh) rotateZ(-3.5deg);
     
    
     
 }
+
+
+
 
 
 

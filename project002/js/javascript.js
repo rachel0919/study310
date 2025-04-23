@@ -59,32 +59,7 @@ $('.proList1').children('.left').click(function(){
 
 
 
-/*
 
-
-// 장바구니 클릭시 장바구니가 나타남
-
-let aa = 0;
-
-$('.util li').eq(1).click(function(){
-
-aa++;
-if(aa==2)aa=0;
-if(aa===1){
-
-  $('.cart').addClass('on')
-
-}else{
-
-  $('.cart').removeClass('on')
-
-}
-})
-
-
-
-
-*/
 
 document.querySelector(".util li:nth-child(2) a").addEventListener("click", function (event) {
   event.preventDefault(); // a 태그의 기본 동작(페이지 이동) 막기
@@ -268,49 +243,11 @@ $('.gnb li:first-child').click(function(e) {
 
 
 
-/*
-
-$(document).ready(function() {
-  let index = 0;
-  const $listItems = $('.mainImg ul li');
-
-  // 첫 번째 li부터 시작
-  $listItems.eq(index).addClass('up');
-
-  function showNextItem() {
-    // 이전 li의 'up' 클래스 제거
-    $listItems.eq(index).removeClass('up');
-    
-    // 다음 li의 'up' 클래스 추가
-    index = (index + 1) % $listItems.length;  // 3개 li가 끝나면 처음으로 돌아가기
-    $listItems.eq(index).addClass('up');
-  }
-
-  // 3초마다 showNextItem 함수 실행
-  setInterval(showNextItem, 3000);
-});
 
 
-*/
 
 
-    // section에서 mouse wheel했을 때, 다음화면 또는 이전화면으로 이동
-    $('hero').on('mousewheel DOMMouseScroll', function(event) {
-      let delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
 
-      // 마우스를 올렸을 때 (이전 섹션)
-      if (delta > 0) {
-          let prev = $(this).prev().offset().top;
-          $('html,body').stop().animate({'scrollTop': prev}, 1400, 'easeOutBounce');
-      } 
-      // 마우스를 내렸을 때 (다음 섹션)
-      else if (delta < 0) {
-          let next = $(this).next().offset().top;
-          $('html,body').stop().animate({'scrollTop': next}, 1400, 'easeOutBounce');
-      }
-
-      event.preventDefault(); // 기본 스크롤 방지
-  });
 
 
 // DOM 요소 선택
@@ -336,6 +273,34 @@ function startAnimation() {
 
 // 처음에 애니메이션 시작
 startAnimation();
+
+
+$(window).on('scroll', function() {
+  $('.story .story_box li').each(function() {
+      // 현재 li 요소의 위치를 확인
+      const position = $(this).offset().top;
+      const windowHeight = $(window).height();
+      const scrollTop = $(window).scrollTop();
+
+      // li가 뷰포트에 들어왔을 때 애니메이션 추가 (지연)
+      if (position < scrollTop + windowHeight) {
+          // storyPic 애니메이션 (0.1초 지연)
+          setTimeout(() => {
+              $(this).find('.storyPic_001, .storyPic_002, .storyPic_003, .storyPic_004, .storyPic_005').addClass('animate');
+          }, 100);  // 0.1초 지연
+          
+          // storyText 애니메이션 (0.4초 지연)
+          setTimeout(() => {
+              $(this).find('.storyText_001, .storyText_002, .storyText_004, .storyText_005').addClass('animate');
+          }, 400);  // 0.4초 지연
+      } else {
+          // 요소가 뷰포트 밖으로 나가면 애니메이션 제거
+          $(this).find('.storyText_001, .storyText_002, .storyText_004, .storyText_005, .storyPic_001, .storyPic_002, .storyPic_003, .storyPic_004, .storyPic_005').removeClass('animate');
+      }
+  });
+});
+
+
 
 })     //제이쿼리 끝!!!!!!!!
 

@@ -28,6 +28,21 @@ $(document).ready(function() {
 
 
 
+
+    // .mainPage .util ul li:nth-child(n)을 클릭
+    $('.mainPage .util ul li:nth-child(1)').on('click', function() {
+        window.open('https://oddatelier.net/oddatelier/', '_blank');
+      });
+
+
+
+      $('.mainPage .util ul li:nth-child(2)').on('click', function() {
+        window.open('https://open.spotify.com/album/1vWMw6pu3err6qqZzI3RhH', '_blank');
+      });
+
+
+
+
     $(".logo").click(function() {
        
         $(".mainPage").addClass("on");

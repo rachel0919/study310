@@ -1,0 +1,112 @@
+/* 언어설정 */
+
+@charset 'utf-8';
+
+
+/* 미디어쿼리구간설정 */
+
+
+
+/* 모바일구간 ################################################################*/
+/* 599px이하 설정 */
+
+@media (max-width:599px) 
+{
+
+   
+
+
+
+
+
+}
+
+
+/* 태블릿구간############################################################## */
+
+
+
+/* 600이상 */
+/* 모든 600이상 구간은 다 적용됨 */
+
+
+@media (min-width:600px) {
+
+
+
+
+
+
+}
+
+
+
+/* 600px이상 767px이하 */
+
+@media (max-width:767px) and (min-width:600px)
+{
+
+
+
+
+    
+
+
+}
+
+
+/* 작은데스크탑구간######################################################## */
+/* 1279px-768px */
+
+@media(max-width:1279px) and (min-width:768px)
+{
+
+    .logo {font-size: 26px;}
+    .header nav ul li a {
+        
+        padding: 2px 10px;
+        font-size: 16px;
+        
+    }
+
+
+    .slider_main .imgBox1 {position: absolute;
+        left: 50%;
+        bottom: 0;
+        z-index: 1;
+        transform: scale(0.7);
+     }
+
+
+     .reservation form {width: 95%;
+        position: absolute;
+        bottom: 10vh;
+        left: 50%;
+        transform: translate(-50%,0);
+        margin: 0 auto;
+        margin-bottom: 20px;}
+    
+
+
+
+}
+
+
+
+/* 데스크탑구간############################################################### */
+/* 1280px이상 */
+
+@media (min-width:1280px)
+{
+
+
+       
+    
+
+
+
+
+
+}
+
+

@@ -15,7 +15,26 @@
         @import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap');
     </style>
 
-<script src="https://kit.fontawesome.com/694f379057.js" crossorigin="anonymous"></script>
+      <!-- 반응형스타일시트연결 -->
+      <link rel="stylesheet" href="responsive.css">
+
+
+
+  <!-- font awesome cdn -->
+  <script src="https://kit.fontawesome.com/694f379057.js" crossorigin="anonymous"></script>
+     
+  <!-- 제이쿼리 cdn   순서 꼭 이대로 해야함!!!!!!!! githurb에서는 http를 못읽음 그래서 하단에 있는 것을 씀-->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+   <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  <!-- 외부라이브러리를 먼저 연결하고 외부스크립트를 작성한다 -->
+  <!-- 외부스크립트연결 -->
+  <script src="js/javascript.js"></script>
+
         
 
 </head>
@@ -72,7 +91,7 @@
             <div class="reservation">
 
                 
-                    <form>
+                    <form id="reservationForm">
                         <div class="reservation-box">
 
 
@@ -80,11 +99,11 @@
                             <label for="purpose"><strong>방문목적</strong>을 선택해주세요</label>
                             <div class="selectBox">
                                 <i class="fa-solid fa-dog"></i>
-                                <select id="purpose" name="purpose" required> 
+                                <select id="purposeSelect" name="purpose" required> 
 
                                     <option value="" disabled selected>방문목적</option>
-                                    <option value="adopt">입양하고싶어요</option>
-                                    <option value="rescue">구조하고싶어요</option>
+                                    <option value="입양">입양하고싶어요</option>
+                                    <option value="구조">구조하고싶어요</option>
                                     
                                 </select>
                                 
@@ -110,12 +129,131 @@
 
             </div>
 
+            
+
+
+
+
+
+            <!-- 예약 폼 on넣어야할 자리###################################### -->
+<div class="reservation-form">
+
+<div class="">
+
+
+
+    <div class="reservationBox">
+        
+            <div class="selection">
+              <label for="purpose">방문목적</label>
+              <input type="text" id="purposeInput" value="방문목적 선택됨" disabled /> <!-- 기본적으로 선택된 목적을 보여줍니다 -->
+              
+              <label for="date">날짜</label>
+              <input type="text" id="dateInput" value="2025-04-22" disabled /> <!-- 기본적으로 선택된 날짜를 보여줍니다 -->
+            </div>
+          
+            <!-- 이메일과 요청사항 입력 부분 -->
+            <div class="additional-info">
+    
+                <div class="emailB">
+                  <label for="email">이메일</label>
+                  <input type="email" id="email" placeholder="이메일을 입력해주세요" />
+                </div>
+    
+                <div class="requeB">
+                    <label for="request">요청사항</label>
+                    <textarea id="request" placeholder="요청사항을 입력해주세요"></textarea>
+                </div>
+    
+    
+          </div>
+          
+            <!-- 체크박스 부분 -->
+            <div class="checkboxes">
+             <div class="checkT"> <input type="checkbox" id="terms" /> <label for="terms">입양 희망 시 입양 전 사전 교육을 받고 방문해 주세요</label></div>
+             <div class="checkT"><input type="checkbox" id="agreement" /> <label for="agreement">원하는 아이와 입양할 수 있는 아이가 달라질 수 있습니다</label></div>
+            </div>
+
+
+        <div class="closeBtn">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    
+
+
+        </div>   
+
+
+
+
+            <!-- 예약하기 버튼 -->
+           <div class="reserBox"> 
+            <button id="reserveButton">예약하기</button>
+            </div>
+
+
+
+</div>
+
+
+
+
+  </div>
+
+
+<!-- 예약 확인팝업 on넣어야할 자리###################################### -->
+
+  <div class="confirmR">
+
+
+    
+<div class="confirmBox">
+
+
+
+    <div class="confirmUpper">
+        
+            <div class="noticed">
+              <p>예약이 확정되었습니다</p>
+              <p>상세내역은 email에서 확인해주세요</p>
+            </div>
+          
+   
+
+        <div class="closeBtn">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    
+
+
+    </div>   
+
+
+
+
+            <!-- 예약하기 버튼 -->
+  <div class="confirmLower"> 
+       <button id="confirmButton">확인했습니다</button>
+   </div>
+
+
+
+</div>
+
+
+  </div>
 
 
 
 
 
         </section>
+
+
+
+
+
+        <!-- 2단######################################################################## -->
         
 
 
@@ -158,17 +296,118 @@
                 <section class="notice">
                     <!-- notice를 기준으로 more positon-->  
                     <ul>
-                        <li><a href="">유기동물 입양 상담회 개최 안내<i class="fa-solid fa-plus"></i></a></li>
-                        <li><a href="">우리 센터 동물 친구들, 지금 잘 지내고 있어요!<i class="fa-solid fa-minus"></i></a>
+                        
+                        <li>
+                            <a href="">우리의 발걸음을 이어갈 소중한 소식을 전합니다
+                                <div class="noticeI">     
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
+                            </a>
+                            <p>KARMA는 올해 상반기 동안 152마리의 동물들을 구조하고, 그중 87마리는 새로운 가족을 만났습니다.
+                                이 모든 발걸음은 여러분의 관심과 응원 덕분에 가능했어요.
+                                앞으로도 길 위의 생명들을 향한 따뜻한 시선을 잊지 말아 주세요.</p>
+                        
+                        </li>
+                        
+                        <li>
+                            <a href="">우리 센터 동물 친구들, 지금 잘 지내고 있어요!
+                                <div class="noticeI">     
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
+                            </a>
                             <p>오늘도 보호센터의 동물 친구들은 따뜻한 보살핌 속에서 건강을 회복하며 지내고 있어요. 
                                 수리부엉이, 황조롱이, 고니 등 다양한 야생동물들이 전문 치료와 정성을 받으며 점점 나아지고 있습니다. 
                                 이들이 다시 자연으로 돌아가는 날까지, 많은 응원과 관심 부탁드려요!</p>
                         
                         </li>
-                        <li><a href="">KARMA와 함께하는 연말 후원 이벤트<i class="fa-solid fa-plus"></i></a></li>
-                        <li><a href="">겨울철 야생동물 보호 캠페인 및 봉사활동<i class="fa-solid fa-plus"></i></a></li>
+
+
+
+                        <li>
+                            <a href="">유기동물 입양 상담회 개최 안내
+                                <div class="noticeI">     
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
+                            </a>
+                            <p>오는 5월 11일 토요일, KARMA 보호소에서 입양 상담회가 열립니다.
+                                반려를 고민 중이신 분들을 위해 보호동물들과 직접 만나보고, 상담도 받을 수 있는 자리예요.
+                                사전 신청 없이 누구나 참여 가능하니, 많은 방문 부탁드립니다!</p>
+                        
+                        </li>
+
+
+                        <li>
+                            <a href="">보호소에도 계절이 찾아왔어요
+                                <div class="noticeI">     
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
+                            </a>
+                            <p>따뜻한 봄 햇살과 함께 보호소에도 산책과 목욕 시간들이 늘어났습니다.
+                                아이들이 햇살 아래에서 스트레칭을 하거나 서로 장난치는 모습은
+                                보호소의 하루를 더욱 평화롭게 만들어줘요.</p>
+                        
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="">다시 날개를 펼 수 있도록, 함께해주세요
+                                <div class="noticeI">     
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
+                            </a>
+                            <p>최근 구조된 황조롱이 한 마리가 안정적인 회복 중입니다.
+                                날개뼈 부상으로 하늘을 잃었던 친구가, 이제는 짧은 비행 연습도 가능해졌어요.
+                                자연으로 돌아가기 위한 이 여정을 끝까지 응원해주세요.</p>
+                        
+                        </li>
+                        
+                        
+
+                        <li>
+                            <a href="">KARMA와 함께하는 연말 후원 이벤트
+                                <div class="noticeI">     
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
+                            </a>
+                            <p>연말을 맞아 KARMA에서는 ‘따뜻한 겨울, 함께 나누기’ 후원 이벤트를 진행합니다.
+                                후원금은 전액 보호동물들의 치료와 사료, 겨울나기 준비에 사용됩니다.
+                                한 해를 마무리하며 따뜻한 마음을 전해보세요.</p>
+                        
+                        </li>
+                        
+                        
+
+                        <li>
+                            <a href="">겨울철 야생동물 보호 캠페인 및 봉사활동
+                                <div class="noticeI">     
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
+                            </a>
+                            <p>추운 계절, 자연 속 야생동물들에게도 관심이 필요합니다.
+                                KARMA는 오는 12월까지 ‘겨울 숲을 지켜요’ 캠페인을 통해
+                                먹이주기, 보호 울타리 점검 등 야외 봉사활동을 함께할 자원봉사자를 모집 중이에요.
+                                자연과 함께 살아가는 따뜻한 실천, 함께해주세요!</p>
+                        
+                        </li>
+                        
+                        
+
+
+
+
                         
                     </ul>
+
+
+
+                    
                     <p class="more"><a href="">더보기</a></p>
                 </section>
 
@@ -218,7 +457,7 @@
 
                     <li class="card">
                         <a href="">
-                            <div class="img_w_bg"><img src="img/newmemberImg_003.png" alt="삼순"></div>
+                            <div class="img_w_bg"><img src="img/newmemberImg_003.png" alt="쫑이"></div>
                             <div class="status">
                                 <div class="status_txt">보호중</div>
                                 <div class="status_txt">대형</div>
@@ -230,7 +469,7 @@
 
                     <li class="card">
                         <a href="">
-                            <div class="img_w_bg"><img src="img/newmemberImg_002.png" alt="삼순"></div>
+                            <div class="img_w_bg"><img src="img/newmemberImg_002.png" alt="뿌뿌"></div>
                             <div class="status">
                                 <div class="status_txt">입양가능</div>
                                 <div class="status_txt">소형</div>
@@ -242,7 +481,7 @@
 
                     <li class="card">
                         <a href="">
-                            <div class="img_w_bg"><img src="img/newmemberImg_004.png" alt="삼순"></div>
+                            <div class="img_w_bg"><img src="img/newmemberImg_004.png" alt="라라"></div>
                             <div class="status">
                                 <div class="status_txt">입양가능</div>
                                 <div class="status_txt">중형</div>
@@ -254,48 +493,48 @@
 
                     <li class="card">
                         <a href="">
-                            <div class="img_w_bg"><img src="img/newmemberImg_001.png" alt="삼순"></div>
+                            <div class="img_w_bg"><img src="img/newmemberImg_005.png" alt="뭉치"></div>
                             <div class="status">
                                 <div class="status_txt">입양가능</div>
-                                <div class="status_txt">중형</div>
+                                <div class="status_txt">소형</div>
                             </div>
-                            <div class="name">삼순</div>
-                            <div class="location">경기도 포천</div>
-                        </a>
-                    </li>
-
-                    <li class="card">
-                        <a href="">
-                            <div class="img_w_bg"><img src="img/newmemberImg_001.png" alt="삼순"></div>
-                            <div class="status">
-                                <div class="status_txt">입양가능</div>
-                                <div class="status_txt">중형</div>
-                            </div>
-                            <div class="name">삼순</div>
-                            <div class="location">경기도 포천</div>
-                        </a>
-                    </li>
-
-                    <li class="card">
-                        <a href="">
-                            <div class="img_w_bg"><img src="img/newmemberImg_001.png" alt="삼순"></div>
-                            <div class="status">
-                                <div class="status_txt">입양가능</div>
-                                <div class="status_txt">대형</div>
-                            </div>
-                            <div class="name">쫑이</div>
+                            <div class="name">뭉치</div>
                             <div class="location">경기도 의정부</div>
                         </a>
                     </li>
 
                     <li class="card">
                         <a href="">
-                            <div class="img_w_bg"><img src="img/newmemberImg_001.png" alt="삼순"></div>
+                            <div class="img_w_bg"><img src="img/newmemberImg_006.png" alt="코코"></div>
+                            <div class="status">
+                                <div class="status_txt">입양가능</div>
+                                <div class="status_txt">중형</div>
+                            </div>
+                            <div class="name">코코</div>
+                            <div class="location">경기도 포천</div>
+                        </a>
+                    </li>
+
+                    <li class="card">
+                        <a href="">
+                            <div class="img_w_bg"><img src="img/newmemberImg_007.png" alt="삼순"></div>
                             <div class="status">
                                 <div class="status_txt">입양가능</div>
                                 <div class="status_txt">소형</div>
                             </div>
-                            <div class="name">뿌뿌</div>
+                            <div class="name">아리</div>
+                            <div class="location">경기도 의정부</div>
+                        </a>
+                    </li>
+
+                    <li class="card">
+                        <a href="">
+                            <div class="img_w_bg"><img src="img/newmemberImg_008.png" alt="삼순"></div>
+                            <div class="status">
+                                <div class="status_txt">입양가능</div>
+                                <div class="status_txt">대형</div>
+                            </div>
+                            <div class="name">루비</div>
                             <div class="location">경기도 의정부</div>
                         </a>
                     </li>
@@ -317,7 +556,7 @@
             <!-- slider_second를 기준으로 btn positon  -->
             <div class="con_box">
     
-    <div class="con1Forscroll">
+        <div class="con1Forscroll">
         
                   <div class="con1">
                     <img src="img/board002_001.png" alt="background">
@@ -393,21 +632,199 @@
                                     <div class="info_date">2024.12.30</div>
                                 </div>
                             </li>
+
+
+
+                            <li>
+                                <div class="text_list">
+                                    구조
+                                </div>
+                                <div class="text_main">
+                                    다리가 다친 새가 KARMA의 손길로 구조되어 곧 하늘로 
+                                    날아갈 준비를 하고 있어요. 정말 고맙습니다.
+                                </div>
+                                <div class="text_info">
+                                    <div class="info_name">김ㅇㅇ</div>
+                                    <div class="info_date">2024.12.28</div>
+                                </div>
+                            </li>
+        
+        
+                            <li>
+                                <div class="text_list">
+                                    구조
+                                </div>
+                                <div class="text_main">
+                                    비를 맞으며 떨고 있던 새끼 고양이들을 발견했어요. 
+                                    따뜻한 임시 보호처에서 안정을 찾았어요.
+                                </div>
+                                <div class="text_info">
+                                    <div class="info_name">채ㅇㅇ</div>
+                                    <div class="info_date">2024.12.30</div>
+                                </div>
+        
+                            </li>
+        
+        
+                            <li>
+                                <div class="text_list">
+                                    입양
+                                </div>
+                                <div class="text_main">
+                                    강아지 ‘뭉치’를 입양한 후 매일 웃음이 가득해졌어요. 
+                                    뭉치와 우리 가족 모두에게 큰 행복을 주셔서 감사합니다
+                                </div>
+                                <div class="text_info">
+                                    <div class="info_name">이ㅇㅇ</div>
+                                    <div class="info_date">2025.01.30</div>
+                                </div>
+                            </li>
+        
+        
+                            <li>
+                                <div class="text_list">
+                                    구조
+                                </div>
+                                <div class="text_main">
+                                    비를 맞으며 떨고 있던 새끼 고양이들을 발견했어요. 
+                                    따뜻한 임시 보호처에서 안정을 찾았어요.
+                                </div>
+                                <div class="text_info">
+                                    <div class="info_name">채ㅇㅇ</div>
+                                    <div class="info_date">2024.12.30</div>
+                                </div>
+                            </li>
+
+
+                            <li>
+                                <div class="text_list">
+                                    구조
+                                </div>
+                                <div class="text_main">
+                                    다리가 다친 새가 KARMA의 손길로 구조되어 곧 하늘로 
+                                    날아갈 준비를 하고 있어요. 정말 고맙습니다.
+                                </div>
+                                <div class="text_info">
+                                    <div class="info_name">김ㅇㅇ</div>
+                                    <div class="info_date">2024.12.28</div>
+                                </div>
+                            </li>
+        
+        
+                            <li>
+                                <div class="text_list">
+                                    구조
+                                </div>
+                                <div class="text_main">
+                                    비를 맞으며 떨고 있던 새끼 고양이들을 발견했어요. 
+                                    따뜻한 임시 보호처에서 안정을 찾았어요.
+                                </div>
+                                <div class="text_info">
+                                    <div class="info_name">채ㅇㅇ</div>
+                                    <div class="info_date">2024.12.30</div>
+                                </div>
+        
+                            </li>
+        
+        
+                            <li>
+                                <div class="text_list">
+                                    입양
+                                </div>
+                                <div class="text_main">
+                                    강아지 ‘뭉치’를 입양한 후 매일 웃음이 가득해졌어요. 
+                                    뭉치와 우리 가족 모두에게 큰 행복을 주셔서 감사합니다
+                                </div>
+                                <div class="text_info">
+                                    <div class="info_name">이ㅇㅇ</div>
+                                    <div class="info_date">2025.01.30</div>
+                                </div>
+                            </li>
+        
+        
+                            <li>
+                                <div class="text_list">
+                                    구조
+                                </div>
+                                <div class="text_main">
+                                    비를 맞으며 떨고 있던 새끼 고양이들을 발견했어요. 
+                                    따뜻한 임시 보호처에서 안정을 찾았어요.
+                                </div>
+                                <div class="text_info">
+                                    <div class="info_name">채ㅇㅇ</div>
+                                    <div class="info_date">2024.12.30</div>
+                                </div>
+                            </li>
+
+
+
+                            <li>
+                                <div class="text_list">
+                                    구조
+                                </div>
+                                <div class="text_main">
+                                    다리가 다친 새가 KARMA의 손길로 구조되어 곧 하늘로 
+                                    날아갈 준비를 하고 있어요. 정말 고맙습니다.
+                                </div>
+                                <div class="text_info">
+                                    <div class="info_name">김ㅇㅇ</div>
+                                    <div class="info_date">2024.12.28</div>
+                                </div>
+                            </li>
+        
+        
+                            <li>
+                                <div class="text_list">
+                                    구조
+                                </div>
+                                <div class="text_main">
+                                    비를 맞으며 떨고 있던 새끼 고양이들을 발견했어요. 
+                                    따뜻한 임시 보호처에서 안정을 찾았어요.
+                                </div>
+                                <div class="text_info">
+                                    <div class="info_name">채ㅇㅇ</div>
+                                    <div class="info_date">2024.12.30</div>
+                                </div>
+        
+                            </li>
+        
+        
+                            <li>
+                                <div class="text_list">
+                                    입양
+                                </div>
+                                <div class="text_main">
+                                    강아지 ‘뭉치’를 입양한 후 매일 웃음이 가득해졌어요. 
+                                    뭉치와 우리 가족 모두에게 큰 행복을 주셔서 감사합니다
+                                </div>
+                                <div class="text_info">
+                                    <div class="info_name">이ㅇㅇ</div>
+                                    <div class="info_date">2025.01.30</div>
+                                </div>
+                            </li>
+        
+        
+                            <li>
+                                <div class="text_list">
+                                    구조
+                                </div>
+                                <div class="text_main">
+                                    비를 맞으며 떨고 있던 새끼 고양이들을 발견했어요. 
+                                    따뜻한 임시 보호처에서 안정을 찾았어요.
+                                </div>
+                                <div class="text_info">
+                                    <div class="info_name">채ㅇㅇ</div>
+                                    <div class="info_date">2024.12.30</div>
+                                </div>
+                            </li>
+        
         
         
                         </ul>
                     </div> 
         
         
-                    <div class="btn">
-                   
-                        <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                        </ul>
-                    </div>
-        
+                
         
         
         
@@ -439,17 +856,6 @@
                    <div class="howtoRescue_bg ">
                     <img src="img/board003_001.png" alt="">
                    </div>
-        
-                   
-                <div class="btn">
-                   
-                    <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                    </ul>
-                </div>
-                 
         
                 </div>
     </div>
@@ -486,25 +892,38 @@
                    </div>
         
                 
-                <div class="btn">
-                   
-                    <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                    </ul>
-                </div>
-                 
+             
             
                   </div>
         
              </div>
+
+
+
+
+
+
+      
+
+
     
     
             </div>
     
-       
+            <div class="btn">
+                   
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+
              
+
+
+
+            
         </section>
 
         
@@ -722,7 +1141,7 @@
 
                                 <div class="imgforPosition">
                                     <div class="imgBox">
-                                        <img src="img/findImg_001.jpg" alt="브리티시쇼트헤어">
+                                        <img src="img/findImg_004.jpg" alt="스코티시 폴드">
                                     </div>
                                 </div>
 
@@ -730,7 +1149,58 @@
                                     
                                     <div class="findTextbox">
                                         <div class="findUpper">
-                                            <h3>브리티시쇼트헤어</h3>
+                                            <h3>스코티시 폴드</h3>
+    
+                                            <div class="findList_txt">
+                                                <strong>동물종류</strong> 
+                                                <p>고양이</p>
+                                            </div>
+    
+                                            <div class="findList_txt">
+                                                <strong>성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;별</strong> 
+                                                <p>수컷</p>
+                                            </div>
+    
+                                            <div class="findList_txt">
+                                                <strong>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</strong> 
+                                                <p>경계심이 없음</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="findLower">
+                                            <p>2024.12.01 구조</p>
+                                            <p><i class="fa-solid fa-location-dot"></i>경기 의정부시 의정부 3동</p>
+                                        </div>
+
+                                        <div class="findLower_tap">
+                                                <a href="" class="contact-button">
+                                                바로 연락하기
+                                                </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </a>
+                            
+                        </li>
+
+
+                        <li>
+
+                            <a href="" class="findText">
+
+                                <div class="imgforPosition">
+                                    <div class="imgBox">
+                                        <img src="img/findImg_005.jpg" alt="믹스">
+                                    </div>
+                                </div>
+
+                                <div class="findTextbox_bg">
+                                    
+                                    <div class="findTextbox">
+                                        <div class="findUpper">
+                                            <h3>믹스</h3>
     
                                             <div class="findList_txt">
                                                 <strong>동물종류</strong> 
@@ -744,7 +1214,166 @@
     
                                             <div class="findList_txt">
                                                 <strong>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</strong> 
-                                                <p>경계심이 있음</p>
+                                                <p>공간 애착이 강함</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="findLower">
+                                            <p>2024.12.01 구조</p>
+                                            <p><i class="fa-solid fa-location-dot"></i>경기 의정부시 의정부 3동</p>
+                                        </div>
+
+                                        <div class="findLower_tap">
+                                                <a href="" class="contact-button">
+                                                바로 연락하기
+                                                </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </a>
+                            
+                        </li>
+
+
+
+
+                        <li>
+
+                            <a href="" class="findText">
+
+                                <div class="imgforPosition">
+                                    <div class="imgBox">
+                                        <img src="img/findImg_006.jpg" alt="코리안 숏헤어">
+                                    </div>
+                                </div>
+
+                                <div class="findTextbox_bg">
+                                    
+                                    <div class="findTextbox">
+                                        <div class="findUpper">
+                                            <h3>코리안 숏헤어</h3>
+    
+                                            <div class="findList_txt">
+                                                <strong>동물종류</strong> 
+                                                <p>강아지</p>
+                                            </div>
+    
+                                            <div class="findList_txt">
+                                                <strong>성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;별</strong> 
+                                                <p>수컷</p>
+                                            </div>
+    
+                                            <div class="findList_txt">
+                                                <strong>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</strong> 
+                                                <p>활동적임</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="findLower">
+                                            <p>2024.12.19 구조</p>
+                                            <p><i class="fa-solid fa-location-dot"></i>경기 포천시 삼육사로 2094</p>
+                                        </div>
+
+                                        <div class="findLower_tap">
+                                                <a href="" class="contact-button">
+                                                바로 연락하기
+                                                </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </a>
+                            
+                        </li>
+
+
+
+
+                        <li>
+
+                            <a href="" class="findText">
+
+                                <div class="imgforPosition">
+                                    <div class="imgBox">
+                                        <img src="img/findImg_007.jpg" alt="엑조틱 쇼트헤어">
+                                    </div>
+                                </div>
+
+                                <div class="findTextbox_bg">
+                                    
+                                    <div class="findTextbox">
+                                        <div class="findUpper">
+                                            <h3>엑조틱 쇼트헤어</h3>
+    
+                                            <div class="findList_txt">
+                                                <strong>동물종류</strong> 
+                                                <p>고양이</p>
+                                            </div>
+    
+                                            <div class="findList_txt">
+                                                <strong>성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;별</strong> 
+                                                <p>암컷</p>
+                                            </div>
+    
+                                            <div class="findList_txt">
+                                                <strong>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</strong> 
+                                                <p>온순하고 느긋함</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="findLower">
+                                            <p>2024.12.22 구조</p>
+                                            <p><i class="fa-solid fa-location-dot"></i>경기 의정부시 산곡동 715-2</p>
+                                        </div>
+
+                                        <div class="findLower_tap">
+                                                <a href="" class="contact-button">
+                                                바로 연락하기
+                                                </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </a>
+                            
+                        </li>
+
+
+
+
+                        <li>
+
+                            <a href="" class="findText">
+
+                                <div class="imgforPosition">
+                                    <div class="imgBox">
+                                        <img src="img/findImg_008.jpg" alt="턱시도 고양이">
+                                    </div>
+                                </div>
+
+                                <div class="findTextbox_bg">
+                                    
+                                    <div class="findTextbox">
+                                        <div class="findUpper">
+                                            <h3>턱시도 고양이</h3>
+    
+                                            <div class="findList_txt">
+                                                <strong>동물종류</strong> 
+                                                <p>고양이</p>
+                                            </div>
+    
+                                            <div class="findList_txt">
+                                                <strong>성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;별</strong> 
+                                                <p>암컷</p>
+                                            </div>
+    
+                                            <div class="findList_txt">
+                                                <strong>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</strong> 
+                                                <p>눈 마주치기 잘함</p>
                                             </div>
                                         </div>
 
@@ -778,6 +1407,51 @@
                 
     
          </div>
+
+         <div class="findPopupR">
+
+
+    
+            <div class="findPopupBox">
+            
+            
+            
+                <div class="findPopupUpper">
+                    
+                        <div class="findPopupNoticed">
+                          <p>000-000-0000 으로</p>
+                          <p>바로 연락주세요</p>
+                        </div>
+                      
+               
+            
+                    <div class="closeBtn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                
+            
+            
+                </div>   
+            
+            
+            
+            
+                        <!-- 예약하기 버튼 -->
+              <div class="findPopupLower"> 
+                   <button id="findPopupButton">확인했습니다</button>
+               </div>
+            
+            
+            
+            </div>
+            
+            
+              </div>
+            
+   
+
+         
+
         </section>
 
         <div class="videoBox">
@@ -879,7 +1553,42 @@
             <img src="img/introBg_009.png" alt="" class="particle-img img9">
 
         </section>
-        <footer></footer>
+
+
+
+        <footer class="footer">
+
+            <div class="footerBg"></div>
+
+
+             <div class="footerT">
+
+               <div class="footerB">
+                    <div>
+                        <h2>한국동물구조관리협회</h2>
+                        <p>Korea Animal Rescue & Management Association</p>
+                        <p>대한민국 경기도 양주시 남면 감악산로 63-37</p>
+                        <p>0318679119</p>
+    
+                    </div>
+    
+    
+                    <div>
+                        <p>이 사이트는 포트폴리오용 제작사이트로 사용되니 동영상 및 이미지는 상업적용도로 쓰이지않습니다</p>
+                        <p>Copyright @ RachelChai. 2025. ALL Rights Reserved</p>
+                    </div>
+                    
+        
+               </div>
+
+               <div class="topB">
+                <span>TOP</span>
+                <i class="fa-solid fa-chevron-up"></i>
+               </div>
+
+           </div>
+
+        </footer>
     
 </div>
     

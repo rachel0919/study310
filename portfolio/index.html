@@ -4,51 +4,597 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Heran Chai Portfolio</title>
+
+
+     <!-- 외부스타일시트연결 -->
+     <link rel="stylesheet" href="style.css">
+     <!-- font awesome cdn -->
+     <script src="https://kit.fontawesome.com/694f379057.js" crossorigin="anonymous"></script>
+     
+    <!-- 제이쿼리 cdn   순서 꼭 이대로 해야함!!!!!!!! githurb에서는 http를 못읽음 그래서 하단에 있는 것을 씀-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js" integrity="sha512-zuZ5wVszlsRbRF/vwXD0QS/tHzBYHFzCD/BT0lI3yrWhNZFWDkkF3KPEY//WTanqxwPdZkskQ+xZo0rnfHBc5A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+
+     <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- 외부라이브러리를 먼저 연결하고 외부스크립트를 작성한다 -->
+    <!-- 외부스크립트연결 -->
+    <script src="js/javascript.js"></script>
+
+
 </head>
 <body>
 
 
-    <!-- Main Page Wireframe (Oriental Botanical Style) -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Heran Chai Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="hero-section">
-    <div class="botanical-illustration"></div> <!-- 수채화 일러스트 영역 -->
-    <div class="center-text">
-      <h1 class="name reveal">Heran Chai</h1>
-      <p class="tagline">My design is driven by fast decision-making, collaborative clarity, and user focus.</p>
-    </div>
+
+<wrap id="wrap">
+
+
+  <div class="upperText">
+    <p>PORTFOLIO</p>
+    <p>
+      <a href="mailto:chaiheran@gmail.com?subject=Job Inquiry&body=Hello, I am interested in applying for the position...">
+        <i class="fa-solid fa-envelope" title="Email Me"></i>
+      </a>
+    
+      <!-- 전화 아이콘 버튼 -->
+      <a href="tel:+11234567890">
+        <i class="fa-solid fa-phone" title="Call Me"></i>
+      </a>
+    
+      <!-- WhatsApp 아이콘 버튼 -->
+      <a href="https://wa.me/+11234567890" target="_blank">
+        <i class="fa-brands fa-whatsapp" title="WhatsApp"></i>
+      </a>
+    </p>
+  </div>
+  
+  
+  
+  
+    <!-- Fixed Bottom Navigation -->
+
+
+
+      <div class="lnbButton">
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+    <nav class="lnb">
+    
+      <div class="lnbContent"> <!-- 새로운 div로 그룹화 -->
+        <div class="lnbBg"></div>
+        <ul class="lnbList">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#uxui">UX/UI</a></li>
+          <li><a href="#publishing">Publishing</a></li>
+          <li><a href="#profile">Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+
+  
+ <div class="index">
+
+
+    <!-- on 넣어야할 곳############################################### -->
+  <div class="mainPage">
+    
+    
+          <!-- Main Page (Oriental Botanical Style) -->
+      
+      
+        <div class="hero-section">
+    
+          <div class="heroBg">
+            <!-- <img src="img/mainPage_001.png" alt=""> -->
+          </div> 
+          <div class="heroBgVideo">
+            <video class="overlay-video" autoplay loop muted>
+              <source src="img/dust.mp4" type="video/mp4">
+          </video>
+          
+          </div> 
+    
+          <div class="heroText">
+    
+    
+           <h1 class="nameReveal">
+            <img src="img/nameLogo.png" alt="nameLogo">
+
+           </h1>
+    
+           <div class="tagline"> 
+            <p>My design moves with</p>
+            <em>Rhythm<p>and</p>Intention</em>
+           </div>
+    
+            <span>UX / UI</span>
+            <span>PUBLISHER</span>
+    
+    
+          </div>
+    
+        </div>
+      
+    
+        
+        <!-- Placeholder Sections -->
+      <section class="bottom-nav">
+          
+          <div id="uxui">
+            <h2>UX/UI</h2>
+          </div>
+        
+          <div id="profile">
+            <h2>Profile</h2>
+          </div>
+        
+        
+          <div id="publishing">
+            <h2>Publishing</h2>
+          </div>
+         
+      </section>
+      
   </div>
 
-  <!-- Fixed Bottom Navigation -->
-  <nav class="bottom-nav">
-    <ul>
-      <li><a href="#uxui">UX/UI</a></li>
-      <li><a href="#publishing">Publishing</a></li>
-      <li><a href="#profile">Profile</a></li>
-    </ul>
-  </nav>
 
-  <!-- Placeholder Sections -->
-  <section id="uxui">
-    <h2>UX/UI</h2>
-  </section>
-  <section id="publishing">
-    <h2>Publishing</h2>
-  </section>
-  <section id="profile">
-    <h2>Profile</h2>
-  </section>
-</body>
-</html>
+
+
+ <!-- on 넣어야할 곳############################################### -->   
+  <div class="uxuiPage">
+
+    <div class="uxuiPageBg"></div>
+    <div class="subjectT">
+      <h2>UX / UI <p>contents</p></h2>
+    </div>
+    <div class="contentsArea">
+
+
+
+      <div class="contentsBox">
+        <div class="imgBox">
+          <img src="img/mockupKarma_001.png" alt="">
+        </div>
+        <div class="textBox">
+          <div class="leftside">
+            <em>KARMA</em>
+            <span>동물구조관리협회 리뉴얼프로젝트</span>
+          </div>
+          <div class="rightside">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+
+      
+      <div class="contentsBox">
+        <div class="imgBox">
+          <img src="img/mockupComingsoon_001.png" alt="">
+        </div>
+        <div class="textBox">
+          <div class="leftside">
+            <em>KARROT MARKET</em>
+            <span>당근마켓</span>
+          </div>
+          <div class="rightside">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+
+
+      
+    </div>
+
+
+
+  </div>
+ <!-- on 넣어야할 곳############################################### -->  
+  <div class="uxuiSub1">
+
+    <div class="uxuiSub1Bg">
+    <img src="img/uxuiPkarma_001.png" alt=""> 
+    </div>
+
+    <div class="closeB">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <div class="footerC">
+      <p>이 사이트는 포트폴리오용 제작사이트로 사용되니 동영상 및 이미지는 상업적용도로 쓰이지않습니다.</p> 
+      <p>Copyright @ RachelChai. 2025. ALL Rights Reserved.</p>
+    </div>
+  
+
+  </div>
+ <!-- on 넣어야할 곳############################################### -->  
+  <div class="uxuiSub2">
+  <div class="uxuiSub2Bg">
+    <img src="img/uxuiPcoming_001.png" alt=""> 
+    </div>
+
+    <div class="closeB">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+
+
+    <div class="footerC">
+      <p>이 사이트는 포트폴리오용 제작사이트로 사용되니 동영상 및 이미지는 상업적용도로 쓰이지않습니다.</p> 
+      <p>Copyright @ RachelChai. 2025. ALL Rights Reserved.</p>
+    </div>
+  
+</div>
+
+ <!-- on 넣어야할 곳############################################### -->
+  <div class="publishingPage">
+
+
+    <div class="publishingPageBg"></div>
+    <div class="subjectT">
+      <h2>PUBLISHING <p>contents</p></h2>
+    </div>
+    <div class="contentsArea">
+
+
+
+      <div class="contentsBox">
+        <div class="imgBox">
+          <img src="img/mockupBnj_001.png" alt="">
+        </div>
+        <div class="textBox">
+          <div class="leftside">
+            <em>Ben & Jerry’s</em>
+            <span>벤앤제리스 웹사이트 리뉴얼</span>
+          </div>
+          <div class="rightside">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+
+      
+      <div class="contentsBox">
+        <div class="imgBox">
+          <img src="img/mockupJennie_001.png" alt="">
+        </div>
+        <div class="textBox">
+          <div class="leftside">
+            <em>JENNIE</em>
+            <span>제니 팬페이지 웹사이트</span>
+          </div>
+          <div class="rightside">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+
+
+            
+      <div class="contentsBox">
+        <div class="imgBox">
+          <img src="img/mockupKarma_001.png" alt="">
+        </div>
+        <div class="textBox">
+          <div class="leftside">
+            <em>KARMA</em>
+            <span>동물구조관리협회 리뉴얼프로젝트</span>
+          </div>
+          <div class="rightside">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+ <!-- on 넣어야할 곳############################################### -->  
+  <div class="publishingSub1">
+
+    <div class="publishingSub1Bg">
+      <img src="img/publisherP_BenNJerrys_001.png" alt=""> 
+      </div>
+
+
 
     
+      <div class="linkB">
+        <i class="fa-solid fa-link"></i>
+        <p>https://rachel0919.github.io/study310/project002/index.html</p>
+    </div>
+
+    <div class="closeB">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <div class="footerC">
+      <p>이 사이트는 포트폴리오용 제작사이트로 사용되니 동영상 및 이미지는 상업적용도로 쓰이지않습니다.</p> 
+      <p>Copyright @ RachelChai. 2025. ALL Rights Reserved.</p>
+    </div>
+  
+
+    
+  </div>
+ <!-- on 넣어야할 곳############################################### -->  
+  <div class="publishingSub2">
+
+
+
+    <div class="publishingSub2Bg">
+      <img src="img/publisherP_jennie_001.png" alt=""> 
+      </div>
+
+
+      <div class="linkB">
+        <i class="fa-solid fa-link"></i>
+        <p>https://rachel0919.github.io/study310/project_003_Jennie/index.html</p>
+    </div>
+
+    <div class="closeB">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <div class="footerC">
+      <p>이 사이트는 포트폴리오용 제작사이트로 사용되니 동영상 및 이미지는 상업적용도로 쓰이지않습니다.</p> 
+      <p>Copyright @ RachelChai. 2025. ALL Rights Reserved.</p>
+    </div>
+  
+
+
+  </div>
+ <!-- on 넣어야할 곳############################################### -->  
+  <div class="publishingSub3">
+
+    
+
+    <div class="publishingSub3Bg">
+      <img src="img/publisherP_karma_001.png" alt=""> 
+      </div>
+
+
+
+    <div class="linkB">
+        <i class="fa-solid fa-link"></i>
+        <p>https://rachel0919.github.io/study310/project001/index.html</p>
+    </div>
+
+
+    <div class="closeB">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+     
+    <div class="footerC">
+      <p>이 사이트는 포트폴리오용 제작사이트로 사용되니 동영상 및 이미지는 상업적용도로 쓰이지않습니다.</p> 
+      <p>Copyright @ RachelChai. 2025. ALL Rights Reserved.</p>
+    </div>
+  
+
+  </div>
+ <!-- on 넣어야할 곳############################################### -->  
+  <div class="profilePage">
+
+
+    <div class="profileBg">
+      <!-- <img src="img/profile_txt.png" alt="profile"> -->
+    </div>
+
+
+
+      <div class="proTextBox">
+      
+       <div class="proLeftside">
+          
+          <p>+82 10-5633-9095</p>
+          <div class="proContactB">
+            <div class="iconB">
+              <img src="img/iconLinkedin.png" alt="Linkedin">
+            </div>
+            <div class="iconB">
+              <img src="img/iconGithub.png" alt="Github">
+            </div>
+            <div class="iconB">
+              <img src="img/iconMail.png" alt="Mail">
+            </div>
+          </div>
+
+       </div>
+
+
+
+
+       <div class="proRightside">
+
+        <div class="proRightB">
+          <p>사용자의 흐름을 읽고, 구조로 답하는 디자이너입니다</p>
+          <div class="proUpper">
+            <h2>About Me</h2>
+            <div class="circleI">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+
+          <div class="proLower">
+            <p>방송 종합편집자로 커리어를 시작하며, 저는 <em>메시지를 구조화하고 흐름을 설계하는 감각</em>을 키웠습니다</p>
+            <p><em>문제를 빠르게 파악하고, 실질적인 해결책</em>을 시각적으로 풀어내는 데 강점을 가지고 있습니다</p>
+            <p>지금은 사용자의 맥락을 기반으로, <em>명확하고 의도 있는 디지털 경험을 설계</em>하고 있습니다</p>
+          </div>
+        </div>
+
+
+        <div class="proRightB">
+          
+          <div class="proUpper">
+            <h2>Experience</h2>
+            <div class="circleI">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+
+          <div class="proLower">
+              <div>
+                <span>2013 - 2018</span>
+                <p>
+                  <em>방송종합편집감독으로 근무</em>하며, 화면 구성과 메시지 전달을 위한 <wm>기술 전반을 총괄</wm>했습니다<br>
+                  <em>자막, 색보정, 타이밍, 음향, 출력</em> 등 콘텐츠 편집을 제외한 전체 기술 품질을 책임졌으며,<br>
+                  브랜드 디자인팀 등 <em>다양한 부서와 협업</em>해 결과물을 바탕으로 최종 기술 구현과 산출물 제작을 맡았습니다
+                </p>
+              </div>
+              <div>
+                <span>2019 - 2023</span>
+                <p>
+                  한국과 영국에서 바리스타 및 매장 매니저로 일하며,<br>
+                  다양한 고객의 흐름과 실제 <em>사용자 행동에 대한 관찰력과 대응 감각</em>을 길렀습니다
+                </p>
+              </div>
+              <div>
+                <span>2024 - 현재</span>
+                <p>
+                 <em>UX/UI 디자이너로 전향</em> 이후, 브랜드 <em>경험 중심의 디지털 제품을 설계</em>하고 있으며,<br>
+                 <em>정보 구조와 사용자 흐름 설계에 강점</em>을 가지고 있습니다.<br>
+                 <em>웹 퍼블리싱에 대한 이해와 구현</em> 역량도 함께 갖추고 있습니다
+                </p>
+              </div>
+          </div>
+        </div>
+
+
+        
+        <div class="proRightB">
+          
+          <div class="proUpper">
+            <h2>Strengths</h2>
+            <div class="circleI">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+
+          <div class="proLower">
+            <p><em>정보 구조와 사용자 흐름 설계</em>에 익숙하며,</p>
+            <p><em>디자인 시스템과 UI 컴포넌트 단위의 논리적인 설계</em>가 가능합니다</p>
+            <p><em>기획 - 디자인 - 퍼블리싱</em> 전 과정을 이해하며,</p>
+            <p><em>기능성과 시각적 정돈</em>을 함께 고려한 결과물을 만듭니다</p>
+          </div>
+        </div>
+
+
+
+
+        
+        <div class="proRightB">
+          
+          <div class="proUpper">
+            <h2>Off the Record</h2>
+            <div class="circleI">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+
+          <div class="proLower">
+
+            <div>
+              <p>해외여행 중마다 즐겨 찾던 아이스크림 브랜드는 충분한 매력을 지녔지만,</p>
+              <p>그 가치를 효과적으로 국내에서 전달하지 못한 점이 <em>Ben & Jerry’s 리디자인의 출발점</em>이 되었습니다</p>
+            </div>
+
+            <div>
+              <p>‘동물을 좋아한다’는 단순한 공감에서 시작된 관심이 사람들과 정보를 나누는 방식에 대한 고민으로 이어졌고,</p>
+              <p>이는 <em>KARMA 웹모바일 리뉴얼로 구체화</em>되었습니다</p>
+            </div>
+
+            <div>
+              <p>다양한 국적의 친구들과 어울렸던 런던의 K-pop 클럽 경험은 팬 활동을 더 열린 시선으로 구조화하게 만들었고,</p>
+              <p>이는 <em>Jennie 팬페이지 디자인</em>으로 연결되었습니다</p>
+            </div>
+
+
+
+          </div>
+        </div>
+
+
+
+        
+        <div class="proRightB">
+          
+          <div class="proUpper">
+            <h2>Contact↗</h2>
+            <div class="circleI">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+
+          <div class="proLower contact">
+            <div>
+              <p><span>Email</span>chaiheran@gmail.com</p>
+              <p><span>GitHub</span>heran@email.com</p>
+              <p><span>LinkedIn</span>heran@email.com</p>
+              <p><span>Phone</span>+82 10-5633-9095</p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        
+
+
+
+
+
+
+
+       </div>
+
+
+
+  
+
+
+  
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+    
+    
+    
+</div>
+</wrap>
+
+
+
 </body>
 </html>
