@@ -87,6 +87,68 @@
         margin-bottom: 20px;}
     
 
+        .reservation-form>div:nth-child(1) {
+            
+            transform: translate(-65%,-50%);
+            }
+          
+.confirmBox {transform: translate(-65%,-50%);}
+
+.subject_right {
+   
+    width: 50%;
+   
+   
+
+}
+.subject_right .subject_txt {
+   
+    margin-left: 80px;
+    
+}
+
+
+.contentsBox .map {
+    width: 55%;
+   
+}
+
+.contentsBox .notice {
+    width: 45%;
+  
+}
+
+
+.newmember .subject_left {
+
+  width: 55%;
+ 
+}
+.slider_second .con_box .con1 img {
+    
+   
+    left: -35%;
+}
+.con1 .txtBox_rescue {
+    width: 50%;
+    margin-left: 15%;
+    
+}
+
+.con1 .txtBox_rescue .txt_main {
+    font-size: 51px;
+ 
+}
+.con1 .listBox {
+   
+    width: 50%;
+}
+    
+
+
+.con1 .listBox ul {
+    right: 20%;
+    }
 
 
 }

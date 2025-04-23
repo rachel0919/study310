@@ -1015,7 +1015,16 @@ position: fixed;
 
 }
 
-.newmember .subject_left {}
+.newmember .subject_left {
+
+      width: 40%;
+    height: 165px;
+    background-color: #F6EBD9;
+    border-top-right-radius: 500px;
+    border-bottom-right-radius: 500px;
+    margin-top: 150px;
+    margin-bottom: 80px;
+}
 
 .newmember .iBtn {
     position: relative;
@@ -1390,6 +1399,7 @@ position: fixed;
 .slider_second .con_box .con1 img {
     position: absolute;
     bottom: -5%;
+    left: -5%;
 }
 
 .con1 .txtBox_rescue {
@@ -1431,6 +1441,7 @@ position: fixed;
 
 .con1 .listBox ul {position: absolute;
                    top: -13%;
+                   right: 0;
                    animation: scrollUp 40s linear infinite;}
 
 
