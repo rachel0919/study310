@@ -142,13 +142,19 @@ display: none;
        margin-right: 50px;
        /* padding: 25px;*/} 
 .util ul {display: flex;}
-.util ul li {}
+.util ul li {font-size: 1vw;}
 .util a {display: block;
       color: #fff;
      padding: 10px;
      position: relative;}
 
-.util a:hover {color: #ccc;}        
+.util a:hover {color: #ccc;
+              
+} 
+
+.util a:hover img {
+  filter: grayscale(0%) brightness(80%) saturate(00%)/* 이미지 색상 조정 */
+}
 .util span {display: inline-block;
          text-indent: -9999px;
 
@@ -434,7 +440,9 @@ display: none;
                              display: flex;
                              flex-direction: column; /* 세로 정렬 */
                              align-items: center;
-                             position: relative;}
+                             position: relative;
+                             cursor: pointer;
+                            }
 
 
 
@@ -1215,8 +1223,25 @@ display: none;
                    box-sizing: border-box;
                    padding: 30px;} 
 
-.cartHeader .cartBox {} 
-.cartHeader .cartBox img {} 
+.cartHeader .cartBox {position: relative;
+                      
+                      width: 2.5vw;
+                      height: 5vh;
+
+} 
+.cartHeader .cartBox img {position: absolute;
+                          top: 50%;
+                          height: 50%;
+                          transform: translate(-50%,-80%) scale(1.5);
+} 
+.cartHeader .cartBox span {position: absolute;
+                             top: 50%;
+                          height: 50%;
+                          transform: translate(-50%,-50%);
+                          font-size: 1vw; 
+                          color: #00CDFF;
+
+} 
 
 .cartHeader .yourbag {padding-top: 3px;} 
 .cartHeader .yourbag img {} 
@@ -1263,25 +1288,88 @@ display: none;
 
 
 .cartMiddle .cartList {width: 100%;
-                      height: 60%;
-                    
+                      height: 55%;
+                      overflow: hidden;                 
                     }
 
 
 
-.cartList ul {}
-.cartList li {display: flex;
-              justify-content: space-between;
+.cartList li {display: none;}
+
+.cartList li.on {display: flex;
+              
+              align-items: center;
+              width: 100%;
+              height: 25%;
+              padding: 1.5vh 0.5vw;
+              box-sizing: border-box;
+              
               } 
 
+.cartList li:hover {background-color: #e1f6fc;}              
 
-.cartList li img {}
-.cartList li p {}
-.cartList li .count {display: flex;}
-.cartList li .count .num {}
-.cartList li .deleteIcon {}
+.cartList li>div {margin: 0 0.1vw;
+                  
+}              
+
+.cartProListB {width: 65%;
+               height: 6vh;
+               
+               display: flex;
+               box-sizing: border-box;
+               justify-content: space-around;
+}
+.cartList li .cartPicB {width: 3vw;
+                        height: 6vh;
+                       
+                        overflow: hidden;
+}
+.cartPicB>img {width: 100%;
+  height: auto;}
+
+.cartList li .cartPicT {height: 6vh;
+                        width: 10vw;
+                        
+                        overflow: hidden;
+}
+.cartPicT>img {width: 150%;
+               height: auto;
+               position: relative;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%,-50%);
+}
 
 
+
+
+.cartList li .count {
+                     width: 30%;
+                     height: auto;
+                    
+                     padding: 1vh 0vw;
+                     box-sizing: border-box;
+}
+.cartList li .count .num {display: flex;
+                           justify-content: center;
+                           align-items: center;
+}
+
+.count .num>span {margin: 0 -0.6vw;
+                  display: inline-block;
+                  
+}
+
+.count .num>span i {cursor: pointer;}
+
+
+
+.cartList li .deleteIcon {width: 10%;
+                           height: 10%;
+                           cursor: pointer;
+                           padding: 1.5vh 0.5vw;
+                           
+}
 
 
 
@@ -1342,6 +1430,7 @@ display: none;
                align-items: center;
                text-align: center;
                margin: 10px 0;
+               cursor: pointer;
          }
 .cart .buyBtn span {background-color: #FFB700;
   padding: 13px 150px;
@@ -1353,6 +1442,10 @@ display: none;
                         
 
   }
+
+
+
+.cart .buyBtn:hover span {background-color: #1DB4E8;}  
 
 
 .cart .cartrecomSec {margin-top: 30px;}  
@@ -1378,7 +1471,7 @@ display: none;
               }
 
 
-
+.cartrecomList:hover {background-color: #e1f6fc;}
 
 .cartrecomList>div:nth-child(1) {width: 20%;
                                 }
@@ -1390,7 +1483,9 @@ display: none;
 .cartrecomList>div:nth-child(2) img {width: 100%;
   height: auto;
    transform: scale(1.5);}
-.cartrecomList>div:nth-child(3) {width: 30%;}
+.cartrecomList>div:nth-child(3) {width: 30%;
+
+}
 .cartrecomList>div:nth-child(3) span {color: #1C1E19;
   font-size: 20px;
   font-weight: 500;
@@ -1399,6 +1494,8 @@ display: none;
   border: 1px #000 solid;
   border-radius: 30px;
   padding: 3px 10px;
+  cursor: pointer;
+
 }
 
 
@@ -1671,7 +1768,11 @@ display: none;
 .count .num span {padding: 0 20px;
   font-size: 20px;
   font-family: 'Pretendard-Regular';
-  font-weight: 800;}
+  font-weight: 800;
+  display: inline-block;
+  width: 0.8vw;
+  text-align: center;
+}
 .count .num i {font-size: 18px;}
 
 .count .won {}
@@ -1695,7 +1796,7 @@ display: none;
                 white-space: nowrap;
                 }
 
-
+.deMain .add:hover a {background-color: #00CDFF;}
 
 
 .deInfo {padding: 80px 0;

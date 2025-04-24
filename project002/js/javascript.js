@@ -61,30 +61,6 @@ $('.proList1').children('.left').click(function(){
 
 
 
-document.querySelector(".util li:nth-child(2) a").addEventListener("click", function (event) {
-  event.preventDefault(); // a 태그의 기본 동작(페이지 이동) 막기
-  
-});
-// 장바구니 클릭시 장바구니가 나타남
-
-let aa = 0;
-
-$('.util li').eq(1).click(function(){
-
-aa++;
-if(aa==2)aa=0;
-if(aa===1){
-
-  $('.cart').addClass('on')
-
-}else{
-
-  $('.cart').removeClass('on')
-
-}
-});
-
-
 // header의 h1를 클릭하면 메인페이지에 on이 붙어라
 
 
@@ -126,8 +102,8 @@ $('.gnb li').eq(1).click(function(e){
 
 
 
-//gallerybox를 클릭하면 product에 on이 붙어라
-$('.gallerybox').click(function(e){
+//.gallerypic, .gallerytxt>img, .gallerytxt>p, .gallerytxt>span를 클릭하면 product에 on이 붙어라
+$('.gallerypic, .gallerytxt>img, .gallerytxt>p, .gallerytxt>span').click(function(e){
 
   e.preventDefault()
   $('.contents>div').removeClass('on')
@@ -152,7 +128,7 @@ $('.gallerybox').click(function(e){
 // proList1 li를 클릭하면 product에 on이 붙어라
 
 
-$('.proList1 li').click(function(e){
+$('.proPic, .proTextbox').click(function(e){
 
   e.preventDefault()
   $('.contents>div').removeClass('on')
@@ -299,6 +275,287 @@ $(window).on('scroll', function() {
       }
   });
 });
+
+
+
+document.querySelector(".util li:nth-child(2) a").addEventListener("click", function (event) {
+  event.preventDefault(); // a 태그의 기본 동작(페이지 이동) 막기
+  
+});
+// 장바구니 클릭시 장바구니가 나타남
+
+let aa = 0;
+
+$('.util li').eq(1).click(function(){
+
+aa++;
+if(aa==2)aa=0;
+if(aa===1){
+
+  $('.cart').addClass('on')
+
+}else{
+
+  $('.cart').removeClass('on')
+
+}
+});
+
+
+
+
+
+
+// proList1 li를 클릭하면 product에 on이 붙어라
+
+let count = 1;  // 기본 수량
+
+// proList1 li를 클릭하면 product에 on이 붙어라
+$('.proList1 .container .shopNow').click(function(e) {
+  e.preventDefault();
+  
+  let pro1Pic =  $(this).siblings('div').find('.proList1P').attr('src');
+  let pro1name =  $(this).siblings('div').find('.proName').find('img').attr('src');
+  let pro1cost = $(this).siblings('div').find('.proPrice').text();
+
+  // 가격을 숫자로 변환하여 계산
+  pro1cost = parseInt(pro1cost.replace(/[^0-9]/g, '')); // 원화 기호나 쉼표를 제거하고 숫자만 추출
+
+  // 이미지 업데이트
+  $('.cart .cartProListB .cartPicB img').attr('src', pro1Pic); 
+  $('.cart .cartProListB .cartPicT img').attr('src', pro1name); 
+
+  // 카트 수량 증가
+  count++; 
+  updateCart(); // 카트 업데이트
+});
+
+// 수량 증가
+$('.count .num .plusI>i').click(function() {
+  count++; // 수량 증가
+  updateCart(); // 카트 업데이트
+});
+
+// 수량 감소
+$('.count .num .minusI>i').click(function() {
+  if (count > 1) { // 수량이 1보다 작은 값으로 내려가지 않도록 설정
+    count--; // 수량 감소
+    updateCart(); // 카트 업데이트
+  }
+});
+
+// 카트 내용 업데이트 함수
+function updateCart() {
+  // 상품 가격 가져오기 (쉼표와 원화 기호 제거 후 숫자만 추출)
+  let pro1cost = 14900; // 예시로 기본 아이스크림 가격 설정
+  
+  // 상품 가격에 수량 곱하기
+  let totalPCost = pro1cost * count; // 총 상품 가격 계산
+  // 배송비 조건: 50,000 이상이면 무료, 아니면 기본 배송비 3000원
+  let shippingCost = (totalPCost >= 50000) ? 0 : 3000;
+
+  // 총 가격 계산
+  const totalCost = totalPCost + shippingCost;
+
+  // UI 업데이트
+  $('.cartMiddle .total .price em').text(totalPCost.toLocaleString()); // 상품 가격
+  $('.cartMiddle .total .totalPrice p em').text(totalCost.toLocaleString()); // 총 가격
+  $('.count .num .amount').text(count); // 수량 갯수 화면에 업데이트
+  $('.cartBox span').text(count); 
+  // 배송비 업데이트
+  $('.cartMiddle .total .parcel em').text(shippingCost === 0 ? '0' : shippingCost.toLocaleString()); // 배송비
+
+
+  $('.cart').addClass('on');
+  $('.listLi').addClass('on');
+
+
+
+}
+
+// 삭제 아이콘 클릭 시, 카트 내용 초기화
+$('.listLi>.deleteIcon').click(function() {
+  $('.listLi').removeClass('on');
+
+  // count 초기화
+  count = 0;
+
+  // 수량 초기화
+  $('.count .num .amount').text(count);
+
+  // 가격 초기화
+  $('.cartMiddle .total .price em').text('0');  // 가격을 0으로 설정
+  $('.cartMiddle .total .totalPrice p em').text('0');  // 총 가격을 0으로 설정
+  $('.cartMiddle .total .parcel em').text('0');  // 배송비를 0으로 설정
+});
+
+
+
+
+
+// 상세페이지 카운트!!!!
+
+
+let pro1cost = 14900;
+let count002 = 0;
+let totalPCost002 = pro1cost * count002; // 총 상품 가격 계산
+// 수량 증가
+$('.deMain .count .num .plI>i').click(function() {
+  count002++; // 수량 증가
+  $('.num001').text(count002)
+  $('.cartBox span').text(count002); 
+  // 수량 증가
+$('.count .num .plusI>i').click(function() {
+  count002++; // 수량 증가
+  updateCart(); // 카트 업데이트
+});
+
+// 수량 감소
+$('.count .num .minusI>i').click(function() {
+  if (count002 > 1) { // 수량이 1보다 작은 값으로 내려가지 않도록 설정
+    count002--; // 수량 감소
+    updateCart(); // 카트 업데이트
+  }
+});
+
+
+  
+  // 총 가격 계산
+  let totalPCost002 = pro1cost * count002; // 총 상품 가격 계산
+  $('.won span').text(totalPCost002.toLocaleString()); // 상품 가격 표시
+
+  
+  
+});
+
+// 수량 감소
+$('.deMain .count .num .miI>i').click(function() {
+  if (count002 > 1) { // 수량이 1보다 작은 값으로 내려가지 않도록 설정
+    count002--; // 수량 감소
+    $('.num001').text(count002)
+    $('.cartBox span').text(count002); 
+     // 총 가격 계산
+     let totalPCost002 = pro1cost * count002; // 총 상품 가격 계산
+     $('.won span').text(totalPCost002.toLocaleString()); // 상품 가격 표시
+   
+  }
+});
+
+
+
+
+// 상세페이지 장바구니삽입
+
+$('.deMain .add').click(function(e) {
+  e.preventDefault();
+
+  let deMainPic =  'img/proNewyork.png';
+  let deMainName =  'img/productText_nychoco_002.png';
+
+
+  
+  $('.cart .cartProListB .cartPicB img').attr('src', deMainPic); 
+  $('.cart .cartProListB .cartPicT img').attr('src', deMainName); 
+
+  $('.count .num .amount').text(count002);
+  $('.cartBox span').text(count002); 
+  let totalPCost002 = pro1cost * count002; // 총 상품 가격 계산
+  
+  // 배송비 조건: 50,000 이상이면 무료, 아니면 기본 배송비 3000원
+  let shippingCost = totalPCost002 >= 50000 ? 0 : 3000;
+
+  // 총 가격 계산
+  const totalCost002 = totalPCost002 + shippingCost;
+
+  // UI 업데이트
+  $('.cartMiddle .total .price em').text(totalPCost002.toLocaleString()); // 상품 가격
+  $('.cartMiddle .total .totalPrice p em').text(totalCost002.toLocaleString()); // 총 가격
+  $('.count .num .amount').text(count002); // 수량 갯수 화면에 업데이트
+  $('.cartBox span').text(count002); 
+  // 배송비 업데이트
+  $('.cartMiddle .total .parcel em').text(shippingCost === 0 ? '0' : shippingCost.toLocaleString()); // 배송비
+
+  $('.cart').addClass('on');
+  $('.listLi').addClass('on');
+});
+
+
+
+// 리스트페이지 카트 카운팅
+
+
+
+
+$('.gallerySection').find('a').click(function(e) {
+  e.preventDefault();
+
+  let gallerPic =  $('.gallerypic>img').attr('src');
+  let gallerName =  $('.gallerytxt>img').attr('src');
+
+
+  count002 = 1;
+  $('.cart .cartProListB .cartPicB img').attr('src', gallerPic); 
+  $('.cart .cartProListB .cartPicT img').attr('src', gallerName); 
+
+  $('.count .num .amount').text(count002);
+  $('.cartBox span').text(count002); 
+  let totalPCost002 = pro1cost * count002; // 총 상품 가격 계산
+  
+  // 배송비 조건: 50,000 이상이면 무료, 아니면 기본 배송비 3000원
+  let shippingCost = totalPCost002 >= 50000 ? 0 : 3000;
+
+  // 총 가격 계산
+  const totalCost002 = totalPCost002 + shippingCost;
+
+  // UI 업데이트
+  $('.cartMiddle .total .price em').text(totalPCost002.toLocaleString()); // 상품 가격
+  $('.cartMiddle .total .totalPrice p em').text(totalCost002.toLocaleString()); // 총 가격
+  $('.count .num .amount').text(count002); // 수량 갯수 화면에 업데이트
+  $('.cartBox span').text(count002); 
+  // 배송비 업데이트
+  $('.cartMiddle .total .parcel em').text(shippingCost === 0 ? '0' : shippingCost.toLocaleString()); // 배송비
+
+  $('.cart').addClass('on');
+  $('.listLi').addClass('on');
+});
+
+
+
+
+
+
+
+
+// 카트 지금 결제하기 
+$('.cart .buyBtn').click(function(){
+
+
+  $('.contents').addClass('loginBig');
+
+
+$('.contents>div').removeClass('on')
+$('.contents>div').eq(3).addClass('on')
+$(window).scrollTop(0);
+
+$('.listLi').removeClass('on');
+
+// count 초기화
+count = 0;
+
+// 수량 초기화
+$('.count .num .amount').text(count);
+
+// 가격 초기화
+$('.cartMiddle .total .price em').text('0');  // 가격을 0으로 설정
+$('.cartMiddle .total .totalPrice p em').text('0');  // 총 가격을 0으로 설정
+$('.cartMiddle .total .parcel em').text('0');  // 배송비를 0으로 설정
+
+
+$('.cart').removeClass('on')
+
+})
+
+
 
 
 
