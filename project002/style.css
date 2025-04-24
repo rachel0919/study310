@@ -1471,7 +1471,9 @@ display: none;
               }
 
 
-.cartrecomList:hover {background-color: #e1f6fc;}
+.cartrecomList:hover {background-color: #e1f6fc;
+                      cursor: pointer;
+}
 
 .cartrecomList>div:nth-child(1) {width: 20%;
                                 }
@@ -1494,7 +1496,7 @@ display: none;
   border: 1px #000 solid;
   border-radius: 30px;
   padding: 3px 10px;
-  cursor: pointer;
+  
 
 }
 
@@ -2026,6 +2028,25 @@ display: none;
               border-radius: 50px;
   
   }  
+
+  .gallerytxt>div {position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(-2vw,-2.8vh);
+   
+  }
+
+  .gallerytxt>div .newTap {
+    transform: scale(0.8);
+    background-color: #FFB700; 
+    color: #1C1E19;
+    padding: 3px 15px;
+    font-size: 20px;
+    font-family: 'Pretendard-Regular';
+    font-weight: 500;
+    border-radius: 30px;
+    border: 1px solid #111;
+}
 
 
 

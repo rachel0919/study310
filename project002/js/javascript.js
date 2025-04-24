@@ -301,7 +301,22 @@ if(aa===1){
 }
 });
 
+// 장바구니 추천부분 클릭했을때
+$('.cartrecomList').click(function(e){
 
+  e.preventDefault();
+
+  $('.contents>div').removeClass('on')
+  $('.contents>div').eq(1).addClass('on')
+
+  
+  $('.header').removeClass('sub')
+  $('.header').addClass('sub')
+
+
+  $('.cart').removeClass('on')
+
+})
 
 
 
@@ -485,12 +500,13 @@ $('.deMain .add').click(function(e) {
 
 
 
-
-$('.gallerySection').find('a').click(function(e) {
+// 
+$('.gallerySection .gallerybox').find('a').click(function(e) {
   e.preventDefault();
 
-  let gallerPic =  $('.gallerypic>img').attr('src');
-  let gallerName =  $('.gallerytxt>img').attr('src');
+ // .gallerybox 내에서 이미지를 선택
+ let gallerPic =  $(this).closest('.gallerybox').find('.gallerypic img').attr('src');
+ let gallerName =  $(this).closest('.gallerybox').find('.gallerytxt img').attr('src');
 
 
   count002 = 1;
@@ -556,6 +572,37 @@ $('.cart').removeClass('on')
 })
 
 
+
+
+
+
+    // foooter util 클릭
+    $('.snsIcons i:nth-child(1)').on('click', function() {
+      window.open('https://www.instagram.com/benandjerrys/', '_blank');
+    });
+
+    $('.snsIcons i:nth-child(2)').on('click', function() {
+      window.open('https://www.instagram.com/benandjerrys/', '_blank');
+    });
+
+
+    $('.snsIcons i:nth-child(3)').on('click', function() {
+      window.open('https://www.instagram.com/benandjerrys/', '_blank');
+    });
+
+
+
+
+    
+
+
+
+
+  $(".logo").click(function() {
+     
+      $(".mainPage").addClass("on");
+   
+  });
 
 
 
