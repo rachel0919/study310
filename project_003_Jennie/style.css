@@ -2567,9 +2567,9 @@ position: relative;
 top: 0;
 left: 50vw;
 width: 64.06vw;
-height: 78.33vh;
-
-transform: translateX(-32vw) translateY(-0.93vh);
+height: 78vh;
+overflow: hidden;
+transform: translateX(-32vw) translateY(-5vh);
 }
 .mvMainframe video {position: absolute;
     top: 0;

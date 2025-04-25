@@ -170,7 +170,9 @@ display: none;
          border-radius: 50%;
          display: flex;
          justify-content: center;
-         align-items: center;}
+         align-items: center;
+         background-color: #FFB700; 
+        }
 
 
 
@@ -1289,8 +1291,18 @@ display: none;
 
 .cartMiddle .cartList {width: 100%;
                       height: 55%;
-                      overflow: hidden;                 
+                      overflow-y: auto;
+                      overflow-x: hidden;
+                      padding-right: 6px;
+                      scrollbar-gutter: stable; /* 핵심! */               
                     }
+
+/* 스크롤바################# */
+.cartList::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 
 
@@ -1624,12 +1636,20 @@ display: none;
   color: #1C1E19; 
 }
 
+.header.sub .util a>img {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(3%) saturate(641%) hue-rotate(31deg) brightness(92%) contrast(95%); 
+}
+
 .header.sub .util a:hover {
   color: #666; 
+}
+.header.sub .util a:hover > img {
+  filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(750%) hue-rotate(0deg) brightness(90%) contrast(90%);
 }
 .header.sub {
   background-color: rgba(255, 255, 255, 0.8); 
   transition: none; /* 불필요한 애니메이션 제거 */
+
 }
 
 
@@ -1991,6 +2011,7 @@ display: none;
                            width: 385px;
                            height: 555px;
                            text-align: center;
+                           cursor: pointer;
                            }
 
 .gallerybox:last-child {
