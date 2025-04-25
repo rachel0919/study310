@@ -322,6 +322,31 @@ $(".musicvideoPage .close").click(function(e) {
 
 
 
+
+
+
+
+// 트랙리스트 클릭 설정
+
+
+// 공통 클릭 이벤트 등록
+$('[class^="trackList"]').click(function () {
+    // 1. 클래스명에서 번호 추출 (trackList001 → 001)
+    const classList = $(this).attr('class').split(' ');
+    let trackClass = classList.find(cls => cls.startsWith('trackList'));
+    let trackNum = trackClass.replace('trackList', '');
+  
+    // 2. 모든 가사 이미지 숨기기
+    $('[class^="lyricsCircle_"]').hide();
+  
+    // 3. 해당 번호와 일치하는 가사 이미지만 보이게
+    $('.lyricsCircle_' + trackNum).css('display', 'block');
+
+
+    $('[class^="lyricsCircle_"]').fadeOut(10);
+    $('.lyricsCircle_' + trackNum).fadeIn(200);
+  });
+
 // .musicvideoPage 설정
 
 
@@ -363,6 +388,10 @@ $('.mvList_005').click(function(e){
     $(".mvMainframe video").attr("src", "img/mvList_005.mp4")[0].load();
 
 })
+
+
+
+
 
 
 

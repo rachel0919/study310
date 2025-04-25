@@ -2280,6 +2280,7 @@ z-index: 1;
             height: 325vh;
             
             
+            
           
 }
 
@@ -2389,46 +2390,53 @@ z-index: 1;
         }
 
 
-.moreBtn {display: flex;
-                     position: absolute;
-                     top: 50%;
-                     right: 50%;
-                     transform: translateX(48vw) translateY(41vh);
-                     color: #000;
-                     transition: all 1s;
-                     opacity: 1;
-                     box-sizing: border-box;
-                     padding: 1vw 1vh;
-                    
-                    
-                    
-}
-.moreBtn p {margin-right: 0.5vw;
-    font-size: 18px;
-    
-    font-weight: 200;     
-}
-.moreBtn img {font-size: 16px;}
-
-.moreBtn:hover { transform: translateX(48vw) translateY(45vh);
-                 
-                 filter: invert(1);
-                
-                
-                }
-
-
-
+        .moreBtn {
+            display: flex;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translateX(48vw) translateY(-70vh);
+            transition: all 1s;
+            cursor: none;
+            z-index: 1;
+            /* 위치는 고정 */
+           
+          }
+          
+          .btnInner {
+            display: flex;
+            align-items: center;
+            color: #000;
+            transition: transform 0.8s ease, filter 0.8s ease;
+          }
+          
+          .moreBtn p {
+            margin-right: 0.5vw;
+            font-size: 18px;
+            font-weight: 200;
+          }
+          
+          .moreBtn img {
+            font-size: 16px;
+          }
+          
+          /* 움직임은 안쪽에만 적용 */
+          .moreBtn:hover .btnInner {
+            transform: translateY(5vh); /* 원하는 만큼 */
+            filter: invert(1);
+          }
+          
 
 /* albulTrackBox###################################### */
 
 .albulTrackBox {padding-top: 20vh;
                 position: relative;
-                width: 100vw;
-                height: auto;
+                
                 background-color: #CF0000;
                 width: 100vw;
-                height: 20vh;
+                height: 230vh;
+                overflow: hidden;
+                
                 
 }
 .albulTrackBox>div {position: absolute;
@@ -2440,6 +2448,7 @@ z-index: 1;
                     height: auto;
                     background-color: #CF0000;
                     pointer-events: none;
+                    z-index: 0;
                     
 }
 .albulTrackBox .bg img:nth-child(1) {width: 100vw;
@@ -2451,11 +2460,13 @@ z-index: 1;
 
 .albulTrackBox .iconVD {top: 50%;
                         right: 50%; 
-                        transform: translateX(43vw) translateY(74vh);
+                        transform: translateX(23vw) translateY(-59.5vh);
                         color: #fff;
                         display: flex;
                         font-size: 20px;
                         
+                        z-index: 3;
+                        cursor: pointer;
 
 
 }
@@ -2484,14 +2495,17 @@ z-index: 1;
 
 .trackBox {top: 50%;
            right: 50%; 
-           transform: translateX(2vw) translateY(88vh);
+           transform: translateX(55vw) translateY(-80vh);
            position: relative;
            scale: 0.85;
-           pointer-events: none;
+           
+           width: 50vw;
+           height: 100vh;
 }
 
 .trackBox>img {position: absolute;
                z-index: 1; 
+               
    
                 
 }
@@ -2501,8 +2515,9 @@ z-index: 1;
                          position: absolute;
                          top: 50%;
                          left: 50%;
-                         transform: translate(3vw, 10vh);
+                         transform: translate(-25vw, -50vh);
                          scale: 0.85;
+                     
                          
 }
 
@@ -2516,9 +2531,39 @@ z-index: 1;
     cursor: pointer;
 } 
 
+.trackTxtBox img:hover { 
+    filter: saturate(100%) invert(8%) sepia(100%) saturate(7450%) hue-rotate(10deg) contrast(105%);
+}
+
+.lpEffectSec {
+   
+    }
+
+
+.lpEffectB {position: relative;
+            top: 3vh;
+            left: -50vw;
+            transform: rotateX('angle');
+            
+}
+.lpEffectB>img {position: absolute;
+                display: none;
+                animation: spin 60s linear infinite;
+                mix-blend-mode: hard-light;
+                opacity: 0.5;
+                pointer-events: none;
+                
+             
+                    
+}
 
 
 
+
+@keyframes spin {
+    0%   { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+  }
 
 /* musicvideoPage########################################### */
 
@@ -2557,7 +2602,7 @@ z-index: 1;
 
 
 .mvMainframeSec {position: relative;
-              height: 80vh; 
+              height: 78vh; 
 
 }
 
@@ -2566,15 +2611,15 @@ z-index: 1;
 position: relative;
 top: 0;
 left: 50vw;
-width: 64.06vw;
+width: 70vw;
 height: 78vh;
 overflow: hidden;
-transform: translateX(-32vw) translateY(-5vh);
+transform: translateX(-32vw) translateY(-5vh) scale(1.1);
 }
 .mvMainframe video {position: absolute;
     top: 0;
     left: 50vw;
-    transform: translateX(-47.1vw) translateY(-0.93vh);
+    transform: translateX(-47.1vw) translateY(-3vh);
     width: 58.7vw;
     height: auto;
 
@@ -2600,7 +2645,7 @@ transform: translateX(-32vw) translateY(-5vh);
   width: 58.7vw;
     height: auto;
     
-    transform: translateX(-29.2vw) translateY(6vh);
+    transform: translateX(-29.2vw) translateY(1vh);
     z-index: -1;
 
 
