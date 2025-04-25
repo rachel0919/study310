@@ -35,6 +35,7 @@ img {
     height: auto;
     margin: 0 auto;
     background-color: #FAF6EB;
+    overflow-x: hidden;
 }
 
 body {
@@ -120,13 +121,9 @@ body {
 
 .slider_main .txtBox {
     width: 100%;
-    /* 텍스트는 width 100%해야함 침범할 것같다고 40%으로 막지말것
-      z-index로 위로 올리기 */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    /* text-align: end; 
-       end는 적용하지 못함 하려면 right로 가야함*/
     margin-top: 40px;
     position: absolute;
     top: 0;
@@ -180,17 +177,6 @@ body {
               width: 100%;
               height: calc(100vh - 150px);}
 
-/* .slider_main .imgBox1 {position: absolute;
-                       width: 100%;
-                       height: auto;
-                       bottom: 8%;
-                       left: 2%;
-
-                       max-width: 1915px;
-                       z-index: 1;}
-            
-.slider_main .imgBox1 img {max-width: 100%;
-                           height: auto;} */
 
 
 .slider_main .imgBox1 {position: absolute;
@@ -208,7 +194,7 @@ body {
 
 
 
-/* .slider_main::after {display: block; content: ''; clear: both;} */
+
 
 
 
@@ -368,7 +354,10 @@ body {
     border: 1px solid #3D3D3D;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 0px;
     cursor: pointer;
+    padding: 0;
+    margin-top: 0;
 
 }
 
@@ -1024,6 +1013,13 @@ position: fixed;
     border-bottom-right-radius: 500px;
     margin-top: 150px;
     margin-bottom: 80px;
+}
+
+
+.newmember .subject_left .subject_txt {
+  width: 100%;
+  margin-left: 220px;
+  padding-top: 25px;
 }
 
 .newmember .iBtn {
@@ -1773,6 +1769,16 @@ height: 100%;
 }
 
 
+.find_leftside .subject_left .subject_txt {
+  width: 100%;
+  margin-left: 220px;
+  padding-top: 25px;
+}
+
+
+
+
+
 
 .find_leftside .search {position: absolute;
                         top: 35%;
@@ -2173,7 +2179,7 @@ position: fixed;
 
 }
 
-.subject_left {
+.videoBox .subject_left {
     width: 40%;
     height: 165px;
     background-color: #F6EBD9;
@@ -2183,7 +2189,7 @@ position: fixed;
     margin-bottom: 80px;
 }
 
-.subject_left .subject_txt {
+.videoBox .subject_left .subject_txt {
     width: 100%;
     margin-left: 220px;
     padding-top: 25px;

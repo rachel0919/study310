@@ -3,6 +3,21 @@
 @charset 'utf-8';
 
 
+/* 구간에 order 설정############################################ */
+
+.header {order: 1;}
+.slider_main {order: 2;}
+.reservation {order: 3;}
+.notice_box {order: 4;}
+.newmember {order: 6;}
+.slider_second {order: 7;}
+.find {order: 8;}
+.videoBox {order: 9;}
+.info {order: 10;}
+.footer {order: 11;}
+
+
+
 /* 미디어쿼리구간설정 */
 
 
@@ -45,11 +60,376 @@
 
 @media (max-width:767px) and (min-width:600px)
 {
-
-
-
+    #wrap {width: 100%;
+        margin: 0 auto; 
+ }
+    
+    .header {
+       
+        flex-direction: column;
+        width: 90%;
+    
+    }
 
     
+    .header nav {
+        top: 6vh;
+        right: 10vw;
+        margin-right: 5vw;
+    }
+    .header nav ul {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .header nav ul li a {
+        
+        padding: 2px 7px;
+        font-size: 12px;
+        
+    }
+
+
+
+
+    .slider_main .txtBox {
+      
+        margin-top: -40px;
+    
+        margin-right: 3vw;
+    
+    }
+    
+    
+    
+    
+    .txtBox .txt_upper {
+        font-size: 12px;
+        
+    }
+    
+    
+    
+    .txtBox .txt_main {
+    
+        font-size: 31px;
+        
+    }
+    
+    
+    .txtBox .txt_sub {
+        margin-top: 10px;
+    }
+    
+    .txtBox .txt_sub p {
+        font-size: 12px;
+      
+    }
+    
+    .slider_main {
+                  height: calc(100vh - 700px);}
+    
+    
+    
+    .slider_main .imgBox1 {left: 55%;
+                           margin-bottom: 0px;
+                           height: 600px; 
+                           overflow: hidden;
+                           z-index: 1;
+                           pointer-events: none;
+                        }
+    
+
+
+  
+.slider_main .reservation {
+    height: 350px; 
+}
+
+
+.reservation form {width: 50%;
+    position: absolute;
+    bottom: 10%;
+    left: 38%;
+    
+    margin-bottom: 10px;}
+
+
+.reservation .reservation-box {
+
+    width: 80%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+
+
+}                    
+
+.reservation .reservation-box .reser_box1 {
+    
+    width: 95%;
+    border-right: 0px solid #3D3D3D;
+    margin-left: 20px;
+    padding-top: 18px;
+    font-size: 16px;
+    
+}
+
+
+
+.reservation .reservation-box .reser_box1 .selectBox select {
+   
+    font-size: 18px;
+   
+    margin-right: 30px;
+  
+    
+}
+
+
+
+.reservation .reservation-box .reser_box2 {
+    
+    padding: 16px 20px 0px 20px ;
+    margin-left: 0px;
+    margin-top: 20px;
+    width: 95%;
+    font-size: 16px;
+    border-top: 0.75px solid #3D3D3D;
+
+}
+
+
+
+
+.reservation .reservation-box .reser_box2 input {
+    
+    font-size: 18px;
+    
+    margin-right: -10px;
+    
+
+ 
+    
+}
+
+.reservation .reservation-box .reser_box3 {
+  
+    width: 100%;
+    background-color: #785379;
+    
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 8px;
+    margin-top: 20px;
+
+}
+
+
+.subject_rightBox {
+    top: 34%;
+}
+
+
+.subject_right {
+   
+    width: 90%;
+   
+   
+
+}
+
+
+
+.subject_right .subject_txt {
+   
+    margin-left: 160px;
+    
+}
+
+
+
+.notice_box>.contentsBox {
+    margin-top: 100px;
+    margin-left: 3.5%;
+    width: 95%;
+    height: 1500px;
+    display: flex;
+    flex-direction: column;
+   
+
+}
+
+.contentsBox .map {
+    width: 100%;
+    margin-bottom: 300px;
+    height: 40%;
+}
+
+.contentsBox .notice {
+    width: 100%;
+    height: 60%;
+   
+}
+
+.contentsBox .notice ul {
+    height: 70%;
+    
+   
+}
+
+
+
+.newmember .subject_left {
+
+    width: 65%;
+    margin-top: 0px;
+  }
+
+
+  .newmember .subject_left .subject_txt {
+    
+    margin-left: 40px;
+   
+  }
+
+  
+  .con1Forscroll {
+   
+    height: 390px;
+   
+  }
+
+.slider_second>.btn {position: absolute;
+    top: 0;
+   left: 3%;
+   transform: translateY(0%);
+   height: 390px;  
+                 
+                       }
+   
+  
+
+
+  .slider_second .con_box .con1 {
+   
+    height: 390px;
+    overflow: hidden;
+   
+    
+}
+
+  .slider_second .con_box .con1 img {
+    
+   
+    left: -35%;
+}
+.con1 .txtBox_rescue {
+    width: 50%;
+    margin-left: 3%;
+    margin-top: 5%;
+    
+}
+
+.con1 .txtBox_rescue .txt_main {
+    font-size: 31px;
+    text-shadow:
+    0px 0px 0 #FAF6EB,
+    0px 0px 0 #FAF6EB,
+    0px 0px 0 #FAF6EB,
+    0px 0px 0 #FAF6EB;
+}
+
+.con1 .txtBox_rescue .txt_sub {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.con1 .listBox {
+   
+    width: 50%;
+}
+    
+
+
+.con1 .listBox ul {
+    right: 0%;
+    }
+
+    .con1 .listBox ul li {
+        width: 95%;
+        height: 30%;
+        
+    
+      
+        padding: 20px;
+        
+    }
+
+.con1 .listBox ul li:nth-child(odd) {margin-left: 0px;}
+.con1 .listBox ul li .text_list {
+    font-size: 16px;
+  
+}
+
+.con1 .listBox ul li .text_main {
+    font-size: 16px;
+  
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.con1 .listBox ul li .text_info {
+    font-size: 12px;
+  
+   
+}
+
+
+.howtoRescue_txt {
+                  
+                  padding: 80px 50px;
+                 
+                  }  
+
+
+
+
+
+
+.con3 .rescue-request {width: 40%;
+                       
+                       left: 8%;
+                       }
+
+
+
+.con3 .rescue-request h1 {
+                          font-size: 51px;
+                          margin-bottom: 10px;  
+                   
+    
+}
+
+.con3 .rescue-request p {font-size: 20px;
+   
+    
+    }
+
+
+.con3 .simple-steps {width: 60%;
+       
+        top: 15%;
+        right: -10%;
+        }
+
+
+
+
 
 
 }
@@ -61,11 +441,14 @@
 @media(max-width:1279px) and (min-width:768px)
 {
 
+    #wrap {width: 100%;
+           margin: 0 auto; 
+    }
     .logo {font-size: 26px;}
     .header nav ul li a {
         
-        padding: 2px 10px;
-        font-size: 16px;
+        padding: 2px 5px;
+        font-size: 14px;
         
     }
 
@@ -149,6 +532,123 @@
 .con1 .listBox ul {
     right: 20%;
     }
+
+
+
+
+.howtoRescue_txt {
+                  
+                  padding: 80px 50px;
+                 
+                  }  
+
+
+
+
+
+
+.con3 .rescue-request {width: 40%;
+                       
+                       left: 8%;
+                       }
+
+
+
+.con3 .rescue-request h1 {
+                          font-size: 51px;
+                          margin-bottom: 10px;  
+                   
+    
+}
+
+.con3 .rescue-request p {font-size: 20px;
+   
+    
+    }
+
+
+.con3 .simple-steps {width: 60%;
+       
+        top: 15%;
+        right: -10%;
+        }
+
+
+
+
+.find .find_leftside {width: 35%;
+    position: relative;
+                     
+                     
+                     
+                     }
+
+
+
+.find_leftside .subject_left {
+   
+    left: 0%;
+  
+   
+    
+}     
+
+.find_leftside .subject_left .subject_txt {
+   
+    margin-left: 80px;
+    
+  }
+
+
+
+
+  
+
+.find_leftside .search {
+    left: 13%;
+    margin: 10px 0; 
+
+      }
+
+
+.search-input {
+                
+                padding: 4px 10px; /* 내부 여백 */
+                font-size: 16px; /* 텍스트 크기 */
+                color: #7e7e7e; /* 텍스트 색상 */
+                          }
+
+
+.btnForposition {position: absolute;
+                 top: 48%;
+                 left: 13%;}
+
+
+
+
+
+.videoBox .subject_left {
+    width: 60%;
+    left: 0%;
+  
+   
+    
+}     
+
+.videoBox .subject_left .subject_txt {
+   
+    margin-left: 80px;
+    
+  }
+
+
+  .footerT {
+  
+padding: 10px 100px;
+  
+}
+
+
 
 
 }
