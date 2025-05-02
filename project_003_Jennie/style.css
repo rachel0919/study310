@@ -2626,9 +2626,10 @@ transform: translateX(-32vw) translateY(-5vh) scale(1.1);
 .mvMainframe video {position: absolute;
     top: 0;
     left: 50vw;
-    transform: translateX(-47.1vw) translateY(-3vh);
-    width: 58.7vw;
+    transform: translateX(-47.5vw) translateY(-3vh);
+    width: 59vw;
     height: auto;
+   
 
            
 }
@@ -2642,6 +2643,8 @@ transform: translateX(-32vw) translateY(-5vh) scale(1.1);
                    
                   width: 64.06vw;
                   height: 78.33vh;
+
+                  
 }
 
 
@@ -2649,11 +2652,12 @@ transform: translateX(-32vw) translateY(-5vh) scale(1.1);
 .mvMainframeSec .bg-video {position: absolute;
     top: 0;
     left: 50vw;
-  width: 58.7vw;
+    width: 68vw;
     height: auto;
     
-    transform: translateX(-29.2vw) translateY(1vh);
+    transform: translateX(-34vw) translateY(-1vh);
     z-index: -1;
+    opacity: 0.8;
 
 
    
