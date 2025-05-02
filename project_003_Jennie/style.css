@@ -2629,6 +2629,7 @@ transform: translateX(-32vw) translateY(-5vh) scale(1.1);
     transform: translateX(-47.5vw) translateY(-3vh);
     width: 59vw;
     height: auto;
+    /* opacity: 0; */
    
 
            
