@@ -1028,10 +1028,10 @@ height: calc(320px * (460 / 400));
 .find_leftside .subject_left {
    
     left: 0%;
-  
+    
    
     
-}     
+}    
 
 .find_leftside .subject_left .subject_txt {
    
@@ -1102,8 +1102,15 @@ padding: 10px 100px;
 {
 
 
-       
     
+.find_leftside .subject_left {
+   
+    left: 0%;
+    top: 100px;
+    
+   
+    
+}    
 
 
 

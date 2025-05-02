@@ -260,6 +260,52 @@ $('.find_leftside .iBtn ul li:nth-child(1)').click(function(e){
 
 
 
+// .simple-steps ul li a버튼 클릭시 팝업
+
+
+$('.simple-steps ul li a').click(function(e){
+
+  e.preventDefault(); // 기본 새로고침 막기
+
+
+$(".findPopupR").removeClass("on");
+$(".findPopupR").addClass("on");
+
+
+
+})
+
+
+
+
+$(".findPopupUpper>.closeBtn").click(function(){
+
+
+  $(".findPopupR").removeClass("on");
+
+
+
+})
+
+
+
+$(".findPopupLower").click(function(){
+
+
+  $(".findPopupR").removeClass("on");
+
+
+
+})
+
+
+
+
+
+
+
+
+
 // find 버튼 클릭시 팝업
 
 
