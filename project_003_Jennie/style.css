@@ -1017,13 +1017,16 @@ z-index: 1;
                                overflow: hidden;
                                filter: grayscale(60%);
                                transition: transform 0.5s ease;
+                               cursor: pointer;
                             }
 
 .storiesPage>section>article img {
     pointer-events: none; /* 이미지 위에서 마우스를 올려도 부모 article이 hover 감지 */
 }
 
-.storiesPage>section>article:hover {filter: grayscale(0%);} 
+.storiesPage>section>article:hover {filter: grayscale(0%);
+                        
+} 
 
 
 
@@ -1405,7 +1408,7 @@ z-index: 1;
 .storiesPage>section>article:nth-child(10) strong img:nth-child(1) {position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-45%,-50%) scale(0.6);
+    transform: translate(-50%,-50%) scale(1);
 
 }
 
@@ -1414,9 +1417,13 @@ z-index: 1;
 .storiesPage>section>article:nth-child(10).on p img:nth-child(1) {position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%) scale(0.8);
+    transform: translate(-50%,-50%) scale(1);
     
 
+}
+
+.storiesPage>section>article:nth-child(10) .articleTxtbox {background-color: rgba(0, 0, 0, 0.2);
+                                                           
 }
 
 

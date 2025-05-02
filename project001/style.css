@@ -1858,7 +1858,10 @@ height: 100%;
 .find_leftside .imgForpositionCD {position: absolute;
                                 bottom: 0;
                                 left: 35%;
-                                 margin-bottom: 25px;}
+                                width: 100%;
+                                 margin-bottom: 25px;
+                                transform: scale(1);
+                                }
 
 .imgForpositionCD .cat {margin-right: -19px;}
 
@@ -2332,8 +2335,7 @@ position: fixed;
 .info .info_001 .txt {
                       width: 60%;
                       height: 100%;
-                      /* top: 0;
-                      left: 0; */
+                     position: relative;
                       text-align: center;
                       align-content: center;
                       }
@@ -2399,10 +2401,6 @@ position: fixed;
                  height: 890px;
                  margin: 0 auto;
                  position: relative;
-                 /* background-image: url(img/introBg_010.png);
-                 background-size: 90%;
-                 background-position: center;
-                 background-repeat: no-repeat; */
                  display: flex;
                  justify-content: center;
                  align-items: center;
@@ -2440,6 +2438,7 @@ position: fixed;
              0.5px 0.5px 0px #785379;
              margin: 0;
              opacity: 66; 
+             z-index: 555;
              }
 
 

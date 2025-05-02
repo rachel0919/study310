@@ -292,25 +292,18 @@ body {background-color: #e6e6e6;
   position: absolute; 
   top: 50%; 
   left: 50%; 
-  transform: translate(-55%, -80%); 
+  transform: translate(-55%, -60%); 
   text-align: center; /* 텍스트 중앙 정렬 */
   z-index: 2; /* heroBg보다 위로 올리기 위해 z-index 추가 */
   
 }
 
 
-.heroText .nameReveal {font-family: 'Silver Garden';
-                       font-size: 7.292vw;; 
-                       display: flex;
-                       align-items: center; /* 세로 정렬 */
-                       justify-content: center; /* 가로 정렬 */
-                       opacity: 1;
-                      /*  animation: fadeIn 2s ease-out forwards;
-                       filter: url(#ink-wobble); */
+.heroText .nameReveal {
                        
 
 }
-.heroText .nameReveal>img {transform: scale(0.85);}
+.heroText .nameReveal>img {transform: scale(1);}
 /* 
 .heroText .nameReveal p {font-style: italic;
                          font-size: 7.292vw;;
@@ -376,7 +369,7 @@ body {background-color: #e6e6e6;
 .heroText span:nth-of-type(1) {position: absolute;
                                top: 0;
                                left: 0;
-                               transform: translate(-10vw, -5vh);
+                               transform: translate(-22vw, 10vh);
                                font-size: 1.093vw;
                                font-weight: 200; 
                                font-family: "Inter", sans-serif;
@@ -386,7 +379,7 @@ body {background-color: #e6e6e6;
 .heroText span:nth-of-type(2) {position: absolute;
                                top: 0;
                                right: 0;
-                               transform: translate(7vw, 28vh);
+                               transform: translate(22vw, 48vh);
                                font-size: 1.093vw;
                                font-weight: 200; 
                                font-family: "Inter", sans-serif;
@@ -959,7 +952,7 @@ height: auto;}
 
 .profileBg {width: 100%;
             height: 100%;
-            background-image: url(img/profile_txt.png);
+            background-image: url(img/profile_txt_001.png);
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -971,7 +964,7 @@ height: auto;}
 .proTextBox {position: absolute;
              width: 92vw;
              height: 68vh;
-             top: 50%;
+             top: 53%;
              left: 50%;
              transform: translate(-50%,-38%);
              /* background-color: red; */
@@ -994,6 +987,7 @@ height: auto;}
                 font-family: "Inter", sans-serif;
                 color: #696969;
                 margin: 10px 0;
+             
               }
 .proLeftside .proContactB {display: flex;}
 .proContactB .iconB {width: 22px;
@@ -1038,7 +1032,7 @@ height: auto;}
               padding-bottom: 3px;
               font-size: 21px;
               font-family: "Inter", sans-serif;
-              opacity: 0.5;
+              opacity: 0;
               font-weight: 200;
               letter-spacing: -1px;
 
